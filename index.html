@@ -4,17 +4,15 @@
 	<title>CreativePMG prueba 2</title>
 </head>
 <body>
-	<marquee> 
+
 		<h1>CREATIVE PMG</h1>
 		<p>Hola mundo!</p>
-	</marquee>
-	<form>
-	usuario:<br>
-	<input type="text" name="user">
-	<br>
-	password<br>
-	<input type="password" name="password">
-	<br>
+	<!--En el form el action es a donde enviaras los datos del formulario y el method ps el metodo de envio xD! -->
+	<form action="procesar.php" method="get">
+	<label>usuario:</label>	
+		<input type="text" name="user">
+	<label>password:</label>
+		<input type="password" name="password">
 	<input type="submit" value="enviar">
 </form>
 </body>
