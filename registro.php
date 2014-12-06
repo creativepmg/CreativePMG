@@ -1,3 +1,3 @@
 <?php
-	echo "Nombre de usuario: ".$_POST['name']."</br>Correo electronico: ".$_POST['email'];
+	echo "Username: ".$_POST['username'].$_POST['email']."<br>Password: ".$_POST['password']."</br>Email: ";
 ?>
