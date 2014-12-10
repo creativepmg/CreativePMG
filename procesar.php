@@ -4,7 +4,7 @@
 	{
 		if($_POST['password'] == '123456')
 		{
-			echo "Bienvenido".$_POST['user'];
+			echo "Bienvenido".$_POST['user']."<meta  http-equiv = 'refresh'  contenido = '5; url = restringida.php' >";
 		}
 		else
 		{
