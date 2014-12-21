@@ -1,6 +1,6 @@
 <?php
 	$host 			= "localhost";
-	$user 			= "root";
-	$pw 			= "";
-	$db 			= "desarrollo";
+	$user 			= "creative_admin";
+	$pw 			= "creativepmg";
+	$db 			= "creative_desarrollo";
 ?>
