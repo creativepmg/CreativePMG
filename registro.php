@@ -1,6 +1,5 @@
 <?php 
 	include('conexion.php')
-	error_reporting(0);
 	$con=mysql_connect($host,$user,$pw)or die("problemas al conectar");
 		mysql_select_db($db,$con)or die("problemas al conectar la bd".mysql_error());
 
