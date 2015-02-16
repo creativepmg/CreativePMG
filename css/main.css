@@ -1,0 +1,881 @@
+*{margin: 0;}
+/*
+ * #2980b9 Azul Oscuro	CreativePMG 
+ * #3498db Azul Hover 	CreativePMG
+ * #ecf0f1 Nubes 		CreativePMG
+ */
+body 
+{ 
+	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	text-align: center;
+    background-color: #efefef;
+    color: rgb(50,50,50);
+    height: 100%; 
+    margin: 0 auto;
+    padding: 0;
+}
+footer
+{
+	background-color: #2980b9;
+	color: #e9e9e9;
+	height: 50px;
+	border-top: 1px inset #ededed;
+}
+footer p
+{
+	line-height: 50px;
+	font-weight: bold;
+}
+h1
+{
+	color: #2980b9; 
+	font-weight: normal;
+}
+header
+{
+	background-color: #2980b9;
+	height: 50px;
+	position: relative;
+	text-align: left;
+}
+header nav
+{
+	position: absolute;
+	height: 50px;
+	right: 0;
+	top: 0;
+}
+header nav ul
+{
+	list-style: none;
+	padding: 0;
+}
+header nav ul li
+{
+	display: inline-block;
+	font-weight: bold;
+}
+header nav ul li a
+{
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	color: #e9e9e9;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	border-left: 1px outset #e9e9e9;
+}
+header nav ul li a:hover
+{
+	background-color: #3498db;
+	color: rgba(85,85,85,.7);
+}
+
+header .logo
+{
+	height: 50px;
+	display: inline-block;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: 0px center;
+	background-size: 135px;
+	width: 150px;
+}
+.botonNuevo
+{
+	background-color: #2980b9;
+	background-image: url('../img/iconos/plus.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 35%;
+	border-radius: 50%;
+	bottom: 30px;
+	box-shadow: 0 0 1em rgba(0,0,0,1);
+	cursor: pointer;
+	height: 50px;
+	position: fixed;
+	right: 10px;
+	width: 50px;
+}
+
+.cajaDialogo
+{
+	background-color: #fff;	
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	display: none;
+	height: 265px;
+	left:50%;
+	margin-left:-145px;
+	margin-top:-130px;
+	padding:5px;
+	position: fixed;
+	text-align: center;
+	top:50%;
+	width: 280px;
+	z-index: 3;
+}
+.chat
+{
+	background-color: #efefef;
+	max-width: 90%;
+	margin: 0 auto;
+}
+.chat h2
+{
+	background-color: #333;
+	color: #e9e9e9;
+	padding: 10px;
+	
+}
+.chat .listaChats .item
+{
+	height: 50px;
+	/*overflow: hidden;*/
+	position: relative;
+	padding: 5px;
+}
+.chat .listaChats .item:hover
+{
+	background-color: #ccc;
+}
+.chat .listaChats .item .avatar
+{
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+.chat .listaChats .item .avatar img
+{
+	width: 100%;
+	height: 100%;
+}
+.chat .listaChats .item .contenido
+{
+	
+	padding-left: 60px;
+	text-align: left;
+}
+.chat .listaChats .item .chatAmigo .titulo
+{
+	position: relative;
+	
+}
+.chat .listaChats .item .chatAmigo .titulo .avatar
+{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+.chat .listaChats .item .chatAmigo .titulo .avatar img
+{
+	width: 100%;
+	height: 100%;
+}
+.chat .listaChats .item .chatAmigo .titulo h3
+{
+	text-align: left;
+	line-height: 30px;
+	padding-left: 30px;
+}
+.chat .listaChats .item .chatAmigo .mensaje
+{
+	background-color: green;
+	color: #e9e9e9;
+}
+.chat .listaChats .item .chatAmigo .mensaje .amigo
+{
+	background-color: blue;
+	text-align: left;
+}
+.chat .listaChats .item .chatAmigo .mensaje .amigo,
+.chat .listaChats .item .chatAmigo .mensaje .yo
+{
+	width: 70%;
+	padding: 5px;
+}
+.chat .listaChats .item .chatAmigo .mensaje .yo
+{
+	background-color: red;
+	margin-left: 27%;
+	text-align: right;
+}
+.chat .listaChats .item .chatAmigo .composicion 
+{
+	padding: 10px;
+}
+.chat .listaChats .item .chatAmigo .composicion .campoMensaje
+{
+	height: 30px;
+	width: 70%;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 2px solid #333;
+	vertical-align: middle;
+}
+.chat .listaChats .item .chatAmigo .composicion .botonEnviar
+{
+	background-color: #2980b9;
+	vertical-align: middle;
+	border-radius: 5px;
+	border: 0;
+	height: 45px;
+	width: 50px;
+	background-image: url('../img/iconos/enviar.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.chat .listaChats .item .inactivo
+{
+	display: none;
+}
+.chat .listaChats .item .activo
+{
+	display: block;
+}
+.contenido
+{
+	margin: 0 auto;
+	max-width: 100%;
+	width: 970px;
+}
+.contenido .boton
+{
+	background-color: #2980b9;
+	border-radius: 5px;
+	border: 0;
+	color: #e9e9e9;
+	height: 45px;
+	padding: 0px 10px;
+	width: 100%;
+}
+.contenido .contactanos
+{
+	border-top: 1px rgba(85,85,85,.7) solid;
+	color: #333;
+	text-align: center;
+	padding: 1em 0 2em 0;
+	margin-top: 2em;
+}
+.contenido .contactanos h2
+{
+	font-size: 37px;
+	margin: 21px 0 37px 0;
+	text-align: center;
+	color: #333;
+	text-transform: uppercase;
+}
+.contenido .contactanos .formContacto
+{	
+	width: 300px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	padding: 10px;
+}
+
+.contenido .contactanos .formContacto label
+{
+	display: block;
+	padding: 5px;
+}
+.contenido .contactanos .formContacto input[type="email"]
+{
+	height: 45px;
+	width: 100%;
+	line-height: 40px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	display: block;
+	border-radius: 5px;
+	padding-left: 10px;
+	color: #333;
+}
+.contenido .contactanos .formContacto textarea
+{
+	height: 100px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	color: #333;
+}
+.contenido .contactanos p
+{
+	display: inline-block;
+	width: 730px;
+	max-width: 100%;
+	vertical-align: top;
+	padding: 10px;
+	text-align: left;
+}
+.contenido .dominios
+{
+	text-align: right;
+	padding-top: 1em;
+}
+.contenido .dominios h2
+{
+	color: rgb(50,50,50);
+	padding: 10px;
+	font-size: 50px;
+
+}
+.contenido .dominios h3
+{
+	font-style: italic;
+	padding: 5px;
+	font-size: 20px;
+}
+.contenido .dominios p
+{
+	font-style: italic;
+	padding-left: 5px;
+	
+}
+.contenido .dominios div
+{
+	display: inline-block;
+	vertical-align: top
+
+}
+.contenido .dominios .content
+{
+	text-align: left;
+	float: left;
+	max-width: 95%;
+}
+.contenido .dominios .fbBox
+{
+
+}
+.contenido .dominios .buscador
+{
+	border: 1px solid #ccc;
+	width: 600px;
+	position: relative;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: 6px;
+	max-width: 94%;
+}
+.contenido .dominios .buscador input[type="text"],
+.contenido .dominios .buscador input[type="email"]
+{
+	border-radius: 5px;
+	height: 40px;
+	border: 0;
+	padding-left: 10px;
+	background-color: #fff;
+	margin: 3px;
+	width: 60%;
+	color: #4B7F00;
+}
+.contenido .dominios .buscador .boton
+{
+	position: absolute;
+	right: 10px;
+	top: 7px;
+	background-color: #2980b9;
+	height: 45px;
+	width: 100px!important;
+	color: #e9e9e9;
+	border: 0;
+	border-radius: 5px;
+	padding: 0px 10px;
+}
+.contenido .dominios .buscador .boton:hover
+{
+	background-color: #3498db;
+	color: rgba(85,85,85,.7);
+}
+.contenido .dominios .disponible
+{
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	width: 600px;
+	margin: 5px;
+	padding: 10px;
+}
+.contenido .dominios .ocupado
+{
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	width: 600px;
+	margin: 5px;
+	padding: 10px;
+}
+.contentPanel
+{
+	position: relative;
+}
+.deuda
+{
+	padding: 45px;
+}
+.deuda p
+{
+	padding: 5px;
+}
+.deuda .montoDeuda
+{
+	background-color: #2980b9;
+	width: 120px;
+	font-weight: bolder;
+	font-size: 20px;
+	color: #e9e9e9;
+	height: 120px;
+	margin: 0 auto;
+	border-radius: 50%;
+	line-height: 120px;
+}
+.formulario
+{
+	max-width: 300px;
+	margin: 0 auto;
+}
+.formulario label
+{
+	display: block;
+	margin: 5px;
+	text-align: left;
+}
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario input[type="email"]
+{
+	border-radius: 5px;
+	border: 2px solid #2980b9;
+	display: block;
+	height: 40px;
+	padding-left: 10px;
+	width: 95%;
+	margin: 0 auto;
+}
+.formulario input[type="submit"]
+{
+	background-color: #2980b9;
+	border-radius: 5px;
+	border: 0;
+	display: block;
+	height: 46px;
+	margin: 5px 0;
+	width: 100%;
+	color: #e9e9e9;
+	font-weight: bolder;
+}
+.formulario .botonFormulario:hover
+{
+	background-color: #3498db;
+}
+.formulario .logo
+{
+	background-image: url('../img/logo.png');
+	background-size: 300px;
+	background-position: center 20px;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 135px;
+}
+.listaDeudas
+{
+	margin: 10px;
+	padding: 0 10px;
+}
+.listaDeudas .item
+{
+	max-width: 500px;
+	border-left: 5px solid #2980b9;
+	background: #fff;
+	margin: 0 auto;
+	border-bottom: 2px solid #2980b9;
+	text-align: left;
+	position: relative;
+}
+.listaDeudas .item div
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+.listaDeudas .item .fecha
+{
+	width: 35px;
+	padding: 0 10px;
+	font-size: 13px;
+	text-align: center;
+}
+.listaDeudas .item .monto
+{
+	height: 45px;
+	line-height: 45px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-right: 10px;
+}
+.mensajeParaElUsuario
+{
+	padding: 10px;
+}
+.menu
+{
+	padding: 10px;
+	font-size: 14px;
+}
+.menu ul
+{
+	list-style: none;
+	padding: 0;
+}
+.menu ul li
+{
+	width: 260px;
+	margin: 10px 0;
+	display: inline-block;
+}
+.menu ul li a
+{
+	display: block;
+	background-color: #444;
+	padding: 20px;
+	border-radius: 10px;
+	color: #e9e9e9;
+	text-decoration: none;
+}
+.menu ul li a:hover
+{
+	background-color: #3498db;
+	font-weight: bolder;
+}
+.nuevoUsuario 
+{
+  	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 250px;
+	height: 180px;
+	margin-left: -125px!important;
+	margin-top: -90px!important;
+}
+.nuevoCliente 
+{
+  	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 250px;
+	min-height: 180px;
+	margin-left: -125px!important;
+	margin-top: -90px!important;
+}
+.opcionCuenta
+{
+	background: #dedede;
+	padding: 20px;
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 50px;
+}
+.opcionCuenta a
+{
+	color: #2980b9;
+	font-size: 20px;
+	text-decoration: none;
+}
+.opcionCuenta p
+{
+	margin: 5px;
+}
+.opcionesUsuario
+{
+	display: none;
+}
+.opcionesUsuario ul
+{
+	list-style: none; 
+	margin: 0;
+	padding: 0;
+}
+.opcionesUsuario ul li a
+{
+	background-color: #333;
+	color: #e9e9e9;
+	display: block;
+	padding: 15px 0;
+	text-decoration: none;
+}
+.opcionesUsuario ul li a:hover
+{
+	background-color: #444;
+}
+.popup
+{
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	bottom: 0;
+}
+.tarjeta
+{
+	margin: 10px auto;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	border-radius: 5px 5px 0 0;
+	padding-bottom: 5px;
+	width: 250px;
+}
+.tarjeta .opciones .agregarMenus
+{
+	background-color: #2980b9;
+	background-image: url('../img/iconos/plus.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 50px;
+}
+.tarjeta .opciones .agregarMenus:hover
+{
+	background-color: #3498db;
+	cursor: pointer;
+}
+.tarjeta .listaMenus label
+{
+	background-color: #efefef;
+	background-image: url('../img/iconos/checkbox-unchecked.png');	
+	background-position: 1px;
+	background-repeat: no-repeat;
+	background-size: 30px;
+	border-bottom: 1px solid #333;
+	display: block;
+	font-size: 14px;
+	padding: 10px 0 10px 35px;
+	text-align: center;
+	cursor: pointer;
+}
+.tarjeta .listaMenus input[type="checkbox"]
+{
+	visibility: hidden;
+	position: fixed;
+}
+.tarjeta .listaMenus input[type="checkbox"]:checked+label
+{ 
+	background-image: url('../img/iconos/checkbox-checked.png');	
+	font-weight: bold; 
+} 
+.tarjeta .formulario
+{
+	background-image: none;
+	padding: 10px;
+}
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario input[type="email"]
+{
+	border-radius: 5px;
+	border: 2px solid #2980b9;
+	display: block;
+	height: 40px;
+	padding-left: 10px;
+	width: 95%;
+	margin: 0 auto;
+}
+.tarjeta .formulario label
+{
+
+}
+.tarjeta .titulo
+{
+	background-color: #2980b9;
+	border-radius: 5px 5px 0 0;
+	color: #e9e9e9;
+	font-weight: bolder;
+	min-height: 20px;
+	padding: 10px;
+	position: relative;
+	text-transform: uppercase;
+}
+.tarjeta .titulo .cerrar
+{
+	background-image: url('../img/iconos/close.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	cursor: pointer;
+	height: 38px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 38px;
+}
+.tarjeta .imagen
+{
+	width: 100px;
+	margin: 5px auto;
+}
+.tarjeta .imagen img
+{
+	width: 100%;
+	height: 100%;
+}
+.tarjeta .detalles
+{
+	padding: 5px;
+}
+.menuUsuario
+{
+	height: 50px;
+	float: right;
+	text-align: right;
+}
+.menuUsuario .notificaciones
+{
+	display: inline-block;
+	position: relative;
+}
+.menuUsuario .notificaciones .icono
+{
+	width: 50px;
+	height: 50px;
+	background-image: url('../img/iconos/notifications.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.menuUsuario .notificaciones .icono:hover
+{
+	background-image: url('../img/iconos/on_notifications.png');
+	cursor: pointer;
+}
+.menuUsuario .notificaciones .icono .contador
+{
+	position: absolute;
+	min-width: 10px;
+	height: 10px;
+	color: #e9e9e9;
+	background-color: #333;
+	border-radius: 50%;
+	right: 0;
+	bottom: 5px;
+	font-size: 10px;
+	text-align: center;
+	padding: 5px;
+}
+.menuUsuario .notificaciones .listaNotificaciones
+{
+	-webkit-animation: gb__a .2s;
+	-webkit-border-radius: 2px;
+	-webkit-user-select: text;
+	-webkit-animation: gb__a .2s;
+	background-color: #fff;
+	border-color: rgba(0,0,0,.2);
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	color: #333;
+	display: none;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	width: 240px;
+	z-index: 99;
+}
+.menuUsuario .notificaciones .listaNotificaciones .item
+{
+	color: #333;
+	font-size: 11px;
+	padding: 5px 30px 5px 20px;
+	position: relative;
+	text-align: left;
+	border: 1px solid #fff;
+}
+.menuUsuario .notificaciones .listaNotificaciones .item:hover
+{
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.03);
+}
+.menuUsuario .notificaciones .listaNotificaciones .verTodos
+{
+	color: #333;
+	list-style: none;
+	font-size: 13px;
+	padding: 1em;
+	text-align: center;
+	position: relative;
+	padding-right: 40px;
+}
+.menuUsuario .notificaciones .listaNotificaciones .verTodos:hover
+{
+	cursor: pointer;
+	color: #e9e9e9;
+	background: rgba(0,0,0,0.5);
+}
+.menuUsuario .notificaciones .listaNotificaciones .flechita:after 
+{
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #fff;
+	content: "";
+	left: 110px;
+	position: absolute;
+	top: 0;
+}
+.menuUsuario .notificaciones .listaNotificaciones .misNotificaciones
+{
+	border: 1px solid #fff;
+    color: #333;
+    font-size: 11px;
+    list-style: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: scroll; 
+    text-align: center;
+}
+.menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar
+{
+    width: 8px;
+}
+.menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb{
+    background-color: #2980b9;
+    border-radius:10px;
+}
+.menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:hover{
+    background-color: #2980b9;
+    border:1px solid #333;
+}
+.menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:active{
+    background-color: #2980b9;
+    border:1px solid #333;
+}
+.menuUsuario .usuario
+{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	cursor: pointer;
+}
+.menuUsuario .usuario img
+{
+	width: 100%;
+	height: 100%;
+}

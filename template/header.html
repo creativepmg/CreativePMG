@@ -1,0 +1,44 @@
+<header>
+    <a href="/panel"><div class="logo"></div></a>
+    <div class="menuUsuario">
+        <div class="notificaciones">
+            <div id="btn_notificaciones" class="icono">
+                <div class="contador"><?= $conteoNotificaciones ?></div>
+            </div>
+            <div class="listaNotificaciones">
+                <div class="misNotificaciones">
+                    <?php while ($reg=mysql_fetch_array($lis_notificaciones)) {?>
+                        <div class="item">
+                            <div class="descripcion"><?= $reg['DESCRIPCION'] ?></div>
+                        </div>
+                    <?php } ?>
+                </div>
+                <div class="verTodos flechita">Ver Todos</div>
+            </div>
+        </div>
+        <div class="usuario">
+            <img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
+        </div>        
+    </div>
+</header>
+
+<div class="opcionesUsuario">
+    <ul>
+        <li style="display: none;">
+            <a href="settings">CONFIGURACION</a>
+        </li>
+        <li>
+            <a href="querys/salir.php">CERRAR SESIÓN</a>
+        </li>
+    </ul>
+</div>
+
+<div class="menu">
+    <ul>
+    <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+      <li>
+        <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+      </li>
+    <?php } ?>
+    </ul>
+</div>
