@@ -1,2 +1,5 @@
 <?php
-	view('mantenimiento-menus');
+
+	$titulo = 'Mantenimiento Menus';
+
+	view('mantenimiento-menus',  compact('titulo'));

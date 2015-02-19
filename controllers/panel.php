@@ -1,2 +1,5 @@
 <?php
-	view('panel');
+	$titulo = '';
+
+	//Llamando una funcion
+	view('panel', compact('titulo'));

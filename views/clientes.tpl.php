@@ -49,6 +49,8 @@
         <form class="formulario" id="formInsCliente" method="post">
           <label>Nombre</label>
           <input type="text" name="nombre_cliente" class="vaciar">
+          <label>Numero Celular</label>
+          <input type="number" name="numero_celular" class="vaciar">
           <label>Email</label>
           <input type="text" name="email" class="vaciar">
           <input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
@@ -57,9 +59,7 @@
     </div>
     <div class="botonNuevo"></div>  
 
-  <footer>
-    <p>Esandex 2015</p>
-  </footer>
+  <?php require 'template/footer.html' ?>
   <!-- Scripts -->
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/main.js"></script>

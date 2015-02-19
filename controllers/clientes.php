@@ -1,2 +1,5 @@
 <?php
-	view('clientes');
+
+	$titulo = 'Clientes';
+
+	view('clientes', compact('titulo'));
