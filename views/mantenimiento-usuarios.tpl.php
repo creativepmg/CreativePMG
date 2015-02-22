@@ -77,9 +77,7 @@
 
       <div class="botonNuevo"></div>  
     </div>
-  <footer>
-    <p>Esandex 2015</p>
-  </footer>
+  <?php include 'template/footer.html'; ?>
   <!-- Scripts -->
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/main.js"></script>

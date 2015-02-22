@@ -23,11 +23,11 @@
       <div class="tarjeta">
         <div id="idUsuario" style="display: none;"><?= $arrClientes['ID_CLIENTE']; ?></div>
         <div class="titulo"><?= $arrClientes['USER']; ?></div>
-        <div class="imagen">
-          <img src="/img/avatares/<?= $arrClientes['FOTO_CLIENTE']; ?>">
-        </div>
+        
         <div class="detalles">
+          <p class="email"><?= $arrClientes['NOMBRE_CLIENTE']; ?></p>
           <p class="email"><?= $arrClientes['EMAIL_CLIENTE']; ?></p>
+          <p class="email"><?= $arrClientes['NUMERO_CELULAR']; ?></p>
         </div>
         <div class="social"></div>
         <div class="opciones">

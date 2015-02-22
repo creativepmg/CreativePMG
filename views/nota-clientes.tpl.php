@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>	Mantenimiento menus - Esandex</title>
+	<title>	<?php $titulo ?> - CreativePGM</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
@@ -34,20 +34,41 @@
 </head>
 <body>
 	<?php require 'template/header.html'; ?>
-	
-	<h4>Nuevo Servicio</h4>
+	<div class="listaNotas">
+		<?php while ($arrNota=mysql_fetch_array($lis_not_clientes)) {?>
+		<div class="item">
+			<div class="cliente"><?= $arrNota['NOMBRE_CLIENTE'] ?></div>
+			<div class="nota"><?= $arrNota['NOTA'] ?></div>
+		</div>
+		<?php } ?>
+	</div>
+	<!-- NUEVA NOTA -->
 	<div id="respuesta"></div>
-	<form id="nuevoMenu" class="formulario" method="post">
-		<label>Nombre del Servicio</label>
-		<input name="nombre_menu" type="text">
-		<label>Link menu</label>
-		<input name="link" type="text">
-		<input id="botonNuevoMenu" type="submit">
-	</form>
+
+	<div class="popup popNuevoUsuario">
+	<div class="tarjeta nuevoUsuario">
+	  <div class="titulo">NOTA CLIENTE
+	    <div class="cerrar cerrarPopups"></div>
+	  </div>
+	  <form  id="formNotaCliente" class="formulario" method="post">
+	  	<label>Cliente</label>
+	    <select name="id_cliente">
+	    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
+	    		<option value="<?= $arrClientes['ID_CLIENTE'] ?>"><?= $arrClientes['NOMBRE_CLIENTE'] ?></option>
+	    	<?php } ?>
+	    </select>
+	    <label>Nota</label>
+	    <textarea name="nota"></textarea>
+	    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Añadir Nota">
+	  </form>
+	</div>
+	</div>
+	<div class="botonNuevo"></div>  
 	<?php include 'template/footer.html'; ?>
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/analytics.js"></script>
+	
 </body>
 </html>

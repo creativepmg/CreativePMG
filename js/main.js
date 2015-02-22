@@ -9,7 +9,10 @@ function inicio()
 	$('#confirmarCuenta').on('click', confirmarCuenta);
 	$('#actualizarMenusUsuarios').on('click', updUsuario);
 	$('#btnInsCliente').on('click', insCliente);
-	$('#btn_notificaciones').on('click', mostrarNotificaciones)
+	$('#btn_notificaciones').on('click', mostrarNotificaciones);
+	$('#btnNotaCliente').on('click', insOrdenServicio);
+	//$('#btnListo').on('click', updOrdenFinalizada);
+	//$('#btnEditarOrden'),on('click', updOrden);
 
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
@@ -24,6 +27,68 @@ function funcando()
 function mostrarNotificaciones()
 {
 	$('.listaNotificaciones').slideToggle();
+}
+function verEditar(obj)
+{
+	var disparador = obj;
+	$(disparador).parents('.item').children('.editarOrden').slideToggle();
+	$(disparador).parents('.item').children('.detalle').slideToggle();
+}
+function updOrden(obj)
+{
+	console.log('Orden de servicio editada');
+	var url = "/querys/updOrden.php";
+	var disparador = obj;
+	var formulario = $(disparador).parents('#frmEditarOrden');
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $(formulario).serialize(),
+		success: function(data){
+			$("#respuesta").html(data);
+			setTimeout ("location.reload()", 3000);
+			}
+	});
+	$('.vaciar').val('');
+	cerrarPopups();
+	return false;
+}
+function updOrdenFinalizada(obj)
+{
+	var url = "/querys/updOrdenFinalizada.php";
+	var disparador = obj;
+	var formulario = $(disparador).parents('.item').children('#frmFinalizado');
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $(formulario).serialize(),
+		success: function(data){
+			$("#respuesta").html(data);
+
+			}
+	});
+	$('.vaciar').val('');
+	cerrarPopups();
+	setTimeout ("location.reload()", 3000);
+	return false;
+}
+function insOrdenServicio()
+{
+	var url = "/querys/insOrdenServicio.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formNotaCliente").serialize(),
+		success: function(data){
+			$("#respuesta").html(data);
+
+			}
+	});
+	$('.vaciar').val('');
+	cerrarPopups();
+	setTimeout ("location.reload()", 3000);
+	return false;
 }
 function insCliente()
 {
@@ -40,6 +105,7 @@ function insCliente()
 	});
 	$('.vaciar').val('');
 	cerrarPopups();
+	setTimeout ("location.reload()", 3000);
 	return false;
 }
 function updUsuario()

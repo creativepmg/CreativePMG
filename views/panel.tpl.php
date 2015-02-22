@@ -41,7 +41,7 @@
 	
 	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
 
-	<div class="deuda">
+	<!--<div class="deuda">
         <p>Tu estado de cuenta es</p>   
         <div class="montoDeuda"> S/. <span class="monto"> <?= totalDeudaUsuario($email) ?> </span></div>
     </div>
@@ -54,10 +54,57 @@
           <div class="monto">S/. <?= $reg['MONTO']  ?></div>
         </div>
       <?php } ?>
-    </div>
-    <footer>
-		<p>Esandex 2015</p>
-	</footer>
+    </div>-->
+
+    <!-- Lista de servicios -->
+    <div class="listaNotas">
+		<?php while ($arrServi=mysql_fetch_array($lis_orden_serv)) {?>
+		<div class="item">
+			<div class="id_orden_servicio">Numero de Orden: <?= $arrServi['ID_ORDEN_SERVICIO'] ?></div>
+		 	<?php $date = date_create($arrServi['FECHA_REGISTRO_ORDEN']) ?> 
+		 	<div class="fecha"><?= date_format($date, 'd M Y') ?></div>     
+			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
+			<div class="nota"><?= $arrServi['DETALLE'] ?></div>
+			<form id="frmFinalizado" method="post">
+				<input name="id_orden_servicio" type="hidden" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
+			</form>
+			<div class="opcionesItem">
+				<div class="listo" id="btnListo" title="Marcar como terminado" onclick="updOrdenFinalizada(this);"></div>
+			</div>
+		</div>
+		<?php } ?>
+	</div>
+
+	<!-- NUEVA SERVICIO -->
+	<div id="respuesta"></div>
+
+	<div class="popup popNuevoUsuario">
+		<div class="tarjeta nuevoUsuario">
+		  <div class="titulo">NOTA CLIENTE
+		    <div class="cerrar cerrarPopups"></div>
+		  </div>
+		  <form  id="formNotaCliente" class="formulario" method="post">
+		  	<label>Cliente</label>
+		    <select name="id_cliente">
+		    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
+		    		<option value="<?= $arrClientes['ID_CLIENTE'] ?>"><?= $arrClientes['NOMBRE_CLIENTE'] ?></option>
+		    	<?php } ?>
+		    </select>
+		    <label>Detalle</label>
+		    <textarea name="detalle"></textarea>
+		    <label>A cuenta</label>
+		    <input name="a_cuenta" type="number" >
+		    <label>Monto Total</label>
+		    <input name="monto_total" type="number" >
+		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Añadir Nota">
+		  </form>
+		</div>
+	</div>
+
+	<div class="botonNuevo"></div>  
+
+	<!-- Footer -->
+   	<?php require 'template/footer.html'  ?>
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>

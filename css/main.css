@@ -5,8 +5,7 @@
  * #ecf0f1 Nubes 		CreativePMG
  */
 body 
-{ 
-	
+{ 	
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	text-align: center;
@@ -22,6 +21,7 @@ footer
 	color: #e9e9e9;
 	height: 50px;
 	border-top: 1px inset #ededed;
+	margin-top: 3em;
 }
 footer p
 {
@@ -457,7 +457,9 @@ header .logo
 .formulario input[type="text"],
 .formulario input[type="password"],
 .formulario input[type="email"],
-.formulario input[type="number"]
+.formulario input[type="number"],
+.formulario select,
+.formulario textarea
 {
 	border-radius: 5px;
 	border: 2px solid #2980b9;
@@ -466,7 +468,9 @@ header .logo
 	padding-left: 10px;
 	width: 95%;
 	margin: 0 auto;
+	box-sizing: border-box;
 }
+.btnEditarOrden,
 .formulario input[type="submit"]
 {
 	background-color: #2980b9;
@@ -478,6 +482,9 @@ header .logo
 	width: 100%;
 	color: #e9e9e9;
 	font-weight: bolder;
+	line-height: 46px;
+	text-align: center;
+	cursor: pointer;
 }
 .formulario .botonFormulario:hover
 {
@@ -491,6 +498,75 @@ header .logo
 	background-repeat: no-repeat;
 	width: 300px;
 	height: 135px;
+}
+.listaNotas
+{
+
+}
+.listaNotas .item
+{
+	max-width: 500px;
+	border-left: 5px solid #2980b9;
+	background: #fff;
+	margin: 0 auto;
+	border-bottom: 2px solid #2980b9;
+	text-align: left;
+	position: relative;
+	padding: 10px 70px 10px 10px;
+}
+.listaNotas .item .editarOrden
+{
+	display: none;
+}
+.listaNotas .item .cliente
+{
+	font-weight: bolder;
+}
+.listaNotas .item .nota
+{
+	padding-left: 25px;
+}
+.listaNotas .item .opcionesItem
+{
+	position: absolute;
+	right: 5px;
+	top: 3px;
+}
+.listaNotas .item .areaEditable
+{
+	border-radius: 5px;
+	display: block;
+	border: 1px  solid #2980b9;
+	width: 100%;
+	height: 5em;
+}
+.listaNotas .item .opcionesItem .listo
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url('../img/iconos/done.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.listaNotas .item .opcionesItem .listo:hover
+{
+	background-image: url('../img/iconos/done-hover.png');
+	cursor: pointer;
+}
+.listaNotas .item .opcionesItem .editar
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url('../img/iconos/edit.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.listaNotas .item .opcionesItem .editar:hover
+{
+	background-image: url('../img/iconos/edit-hover.png');
+	cursor: pointer;
 }
 .listaDeudas
 {
@@ -564,13 +640,15 @@ header .logo
 }
 .nuevoUsuario 
 {
-  	position: absolute;
-	left: 50%;
-	top: 50%;
+	bottom: 0;
+	height: 380px;
+	left: 0;
+	margin: auto!important;
+	min-height: 180px;
+	right: 0;
+	top: 0;
 	width: 250px;
-	height: 180px;
-	margin-left: -125px!important;
-	margin-top: -90px!important;
+  	position: absolute;
 }
 .nuevoCliente 
 {
