@@ -33,6 +33,7 @@ function verEditar(obj)
 	var disparador = obj;
 	$(disparador).parents('.item').children('.editarOrden').slideToggle();
 	$(disparador).parents('.item').children('.detalle').slideToggle();
+	$(disparador).parents('.item').children('.montos').slideToggle();
 }
 function updOrden(obj)
 {

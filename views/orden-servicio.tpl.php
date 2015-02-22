@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>	<?php $titulo ?> - CreativePGM</title>
+	<title>	<?= $titulo ?> - CreativePGM</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
@@ -35,19 +35,54 @@
 <body>
 	<?php require 'template/header.html'; ?>
 	<div class="listaNotas">
-		<?php while ($arrNota=mysql_fetch_array($lis_not_clientes)) {?>
+		<?php while ($arrServi=mysql_fetch_array($lis_not_clientes)) {?>
 		<div class="item">
-			<div class="id_orden_servicio">Numero de Orden: <?= $arrNota['ID_ORDEN_SERVICIO'] ?></div>
-			<div class="cliente"><?= $arrNota['NOMBRE_CLIENTE'] ?></div>
-			<div class="detalle"><?= $arrNota['DETALLE'] ?></div>
+			<div class="id_orden_servicio">Numero de Orden: <?= $arrServi['ID_ORDEN_SERVICIO'] ?></div>
+			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
+			<div class="detalle"><?= $arrServi['DETALLE'] ?></div>
 			<div class="opcionesItem">
 				<div class="editar" title="Marcar como terminado" onclick="verEditar(this);"></div>
 			</div>
 			<form id="frmEditarOrden" class="editarOrden" method="post">
-				<input type="hidden" name="id_orden_servicio" value="<?= $arrNota['ID_ORDEN_SERVICIO'] ?>">
-				<textarea class="areaEditable" name="detalle"> <?= $arrNota['DETALLE'] ?></textarea>
+				<input type="hidden" name="id_orden_servicio" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
+				<textarea class="areaEditable" name="detalle"> <?= $arrServi['DETALLE'] ?></textarea>
+				<div class="montos">
+				<?php  
+					$acuenta = $arrServi['A_CUENTA'];
+					$total = $arrServi['TOTAL'];
+					$deuda = $total - $acuenta;
+				?>
+				<div class="a_cuenta">
+					<p>A cuenta</p>
+					<input name="a_cuenta" type="number" value="<?= $acuenta ?>">
+				</div>
+				<div class="monto_total">
+					<p>Monto Total</p>
+					<input name="monto_total" type="number" value="<?= $total?>">
+				</div>
+			</div>
 				<div class="btnEditarOrden" onclick="updOrden(this)">Guardar</div>
 			</form>
+			<div class="montos">
+				<?php  
+					$acuenta = $arrServi['A_CUENTA'];
+					$total = $arrServi['TOTAL'];
+					$deuda = $total - $acuenta;
+				?>
+				<div class="a_cuenta">
+					<p>A cuenta</p>
+					<p><?= $acuenta." USD" ?></p>
+				</div>
+				
+				<div class="debe">
+					<p>Debe</p>
+					<p><?= number_format($deuda, 2)." USD" ?></p>
+				</div>
+				<div class="monto_total">
+					<p>Monto Total</p>
+					<p><?= $total." USD" ?></p>
+				</div>
+			</div>
 		</div>
 		<?php } ?>
 	</div>
