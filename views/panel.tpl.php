@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Panel - Esandex</title>
+	<title>Panel - CreativePMG</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
@@ -64,12 +64,32 @@
 		 	<?php $date = date_create($arrServi['FECHA_REGISTRO_ORDEN']) ?> 
 		 	<div class="fecha"><?= date_format($date, 'd M Y') ?></div>     
 			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
-			<div class="nota"><?= $arrServi['DETALLE'] ?></div>
+			<div class="detalle"><?= $arrServi['DETALLE'] ?></div>
 			<form id="frmFinalizado" method="post">
 				<input name="id_orden_servicio" type="hidden" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
 			</form>
 			<div class="opcionesItem">
 				<div class="listo" id="btnListo" title="Marcar como terminado" onclick="updOrdenFinalizada(this);"></div>
+			</div>
+			<div class="montos">
+				<?php  
+					$acuenta = $arrServi['A_CUENTA'];
+					$total = $arrServi['TOTAL'];
+					$deuda = $total - $acuenta;
+				?>
+				<div class="a_cuenta">
+					<p>A cuenta</p>
+					<p><?= $acuenta." USD" ?></p>
+				</div>
+				
+				<div class="debe">
+					<p>Debe</p>
+					<p><?= number_format($deuda, 2)." USD" ?></p>
+				</div>
+				<div class="monto_total">
+					<p>Monto Total</p>
+					<p><?= $total." USD" ?></p>
+				</div>
 			</div>
 		</div>
 		<?php } ?>

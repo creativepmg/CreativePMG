@@ -522,9 +522,31 @@ header .logo
 {
 	font-weight: bolder;
 }
-.listaNotas .item .nota
+.listaNotas .item .detalle
 {
 	padding-left: 25px;
+}
+.listaNotas .item .montos
+{
+	margin-top: 10px;
+}
+.listaNotas .item .montos div
+{
+	display: inline-block;
+	width: 100px;
+	padding: 5px;
+	text-align: center;
+	background-color: #efefef;
+}
+.listaNotas .item .montos div p:first-child
+{
+	font-weight: bolder;
+}
+.listaNotas .item .montos div input[type="number"]
+{
+	width: 100px;
+	border: 1px solid #ccc;
+	text-align: center;
 }
 .listaNotas .item .opcionesItem
 {
