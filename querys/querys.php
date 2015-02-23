@@ -7,6 +7,7 @@
 	//Variables de usuario
 		$email = $arrayUsuario['EMAIL'];
 		$userId = $arrayUsuario['ID_USUARIO'];
+		$userCategori = $arrayUsuario['CATEGORIA'];
 	//Suma de totales que adeudan los usuarios
 	function totalDeudaUsuario($email)
 	{
@@ -58,7 +59,9 @@
 	$lis_orden_serv		= mysql_query("SELECT * FROM orden_servicio AS A
 								   	   LEFT JOIN clientes AS B
 								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   	   WHERE A.ESTADO = '0'
+								   	   WHERE 	A.ESTADO 		= '0'
+								   	   	AND    ($userCategori 	= '1'
+								   	   	OR 		A.ID_USUARIO 	= $userId)
 								   	   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
 					   or die("Error en la consulta.." . mysql_error($con));
 	$lis_notificaciones	= mysql_query("SELECT * FROM notificaciones 

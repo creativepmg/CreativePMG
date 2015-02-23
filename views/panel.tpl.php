@@ -94,13 +94,14 @@
 		</div>
 		<?php } ?>
 	</div>
+	
 
-	<!-- NUEVA SERVICIO -->
 	<div id="respuesta"></div>
 
+	<!-- NUEVA SERVICIO -->
 	<div class="popup popNuevoUsuario">
 		<div class="tarjeta nuevoUsuario">
-		  <div class="titulo">NOTA CLIENTE
+		  <div class="titulo">SERVICIO CLIENTE
 		    <div class="cerrar cerrarPopups"></div>
 		  </div>
 		  <form  id="formNotaCliente" class="formulario" method="post">
@@ -121,7 +122,27 @@
 		</div>
 	</div>
 
-	<div class="botonNuevo"></div>  
+<!-- NUEVA Pre orden -->
+	<div class="popup nuevaPreOrden">
+		<div class="tarjeta nuevoUsuario">
+		  <div class="titulo">PRE SERVICIO
+		    <div class="cerrar cerrarPopups"></div>
+		  </div>
+		  <form  id="frmPreOrden" class="formulario" method="post">
+		  	<label>Cliente</label>
+		    <input type="text" name="nombre_cliente">
+		    <label>Numero</label>
+		    <input type="number" name="numero_cliente">
+		    <label>Detalle</label>
+		    <textarea name="detalle"></textarea>
+		    
+		    <input class="botonFormulario" id="btnPreOrden" type="submit" value="Nueva Pre Orden">
+		  </form>
+		</div>
+	</div>
+
+	<div id="nuevoServicio" class="botonNuevo"></div>  
+	<div id="nuevoPreServicio" class="botonNuevo"></div>  
 
 	<!-- Footer -->
    	<?php require 'template/footer.html'  ?>
@@ -143,7 +164,19 @@
 	          console.log('parece tener menus');          
 	        }
 	      }
+	    function tipoUsuario()
+	    {
+	    	var userCategori = <?= $userCategori ?>;
+	    	console.log('La categoria del usuario es ' + userCategori);
+	    	if (userCategori == '2') {
+	    		$('#nuevoServicio').css('display', 'none');
+	    	};
+	    	if (userCategori == '1') {
+	    		$('#nuevoPreServicio').css('display', 'none');
+	    	};
+	    }
       pepe();
+      tipoUsuario();
     </script>
 </body>
 </html>

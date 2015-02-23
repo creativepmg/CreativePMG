@@ -464,9 +464,9 @@ header .logo
 	border-radius: 5px;
 	border: 2px solid #2980b9;
 	display: block;
-	height: 40px;
+	height: 45px;
 	padding-left: 10px;
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
@@ -793,9 +793,9 @@ header .logo
 	border-radius: 5px;
 	border: 2px solid #2980b9;
 	display: block;
-	height: 40px;
+	height: 45px;
 	padding-left: 10px;
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
 }
 .tarjeta .formulario label

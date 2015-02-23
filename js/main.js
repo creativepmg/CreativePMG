@@ -11,18 +11,24 @@ function inicio()
 	$('#btnInsCliente').on('click', insCliente);
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
 	$('#btnNotaCliente').on('click', insOrdenServicio);
+	$('#nuevoServicio').on('click', nuevoUsuario);
+	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	//$('#btnListo').on('click', updOrdenFinalizada);
 	//$('#btnEditarOrden'),on('click', updOrden);
 
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
-	$('.botonNuevo').on('click', nuevoUsuario);
 	$('.cerrarPopups').on('click', cerrarPopups);
 }
 function funcando()
 {
 	alert('estoy funcando');
+}
+function nuevoPreServicio()
+{
+	console.log('Nuevo Usuario')
+	$('.nuevaPreOrden').slideToggle();
 }
 function mostrarNotificaciones()
 {
@@ -93,7 +99,7 @@ function insOrdenServicio()
 }
 function insCliente()
 {
-	var url = "/querys/insCliente.php";
+	var url = "../querys/insCliente.php";
 
 	$.ajax({
 		type: "POST",
@@ -106,7 +112,7 @@ function insCliente()
 	});
 	$('.vaciar').val('');
 	cerrarPopups();
-	setTimeout ("location.reload()", 3000);
+	//setTimeout ("location.reload()", 3000);
 	return false;
 }
 function updUsuario()

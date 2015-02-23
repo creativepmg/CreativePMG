@@ -12,7 +12,7 @@
 	<style type="text/css">
 		body
 		{
-			border-top: 5px #4B7F00 solid;
+			border-top: 5px #2980b9 solid;
 		}
 	</style>
 	<!-- Scripts -->
