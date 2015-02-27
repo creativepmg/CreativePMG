@@ -90,8 +90,8 @@
 	<div id="respuesta"></div>
 
 	<div class="popup popNuevoUsuario">
-		<div class="tarjeta nuevoUsuario">
-		  <div class="titulo">NOTA CLIENTE
+		<div class="tarjeta nuevoServicio">
+		  <div class="titulo">NUEVA ORDEN DE SERVICIO
 		    <div class="cerrar cerrarPopups"></div>
 		  </div>
 		  <form  id="formNotaCliente" class="formulario" method="post">
@@ -111,7 +111,7 @@
 		  </form>
 		</div>
 	</div>
-	<div class="botonNuevo"></div>  
+	<div id="nuevoServicio" class="botonNuevo"></div>  
 	<?php include 'template/footer.html'; ?>
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery.js"></script>

@@ -11,9 +11,10 @@ function inicio()
 	$('#btnInsCliente').on('click', insCliente);
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
 	$('#btnNotaCliente').on('click', insOrdenServicio);
-	$('#nuevoServicio').on('click', nuevoUsuario);
+	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
-	//$('#btnListo').on('click', updOrdenFinalizada);
+	$('#btnPreOrden').on('click', insPreOrden);
+	//$('#btnListo').on('click', updOrdenFinalizada); 
 	//$('#btnEditarOrden'),on('click', updOrden);
 
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
@@ -24,6 +25,24 @@ function inicio()
 function funcando()
 {
 	alert('estoy funcando');
+}
+function insPreOrden()
+{
+	console.log('Orden de servicio editada');
+	var url = "../querys/insPreOrden.php";
+	var formulario = $('#frmPreOrden');
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $(formulario).serialize(),
+		success: function(data){
+			$("#respuesta").html(data);
+			setTimeout ("location.reload()", 3000);
+			}
+	});
+	$('.vaciar').val('');
+	cerrarPopups();
+	return false;
 }
 function nuevoPreServicio()
 {

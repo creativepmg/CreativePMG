@@ -63,7 +63,7 @@
 								   	   	AND    ($userCategori 	= '1'
 								   	   	OR 		A.ID_USUARIO 	= $userId)
 								   	   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta.." . mysql_error($con));
+					   or die("Error en la consulta lis orden serv .." . mysql_error($con));
 	$lis_notificaciones	= mysql_query("SELECT * FROM notificaciones 
 									   WHERE ID_RECEPTOR = '$userId'
 								  	   ORDER BY FECHA_REGISTRO DESC") 

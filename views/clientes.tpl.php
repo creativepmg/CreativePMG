@@ -36,14 +36,13 @@
       </div>
     <?php } ?>
 
-    <div class="botonNuevo"></div>
     <div id="respuesta"></div>
    
     <!-- Nuevo cliente -->
     <div id="respuestaRegister"></div>
     <div class="popup popNuevoUsuario">
       <div class="tarjeta nuevoCliente">
-        <div class="titulo">NUEVO USUARIO
+        <div class="titulo">NUEVO CLIENTE
           <div class="cerrar cerrarPopups"></div>
         </div>
         <form class="formulario" id="formInsCliente" method="post">
@@ -57,7 +56,7 @@
         </form>
       </div>
     </div>
-    <div class="botonNuevo"></div>  
+    <div id="nuevoCliente" class="botonNuevo"></div>
 
   <?php require 'template/footer.html' ?>
   <!-- Scripts -->

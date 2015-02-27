@@ -36,7 +36,7 @@
           </div>
         <?php } ?>
       </div>
-      <div class="botonNuevo"></div>
+      
       <div id="respuestaUsuarioMenu"></div>
        <!-- Acceso -->
       <div class="popup popMenus" style="display: none;">
@@ -75,7 +75,7 @@
         </div>
       </div>
 
-      <div class="botonNuevo"></div>  
+      <div id="nuevoUsuario" class="botonNuevo"></div>  
     </div>
   <?php include 'template/footer.html'; ?>
   <!-- Scripts -->

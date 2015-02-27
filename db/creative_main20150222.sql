@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-02-2015 a las 22:04:20
+-- Tiempo de generación: 22-02-2015 a las 13:22:27
 -- Versión del servidor: 5.5.42-cll
 -- Versión de PHP: 5.4.23
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `ID_USUARIO` int(9) NOT NULL,
   `FECHA_REGISTRO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID_CLIENTE`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -47,13 +47,7 @@ INSERT INTO `clientes` (`ID_CLIENTE`, `NOMBRE_CLIENTE`, `NUMERO_CELULAR`, `EMAIL
 (3, 'bernardo gobines', '3025690969', 'gobines20bernardo@gmail.com', 'user.png', 0, '2015-02-19 23:20:11'),
 (4, 'AXEL velasquez', '4107257005', 'no tiene', 'user.png', 0, '2015-02-20 22:20:04'),
 (5, 'carlos alfaro', '3028535262', 'carlosmanolo8@hotmail.com', 'user.png', 0, '2015-02-20 22:36:13'),
-(6, 'jose ramirez', '3029438262', 'no tieneee', 'user.png', 0, '2015-02-21 20:13:12'),
-(7, 'mario giovanny', '3027273339', 'NULL', 'user.png', 0, '2015-02-23 23:24:10'),
-(8, 'arturo jimenez', '3028645327', 'NULL', 'user.png', 0, '2015-02-24 00:34:30'),
-(9, 'omar ortiz', '3022602529', 'NULL', 'user.png', 0, '2015-02-24 16:36:52'),
-(10, 'antonio mejia ambrosio', '3022604472', 'NULL', 'user.png', 0, '2015-02-24 22:20:08'),
-(11, 'jose maldonado', '4104639800', 'NULL', 'user.png', 0, '2015-02-24 22:40:52'),
-(12, 'domingos lorenzo', '3028589682', 'NULL', 'user.png', 0, '2015-02-25 01:14:17');
+(6, 'jose ramirez', '3029438262', 'no tieneee', 'user.png', 0, '2015-02-21 20:13:12');
 
 -- --------------------------------------------------------
 
@@ -157,31 +151,23 @@ CREATE TABLE IF NOT EXISTS `orden_servicio` (
   `ID_ORDEN_SERVICIO` int(9) NOT NULL AUTO_INCREMENT,
   `ID_CLIENTE` int(9) NOT NULL,
   `DETALLE` text NOT NULL,
-  `REFERENCIA` varchar(500) NOT NULL,
   `A_CUENTA` decimal(10,2) NOT NULL,
   `TOTAL` decimal(10,2) NOT NULL,
   `ESTADO` int(1) NOT NULL,
-  `ID_USUARIO` int(9) NOT NULL,
   `FECHA_REGISTRO_ORDEN` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID_ORDEN_SERVICIO`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `orden_servicio`
 --
 
-INSERT INTO `orden_servicio` (`ID_ORDEN_SERVICIO`, `ID_CLIENTE`, `DETALLE`, `REFERENCIA`, `A_CUENTA`, `TOTAL`, `ESTADO`, `ID_USUARIO`, `FECHA_REGISTRO_ORDEN`) VALUES
-(1, 1, '       El mejor de mis clientes, ahora me debes 15horas\r\nAhahhja ctvda -_-', '', '0.00', '75.00', 1, 0, '2015-02-19 22:11:39'),
-(3, 3, ' creacion de cuenta gmail y restauracion de telefono 30$ y correo es \r\ngobines20bernardo@gmail.com\r\npass : bernardo20', '', '30.00', '30.00', 1, 0, '2015-02-19 23:21:23'),
-(4, 4, ' pieza de galaxy s2 ! dejo 20$ 21 dar respuesta de llegada de repuesto ! debe 30 $', '', '20.00', '50.00', 0, 0, '2015-02-20 22:20:33'),
-(5, 5, ' reseteo de iphone 4 ! \r\nverizon 25 $ entrega de inmediata ! (cerrado)', '', '25.00', '25.00', 1, 0, '2015-02-20 22:36:41'),
-(9, 7, 'Unlock iphone 5c emei : 358540051281957\r\nfecha de entrega \r\nProcess Time3-7 Business Days \r\ninicia el 23 de febrero', '', '50.00', '115.00', 0, 0, '2015-02-23 23:25:25'),
-(8, 6, '  Reparacion de charguing port iPhone 4', '', '20.00', '40.00', 1, 0, '2015-02-21 20:13:44'),
-(10, 8, 'Cambio de bateria Iphone 4s', '', '35.00', '35.00', 1, 0, '2015-02-24 00:34:44'),
-(11, 9, ' Cambio de Charguing port Galaxy s4 active i537 ', '', '45.00', '45.00', 1, 0, '2015-02-24 16:37:52'),
-(12, 10, 'venta de baterry galaxy s5', '', '45.00', '45.00', 1, 0, '2015-02-24 22:20:29'),
-(13, 11, ' dejo iphone 4s page plus entregar 26 se va la senial aun nose da respuesta', '', '0.00', '20.00', 0, 0, '2015-02-24 22:41:35'),
-(14, 12, 'cambio de ranura del monitor Tarjeta ! VGA', '', '60.00', '60.00', 0, 0, '2015-02-25 01:14:44');
+INSERT INTO `orden_servicio` (`ID_ORDEN_SERVICIO`, `ID_CLIENTE`, `DETALLE`, `A_CUENTA`, `TOTAL`, `ESTADO`, `FECHA_REGISTRO_ORDEN`) VALUES
+(1, 1, '    El mejor de mis clientes, ahora me debes 12 horas\r\nAhahhja ctvda -_-', '0.00', '60.00', 1, '2015-02-19 22:11:39'),
+(3, 3, ' creacion de cuenta gmail y restauracion de telefono 30$ y correo es \r\ngobines20bernardo@gmail.com\r\npass : bernardo20', '30.00', '30.00', 1, '2015-02-19 23:21:23'),
+(4, 4, ' pieza de galaxy s2 ! dejo 20$ 21 dar respuesta de llegada de repuesto ! debe 30 $', '20.00', '50.00', 0, '2015-02-20 22:20:33'),
+(5, 5, ' reseteo de iphone 4 ! \r\nverizon 25 $ entrega de inmediata ! (cerrado)', '25.00', '25.00', 1, '2015-02-20 22:36:41'),
+(8, 6, '  Reparacion de charguing port iPhone 4', '20.00', '40.00', 1, '2015-02-21 20:13:44');
 
 -- --------------------------------------------------------
 
@@ -195,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `pre_registro` (
   `CONFIRMADO` int(1) NOT NULL,
   `FECHA_RAGISTRO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `pre_registro`
@@ -203,8 +189,7 @@ CREATE TABLE IF NOT EXISTS `pre_registro` (
 
 INSERT INTO `pre_registro` (`ID`, `EMAIL`, `CONFIRMADO`, `FECHA_RAGISTRO`) VALUES
 (1, 'burngeek8@gmail.com', 1, '2015-02-16 03:51:44'),
-(2, 'phillipmg.15@gmail.com', 1, '2015-02-16 04:31:13'),
-(3, 'slopez@creativepmg.com', 0, '2015-02-25 01:36:25');
+(2, 'phillipmg.15@gmail.com', 1, '2015-02-16 04:31:13');
 
 -- --------------------------------------------------------
 
@@ -244,8 +229,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID_USUARIO`, `EMAIL`, `USER`, `PASS`, `AVATAR_USUARIO`, `CATEGORIA`, `FECHA_REGISTRO`) VALUES
-(1, 'burngeek8@gmail.com', 'burngeek8', 'w8uiq9da', 'user.png', 1, '2015-02-16 03:54:03'),
-(2, 'phillipmg.15@gmail.com', 'filimg017', 'phillip1707', 'user.png', 1, '2015-02-16 04:32:03');
+(1, 'burngeek8@gmail.com', 'burngeek8', 'w8uiq9da', 'user.png', 2, '2015-02-16 03:54:03'),
+(2, 'phillipmg.15@gmail.com', 'filimg017', 'phillip1707', 'user.png', 2, '2015-02-16 04:32:03');
 
 -- --------------------------------------------------------
 
@@ -274,27 +259,6 @@ INSERT INTO `usuario_menu` (`ID`, `ID_USUARIO`, `ID_MENU`) VALUES
 (35, 2, 3),
 (28, 1, 1),
 (34, 2, 5);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario_tipo`
---
-
-CREATE TABLE IF NOT EXISTS `usuario_tipo` (
-  `ID_TIPO` int(9) NOT NULL AUTO_INCREMENT,
-  `DESCRIPCION` varchar(250) NOT NULL,
-  `FECHA_REGISTRO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`ID_TIPO`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Volcado de datos para la tabla `usuario_tipo`
---
-
-INSERT INTO `usuario_tipo` (`ID_TIPO`, `DESCRIPCION`, `FECHA_REGISTRO`) VALUES
-(1, 'ADMINISTRADOR', '2015-02-23 00:18:34'),
-(2, 'USUARIO', '2015-02-23 00:18:34');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

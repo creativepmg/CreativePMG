@@ -100,7 +100,7 @@
 
 	<!-- NUEVA SERVICIO -->
 	<div class="popup popNuevoUsuario">
-		<div class="tarjeta nuevoUsuario">
+		<div class="tarjeta nuevoServicio">
 		  <div class="titulo">SERVICIO CLIENTE
 		    <div class="cerrar cerrarPopups"></div>
 		  </div>
@@ -111,6 +111,7 @@
 		    		<option value="<?= $arrClientes['ID_CLIENTE'] ?>"><?= $arrClientes['NOMBRE_CLIENTE'] ?></option>
 		    	<?php } ?>
 		    </select>
+		    <div class="btn_nuevo"></div>
 		    <label>Detalle</label>
 		    <textarea name="detalle"></textarea>
 		    <label>A cuenta</label>
@@ -122,20 +123,19 @@
 		</div>
 	</div>
 
-<!-- NUEVA Pre orden -->
+<!-- nueva Pre orden -->
 	<div class="popup nuevaPreOrden">
-		<div class="tarjeta nuevoUsuario">
+		<div class="tarjeta newPreOrder">
 		  <div class="titulo">PRE SERVICIO
 		    <div class="cerrar cerrarPopups"></div>
 		  </div>
 		  <form  id="frmPreOrden" class="formulario" method="post">
 		  	<label>Cliente</label>
-		    <input type="text" name="nombre_cliente">
+		    <input type="text" class="vaciar" name="nombre_cliente">
 		    <label>Numero</label>
-		    <input type="number" name="numero_cliente">
+		    <input type="number" class="vaciar" name="numero_celular">
 		    <label>Detalle</label>
-		    <textarea name="detalle"></textarea>
-		    
+		    <textarea name="detalle" class="vaciar"></textarea>		    
 		    <input class="botonFormulario" id="btnPreOrden" type="submit" value="Nueva Pre Orden">
 		  </form>
 		</div>
