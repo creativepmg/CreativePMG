@@ -1,39 +1,5 @@
-<?php 
-	require 'querys/control.php';
-	require 'querys/conexion.php';
-	require 'querys/querys.php';
-?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<title>	<?= $titulo ?> - CreativePGM</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="HandheldFriendly" content="true">
-	 <!-- Hojas de estilo -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
-	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<style type="text/css">
-	    body
-	    {
-	      border-top: 0!important;          
-	    }
-	    #respuestaUbicacion
-	    {
-	        position: fixed;
-	        width: 100%;
-	        background: #e9e9e9;
-	        color: #333;
-	        line-height: 25px;
-	        height: 25px;
-	        font-size: 15px;
-	        bottom: 0; 
-	    }
-	</style>
-</head>
-<body>
-	<?php require 'template/header.html'; ?>
+<?php require 'template/inicio.php'; ?>
+
 	<div class="listaNotas">
 		<?php while ($arrServi=mysql_fetch_array($lis_not_clientes)) {?>
 		<div class="item">
@@ -96,11 +62,10 @@
 		  </div>
 		  <form  id="formNotaCliente" class="formulario" method="post">
 		  	<label>Cliente</label>
-		    <select name="id_cliente">
-		    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
-		    		<option value="<?= $arrClientes['ID_CLIENTE'] ?>"><?= $arrClientes['NOMBRE_CLIENTE'] ?></option>
-		    	<?php } ?>
-		    </select>
+		  	<input id="id_cliente" name="id_cliente" type="hidden" >
+		  	<input id="nombre_cliente" type="text" disabled style="width: 80%; display: inline-block">
+		  	<div class="btn_cliente" onclick="guardadoLocal();"></div>
+		   
 		    <label>Detalle</label>
 		    <textarea name="detalle"></textarea>
 		    <label>A cuenta</label>
@@ -111,12 +76,33 @@
 		  </form>
 		</div>
 	</div>
+
+
+	<!--  -->
+	<div class="cuadro_clientes">
+		<div class="encabezado">
+			<p class="titulo">CLIENTES</p>
+			<div class="cerrar"></div>
+		</div>
+		<div class="listaClientes">
+			 
+		    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
+		    		<div class="item" onclick="guardadoLocal(this);">
+						<div class="avatar">
+							<img src="">
+						</div>
+						<div class="descripcion">
+							<p id="id_cliente" class="id_cliente"><?= $arrClientes['ID_CLIENTE'] ?></p>
+							<p id="nombre_cliente"><?= $arrClientes['NOMBRE_CLIENTE'] ?></p>
+						</div>
+					</div>
+		    
+		    	<?php } ?>
+		</div>
+	</div>
+	<!--  -->
+
+
 	<div id="nuevoServicio" class="botonNuevo"></div>  
-	<?php include 'template/footer.html'; ?>
-	<!-- Scripts -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/analytics.js"></script>
 	
-</body>
-</html>
+<?php require 'template/fin.php'; ?>

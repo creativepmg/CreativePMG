@@ -17,7 +17,7 @@ function inicio()
 	//$('#btnListo').on('click', updOrdenFinalizada); 
 	//$('#btnEditarOrden'),on('click', updOrden);
 
-	$('.usuario img').on('click', mostrarOpcionesUsuario);
+	$('.usuario').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
 	$('.cerrarPopups').on('click', cerrarPopups);
@@ -25,6 +25,20 @@ function inicio()
 function funcando()
 {
 	alert('estoy funcando');
+}
+function guardadoLocal(obj)
+{	
+	var disparador = obj;
+	var id_cliente = $(disparador).children('.descripcion').children('#id_cliente').text()
+	var nombre_cliente = $(disparador).children('.descripcion').children('#nombre_cliente').text()
+	console.log('deberia llenar sessionStorage');
+	sessionStorage.setItem("nombre_cliente", nombre_cliente);
+	sessionStorage.setItem("id_cliente", id_cliente);
+	$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+	$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("nombre_cliente"));
+	$('.cuadro_clientes').slideToggle();
+	nuevoUsuario();
+
 }
 function insPreOrden()
 {
@@ -46,7 +60,7 @@ function insPreOrden()
 }
 function nuevoPreServicio()
 {
-	console.log('Nuevo Usuario')
+	console.log('Nuevo Pre servicio')
 	$('.nuevaPreOrden').slideToggle();
 }
 function mostrarNotificaciones()

@@ -1,4 +1,42 @@
-<header>
+<?php 
+	require 'querys/control.php';
+	require 'querys/conexion.php';
+	require 'querys/querys.php';
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> <?= $titulo ?> - CreativePMG</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="HandheldFriendly" content="true">
+	 <!-- Hojas de estilo -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<style type="text/css">
+	    body
+	    {
+	      border-top: 0!important;          
+	    }
+	    #respuestaUbicacion
+	    {
+	        position: fixed;
+	        width: 100%;
+	        background: #e9e9e9;
+	        color: #333;
+	        line-height: 25px;
+	        height: 25px;
+	        font-size: 15px;
+	        bottom: 0; 
+	    }
+	</style>
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<header>
     <a href="/panel"><div class="logo"></div></a>
     <div class="menuUsuario">
         <div class="notificaciones">
@@ -17,7 +55,10 @@
             </div>
         </div>
         <div class="usuario">
-            <img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
+        	<p class="username"><?= $userName ?></p>
+        	<div class="avatar">
+            	<img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
+            </div>
         </div>        
     </div>
 </header>

@@ -7,6 +7,7 @@
 	$usuarios=mysql_query("SELECT * FROM users
 							WHERE USER = '$_POST[username]'",$con);
 	$arrUsuarios=mysql_fetch_array($usuarios);
+	$userName = $arrUsuarios[''];
 
 	if($_POST['username'] == $arrUsuarios['USER'])
 	{

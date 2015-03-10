@@ -1,22 +1,4 @@
-<?php 
-  require 'querys/control.php';
-  require 'querys/conexion.php';
-  require 'querys/querys.php';
-?>
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-  <title> Clientes - CreativePMG</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="HandheldFriendly" content="true">
-   <!-- Hojas de estilo -->
-  <link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
-  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
-</head>
-  <body>
-    <?php require 'template/header.html'; ?>
+<?php require 'template/inicio.php'; ?>
 
     <!-- Lista de Clientes -->
     <?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
@@ -25,9 +7,9 @@
         <div class="titulo"><?= $arrClientes['USER']; ?></div>
         
         <div class="detalles">
-          <p class="email"><?= $arrClientes['NOMBRE_CLIENTE']; ?></p>
+          <p class="nombre"><?= $arrClientes['NOMBRE_CLIENTE']; ?></p>
           <p class="email"><?= $arrClientes['EMAIL_CLIENTE']; ?></p>
-          <p class="email"><?= $arrClientes['NUMERO_CELULAR']; ?></p>
+          <p class="mobile"><?= $arrClientes['NUMERO_CELULAR']; ?></p>
         </div>
         <div class="social"></div>
         <div class="opciones">
@@ -44,7 +26,7 @@
       <div class="tarjeta nuevoCliente">
         <div class="titulo">NUEVO CLIENTE
           <div class="cerrar cerrarPopups"></div>
-        </div>
+        </div> 
         <form class="formulario" id="formInsCliente" method="post">
           <label>Nombre</label>
           <input type="text" name="nombre_cliente" class="vaciar">
@@ -58,10 +40,4 @@
     </div>
     <div id="nuevoCliente" class="botonNuevo"></div>
 
-  <?php require 'template/footer.html' ?>
-  <!-- Scripts -->
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/analytics.js"></script>
-  </body>
-</html>
+ <?php require 'template/fin.php'; ?>

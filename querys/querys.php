@@ -7,6 +7,7 @@
 	//Variables de usuario
 		$email = $arrayUsuario['EMAIL'];
 		$userId = $arrayUsuario['ID_USUARIO'];
+		$userName = $arrayUsuario['USER'];
 		$userCategori = $arrayUsuario['CATEGORIA'];
 	//Suma de totales que adeudan los usuarios
 	function totalDeudaUsuario($email)

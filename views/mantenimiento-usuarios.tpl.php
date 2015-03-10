@@ -1,22 +1,4 @@
-<?php 
-  require 'querys/control.php';
-  require 'querys/conexion.php';
-  require 'querys/querys.php';
-?>
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-  <title> Mantenimiento menus - CreativePMG</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="HandheldFriendly" content="true">
-   <!-- Hojas de estilo -->
-  <link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
-  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
-</head>
-  <body>
-    <?php require 'template/header.html'; ?>
+<?php require 'template/inicio.php'; ?>
 
       <div class="listaUsuarios">
         <?php while ($arrUsuarios=mysql_fetch_array($usuarios)) {?>
@@ -77,10 +59,5 @@
 
       <div id="nuevoUsuario" class="botonNuevo"></div>  
     </div>
-  <?php include 'template/footer.html'; ?>
-  <!-- Scripts -->
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/analytics.js"></script>
-  </body>
-</html>
+ 
+<?php require 'template/fin.php'; ?>
