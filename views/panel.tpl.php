@@ -102,7 +102,7 @@
 		    
 		    	<?php } ?>
 		</div>
-		<div id="btn_new_cliente" class="btn_nuevo">PROXIMAMENTE</div>
+		<div id="btn_new_cliente" class="btn_nuevo">NUEVO CLIENTE</div>
 	</div>
 	<!--  -->
 	<!-- Nuevo Cliente  -->
