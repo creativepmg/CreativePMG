@@ -135,7 +135,7 @@ header .logo
 {
 	position: fixed;
 	background-color: #fff;
-	border: 2px solid #333;
+	box-shadow: 0 0 1em rgba(0,0,0,1);
 	width: 250px;
 	height: 300px;
 	display: none;
@@ -144,19 +144,37 @@ header .logo
 	bottom: 0;
 	left: 0;
 	margin: auto;
-}.cuadro_clientes .listaClientes
+}
+.encabezado
 {
-	height: 150px;
+	background-color: #2980b9;
+	padding: 10px;
+	color: #e9e9e9;
+}
+.cuadro_clientes .listaClientes
+{
+	height: 208px;
 	overflow-x: hidden;
 	overflow-y: scroll; 
 }
 .cuadro_clientes .listaClientes .item
 {
-	border: 1px solid #333;
+	border-bottom: 1px solid #333;
+	padding: 10px 0 10px 25px;
+	text-transform: uppercase;
+	text-align: left;
+	font-size: 15px;
 }
 .cuadro_clientes .listaClientes .item .descripcion .id_cliente
 {
 	display: none;
+}
+.cuadro_clientes .btn_nuevo
+{
+	background-color: #333;
+	color: #e9e9e9;
+	line-height: 50px;
+	height: 50px;
 }
 .chat
 {
@@ -747,7 +765,7 @@ header .logo
 	left: 0;
 	right: 0;
 	top: 0;
-	height: 325px;
+	height: 335px;
 	bottom: 0;
 	width: 250px;
 	margin: auto!important;

@@ -67,25 +67,62 @@
 		  </div>
 		  <form  id="formNotaCliente" class="formulario" method="post">
 		  	<label>Cliente</label>
-		    <select name="id_cliente">
-		    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
-		    		<option value="<?= $arrClientes['ID_CLIENTE'] ?>"><?= $arrClientes['NOMBRE_CLIENTE'] ?></option>
-		    	<?php } ?>
-		    </select>
+		    <input id="id_cliente" class="vaciar" name="id_cliente" type="hidden" >
+		  	<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
+		  	<div class="btn_cliente" onclick="guardadoLocal();"></div>
 		    <label>Detalle</label>
 		    <textarea name="detalle"></textarea>
 		    <label>A cuenta</label>
 		    <input name="a_cuenta" type="number" >
 		    <label>Monto Total</label>
 		    <input name="monto_total" type="number" >
-		    <!-- Ocultos  -->
-		    <input type="text" value="<?= $userId ?>">
-		    <!--  -->
 		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Añadir Nota">
 		  </form>
 		</div>
 	</div>
 
+	<!--  -->
+	<div class="cuadro_clientes">
+		<div class="encabezado">
+			<p class="titulo">CLIENTES</p>
+			<div class="cerrar"></div>
+		</div>
+		<div class="listaClientes">
+			 
+		    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
+		    		<div class="item" onclick="guardadoLocal(this);">
+						<div class="avatar">
+							<img src="">
+						</div>
+						<div class="descripcion">
+							<p id="id_cliente" class="id_cliente"><?= $arrClientes['ID_CLIENTE'] ?></p>
+							<p id="nombre_cliente"><?= $arrClientes['NOMBRE_CLIENTE'] ?></p>
+						</div>
+					</div>
+		    
+		    	<?php } ?>
+		</div>
+		<div id="btn_new_cliente" class="btn_nuevo">PROXIMAMENTE</div>
+	</div>
+	<!--  -->
+	<!-- Nuevo Cliente  -->
+	 <div class="popup popNuevoCliente">
+      <div class="tarjeta nuevoCliente">
+        <div class="titulo">NUEVO CLIENTE
+          <div class="cerrar cerrarPopups"></div>
+        </div> 
+        <form class="formulario" id="formInsCliente" method="post">
+          <label>Nombre</label>
+          <input type="text" name="nombre_cliente" class="vaciar">
+          <label>Numero Celular</label>
+          <input type="number" name="numero_celular" class="vaciar">
+          <label>Email</label>
+          <input type="text" name="email" class="vaciar">
+          <input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
+        </form>
+      </div>
+    </div>
+	<!--  -->
 <!-- nueva Pre orden -->
 	<div class="popup nuevaPreOrden">
 		<div class="tarjeta newPreOrder">

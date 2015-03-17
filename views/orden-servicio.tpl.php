@@ -62,8 +62,8 @@
 		  </div>
 		  <form  id="formNotaCliente" class="formulario" method="post">
 		  	<label>Cliente</label>
-		  	<input id="id_cliente" name="id_cliente" type="hidden" >
-		  	<input id="nombre_cliente" type="text" disabled style="width: 80%; display: inline-block">
+		  	<input id="id_cliente" class="vaciar" name="id_cliente" type="hidden" >
+		  	<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
 		  	<div class="btn_cliente" onclick="guardadoLocal();"></div>
 		   
 		    <label>Detalle</label>
@@ -99,6 +99,7 @@
 		    
 		    	<?php } ?>
 		</div>
+		<div class="btn_nuevo">PROXIMAMENTE</div>
 	</div>
 	<!--  -->
 

@@ -14,6 +14,7 @@ function inicio()
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
+	$('#btn_new_cliente').on('click', mostarFormNewCliente);
 	//$('#btnListo').on('click', updOrdenFinalizada); 
 	//$('#btnEditarOrden'),on('click', updOrden);
 
@@ -25,6 +26,10 @@ function inicio()
 function funcando()
 {
 	alert('estoy funcando');
+}
+function mostarFormNewCliente()
+{
+	$('.popNuevoCliente').slideToggle();
 }
 function guardadoLocal(obj)
 {	
@@ -134,13 +139,16 @@ function insCliente()
 {
 	var url = "../querys/insCliente.php";
 
+
+
+
 	$.ajax({
 		type: "POST",
 		url: url,
 		data: $("#formInsCliente").serialize(),
 		success: function(data){
-			$("#respuesta").html(data);
-
+			//$("#respuesta").html(data);
+			
 			}
 	});
 	$('.vaciar').val('');
@@ -224,6 +232,7 @@ function asignarMenu(obj)
 function cerrarPopups()
 {
 	$('.popup').css('display', 'none');
+	$('.vaciar').val('');
 }
 function nuevoUsuario()
 {
