@@ -55,16 +55,18 @@
 	{
 		if ($emailCliente == '') 
 		{
-			echo "No hay coincidencia en email, continuamos <br />";
+			
 			if ($numeroCel == '') 
 			{
-				echo "No hay conicidencia en el celular, continuamos<br/>
-					  Insertar Cliente: ".$postCliente."<br/>
-					  Insertar Celular: ".$postCelular."<br/>
-					  Insertar Email: ".$postEmail."<br/>";
 	  			$result_ins_menu = mysql_query($ins_cliente,$con);
-				echo "Nuevo cliente insertado correctamente";		
-
+				
+				$ultimoCliente = mysql_query("SELECT ID_CLIENTE FROM clientes 
+							  	ORDER BY ID_CLIENTE DESC 
+							  	LIMIT 1 
+							  	",$con);	
+				$arryCliente=mysql_fetch_array($ultimoCliente);
+				echo $arryCliente['ID_CLIENTE'];
+				
 			}
 			else
 			{
@@ -79,22 +81,4 @@
 				  	El email: ".$emailCliente."<br />";
 		}
 	}
-
-	/*if(isset($emailCliente))
-	{
-		if(empty($numeroCel))
-		{
-			$result_ins_menu = mysql_query($ins_cliente,$con);
-			echo "Nuevo cliente insertado correctamente";		
-		}
-		else
-		{
-			echo "El numero ya existe";	
-		}
-	}
-	else
-	{
-		echo "El email enviado ya existe";
-	}*/
-
 ?>

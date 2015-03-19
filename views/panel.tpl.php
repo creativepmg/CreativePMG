@@ -113,11 +113,11 @@
         </div> 
         <form class="formulario" id="formInsCliente" method="post">
           <label>Nombre</label>
-          <input type="text" name="nombre_cliente" class="vaciar">
+          <input id="nombre_cliente" type="text" name="nombre_cliente" class="vaciar">
           <label>Numero Celular</label>
-          <input type="number" name="numero_celular" class="vaciar">
+          <input id="numero_cliente" type="number" name="numero_celular" class="vaciar">
           <label>Email</label>
-          <input type="text" name="email" class="vaciar">
+          <input id="email_cliente" type="text" name="email" class="vaciar">
           <input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
         </form>
       </div>

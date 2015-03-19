@@ -16,7 +16,7 @@ function inicio()
 	$('#btnPreOrden').on('click', insPreOrden);
 	$('#btn_new_cliente').on('click', mostarFormNewCliente);
 	//$('#btnListo').on('click', updOrdenFinalizada); 
-	//$('#btnEditarOrden'),on('click', updOrden);
+	//$('#btnEditarOrden'),on('click', updOrden); 
 
 	$('.usuario').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
@@ -30,6 +30,7 @@ function funcando()
 function mostarFormNewCliente()
 {
 	$('.popNuevoCliente').slideToggle();
+	$('.cuadro_clientes').slideToggle();
 }
 function guardadoLocal(obj)
 {	
@@ -41,8 +42,8 @@ function guardadoLocal(obj)
 	sessionStorage.setItem("id_cliente", id_cliente);
 	$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
 	$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("nombre_cliente"));
-	$('.cuadro_clientes').slideToggle();
-	nuevoUsuario();
+	$('.cuadro_clientes').css('display', 'block');
+	$('.popNuevoUsuario').slideToggle();
 
 }
 function insPreOrden()
@@ -138,21 +139,31 @@ function insOrdenServicio()
 function insCliente()
 {
 	var url = "../querys/insCliente.php";
-
-
-
+	//VARIABLES A RECOGER
+	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
+	var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
+	var cliente_email = $('#formInsCliente').children('#email_cliente').val();
+	//SETIADO DE VARIABLES EN SESSION STORAGE
+	sessionStorage.setItem("cliente_nombre", cliente_nombre);
+	
+	
 
 	$.ajax({
 		type: "POST",
 		url: url,
 		data: $("#formInsCliente").serialize(),
 		success: function(data){
-			//$("#respuesta").html(data);
-			
+			var id_utl_client = data;
+			console.log(id_utl_client);	
+			sessionStorage.setItem("id_cliente", id_utl_client);
+			$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+			$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));		
 			}
 	});
 	$('.vaciar').val('');
-	cerrarPopups();
+	$('.cuadro_clientes').css('display', 'none');
+	$('.popNuevoUsuario').slideToggle();
+	$('.popNuevoCliente').slideToggle();
 	//setTimeout ("location.reload()", 3000);
 	return false;
 }
@@ -238,6 +249,7 @@ function nuevoUsuario()
 {
 	console.log('Nuevo Usuario')
 	$('.popNuevoUsuario').slideToggle();
+	$('.cuadro_clientes').css('display', 'none');
 }
 function listaDeChats()
 {
