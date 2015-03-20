@@ -4,6 +4,7 @@
 						 WHERE USER = '$usuarioSesion'")
 			or die("problemas en consulta:".mysql_error());
 	$arrayUsuario=mysql_fetch_array($user);
+	
 	//Variables de usuario
 		$email = $arrayUsuario['EMAIL'];
 		$userId = $arrayUsuario['ID_USUARIO'];
@@ -52,11 +53,7 @@
 								   		ON A.ID_USUARIO = B.ID_USUARIO
 								   ORDER BY NOMBRE_CLIENTE") 
 					   or die("Error en la consulta.." . mysqli_error($con));
-	$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
-								   	   LEFT JOIN clientes AS B
-								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta.." . mysql_error($con));
+	
 	$lis_orden_serv		= mysql_query("SELECT * FROM orden_servicio AS A
 								   	   LEFT JOIN clientes AS B
 								   		ON A.ID_CLIENTE = B.ID_CLIENTE

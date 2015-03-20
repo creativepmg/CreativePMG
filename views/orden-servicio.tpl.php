@@ -1,7 +1,30 @@
 <?php require 'template/inicio.php'; ?>
-
+	<div class="buscador">
+		<form method="get">
+			<div class="bloque">
+				<label>Nro Servicio</label>
+				<input name="nroOrden" type="number">				
+			</div>
+			<input class="boton" type="submit" value="BUSCAR">
+		</form>
+	</div>
 	<div class="listaNotas">
-		<?php while ($arrServi=mysql_fetch_array($lis_not_clientes)) {?>
+		<?php
+				if(empty($_GET['nroOrden']))
+				{
+					$nroOrden = 'NULL';
+				}
+				else
+				{
+					$nroOrden = $_GET['nroOrden'];
+				}
+				$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
+								   	   LEFT JOIN clientes AS B
+								   		ON A.ID_CLIENTE = B.ID_CLIENTE
+								   		WHERE ID_ORDEN_SERVICIO = '$nroOrden'
+								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
+					   or die("Error en la consulta.." . mysql_error($con));
+		 while ($arrServi=mysql_fetch_array($lis_not_clientes)) {?>
 		<div class="item">
 			<div class="id_orden_servicio">Numero de Orden: <?= $arrServi['ID_ORDEN_SERVICIO'] ?></div>
 			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
