@@ -37,7 +37,8 @@
 </head>
 <body>
 	<header>
-    <a href="/panel"><div class="logo"></div></a>
+    <div class="btn_menu"></div>
+    <a href="/panel" class="logo"></a>
     <div class="menuUsuario">
         <div class="notificaciones">
             <div id="btn_notificaciones" class="icono">
@@ -61,8 +62,8 @@
             </div>
         </div>        
     </div>
+    
 </header>
-
 <div class="opcionesUsuario">
     <ul>
         <li style="display: none;">
@@ -74,6 +75,7 @@
     </ul>
 </div>
 <h1><?= $titulo ?></h1>
+
 <div class="menu">
     <ul>
     <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
@@ -83,3 +85,5 @@
     <?php } ?>
     </ul>
 </div>
+
+<div class="contenido">

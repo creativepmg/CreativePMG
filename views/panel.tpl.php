@@ -81,7 +81,7 @@
 		</div>
 	</div>
 
-	<!--  -->
+	<!-- NUEVO CLIENTE -->
 	<div class="cuadro_clientes">
 		<div class="encabezado">
 			<p class="titulo">CLIENTES</p>

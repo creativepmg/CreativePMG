@@ -15,6 +15,7 @@ function inicio()
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
 	$('#btn_new_cliente').on('click', mostarFormNewCliente);
+	$('.btn_menu').on('click', ioMenu);
 	//$('#btnListo').on('click', updOrdenFinalizada); 
 	//$('#btnEditarOrden'),on('click', updOrden); 
 
@@ -26,6 +27,13 @@ function inicio()
 function funcando()
 {
 	alert('estoy funcando');
+}
+function ioMenu()
+{
+	$('.menu').animate({
+        width: "toggle",
+        opacity: "toggle"
+    });  
 }
 function mostarFormNewCliente()
 {

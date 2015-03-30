@@ -26,7 +26,7 @@
 		<a href="/">
 			<div class="logo"></div>			
 		</a>
-		<h1>Iniciar Sesión</h1>
+		<div class="titulo">Iniciar Sesión</div>
 		<div id="respuestaLogin" class="cajaDialogo">
 			<img src="../img/loader.gif">
 		</div>

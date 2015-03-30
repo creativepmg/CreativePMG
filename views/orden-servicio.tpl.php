@@ -5,6 +5,13 @@
 				<label>Nro Servicio</label>
 				<input name="nroOrden" type="number">				
 			</div>
+			<div class="bloque">
+				<label>Estado</label>
+				<select name="estado">
+					<option value="0">RECIBIDO</option>
+					<option value="1">TERMINADO</option>
+				</select>
+			</div>
 			<input class="boton" type="submit" value="BUSCAR">
 		</form>
 	</div>
@@ -12,16 +19,25 @@
 		<?php
 				if(empty($_GET['nroOrden']))
 				{
-					$nroOrden = 'NULL';
+					$nroOrden = '%';
 				}
 				else
 				{
 					$nroOrden = $_GET['nroOrden'];
 				}
+				if(empty($_GET['estado']))
+				{
+					$estado = '%';
+				}
+				else
+				{
+					$estado = $_GET['estado'];
+				}
 				$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
 								   	   LEFT JOIN clientes AS B
 								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   		WHERE ID_ORDEN_SERVICIO = '$nroOrden'
+								   		WHERE  	 A.ID_ORDEN_SERVICIO like '$nroOrden'
+								   			AND  A.ESTADO 			 like '$estado'
 								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
 					   or die("Error en la consulta.." . mysql_error($con));
 		 while ($arrServi=mysql_fetch_array($lis_not_clientes)) {?>
@@ -101,7 +117,7 @@
 	</div>
 
 
-	<!--  -->
+	<!-- NUEVO CLIENTE -->
 	<div class="cuadro_clientes">
 		<div class="encabezado">
 			<p class="titulo">CLIENTES</p>
@@ -122,8 +138,26 @@
 		    
 		    	<?php } ?>
 		</div>
-		<div class="btn_nuevo">PROXIMAMENTE</div>
+		<div id="btn_new_cliente" class="btn_nuevo">NUEVO CLIENTE</div>
 	</div>
+	<!--  -->
+	<!-- Nuevo Cliente  -->
+	 <div class="popup popNuevoCliente">
+      <div class="tarjeta nuevoCliente">
+        <div class="titulo">NUEVO CLIENTE
+          <div class="cerrar cerrarPopups"></div>
+        </div> 
+        <form class="formulario" id="formInsCliente" method="post">
+          <label>Nombre</label>
+          <input id="nombre_cliente" type="text" name="nombre_cliente" class="vaciar">
+          <label>Numero Celular</label>
+          <input id="numero_cliente" type="number" name="numero_celular" class="vaciar">
+          <label>Email</label>
+          <input id="email_cliente" type="text" name="email" class="vaciar">
+          <input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
+        </form>
+      </div>
+    </div>
 	<!--  -->
 
 

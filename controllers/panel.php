@@ -1,5 +1,5 @@
 <?php
-	$titulo = '';
+	$titulo = 'Home';
 
 	//Llamando una funcion
 	view('panel', compact('titulo'));

@@ -1,5 +1,7 @@
-
-	<?php include 'template/footer.html'; ?>
+</div>
+<footer>
+	<p>CreativePMG 2015 - Desarrollado por <a href="www.esandex.com">Esandex</a></p>
+</footer>
 	<!-- Scripts -->
 	
 	
