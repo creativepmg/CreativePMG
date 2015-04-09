@@ -48,16 +48,12 @@
 									or die("problemas en consulta:".mysql_error());
 	$lis_menus 		= "SELECT * FROM menu ORDER BY DESCRIPCION" 
 					   or die("Error en la consulta.." . mysqli_error($con));
-	$lis_clientes	= mysql_query("SELECT * FROM clientes AS A
-								   LEFT JOIN usuarios AS B
-								   		ON A.ID_USUARIO = B.ID_USUARIO
-								   ORDER BY NOMBRE_CLIENTE") 
-					   or die("Error en la consulta.." . mysqli_error($con));
+	
 	
 	$lis_orden_serv		= mysql_query("SELECT * FROM orden_servicio AS A
 								   	   LEFT JOIN clientes AS B
 								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   	   WHERE 	A.ESTADO 		= '0'
+								   	   WHERE 	A.ID_ESTADO_SERVICIO 		= '0'
 								   	   	AND    ($userCategori 	= '1'
 								   	   	OR 		A.ID_USUARIO 	= $userId)
 								   	   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 

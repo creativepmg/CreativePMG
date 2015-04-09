@@ -1,46 +1,71 @@
 <?php require 'template/inicio.php'; ?>
+<?php
+			
+			if(empty($_POST['nroOrden']))
+			{
+				$id_orden = '%';
+			}
+			else
+			{
+				$id_orden = $_POST['nroOrden'];
+			}
+			if(empty($_POST['estado']))
+			{
+				$id_estado = '%';
+			}
+			else
+			{
+				$id_estado = $_POST['estado'];
+			}
+
+				
+	$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
+								   	   LEFT JOIN clientes 			AS B
+								   		ON A.ID_CLIENTE 	= B.ID_CLIENTE
+								   	   WHERE A.ID_ORDEN_SERVICIO  like '$id_orden'
+								   	   	AND  A.ID_ESTADO_SERVICIO like '$id_estado'
+								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
+					   or die("Error en la consulta.." . mysql_error($con));
+	$countOrden = mysql_num_rows($lis_not_clientes);
+
+		
+				 	
+ ?>
+
+ <div class="contResult"><?= $countOrden ?></div>
+
+
 	<div class="buscador">
-		<form method="get">
+		<form method="post">
 			<div class="bloque">
-				<label>Nro Servicio</label>
-				<input name="nroOrden" type="number">				
+				<label>Numero Orden</label>
+				<input name="nroOrden" type="text">
 			</div>
 			<div class="bloque">
 				<label>Estado</label>
 				<select name="estado">
-					<option value="0">RECIBIDO</option>
-					<option value="1">TERMINADO</option>
+					<option value="%">TODOS</option>
+					<option value="1">INTERNADO</option>
+					<option value="2">ENTREGADO</option>
 				</select>
 			</div>
+			
 			<input class="boton" type="submit" value="BUSCAR">
 		</form>
 	</div>
 	<div class="listaNotas">
-		<?php
-				if(empty($_GET['nroOrden']))
-				{
-					$nroOrden = '%';
-				}
-				else
-				{
-					$nroOrden = $_GET['nroOrden'];
-				}
-				if(empty($_GET['estado']))
-				{
-					$estado = '%';
-				}
-				else
-				{
-					$estado = $_GET['estado'];
-				}
-				$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
-								   	   LEFT JOIN clientes AS B
-								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   		WHERE  	 A.ID_ORDEN_SERVICIO like '$nroOrden'
-								   			AND  A.ESTADO 			 like '$estado'
-								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta.." . mysql_error($con));
-		 while ($arrServi=mysql_fetch_array($lis_not_clientes)) {?>
+	
+		<?php  while ($arrServi=mysql_fetch_array($lis_not_clientes)) {
+		
+		 			if($arrServi['ID_ESTADO_SERVICIO'] == '1')
+			 			{
+			 				$resEstado = 'INTERNADO';
+			 			}
+			 		elseif ($arrServi['ID_ESTADO_SERVICIO'] == '2') 
+				 		{
+				 			$resEstado = 'ENTREGADO';
+				 		}
+		?>
 		<div class="item">
 			<div class="id_orden_servicio">Numero de Orden: <?= $arrServi['ID_ORDEN_SERVICIO'] ?></div>
 			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
@@ -88,9 +113,11 @@
 					<p><?= $total." USD" ?></p>
 				</div>
 			</div>
+			<div class="estado"><?= 'ESTADO: '.$resEstado ?></div>
 		</div>
 		<?php } ?>
 	</div>
+	
 	<!-- NUEVA SERVICIO -->
 	<div id="respuesta"></div>
 
@@ -109,8 +136,7 @@
 		    <textarea name="detalle"></textarea>
 		    <label>A cuenta</label>
 		    <input name="a_cuenta" type="number" >
-		    <label>Monto Total</label>
-		    <input name="monto_total" type="number" >
+		   
 		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Añadir Nota">
 		  </form>
 		</div>

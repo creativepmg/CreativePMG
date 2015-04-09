@@ -1,6 +1,6 @@
 </div>
 <footer>
-	<p>CreativePMG 2015 - Desarrollado por <a href="www.esandex.com">Esandex</a></p>
+	<p>CreativePMG 2015 - Desarrollado por <a href="http://www.esandex.com" target="_blank">Esandex</a></p>
 </footer>
 	<!-- Scripts -->
 	
