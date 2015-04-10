@@ -72,6 +72,10 @@
 			<div class="detalle"><?= $arrServi['DETALLE'] ?></div>
 			<div class="opcionesItem">
 				<div class="editar" title="Marcar como terminado" onclick="verEditar(this);"></div>
+				<form action="detalle-orden-servicio" method="post">
+					<input name="nroOrden" type="text" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
+					<input type="submit" class="agregar" title="Agregar detalles" value="" />
+				</form>
 			</div>
 			<form id="frmEditarOrden" class="editarOrden" method="post">
 				<input type="hidden" name="id_orden_servicio" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
@@ -135,7 +139,7 @@
 		    <label>Detalle</label>
 		    <textarea name="detalle"></textarea>
 		    <label>A cuenta</label>
-		    <input name="a_cuenta" type="number" >
+		    <input name="a_cuenta" type="number" value="0.00">
 		   
 		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Añadir Nota">
 		  </form>
@@ -149,9 +153,8 @@
 			<p class="titulo">CLIENTES</p>
 			<div class="cerrar"></div>
 		</div>
-		<div class="listaClientes">
-			 
-		    	<?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
+		<div class="listaClientes">			 
+		    	<?php while ($arrClientes=mysql_fetch_array($lis_clients)) {?>
 		    		<div class="item" onclick="guardadoLocal(this);">
 						<div class="avatar">
 							<img src="">
@@ -160,8 +163,7 @@
 							<p id="id_cliente" class="id_cliente"><?= $arrClientes['ID_CLIENTE'] ?></p>
 							<p id="nombre_cliente"><?= $arrClientes['NOMBRE_CLIENTE'] ?></p>
 						</div>
-					</div>
-		    
+					</div>		    
 		    	<?php } ?>
 		</div>
 		<div id="btn_new_cliente" class="btn_nuevo">NUEVO CLIENTE</div>

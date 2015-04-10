@@ -34,6 +34,7 @@
 	/*
 	 *	Consultas
 	 */
+
 	$deudaUsuario 	= mysql_query("SELECT * 
 								   FROM deuda_cliente  
 								   WHERE ID_CLIENTE = '$arrayUsuario[EMAIL]'")
@@ -46,6 +47,11 @@
 									where a.ID_USUARIO = '$arrayUsuario[ID_USUARIO]'
 									ORDER BY DESCRIPCION")
 									or die("problemas en consulta:".mysql_error());
+
+	$lis_clients = mysql_query("SELECT * FROM clientes AS A
+                                ORDER BY A.NOMBRE_CLIENTE") 
+             		or die("Error en la consulta.." . mysqli_error($con));
+
 	$lis_menus 		= "SELECT * FROM menu ORDER BY DESCRIPCION" 
 					   or die("Error en la consulta.." . mysqli_error($con));
 	

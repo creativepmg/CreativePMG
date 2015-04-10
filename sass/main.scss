@@ -421,6 +421,7 @@ h1
 	right: 5px;
 	top: 3px;
 }
+
 .listaNotas .item .areaEditable
 {
 	border-radius: 5px;
@@ -428,6 +429,22 @@ h1
 	border: 1px  solid #2980b9;
 	width: 100%;
 	height: 5em;
+}
+.listaNotas .item .opcionesItem .agregar
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url('../img/iconos/plus-opciones.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+}
+.listaNotas .item .opcionesItem .agregar:hover
+{
+	background-image: url('../img/iconos/plus-hover.png');
+	cursor: pointer;
 }
 .listaNotas .item .opcionesItem .listo
 {
@@ -546,7 +563,7 @@ h1
 .nuevoServicio
 {
 	bottom: 0;
-	height: 380px;
+	height: 370px;
 	left: 0;
 	margin: auto!important;
 	height: 450px;
