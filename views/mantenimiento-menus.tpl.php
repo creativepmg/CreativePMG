@@ -1,5 +1,11 @@
 <?php require 'template/inicio.php'; ?>
-	
+	<?php  while ($arrMenus=mysql_fetch_array($lis_menus)) { ?>
+	<div>
+		<div class="descripcion"><?= $arrMenus['DESCRIPCION'] ?></div>
+		<div class="enlace"><?= $arrMenus['URL'] ?></div>
+
+	</div>
+	<?php } ?>
 	<h4>Nuevo Menu</h4>
 	<div id="respuesta"></div>
 	<form id="nuevoMenu" class="formulario" method="post">

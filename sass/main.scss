@@ -190,9 +190,31 @@ h1
 	right: 10px;
 	width: 50px;
 }
+.notificacion-emergente
+{
+	width: 320px;
+	display: none;
+	height: 50px;
+	background-color: rgba($grisOscuro, 0.5);
+	position: absolute;
+	left: 10px; 
+	border-radius: 5px;
+	color: $letraBlanco;
+	line-height: 50px;
+	bottom: 60px;
+}
 .contenido
 {
 	margin: 105px 0;
+}
+.contenido .cabecera div
+{
+	display: inline-block;
+}
+.contenido .detalle .titulos div,
+.contenido .detalle .item div
+{
+	display: inline-block;
 }
 .contResult
 {

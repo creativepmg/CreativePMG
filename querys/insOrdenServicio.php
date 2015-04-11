@@ -7,10 +7,12 @@
 	$ins_orden_servicio		= "INSERT INTO orden_servicio (ID_CLIENTE,
 												   		   DETALLE,
 												   		   A_CUENTA,
+												   		   ID_ESTADO_SERVICIO,
 												   	 	   ID_USUARIO)
 				   	   		VALUES ('$_POST[id_cliente]',
 						   	   		'$_POST[detalle]',
 						   	   		'$_POST[a_cuenta]',
+						   	   		'1',
 						   	   		'$userId')"
 				       		or die("Error en la consulta.." . mysqli_error($con));
 	$result_ins_orden_servicio = mysql_query($ins_orden_servicio,$con);

@@ -52,7 +52,7 @@
                                 ORDER BY A.NOMBRE_CLIENTE") 
              		or die("Error en la consulta.." . mysqli_error($con));
 
-	$lis_menus 		= "SELECT * FROM menu ORDER BY DESCRIPCION" 
+	$lis_menus 		= mysql_query("SELECT * FROM menu ORDER BY DESCRIPCION")
 					   or die("Error en la consulta.." . mysqli_error($con));
 	
 	

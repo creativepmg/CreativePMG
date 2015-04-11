@@ -16,6 +16,7 @@ function inicio()
 	$('#btnPreOrden').on('click', insPreOrden);
 	$('#btn_new_cliente').on('click', mostarFormNewCliente);
 	$('.btn_menu').on('click', ioMenu);
+
 	//$('#btnListo').on('click', updOrdenFinalizada); 
 	//$('#btnEditarOrden'),on('click', updOrden); 
 
@@ -23,6 +24,18 @@ function inicio()
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
 	$('.cerrarPopups').on('click', cerrarPopups);
+}
+function notificacionEmergente()
+{
+	$('.notificacion-emergente').slideToggle();
+	setTimeout ('ocultarEmergente()', 5000);
+}
+function ocultarEmergente()
+{
+	$('.notificacion-emergente').animate({
+        height: "toggle",
+        opacity: "toggle"
+    });  
 }
 function funcando()
 {

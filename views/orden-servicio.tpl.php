@@ -136,12 +136,12 @@
 		  	<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
 		  	<div class="btn_cliente" onclick="guardadoLocal();"></div>
 		   
-		    <label>Detalle</label>
+		    <label>Observaciones</label>
 		    <textarea name="detalle"></textarea>
 		    <label>A cuenta</label>
 		    <input name="a_cuenta" type="number" value="0.00">
 		   
-		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Añadir Nota">
+		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Crear Orden">
 		  </form>
 		</div>
 	</div>

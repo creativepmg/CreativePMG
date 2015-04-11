@@ -1,4 +1,5 @@
 </div>
+<div class="notificacion-emergente"></div>
 <footer>
 	<p>CreativePMG 2015 - Desarrollado por <a href="http://www.esandex.com" target="_blank">Esandex</a></p>
 </footer>
