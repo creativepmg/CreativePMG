@@ -53,13 +53,24 @@
              		or die("Error en la consulta.." . mysqli_error($con));
 
 	$lis_menus 		= mysql_query("SELECT * FROM menu ORDER BY DESCRIPCION")
-					   or die("Error en la consulta.." . mysqli_error($con));
-	
-	
+					   	or die("Error en la consulta.." . mysqli_error($con));
+	$lis_compras = mysql_query("SELECT 	*
+								FROM compras AS A
+								INNER JOIN proveedores AS B
+									ON B.ID_PROVEEDOR = A.ID_PROVEEDOR
+								ORDER BY A.FECHA_COMPRA")
+						or die("Error en la consulta compras.." . mysql_error($con));
+
+	$lis_productos = mysql_query("SELECT * FROM producto_stock ORDER BY DESCRIPCION")
+						or die("Error en la consulta producto_stock.." . mysql_error($con));
+
+	$lis_proveedores = mysql_query("SELECT * FROM proveedores ORDER BY DESCRIPCION")
+						or die("Error en la consulta proveedores.." . mysqli_error($con));
+						
 	$lis_orden_serv		= mysql_query("SELECT * FROM orden_servicio AS A
 								   	   LEFT JOIN clientes AS B
 								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   	   WHERE 	A.ID_ESTADO_SERVICIO 		= '0'
+								   	   WHERE 	A.ID_ESTADO_SERVICIO 		= '1'
 								   	   	AND    ($userCategori 	= '1'
 								   	   	OR 		A.ID_USUARIO 	= $userId)
 								   	   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 

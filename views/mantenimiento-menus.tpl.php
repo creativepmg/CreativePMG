@@ -3,7 +3,6 @@
 	<div>
 		<div class="descripcion"><?= $arrMenus['DESCRIPCION'] ?></div>
 		<div class="enlace"><?= $arrMenus['URL'] ?></div>
-
 	</div>
 	<?php } ?>
 	<h4>Nuevo Menu</h4>

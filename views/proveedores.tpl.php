@@ -1,13 +1,13 @@
-<?php require 'template/inicio.php'; ?>
+<?php require 'template/inicio.php' ?>
 	<!-- Contenido mostrado -->
-	<?php while ($arrProductos=mysql_fetch_array($lis_productos)) {?>
+	<?php while ($arrProductos=mysql_fetch_array($lis_proveedores)) {?>
 		<div class="tarjeta">
 	        <div id="idUsuario" style="display: none;"></div>
 	        <div class="titulo"></div>
 	        
 	        <div class="detalles">
 	          <p><?= $arrProductos['DESCRIPCION']; ?></p>
-	          <p><?= $arrProductos['PRECIO_VENTA']; ?> USD</p>
+	         
 	        </div>
 	        <div class="social"></div>
 	        <div class="opciones">
@@ -16,23 +16,21 @@
       </div>
 	<?php } ?>
 	<!-- Cajas de dialogo -->
-	<div id="dNewProducto" class="cajaDialogo">
-		<div class="formulario">
+	<div id="dNewProveedor" class="cajaDialogo">
+		<div class="newProveedor formulario">
 			<div class="encabezado">
-				NUEVO PRODUCTO	
+				NUEVO PROVEEDOR	
 				<div class="cerrar"></div>
 			</div>
 			<div class="detalles">
-				<form id="nuevoProducto">
+				<form id="nuevoProveedor">
 					<label>Descripcion</label>
 					<input name="descripcion" type="text" class="vaciar">
-					<label>Precio Venta</label>
-					<input name="precio_venta" type="number" class="vaciar">
-					<input id="btnInsProducto" type="submit" value="Guardar">
+					<input name="id_user" type="hidden" value="<?= $userId ?>">
+					<input id="btnInsProveedor" type="submit" value="Guardar">
 				</form>
 			</div>
 		</div>
 	</div>
-
-	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewProducto')"></div>
-<?php require 'template/fin.php'; ?>
+	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewProveedor')"></div>
+<?php require 'template/fin.php' ?>

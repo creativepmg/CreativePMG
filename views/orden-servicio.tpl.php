@@ -28,7 +28,8 @@
 					   or die("Error en la consulta.." . mysql_error($con));
 	$countOrden = mysql_num_rows($lis_not_clientes);
 
-		
+	$date = date_create($reg['FECHA_REGISTRO']);      
+        
 				 	
  ?>
 
@@ -68,12 +69,13 @@
 		?>
 		<div class="item">
 			<div class="id_orden_servicio">Numero de Orden: <?= $arrServi['ID_ORDEN_SERVICIO'] ?></div>
+			<div class="fechaRegistro">Fecha Ingreso: <?= date_format($date, 'd M Y') ?></div>
 			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
 			<div class="detalle"><?= $arrServi['DETALLE'] ?></div>
 			<div class="opcionesItem">
 				<div class="editar" title="Marcar como terminado" onclick="verEditar(this);"></div>
 				<form action="detalle-orden-servicio" method="post">
-					<input name="nroOrden" type="text" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
+					<input name="nroOrden" type="hidden" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
 					<input type="submit" class="agregar" title="Agregar detalles" value="" />
 				</form>
 			</div>
@@ -94,6 +96,13 @@
 					<p>Monto Total</p>
 					<input name="monto_total" type="number" value="<?= $total?>">
 				</div>
+				<div>
+					<p>Estado</p>
+					<select name="id_estado_servicio">
+						<option value="1">Internado</option>
+						<option value="2">Entregado</option>
+					</select>
+				</div>	
 			</div>
 				<div class="btnEditarOrden" onclick="updOrden(this)">Guardar</div>
 			</form>
@@ -123,72 +132,79 @@
 	</div>
 	
 	<!-- NUEVA SERVICIO -->
-	<div id="respuesta"></div>
+	
 
-	<div class="popup popNuevoUsuario">
-		<div class="tarjeta nuevoServicio">
-		  <div class="titulo">NUEVA ORDEN DE SERVICIO
-		    <div class="cerrar cerrarPopups"></div>
-		  </div>
-		  <form  id="formNotaCliente" class="formulario" method="post">
-		  	<label>Cliente</label>
-		  	<input id="id_cliente" class="vaciar" name="id_cliente" type="hidden" >
-		  	<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
-		  	<div class="btn_cliente" onclick="guardadoLocal();"></div>
-		   
-		    <label>Observaciones</label>
-		    <textarea name="detalle"></textarea>
-		    <label>A cuenta</label>
-		    <input name="a_cuenta" type="number" value="0.00">
-		   
-		    <input class="botonFormulario" id="btnNotaCliente" type="submit" value="Crear Orden">
-		  </form>
+	<div id="dNewOrdenService" class="cajaDialogo">
+		<div class="nuevaOrdenServicio formulario">
+			<div class="encabezado">
+				NUEVA ORDEN DE SERVICIO
+				<div class="cerrar"></div>
+			</div>
+			<div class="detalles">
+				<form  id="formNotaCliente" method="post">
+					<label>Cliente</label>
+					<input id="id_cliente" class="vaciar" name="id_cliente" type="hidden" >
+					<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
+					<div class="btn_cliente" onclick="mostraCajaDialogo('#dListaCliente')"></div>		   
+					<label>Observaciones</label>
+					<textarea name="detalle"></textarea>
+					<label>A cuenta</label>
+					<input name="a_cuenta" type="number" value="0.00">
+					<input class="botonFormulario" id="btnNotaCliente" type="submit" value="Crear Orden">
+				</form>
+			</div>
 		</div>
 	</div>
 
 
-	<!-- NUEVO CLIENTE -->
-	<div class="cuadro_clientes">
-		<div class="encabezado">
-			<p class="titulo">CLIENTES</p>
-			<div class="cerrar"></div>
+	<!-- ESCOGER CLIENTE -->
+	<div id="dListaCliente" class="cajaDialogo">
+		<div class="lisClientes formulario">
+			<div class="encabezado">
+				CLIENTES
+				<div class="cerrar"></div>
+			</div>
+			<div class="lista">			 
+			    	<?php while ($arrClientes=mysql_fetch_array($lis_clients)) {?>
+			    		<div class="item" onclick="guardadoLocal(this);">
+							<div class="avatar">
+								<img src="">
+							</div>
+							<div class="descripcion">
+								<p id="id_cliente" class="id_cliente"><?= $arrClientes['ID_CLIENTE'] ?></p>
+								<p id="nombre_cliente"><?= $arrClientes['NOMBRE_CLIENTE'] ?></p>
+							</div>
+						</div>		    
+			    	<?php } ?>
+			</div>
+			<div class="btn_nuevo" onclick="mostraCajaDialogo('#dNewCliente')">NUEVO CLIENTE</div>
 		</div>
-		<div class="listaClientes">			 
-		    	<?php while ($arrClientes=mysql_fetch_array($lis_clients)) {?>
-		    		<div class="item" onclick="guardadoLocal(this);">
-						<div class="avatar">
-							<img src="">
-						</div>
-						<div class="descripcion">
-							<p id="id_cliente" class="id_cliente"><?= $arrClientes['ID_CLIENTE'] ?></p>
-							<p id="nombre_cliente"><?= $arrClientes['NOMBRE_CLIENTE'] ?></p>
-						</div>
-					</div>		    
-		    	<?php } ?>
-		</div>
-		<div id="btn_new_cliente" class="btn_nuevo">NUEVO CLIENTE</div>
 	</div>
 	<!--  -->
+
 	<!-- Nuevo Cliente  -->
-	 <div class="popup popNuevoCliente">
-      <div class="tarjeta nuevoCliente">
-        <div class="titulo">NUEVO CLIENTE
-          <div class="cerrar cerrarPopups"></div>
-        </div> 
-        <form class="formulario" id="formInsCliente" method="post">
-          <label>Nombre</label>
-          <input id="nombre_cliente" type="text" name="nombre_cliente" class="vaciar">
-          <label>Numero Celular</label>
-          <input id="numero_cliente" type="number" name="numero_celular" class="vaciar">
-          <label>Email</label>
-          <input id="email_cliente" type="text" name="email" class="vaciar">
-          <input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
-        </form>
-      </div>
-    </div>
+	<div id="dNewCliente" class="cajaDialogo">
+		<div class="newCliente formulario">
+			<div class="encabezado">
+				NUEVO CLIENTE
+				<div class="cerrar"></div>
+			</div> 
+			<div class="detalles">
+				<form id="formInsCliente" method="post">
+					<label>Nombre</label>
+					<input id="nombre_cliente" type="text" name="nombre_cliente" class="vaciar">
+					<label>Numero Celular</label>
+					<input id="numero_cliente" type="number" name="numero_celular" class="vaciar">
+					<label>Email</label>
+					<input id="email_cliente" type="text" name="email" class="vaciar">
+					<input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
+				</form>
+			</div>
+		</div>
+	</div>
 	<!--  -->
 
 
-	<div id="nuevoServicio" class="botonNuevo"></div>  
+	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewOrdenService')"></div>  
 	
 <?php require 'template/fin.php'; ?>

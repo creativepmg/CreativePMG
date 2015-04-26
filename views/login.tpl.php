@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,12 +22,12 @@
 	<script type="text/javascript" src="js/analytics.js"></script>
 </head>
 <body>
-	<div class="formulario">
+	<div class="formularioExterno">
 		<a href="/">
 			<div class="logo"></div>			
 		</a>
 		<div class="titulo">Iniciar Sesión</div>
-		<div id="respuestaLogin" class="cajaDialogo">
+		<div id="respuestaLogin" class="loading">
 			<img src="../img/loader.gif">
 		</div>
 		<form id="formLogIn" method="post">

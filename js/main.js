@@ -14,16 +14,120 @@ function inicio()
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
-	$('#btn_new_cliente').on('click', mostarFormNewCliente);
 	$('.btn_menu').on('click', ioMenu);
-
-	//$('#btnListo').on('click', updOrdenFinalizada); 
-	//$('#btnEditarOrden'),on('click', updOrden); 
-
+	$('#btnInsProducto').on('click', insProducto);
 	$('.usuario').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
 	$('.cerrarPopups').on('click', cerrarPopups);
+	$('.cajaDialogo .formulario .encabezado .cerrar').on('click', cerrarCajaDialogo);
+	$('#btnInsProveedor').on('click', insProveedor);
+	$('#btnInsCompra').on('click', insCompra);
+}
+function insCompra()
+{
+	var url = "inserts/insCompra.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#frmNuevaCompra").serialize(),
+		success: function(data){
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
+			setTimeout ("location.reload()", 5000);
+			}
+	});
+	cerrarCajaDialogo();
+	return false;
+}
+function insProveedor()
+{
+	console.log('MFNuevoProveedor');
+	var url = "../querys/insProveedor.php";
+	var formulario = $('#nuevoProveedor');
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $(formulario).serialize(),
+		success: function(data){
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
+			setTimeout ("location.reload()", 5000);
+			}
+	});
+	$('.vaciar').val('');
+	cerrarCajaDialogo();
+	return false;
+}
+function mostraCajaDialogo(parametro)
+{
+	cerrarCajaDialogo();
+	$(parametro).slideToggle();
+}
+function cerrarCajaDialogo()
+{
+	$('.cajaDialogo').css('display', 'none');
+}
+function guardadoLocal(obj)
+{	
+	var disparador = obj;
+	var id_cliente = $(disparador).children('.descripcion').children('#id_cliente').text()
+	var nombre_cliente = $(disparador).children('.descripcion').children('#nombre_cliente').text()
+	console.log('deberia llenar sessionStorage');
+	sessionStorage.setItem("nombre_cliente", nombre_cliente);
+	sessionStorage.setItem("id_cliente", id_cliente);
+	$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+	$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("nombre_cliente"));
+	mostraCajaDialogo('#dNewOrdenService');
+}
+function insCliente()
+{
+	var url = "../querys/insCliente.php";
+	//VARIABLES A RECOGER
+	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
+	var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
+	var cliente_email = $('#formInsCliente').children('#email_cliente').val();
+	//SETIADO DE VARIABLES EN SESSION STORAGE
+	sessionStorage.setItem("cliente_nombre", cliente_nombre);
+	
+	
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formInsCliente").serialize(),
+		success: function(data){
+			var id_utl_client = data;
+			console.log(id_utl_client);	
+			sessionStorage.setItem("id_cliente", id_utl_client);
+			$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+			$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));	
+			}
+	});
+	$('.vaciar').val('');
+	mostraCajaDialogo('#dNewOrdenService');
+	//setTimeout ("location.reload()", 3000);
+	return false;
+}
+function insProducto()
+{
+	console.log('MFNuevoProducto');
+	var url = "../querys/insProducto.php";
+	var formulario = $('#nuevoProducto');
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $(formulario).serialize(),
+		success: function(data){
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
+			setTimeout ("location.reload()", 5000);
+			}
+	});
+	$('.vaciar').val('');
+	cerrarCajaDialogo();
+	return false;
 }
 function notificacionEmergente()
 {
@@ -48,25 +152,8 @@ function ioMenu()
         opacity: "toggle"
     });  
 }
-function mostarFormNewCliente()
-{
-	$('.popNuevoCliente').slideToggle();
-	$('.cuadro_clientes').slideToggle();
-}
-function guardadoLocal(obj)
-{	
-	var disparador = obj;
-	var id_cliente = $(disparador).children('.descripcion').children('#id_cliente').text()
-	var nombre_cliente = $(disparador).children('.descripcion').children('#nombre_cliente').text()
-	console.log('deberia llenar sessionStorage');
-	sessionStorage.setItem("nombre_cliente", nombre_cliente);
-	sessionStorage.setItem("id_cliente", id_cliente);
-	$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
-	$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("nombre_cliente"));
-	$('.cuadro_clientes').css('display', 'block');
-	$('.popNuevoUsuario').slideToggle();
 
-}
+
 function insPreOrden()
 {
 	console.log('Orden de servicio editada');
@@ -77,12 +164,13 @@ function insPreOrden()
 		url: url,
 		data: $(formulario).serialize(),
 		success: function(data){
-			$("#respuesta").html(data);
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
 			setTimeout ("location.reload()", 3000);
 			}
 	});
 	$('.vaciar').val('');
-	cerrarPopups();
+	cerrarCajaDialogo();
 	return false;
 }
 function nuevoPreServicio()
@@ -101,7 +189,7 @@ function verEditar(obj)
 	$(disparador).parents('.item').children('.detalle').slideToggle();
 	$(disparador).parents('.item').children('.montos').slideToggle();
 }
-function updOrden(obj)
+function updOrden(obj) 
 {
 	console.log('Orden de servicio editada');
 	var url = "/querys/updOrden.php";
@@ -112,12 +200,13 @@ function updOrden(obj)
 		url: url,
 		data: $(formulario).serialize(),
 		success: function(data){
-			$("#respuesta").html(data);
+			$(".notificacion-emergente").html(data);
 			setTimeout ("location.reload()", 3000);
+			notificacionEmergente();
+			verEditar(disparador);
 			}
 	});
 	$('.vaciar').val('');
-	cerrarPopups();
 	return false;
 }
 function updOrdenFinalizada(obj)
@@ -130,8 +219,8 @@ function updOrdenFinalizada(obj)
 		url: url,
 		data: $(formulario).serialize(),
 		success: function(data){
-			$("#respuesta").html(data);
-
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
@@ -148,8 +237,8 @@ function insOrdenServicio()
 		url: url,
 		data: $("#formNotaCliente").serialize(),
 		success: function(data){
-			$("#respuesta").html(data);
-
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
@@ -157,37 +246,7 @@ function insOrdenServicio()
 	setTimeout ("location.reload()", 3000);
 	return false;
 }
-function insCliente()
-{
-	var url = "../querys/insCliente.php";
-	//VARIABLES A RECOGER
-	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
-	var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
-	var cliente_email = $('#formInsCliente').children('#email_cliente').val();
-	//SETIADO DE VARIABLES EN SESSION STORAGE
-	sessionStorage.setItem("cliente_nombre", cliente_nombre);
-	
-	
 
-	$.ajax({
-		type: "POST",
-		url: url,
-		data: $("#formInsCliente").serialize(),
-		success: function(data){
-			var id_utl_client = data;
-			console.log(id_utl_client);	
-			sessionStorage.setItem("id_cliente", id_utl_client);
-			$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
-			$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));		
-			}
-	});
-	$('.vaciar').val('');
-	$('.cuadro_clientes').css('display', 'none');
-	$('.popNuevoUsuario').slideToggle();
-	$('.popNuevoCliente').slideToggle();
-	//setTimeout ("location.reload()", 3000);
-	return false;
-}
 function updUsuario()
 {
 	var url = "/querys/updUsuario.php";
@@ -197,8 +256,8 @@ function updUsuario()
 		url: url,
 		data: $("#formMenuUsuarios").serialize(),
 		success: function(data){
-			$("#respuestaRegister").html(data);
-
+			$(".notificacion-emergenteRegister").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
@@ -214,7 +273,8 @@ function insContacto()
 		url: url,
 		data: $("#formContacto").serialize(),
 		success: function(data){
-			$("#respuestaContacto").html(data);
+			$(".notificacion-emergenteContacto").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
@@ -230,7 +290,8 @@ function consultaDominio()
 		url: url,
 		data: $("#formDominio").serialize(),
 		success: function(data){
-			$("#respuestaDominios").html(data);
+			$(".notificacion-emergenteDominios").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
@@ -246,7 +307,8 @@ function nuevoMenu()
 		url: url,
 		data: $("#nuevoMenu").serialize(),
 		success: function(data){
-			$("#respuesta").html(data);
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
@@ -263,7 +325,7 @@ function asignarMenu(obj)
 }
 function cerrarPopups()
 {
-	$('.popup').css('display', 'none');
+	$('.popup,.cajaDialogo').css('display', 'none');
 	$('.vaciar').val('');
 }
 function nuevoUsuario()
@@ -296,10 +358,11 @@ function confirmarCuenta()
 		url: url,
 		data: $("#formConfirmarCuenta").serialize(),
 		success: function(data){
-			$("#respuestaConfirmacionCuenta").html(data);
+			$(".notificacion-emergenteConfirmacionCuenta").html(data);
+			notificacionEmergente();
 			}
 	});
-	$('#respuestaConfirmacionCuenta').slideToggle();
+	$('.notificacion-emergenteConfirmacionCuenta').slideToggle();
 	$('.vaciar').val('');
 	return false;
 }
@@ -314,8 +377,8 @@ function redireccionar()
 function ocultar()
 {
 	console.log('se ejecuto ocultar');
-	$('#respuestaLogin').slideToggle();
-	$('#respuestaConfirmacionCuenta').slideToggle();
+	$('.notificacion-emergenteLogin').slideToggle();
+	$('.notificacion-emergenteConfirmacionCuenta').slideToggle();
 }
 function timeOcultar()
 {
@@ -341,6 +404,7 @@ function mostarMenu()
 }
 function logIn()
 {
+	console.log('deberias loguearte');
 	var url = "../querys/login.php";
 
 	$.ajax({
@@ -365,9 +429,28 @@ function PreRegister()
 		url: url,
 		data: $("#formRegister").serialize(),
 		success: function(data){
-			$("#respuestaRegister").html(data);
+			$("#RespuestaRegister").html(data);
+			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
 	return false;
 }
+//NOTIFICACIONES DE ESCRITORIO
+var options = {
+    body: "La orden de servicio Nro. 76 ha sido generada correctamente",
+    icon: "img/ico.png"
+};
+ 
+//var notif = new Notification("Orden de servicio", options);
+
+function GetWebNotificationsSupported() {
+    return (!!window.Notification);
+}
+function AskForWebNotificationPermissions()
+{
+    if (Notification) {
+        Notification.requestPermission();
+    }
+}
+AskForWebNotificationPermissions();
