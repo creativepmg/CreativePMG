@@ -1,8 +1,8 @@
 <?php 
-	require 'conexion.php';
+	require '../../querys/conexion.php';
 	mysql_set_charset('utf8');					
 	//$result_ins_cliente = $link->query($ins_cliente); 
-	$ins_producto	= "INSERT INTO productos (DESCRIPCION,
+	$ins_producto	= "INSERT INTO producto_tipo (DESCRIPCION,
 											 PRECIO_VENTA)
 				   	   VALUES ('$_POST[descripcion]',
 				   	   		   '$_POST[precio_venta]')"

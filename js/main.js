@@ -23,10 +23,28 @@ function inicio()
 	$('.cajaDialogo .formulario .encabezado .cerrar').on('click', cerrarCajaDialogo);
 	$('#btnInsProveedor').on('click', insProveedor);
 	$('#btnInsCompra').on('click', insCompra);
+	$('#btnInsItemCompra').on('click', insItemCompra);
+}
+function insItemCompra()
+{
+	var url = "src/inserts/insItemCompra.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#frmNuevoItemCompra").serialize(),
+		success: function(data){
+			$(".notificacion-emergente").html(data);
+			notificacionEmergente();
+			setTimeout ("location.reload()", 5000);
+			}
+	});
+	cerrarCajaDialogo();
+	return false;
 }
 function insCompra()
 {
-	var url = "inserts/insCompra.php";
+	var url = "src/inserts/insCompra.php";
 
 	$.ajax({
 		type: "POST",
@@ -113,7 +131,7 @@ function insCliente()
 function insProducto()
 {
 	console.log('MFNuevoProducto');
-	var url = "../querys/insProducto.php";
+	var url = "src/inserts/insProducto.php";
 	var formulario = $('#nuevoProducto');
 	$.ajax({
 		type: "POST",

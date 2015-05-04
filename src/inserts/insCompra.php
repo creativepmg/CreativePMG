@@ -1,5 +1,5 @@
 <?php 
-	require '../querys/conexion.php';
+	require '../../querys/conexion.php';
 
 	if(isset($_POST['fecha_compra']) && !empty($_POST['fecha_compra']))
 	{

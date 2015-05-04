@@ -3,20 +3,20 @@
  * #3498db Azul Hover 	CreativePMG
  * #ecf0f1 Nubes 		CreativePMG
  */
-/* line 22, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 24, D:/Desarrollos/creativepmg/sass/main.scss */
 * {
   margin: 0; }
 
-/* line 23, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 25, D:/Desarrollos/creativepmg/sass/main.scss */
 a {
   color: #e9e9e9;
   text-decoration: none; }
 
-/* line 28, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 30, D:/Desarrollos/creativepmg/sass/main.scss */
 a:hover {
   text-decoration: underline; }
 
-/* line 32, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 34, D:/Desarrollos/creativepmg/sass/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -27,7 +27,7 @@ body {
   margin: 0 auto;
   padding: 0; }
 
-/* line 43, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 45, D:/Desarrollos/creativepmg/sass/main.scss */
 footer {
   background-color: #2980b9;
   color: #e9e9e9;
@@ -37,12 +37,12 @@ footer {
   bottom: 0;
   width: 100%; }
 
-/* line 53, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 55, D:/Desarrollos/creativepmg/sass/main.scss */
 footer p {
   line-height: 50px;
   font-weight: bold; }
 
-/* line 59, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 61, D:/Desarrollos/creativepmg/sass/main.scss */
 header {
   background-color: #2980b9;
   height: 50px;
@@ -53,24 +53,24 @@ header {
   text-align: left;
   z-index: 2; }
 
-/* line 70, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 72, D:/Desarrollos/creativepmg/sass/main.scss */
 header nav {
   position: absolute;
   height: 50px;
   right: 0;
   top: 0; }
 
-/* line 77, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 79, D:/Desarrollos/creativepmg/sass/main.scss */
 header nav ul {
   list-style: none;
   padding: 0; }
 
-/* line 82, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 84, D:/Desarrollos/creativepmg/sass/main.scss */
 header nav ul li {
   display: inline-block;
   font-weight: bold; }
 
-/* line 87, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 89, D:/Desarrollos/creativepmg/sass/main.scss */
 header nav ul li a {
   height: 50px;
   line-height: 50px;
@@ -82,12 +82,12 @@ header nav ul li a {
   text-align: center;
   border-left: 1px outset #e9e9e9; }
 
-/* line 99, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 101, D:/Desarrollos/creativepmg/sass/main.scss */
 header nav ul li a:hover {
   background-color: #3498db;
   color: rgba(85, 85, 85, 0.7); }
 
-/* line 105, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 107, D:/Desarrollos/creativepmg/sass/main.scss */
 header .logo {
   height: 50px;
   display: inline-block;
@@ -97,7 +97,7 @@ header .logo {
   background-size: 135px;
   width: 150px; }
 
-/* line 115, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 117, D:/Desarrollos/creativepmg/sass/main.scss */
 h1 {
   background-color: #333;
   color: #e9e9e9;
@@ -113,18 +113,18 @@ h1 {
   width: 100%;
   z-index: 1; }
 
-/* line 133, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 135, D:/Desarrollos/creativepmg/sass/main.scss */
 .buscador .bloque {
   display: inline-block;
   width: 320px;
   max-width: 90%;
   margin: 0 auto; }
-  /* line 139, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 141, D:/Desarrollos/creativepmg/sass/main.scss */
   .buscador .bloque label {
     display: inline-block;
     margin: 5px;
     text-align: left; }
-  /* line 147, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 149, D:/Desarrollos/creativepmg/sass/main.scss */
   .buscador .bloque input[type="text"], .buscador .bloque input[type="number"], .buscador .bloque select {
     border-radius: 5px;
     border: 2px solid #2980b9;
@@ -135,7 +135,7 @@ h1 {
     box-sizing: border-box;
     vertical-align: middle; }
 
-/* line 162, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 164, D:/Desarrollos/creativepmg/sass/main.scss */
 .btnEditarOrden, .buscador .boton {
   background-color: #2980b9;
   border-radius: 5px;
@@ -150,11 +150,11 @@ h1 {
   text-align: center;
   cursor: pointer; }
 
-/* line 177, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 179, D:/Desarrollos/creativepmg/sass/main.scss */
 .buscador .boton:hover {
   background-color: #3498db; }
 
-/* line 182, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 184, D:/Desarrollos/creativepmg/sass/main.scss */
 .btn_cliente {
   width: 45px;
   height: 45px;
@@ -166,7 +166,7 @@ h1 {
   display: inline-block;
   vertical-align: middle; }
 
-/* line 194, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 196, D:/Desarrollos/creativepmg/sass/main.scss */
 .btn_menu {
   cursor: pointer;
   width: 50px;
@@ -176,7 +176,7 @@ h1 {
   background-repeat: no-repeat;
   display: inline-block; }
 
-/* line 204, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 206, D:/Desarrollos/creativepmg/sass/main.scss */
 .botonNuevo {
   background-color: #2980b9;
   background-image: url('../img/iconos/plus.png');
@@ -192,7 +192,7 @@ h1 {
   right: 10px;
   width: 50px; }
 
-/* line 220, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 222, D:/Desarrollos/creativepmg/sass/main.scss */
 .notificacion-emergente {
   width: 320px;
   display: none;
@@ -205,19 +205,19 @@ h1 {
   line-height: 50px;
   bottom: 60px; }
 
-/* line 233, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 235, D:/Desarrollos/creativepmg/sass/main.scss */
 .contenido {
   margin: 105px 0; }
 
-/* line 237, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 239, D:/Desarrollos/creativepmg/sass/main.scss */
 .contenido .cabecera div {
   display: inline-block; }
 
-/* line 242, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 244, D:/Desarrollos/creativepmg/sass/main.scss */
 .contenido .detalle .titulos div, .contenido .detalle .item div {
   display: inline-block; }
 
-/* line 246, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 248, D:/Desarrollos/creativepmg/sass/main.scss */
 .contResult {
   position: fixed;
   right: 10px;
@@ -230,7 +230,7 @@ h1 {
   height: 20px;
   width: 20px; }
 
-/* line 259, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 261, D:/Desarrollos/creativepmg/sass/main.scss */
 .loading {
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -246,12 +246,12 @@ h1 {
   width: 280px;
   z-index: 3; }
 
-/* line 275, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 277, D:/Desarrollos/creativepmg/sass/main.scss */
 .formularioExterno {
   width: 300px;
   margin: 0 auto;
   text-align: center; }
-  /* line 280, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 282, D:/Desarrollos/creativepmg/sass/main.scss */
   .formularioExterno .logo {
     background-image: url('../img/logo.png');
     background-size: 300px;
@@ -259,24 +259,24 @@ h1 {
     background-repeat: no-repeat;
     width: 300px;
     height: 135px; }
-  /* line 289, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 291, D:/Desarrollos/creativepmg/sass/main.scss */
   .formularioExterno .titulo {
     font-size: 40px;
     margin: 10px;
     color: #2980b9; }
-  /* line 295, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 297, D:/Desarrollos/creativepmg/sass/main.scss */
   .formularioExterno label {
     display: block;
     text-align: left;
     margin: 10px 0 5px 15px; }
-  /* line 302, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 304, D:/Desarrollos/creativepmg/sass/main.scss */
   .formularioExterno input[type="text"], .formularioExterno input[type="password"] {
     width: 90%;
     height: 42px;
     border-radius: 5px;
     border: 2px #2980b9 solid;
     padding-left: 10px; }
-  /* line 310, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 312, D:/Desarrollos/creativepmg/sass/main.scss */
   .formularioExterno input[type="submit"] {
     background-color: #2980b9;
     border-radius: 5px;
@@ -292,6 +292,84 @@ h1 {
     width: 95%; }
 
 /* line 328, D:/Desarrollos/creativepmg/sass/main.scss */
+.tabla {
+  text-align: left;
+  max-width: 90%;
+  margin: 0 auto; }
+  /* line 337, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla div div {
+    display: inline-block;
+    padding: 10px;
+    text-align: left;
+    border-right: 1px #607D8B solid;
+    font-size: 14px;
+    vertical-align: middle; }
+  /* line 346, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla div .id {
+    width: 40px;
+    text-align: center; }
+  /* line 351, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla div .descripcion {
+    width: 300px; }
+  /* line 355, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla div .monto {
+    width: 70px; }
+  /* line 359, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla div .enlace {
+    width: 200px; }
+  /* line 363, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla div .opciones {
+    width: 70px;
+    float: right;
+    padding: 0; }
+    /* line 368, D:/Desarrollos/creativepmg/sass/main.scss */
+    .tabla div .opciones .mas {
+      background-color: #2196F3;
+      background-image: url('../img/iconos/plus.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      border: 0;
+      height: 25px;
+      margin: 7px;
+      width: 25px; }
+      /* line 379, D:/Desarrollos/creativepmg/sass/main.scss */
+      .tabla div .opciones .mas:hover {
+        background-color: #607D8B;
+        cursor: pointer; }
+  /* line 386, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla .titulos {
+    background-color: #727272;
+    color: #FFFFFF; }
+    /* line 390, D:/Desarrollos/creativepmg/sass/main.scss */
+    .tabla .titulos .opciones {
+      padding: 10px; }
+  /* line 395, D:/Desarrollos/creativepmg/sass/main.scss */
+  .tabla .item {
+    border-bottom: 1px #607D8B solid; }
+
+/* line 400, D:/Desarrollos/creativepmg/sass/main.scss */
+.bloque {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px #212121;
+  margin: 10px auto;
+  max-width: 90%;
+  padding: 10px;
+  text-align: left; }
+  /* line 410, D:/Desarrollos/creativepmg/sass/main.scss */
+  .bloque .titulo {
+    font-size: 20px;
+    border-bottom: 1px #727272 solid;
+    padding: 5px; }
+  /* line 417, D:/Desarrollos/creativepmg/sass/main.scss */
+  .bloque .item {
+    padding: 10px; }
+    /* line 421, D:/Desarrollos/creativepmg/sass/main.scss */
+    .bloque .item div, .bloque .item p {
+      display: inline-block; }
+
+/* line 428, D:/Desarrollos/creativepmg/sass/main.scss */
 .cajaDialogo {
   background-color: rgba(114, 114, 114, 0.5);
   bottom: 0;
@@ -301,7 +379,7 @@ h1 {
   right: 0;
   top: 0;
   z-index: 3; }
-  /* line 339, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 439, D:/Desarrollos/creativepmg/sass/main.scss */
   .cajaDialogo .formulario {
     background-color: #fff;
     bottom: 0;
@@ -317,7 +395,7 @@ h1 {
     top: 0;
     width: 280px;
     z-index: 3; }
-    /* line 362, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 462, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario input[type="text"], .cajaDialogo .formulario input[type="password"], .cajaDialogo .formulario input[type="email"], .cajaDialogo .formulario input[type="number"], .cajaDialogo .formulario input[type="date"], .cajaDialogo .formulario select, .cajaDialogo .formulario textarea {
       border-radius: 5px;
       border: 2px solid #2980b9;
@@ -328,21 +406,21 @@ h1 {
       margin: 0 auto;
       box-sizing: border-box;
       vertical-align: middle; }
-    /* line 374, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 474, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario input[type="date"] {
       text-align: center;
       padding-right: 10px; }
-    /* line 379, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 479, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario textarea {
       height: 5em !important; }
-    /* line 385, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 485, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario .encabezado {
       background-color: #2980b9;
       padding: 10px;
       color: #e9e9e9;
       position: relative;
       text-align: left; }
-      /* line 392, D:/Desarrollos/creativepmg/sass/main.scss */
+      /* line 492, D:/Desarrollos/creativepmg/sass/main.scss */
       .cajaDialogo .formulario .encabezado .cerrar {
         background-image: url('../img/iconos/close.png');
         background-position: center;
@@ -354,17 +432,17 @@ h1 {
         right: 0;
         top: 0;
         width: 42px; }
-    /* line 406, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 506, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario .btn_nuevo {
       background-color: #333;
       color: #e9e9e9;
       line-height: 50px;
       height: 50px;
       cursor: pointer; }
-    /* line 416, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 516, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario .detalles label {
       display: block; }
-    /* line 420, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 520, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario .detalles input[type="submit"] {
       background-color: #2980b9;
       border-radius: 5px;
@@ -378,53 +456,57 @@ h1 {
       line-height: 46px;
       text-align: center;
       cursor: pointer; }
-    /* line 437, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 537, D:/Desarrollos/creativepmg/sass/main.scss */
     .cajaDialogo .formulario .lista {
       height: 208px;
       overflow-x: hidden;
       overflow-y: scroll; }
-      /* line 442, D:/Desarrollos/creativepmg/sass/main.scss */
+      /* line 542, D:/Desarrollos/creativepmg/sass/main.scss */
       .cajaDialogo .formulario .lista .item {
         border-bottom: 1px solid #333;
         padding: 10px 0 10px 25px;
         text-transform: uppercase;
         text-align: left;
         font-size: 15px; }
-        /* line 449, D:/Desarrollos/creativepmg/sass/main.scss */
+        /* line 549, D:/Desarrollos/creativepmg/sass/main.scss */
         .cajaDialogo .formulario .lista .item:hover {
           background-color: rgba(33, 33, 33, 0.5);
           color: #FFFFFF;
           cursor: pointer; }
-        /* line 455, D:/Desarrollos/creativepmg/sass/main.scss */
+        /* line 555, D:/Desarrollos/creativepmg/sass/main.scss */
         .cajaDialogo .formulario .lista .item .descripcion .id_cliente {
           display: none; }
-  /* line 463, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 564, D:/Desarrollos/creativepmg/sass/main.scss */
   .cajaDialogo .nuevaOrdenServicio {
     height: 330px; }
-  /* line 468, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 569, D:/Desarrollos/creativepmg/sass/main.scss */
   .cajaDialogo .lisProducto, .cajaDialogo .lisClientes {
     height: 300px; }
-  /* line 472, D:/Desarrollos/creativepmg/sass/main.scss */
-  .cajaDialogo .newCliente {
-    height: 294px; }
-  /* line 476, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 574, D:/Desarrollos/creativepmg/sass/main.scss */
+  .cajaDialogo .newItemCompra, .cajaDialogo .newCliente {
+    height: 295px;
+    /*Tres inputs y sus labels*/ }
+  /* line 578, D:/Desarrollos/creativepmg/sass/main.scss */
+  .cajaDialogo .newCompra {
+    height: 227px; }
+  /* line 582, D:/Desarrollos/creativepmg/sass/main.scss */
   .cajaDialogo .newProveedor {
     height: 160px;
     /*Un solo input*/ }
 
-/* line 489, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 595, D:/Desarrollos/creativepmg/sass/main.scss */
 .contentPanel {
   position: relative; }
 
-/* line 493, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 599, D:/Desarrollos/creativepmg/sass/main.scss */
 .deuda {
   padding: 45px; }
 
-/* line 497, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 603, D:/Desarrollos/creativepmg/sass/main.scss */
 .deuda p {
   padding: 5px; }
 
-/* line 501, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 607, D:/Desarrollos/creativepmg/sass/main.scss */
 .deuda .montoDeuda {
   background-color: #2980b9;
   width: 120px;
@@ -436,7 +518,7 @@ h1 {
   border-radius: 50%;
   line-height: 120px; }
 
-/* line 514, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 620, D:/Desarrollos/creativepmg/sass/main.scss */
 .descripciones {
   margin: 10px auto;
   display: inline-block;
@@ -447,28 +529,28 @@ h1 {
   padding: 25px;
   width: 90%;
   text-align: left; }
-  /* line 525, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 631, D:/Desarrollos/creativepmg/sass/main.scss */
   .descripciones div {
     display: inline-block;
     margin-left: 10px; }
-    /* line 529, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 635, D:/Desarrollos/creativepmg/sass/main.scss */
     .descripciones div div {
       font-weight: bolder;
       width: 85px;
       display: inline-block;
       font-size: 16px; }
-    /* line 536, D:/Desarrollos/creativepmg/sass/main.scss */
+    /* line 642, D:/Desarrollos/creativepmg/sass/main.scss */
     .descripciones div p {
       display: inline-block;
       text-transform: uppercase;
       font-size: 14px; }
 
-/* line 545, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 651, D:/Desarrollos/creativepmg/sass/main.scss */
 .optDetalle {
   text-align: right;
   max-width: 90%;
   margin: 0 auto; }
-  /* line 550, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 656, D:/Desarrollos/creativepmg/sass/main.scss */
   .optDetalle .agregarDetalle {
     background-color: #2980b9;
     border-radius: 5px;
@@ -484,7 +566,7 @@ h1 {
     text-align: center;
     width: 150px; }
 
-/* line 573, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 679, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item {
   max-width: 700px;
   border-left: 5px solid #2980b9;
@@ -495,7 +577,7 @@ h1 {
   position: relative;
   padding: 10px 70px 45px 10px; }
 
-/* line 585, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 691, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .estado {
   background-color: #2980b9;
   color: #e9e9e9;
@@ -504,23 +586,23 @@ h1 {
   bottom: 0;
   padding: 5px; }
 
-/* line 594, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 700, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .editarOrden {
   display: none; }
 
-/* line 598, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 704, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .cliente {
   font-weight: bolder; }
 
-/* line 602, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 708, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .detalle {
   padding-left: 25px; }
 
-/* line 606, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 712, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .montos {
   margin-top: 10px; }
 
-/* line 610, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 716, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .montos div {
   display: inline-block;
   width: 100px;
@@ -528,23 +610,23 @@ h1 {
   text-align: center;
   background-color: #efefef; }
 
-/* line 618, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 724, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .montos div p:first-child {
   font-weight: bolder; }
 
-/* line 622, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 728, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .montos div input[type="number"] {
   width: 100px;
   border: 1px solid #ccc;
   text-align: center; }
 
-/* line 628, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 734, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .opcionesItem {
   position: absolute;
   right: 5px;
   top: 3px; }
 
-/* line 635, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 741, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .areaEditable {
   border-radius: 5px;
   display: block;
@@ -552,7 +634,7 @@ h1 {
   width: 100%;
   height: 5em; }
 
-/* line 643, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 749, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .opcionesItem .agregar {
   background-color: transparent;
   background-image: url('../img/iconos/plus-opciones.png');
@@ -562,12 +644,12 @@ h1 {
   border: 0;
   height: 50px;
   width: 50px; }
-  /* line 653, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 759, D:/Desarrollos/creativepmg/sass/main.scss */
   .listaNotas .item .opcionesItem .agregar:hover {
     background-image: url('../img/iconos/plus-hover.png');
     cursor: pointer; }
 
-/* line 659, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 765, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .opcionesItem .listo {
   width: 50px;
   height: 50px;
@@ -576,12 +658,12 @@ h1 {
   background-position: center;
   background-repeat: no-repeat; }
 
-/* line 668, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 774, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .opcionesItem .listo:hover {
   background-image: url('../img/iconos/done-hover.png');
   cursor: pointer; }
 
-/* line 673, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 779, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .opcionesItem .editar {
   width: 50px;
   height: 50px;
@@ -590,17 +672,17 @@ h1 {
   background-position: center;
   background-repeat: no-repeat; }
 
-/* line 682, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 788, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaNotas .item .opcionesItem .editar:hover {
   background-image: url('../img/iconos/edit-hover.png');
   cursor: pointer; }
 
-/* line 687, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 793, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaDeudas {
   margin: 10px;
   padding: 0 10px; }
 
-/* line 692, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 798, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaDeudas .item {
   max-width: 500px;
   border-left: 5px solid #2980b9;
@@ -610,19 +692,19 @@ h1 {
   text-align: left;
   position: relative; }
 
-/* line 702, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 808, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaDeudas .item div {
   display: inline-block;
   vertical-align: middle; }
 
-/* line 707, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 813, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaDeudas .item .fecha {
   width: 35px;
   padding: 0 10px;
   font-size: 13px;
   text-align: center; }
 
-/* line 714, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 820, D:/Desarrollos/creativepmg/sass/main.scss */
 .listaDeudas .item .monto {
   height: 45px;
   line-height: 45px;
@@ -631,11 +713,11 @@ h1 {
   top: 0;
   padding-right: 10px; }
 
-/* line 723, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 829, D:/Desarrollos/creativepmg/sass/main.scss */
 .mensajeParaElUsuario {
   padding: 10px; }
 
-/* line 727, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 833, D:/Desarrollos/creativepmg/sass/main.scss */
 .menu {
   font-size: 14px;
   width: 250px;
@@ -648,28 +730,28 @@ h1 {
   display: none;
   z-index: 2; }
 
-/* line 740, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 846, D:/Desarrollos/creativepmg/sass/main.scss */
 .menu ul {
   list-style: none;
   padding: 0; }
 
-/* line 745, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 851, D:/Desarrollos/creativepmg/sass/main.scss */
 .menu ul li {
   border-bottom: 1px #e9e9e9 solid; }
 
-/* line 749, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 855, D:/Desarrollos/creativepmg/sass/main.scss */
 .menu ul li a {
   display: block;
   padding: 20px;
   color: #e9e9e9;
   text-decoration: none; }
 
-/* line 756, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 862, D:/Desarrollos/creativepmg/sass/main.scss */
 .menu ul li a:hover {
   background-color: #3498db;
   font-weight: bolder; }
 
-/* line 761, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 867, D:/Desarrollos/creativepmg/sass/main.scss */
 .nuevoUsuario {
   bottom: 0;
   height: 380px;
@@ -681,7 +763,7 @@ h1 {
   width: 250px;
   position: absolute; }
 
-/* line 773, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 879, D:/Desarrollos/creativepmg/sass/main.scss */
 .nuevoServicio {
   bottom: 0;
   height: 370px;
@@ -693,7 +775,7 @@ h1 {
   width: 250px;
   position: absolute; }
 
-/* line 785, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 891, D:/Desarrollos/creativepmg/sass/main.scss */
 .newPreOrder {
   bottom: 0;
   height: 380px;
@@ -705,7 +787,7 @@ h1 {
   width: 250px;
   position: absolute; }
 
-/* line 797, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 903, D:/Desarrollos/creativepmg/sass/main.scss */
 .nuevoCliente {
   position: absolute;
   left: 0;
@@ -717,7 +799,7 @@ h1 {
   margin: auto !important;
   min-height: 180px; }
 
-/* line 809, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 915, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionCuenta {
   background: #dedede;
   padding: 20px;
@@ -725,17 +807,17 @@ h1 {
   font-size: 14px;
   margin-bottom: 50px; }
 
-/* line 817, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 923, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionCuenta a {
   color: #2980b9;
   font-size: 20px;
   text-decoration: none; }
 
-/* line 823, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 929, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionCuenta p {
   margin: 5px; }
 
-/* line 827, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 933, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionesUsuario {
   display: none;
   position: absolute;
@@ -744,13 +826,13 @@ h1 {
   top: 50px;
   z-index: 3; }
 
-/* line 836, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 942, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionesUsuario ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-/* line 842, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 948, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionesUsuario ul li a {
   background-color: #333;
   color: #e9e9e9;
@@ -758,11 +840,11 @@ h1 {
   padding: 15px 0;
   text-decoration: none; }
 
-/* line 850, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 956, D:/Desarrollos/creativepmg/sass/main.scss */
 .opcionesUsuario ul li a:hover {
   background-color: #444; }
 
-/* line 854, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 960, D:/Desarrollos/creativepmg/sass/main.scss */
 .popup {
   display: none;
   background-color: rgba(0, 0, 0, 0.3);
@@ -773,7 +855,7 @@ h1 {
   z-index: 99;
   bottom: 0; }
 
-/* line 865, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 971, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta {
   margin: 10px auto;
   display: inline-block;
@@ -784,7 +866,7 @@ h1 {
   padding-bottom: 5px;
   width: 275px; }
 
-/* line 876, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 982, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .opciones .agregarMenus {
   background-color: #2980b9;
   background-image: url('../img/iconos/plus.png');
@@ -792,12 +874,12 @@ h1 {
   background-repeat: no-repeat;
   height: 50px; }
 
-/* line 884, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 990, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .opciones .agregarMenus:hover {
   background-color: #3498db;
   cursor: pointer; }
 
-/* line 889, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 995, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .listaMenus label {
   background-color: #efefef;
   background-image: url('../img/iconos/checkbox-unchecked.png');
@@ -811,17 +893,17 @@ h1 {
   text-align: center;
   cursor: pointer; }
 
-/* line 903, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1009, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .listaMenus input[type="checkbox"] {
   visibility: hidden;
   position: fixed; }
 
-/* line 908, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1014, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .listaMenus input[type="checkbox"]:checked + label {
   background-image: url('../img/iconos/checkbox-checked.png');
   font-weight: bold; }
 
-/* line 913, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1019, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .titulo {
   background-color: #2980b9;
   border-radius: 5px 5px 0 0;
@@ -832,41 +914,41 @@ h1 {
   position: relative;
   text-transform: uppercase; }
 
-/* line 925, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1031, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .imagen {
   width: 100px;
   margin: 5px auto; }
 
-/* line 930, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1036, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .imagen img {
   width: 100%;
   height: 100%; }
 
-/* line 935, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1041, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .detalles {
   padding: 5px;
   text-align: left; }
 
-/* line 940, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1046, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .detalles p {
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: 5px center;
   padding: 0 0 0 25px; }
 
-/* line 947, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1053, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .detalles .nombre {
   background-image: url('../img/iconos/user.png'); }
 
-/* line 951, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1057, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .detalles .email {
   background-image: url('../img/iconos/email.png'); }
 
-/* line 955, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1061, D:/Desarrollos/creativepmg/sass/main.scss */
 .tarjeta .detalles .mobile {
   background-image: url('../img/iconos/mobile.png'); }
 
-/* line 960, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1066, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario {
   height: 50px;
   right: 0;
@@ -874,13 +956,13 @@ h1 {
   position: absolute;
   top: 0; }
 
-/* line 968, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1074, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones {
   display: inline-block;
   position: relative;
   vertical-align: middle; }
 
-/* line 974, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1080, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .icono {
   width: 50px;
   height: 50px;
@@ -889,12 +971,12 @@ h1 {
   background-repeat: no-repeat;
   position: relative; }
 
-/* line 983, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1089, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .icono:hover {
   background-image: url('../img/iconos/on_notifications.png');
   cursor: pointer; }
 
-/* line 988, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1094, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .icono .contador {
   background-color: #333;
   border-radius: 50%;
@@ -909,7 +991,7 @@ h1 {
   right: 0;
   text-align: center; }
 
-/* line 1003, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1109, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones {
   -webkit-animation: gb__a 0.2s;
   -webkit-border-radius: 2px;
@@ -930,7 +1012,7 @@ h1 {
   width: 240px;
   z-index: 99; }
 
-/* line 1024, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1130, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .item {
   color: #333;
   font-size: 11px;
@@ -939,13 +1021,13 @@ h1 {
   text-align: left;
   border: 1px solid #fff; }
 
-/* line 1033, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1139, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .item:hover {
   border: 1px solid #e5e5e5;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.03); }
 
-/* line 1039, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1145, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .verTodos {
   color: #333;
   list-style: none;
@@ -955,13 +1037,13 @@ h1 {
   position: relative;
   padding-right: 40px; }
 
-/* line 1049, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1155, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .verTodos:hover {
   cursor: pointer;
   color: #e9e9e9;
   background: rgba(0, 0, 0, 0.5); }
 
-/* line 1055, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1161, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .flechita:after {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -971,7 +1053,7 @@ h1 {
   position: absolute;
   top: 0; }
 
-/* line 1065, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1171, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones {
   border: 1px solid #fff;
   color: #333;
@@ -982,51 +1064,51 @@ h1 {
   overflow-y: scroll;
   text-align: center; }
 
-/* line 1076, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1182, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar {
   width: 8px; }
 
-/* line 1080, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1186, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb {
   background-color: #2980b9;
   border-radius: 10px; }
 
-/* line 1084, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1190, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:hover {
   background-color: #2980b9;
   border: 1px solid #333; }
 
-/* line 1088, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1194, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:active {
   background-color: #2980b9;
   border: 1px solid #333; }
 
-/* line 1092, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1198, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .usuario {
   display: inline-block;
   cursor: pointer; }
 
-/* line 1097, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1203, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .usuario .username {
   display: none;
   font-weight: bolder;
   color: #e9e9e9;
   vertical-align: middle; }
 
-/* line 1104, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1210, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .usuario .avatar {
   width: 50px;
   height: 50px;
   display: inline-block;
   vertical-align: middle; }
 
-/* line 1111, D:/Desarrollos/creativepmg/sass/main.scss */
+/* line 1217, D:/Desarrollos/creativepmg/sass/main.scss */
 .menuUsuario .usuario .avatar img {
   width: 100%;
   height: 100%; }
 
 @media screen and (min-width: 400px) {
-  /* line 1117, D:/Desarrollos/creativepmg/sass/main.scss */
+  /* line 1223, D:/Desarrollos/creativepmg/sass/main.scss */
   .menuUsuario .usuario .username {
     display: inline-block; }
  }

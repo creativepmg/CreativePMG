@@ -1,19 +1,26 @@
 <?php require 'template/inicio.php' ?>
 	<!-- Contenido mostrado -->
-	<?php while ($arrProveedores=mysql_fetch_array($lis_compras)) {?>
-		<div class="tarjeta">
-	        <div id="idUsuario" style="display: none;"></div>
-	        <div class="titulo"></div>
-	        
-	        <div class="detalles">
-	          <p><?= $arrProveedores['DESCRIPCION']; ?></p>	          
-	        </div>
-	        <div class="social"></div>
-	        <div class="opciones">
-	          <div class="agregarMenus" onclick="asignarMenu(this);"></div>
-	        </div>   
-      </div>
+	<div class="tabla">
+		<div class="titulos">
+			<div class="id">ID</div>
+			<div class="descripcion">DESCRIPCION</div>
+			<div class="monto">TOTAL</div>
+			<div class="opciones">OPCIONES</div>
+		</div>
+	<?php while ($arrCompras=mysql_fetch_array($lis_compras)) {?>
+		<div class="item">
+			<div class="id"><?= $arrCompras['ID_COMPRA'] ?></div>
+			<div class="descripcion"><?= $arrCompras['DESCRIPCION'] ?></div>
+			<div class="monto"><?= $arrCompras['MONTO_TOTAL'] ?> USD</div>
+			<div class="opciones">
+				<form action="compra-detalle" method="post">
+					<input type="hidden" name="id_compra" value="<?= $arrCompras['ID_COMPRA'] ?>">
+					<input class="mas" type="submit" value="">
+				</form>
+			</div>
+		</div>
 	<?php } ?>
+	</div>
 	<!-- Cajas de dialogo -->
 	<div id="dNewCompra" class="cajaDialogo">
 		<div class="newCompra formulario">
