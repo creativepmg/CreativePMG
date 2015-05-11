@@ -99,6 +99,22 @@ function guardadoLocal(obj)
 	$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("nombre_cliente"));
 	mostraCajaDialogo('#dNewOrdenService');
 }
+function guardadoLocalProducto(obj)
+{	
+	var disparador = obj;
+	var id_servicio = $(disparador).children('.descripcion').children('#id_servicio').text()
+	var id_producto = $(disparador).children('.descripcion').children('#id_producto').text()
+	console.log('deberia llenar sessionStorage');
+	sessionStorage.setItem("id_servicio", id_servicio);
+	sessionStorage.setItem("id_producto", id_producto);
+	insItemServicio();
+}
+function insItemServicio()
+{
+	var id_servicio = sessionStorage.getItem("id_servicio");
+	var id_producto = sessionStorage.getItem("id_producto");
+	window.location = 'src/inserts/insItemServicio.php?id_servicio=' + id_servicio + '&id_producto=' + id_producto;
+}
 function insCliente()
 {
 	var url = "../querys/insCliente.php";

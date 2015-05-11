@@ -2,6 +2,7 @@
 	require 'querys/control.php';
 	require 'querys/conexion.php';
 	require 'querys/querys.php';
+    require 'src/selects/selects.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">

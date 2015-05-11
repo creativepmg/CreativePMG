@@ -397,7 +397,7 @@ h1
 		border-bottom: 1px $accent-color solid;
 	}
 }
-.bloque
+.tarjeton
 {
 	background-color: $primary-color-text;
 	border-radius: 3px;
@@ -517,7 +517,8 @@ h1
 			{
 				display: block;
 			}
-			input[type="submit"]
+			input[type="submit"],
+			.boton
 			{
 				background-color: #2980b9;
 				border-radius: 5px;
@@ -556,6 +557,11 @@ h1
 				{
 					display: none;
 				}
+				.proveedor
+				{
+					font-weight: bolder;
+					font-size: 0.8em;
+				}
 			}
 
 		}
@@ -565,7 +571,10 @@ h1
 	{
 		height: 330px;
 	}
-	.lisProducto,
+	.lisProducto
+	{
+		height: 250px;
+	}
 	.lisClientes
 	{
 		height: 300px;
@@ -839,6 +848,8 @@ h1
 	position: fixed;
 	top: 50px;
 	bottom: 50px;
+	overflow-y: scroll;
+	overflow-x: hidden; 
 	left: 0px;
 	display: none;
 	z-index: 2;

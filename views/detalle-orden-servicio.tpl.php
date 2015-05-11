@@ -1,21 +1,28 @@
 <?php require 'template/inicio.php'; ?>
 <?php 
-	if(empty($_POST['nroOrden']))
+	if(empty($_GET['nroOrden']))
 	{
 		$id_orden = 'null';
 		$redirec = '<meta http-equiv="refresh" content="0; url=orden-servicio">';
 	}
 	else
 	{
-		$id_orden = $_POST['nroOrden'];
+		$id_orden = $_GET['nroOrden'];
 		$redirec = '';
 	}
-	$lisDetalleOrden	= mysql_query("SELECT * FROM orden_servicio_detalle								   	  
-								   	   WHERE ID_ORDEN_SERVICIO  = '$id_orden'
-								   ORDER BY ITEM DESC") 
-					   or die("Error en la consulta.." . mysql_error($con));
-
-	
+	$lisDetalleOrden	= mysql_query("SELECT 	A.ID_PRODUCTO,
+												B.ID_PRODUCTO,
+												B.ID_TIPO_PRODUCTO,
+												C.ID_TIPO_PRODUCTO,
+												C.DESCRIPCION,
+												C.PRECIO_VENTA
+										FROM orden_servicio_detalle AS A
+										INNER JOIN producto_stock 	AS B
+											ON B.ID_PRODUCTO = A.ID_PRODUCTO
+										INNER JOIN producto_tipo 	AS C
+											ON C.ID_TIPO_PRODUCTO = B.ID_TIPO_PRODUCTO
+								   	   WHERE A.ID_ORDEN_SERVICIO  = '$id_orden'") 
+					   		or die("Error en la consulta.." . mysql_error($con));	
 
 	$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
 								   	   LEFT JOIN clientes 			AS B
@@ -40,21 +47,23 @@
 		<div class="agregarDetalle" onclick="mostraCajaDialogo('#dElegirProducto')">AGREGAR DETALLE</div>
 	</div>
 	<div class="totalDetalles">Total Items: <?= $countDetalles ?></div>
-	<div class="detalle">
-		<div class="titulos">
-			<div class="cantidad">CANT</div>
-			<div class="detalle">DETALLE</div>
-			<div class="precio">PRECIO</div>
-		</div>	
-	
-	<?php while ($arrOrdenDetalle=mysql_fetch_array($lisDetalleOrden)) {?>
+
+	<div class="tabla" style="max-width: 100%;">
+			<div class="titulos">
+				<div class="id">CANT</div>
+				<div class="descripcion">DESCRIPCION</div>
+				<div class="monto">TOTAL</div>
+			</div>
+		<?php while ($arrOrdenDetalle=mysql_fetch_array($lisDetalleOrden)) {?>
 		<div class="item">
-			<div class="cantidad"><?= $arrOrdenDetalle['CANTIDAD'] ?></div>
-			<div class="detalle"><?= $arrOrdenDetalle['DETALLE'] ?></div>
-			<div class="precio"><?= $arrOrdenDetalle['MONTO'] ?></div>
+			<div class="id"><?= '1' ?></div>
+			<div class="descripcion"><?= $arrOrdenDetalle['DESCRIPCION'] ?></div>
+			<div class="monto"><?= $arrOrdenDetalle['PRECIO_VENTA'] ?></div>
 		</div>
 	<?php } ?>
-	</div>
+		</div>
+
+
 
 	<!-- ESCOGER PRODUCTO -->
 	<div id="dListaProducto" class="cajaDialogo">
@@ -65,18 +74,20 @@
 			</div>
 			<div class="lista">			 
 			    	<?php while ($arrProductos=mysql_fetch_array($lis_productos)) {?>
-			    		<div class="item" onclick="guardadoLocal(this);">
+			    		<div class="item" onclick="guardadoLocalProducto(this);">
 							<div class="avatar">
 								<img src="">
 							</div>
 							<div class="descripcion">
-								<p id="id_cliente" class="id_cliente"><?= $arrProductos['ID_PRODUCTO'] ?></p>
+								<p id="id_servicio" class="id_cliente"><?= $arrOrden['ID_ORDEN_SERVICIO'] ?></p>
+								<p id="id_producto" class="id_cliente"><?= $arrProductos['ID_PRODUCTO'] ?></p>
 								<p id="nombre_cliente"><?= $arrProductos['DESCRIPCION'] ?></p>
+								<p class="proveedor">Proveedor:  <?= $arrProductos['DESCRIPCION_PROVEEDOR'] ?></p>
 							</div>
 						</div>		    
 			    	<?php } ?>
 			</div>
-			<div class="btn_nuevo" onclick="mostraCajaDialogo('#dNewCliente')">NUEVO CLIENTE</div>
+			
 		</div>
 	</div>
 	<!--  -->
@@ -84,23 +95,34 @@
 
 	<!-- ESCOGER PRODUCTO -->
 	<div id="dElegirProducto" class="cajaDialogo">
-		<div class="lisProducto formulario">
+		<div class="formulario">
 			<div class="encabezado">
 				ELIGE UNA OPCION
 				<div class="cerrar"></div>
 			</div>
-			<div class="descripcion">			 
+			<div class="detalles">			 
 			    <div class="boton" onclick="mostraCajaDialogo('#dListaProducto')">PRODUCTOS</div>
+			    <div class="boton" onclick="mostraCajaDialogo('#dManoDeObra')">MANO DE OBRA</div>
 			</div>
 		</div>
 	</div>
 	<!--  -->
+	<div id="dManoDeObra" class="cajaDialogo">
+		<div class="formulario">
+			<div class="encabezado">
+				MANO DE OBRA
+				<div class="cerrar"></div>
+			</div>
 
-	<div class="manoDeObra">
-		<form method="post">
-			<input type="number" >
-			<input type="submit">
-		</form>
+			<div class="detalles">
+				<form method="post">
+					<label>Ingrese un monto</label>
+					<input type="hidden" name="id_servicio" value="MANO DE OBRA">
+					<input type="number" >
+					<input type="submit">
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<!-- <div class="botonNuevo" onclick="mostraCajaDialogo('#dListaProducto')"></div> -->

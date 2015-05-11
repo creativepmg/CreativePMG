@@ -34,7 +34,7 @@
 		$arrCabecera=mysql_fetch_array($cabecera_compra);
 		$id_proveedor = $arrCabecera['ID_PROVEEDOR']
 	?>
-	<div class="bloque">
+	<div class="tarjeton">
 		<div class="titulo">
 			DETALLE COMPRA
 		</div>
@@ -43,7 +43,7 @@
 			<p><?= $arrCabecera['DESCRIPCION'] ?></p>
 		</div>
 	</div>
-	<div class="bloque">
+	<div class="tarjeton">
 		<div class="titulo">
 			ITEMS COMPRADOS
 		</div>

@@ -74,7 +74,7 @@
 			<div class="detalle"><?= $arrServi['DETALLE'] ?></div>
 			<div class="opcionesItem">
 				<div class="editar" title="Marcar como terminado" onclick="verEditar(this);"></div>
-				<form action="detalle-orden-servicio" method="post">
+				<form action="detalle-orden-servicio" method="GET">
 					<input name="nroOrden" type="hidden" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
 					<input type="submit" class="agregar" title="Agregar detalles" value="" />
 				</form>
