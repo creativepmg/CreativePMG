@@ -10,6 +10,9 @@
 									ON B.ID_PROVEEDOR = A.ID_PROVEEDOR
 								ORDER BY A.FECHA_COMPRA")
 						or die("Error en la consulta compras.." . mysql_error($con));
+	//MENUS
+	$lis_menus		= mysql_query("SELECT * FROM menu ORDER BY ID_MENU DESC")
+					  or die("problemas en consulta:".mysql_error());
 	//PRODUCTOS
 	$lis_productos 		= mysql_query("SELECT 	A.ID_PRODUCTO,
 												A.STOCK,
@@ -31,4 +34,5 @@
 	$lis_proveedores = mysql_query("SELECT * FROM proveedores 
 									ORDER BY DESCRIPCION_PROVEEDOR")
 						or die("Error en la consulta proveedores.." . mysql_error($con));
+
 ?>

@@ -35,12 +35,8 @@
 	 *	Consultas
 	 */
 
-	$deudaUsuario 	= mysql_query("SELECT * 
-								   FROM deuda_cliente  
-								   WHERE ID_CLIENTE = '$arrayUsuario[EMAIL]'")
-				      or die("No sabemos cuanto debes ".mysql_error($con));
-	$menu 			= mysql_query("SELECT * FROM menu ORDER BY ID_MENU DESC")
-					  or die("problemas en consulta:".mysql_error());
+	
+	
 	$usuario_menu 	= mysql_query("SELECT * FROM usuario_menu as a
 									INNER JOIN menu as b
 										ON b.ID_MENU = a.ID_MENU
@@ -52,20 +48,10 @@
                                 ORDER BY A.NOMBRE_CLIENTE") 
              		or die("Error en la consulta.." . mysqli_error($con));
 
-	$lis_menus 		= mysql_query("SELECT * FROM menu ORDER BY DESCRIPCION")
-					   	or die("Error en la consulta.." . mysqli_error($con));
-
 	$lis_tipo_productos = mysql_query("SELECT * FROM producto_tipo ORDER BY DESCRIPCION")
 						or die("Error en la consulta lis_tipo_productos.." . mysql_error($con));
 						
-	$lis_orden_serv		= mysql_query("SELECT * FROM orden_servicio AS A
-								   	   LEFT JOIN clientes AS B
-								   		ON A.ID_CLIENTE = B.ID_CLIENTE
-								   	   WHERE 	A.ID_ESTADO_SERVICIO 		= '1'
-								   	   	AND    ($userCategori 	= '1'
-								   	   	OR 		A.ID_USUARIO 	= $userId)
-								   	   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta lis orden serv .." . mysql_error($con));
+
 	$lis_notificaciones	= mysql_query("SELECT * FROM notificaciones 
 									   WHERE ID_RECEPTOR = '$userId'
 								  	   ORDER BY FECHA_REGISTRO DESC") 
