@@ -6,10 +6,11 @@
 	$arrayUsuario=mysql_fetch_array($user);
 	
 	//Variables de usuario
-		$email = $arrayUsuario['EMAIL'];
-		$userId = $arrayUsuario['ID_USUARIO'];
-		$userName = $arrayUsuario['USER'];
-		$userCategori = $arrayUsuario['CATEGORIA'];
+		$email 			= $arrayUsuario['EMAIL'];
+		$userId 		= $arrayUsuario['ID_USUARIO'];
+		$user_name	 	= $arrayUsuario['NOMBRE_USUARIO'];
+		$user_avatar 	= $arrayUsuario['AVATAR_USUARIO']; 
+		$user_user 		= $arrayUsuario['USER'];
 	//Suma de totales que adeudan los usuarios
 	function totalDeudaUsuario($email)
 	{

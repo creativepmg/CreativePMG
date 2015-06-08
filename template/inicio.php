@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="usuario">
-        	<p class="username"><?= $userName ?></p>
+        	<p class="username"><?= $user_user ?></p>
         	<div class="avatar">
             	<img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
             </div>
