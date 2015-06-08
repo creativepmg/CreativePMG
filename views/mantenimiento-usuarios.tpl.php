@@ -41,23 +41,10 @@
         </div>
       </div>
 
-        <!-- Nuevo usuario -->
-      <div id="respuestaRegister"></div>
+      <!-- Nuevo usuario -->
+      <?php require 'src/form/frm_nuevo_usuario.php' ?>
 
-      <div class="popup popNuevoUsuario">
-        <div class="tarjeta nuevoUsuario">
-          <div class="titulo">NUEVO USUARIO
-            <div class="cerrar cerrarPopups"></div>
-          </div>
-          <form class="formulario" id="formRegister" method="post">
-            <label>Email</label>
-            <input type="text" name="email" class="vaciar">
-            <input class="botonFormulario" id="Register" type="submit" value="Enviar Invitacion">
-          </form>
-        </div>
-      </div>
-
-      <div id="nuevoUsuario" class="botonNuevo"></div>  
-    </div>
+     
+     <div class="botonNuevo" onclick="mostraCajaDialogo('#dNewUsuario')"></div>  
  
 <?php require 'template/fin.php'; ?>

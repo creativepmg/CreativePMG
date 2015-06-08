@@ -38,7 +38,6 @@
 </head>
 <body>
 	<header>
-    <div class="btn_menu"></div>
     <a href="/panel" class="logo"></a>
     <div class="menuUsuario">
         <div class="notificaciones">
@@ -65,25 +64,22 @@
     </div>
     
 </header>
-<div class="opcionesUsuario">
+
+<h1><?= $titulo ?></h1>
+
+<div class="menu">
     <ul>
+    <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+        <li>
+            <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+        </li>
+    <?php } ?>
         <li style="display: none;">
             <a href="settings">CONFIGURACION</a>
         </li>
         <li>
             <a href="querys/salir.php">CERRAR SESIÓN</a>
         </li>
-    </ul>
-</div>
-<h1><?= $titulo ?></h1>
-
-<div class="menu">
-    <ul>
-    <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
-      <li>
-        <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
-      </li>
-    <?php } ?>
     </ul>
 </div>
 

@@ -20,7 +20,7 @@
 
 				
 	$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
-								   	   LEFT JOIN clientes 			AS B
+								   	   	LEFT JOIN clientes 			AS B
 								   		ON A.ID_CLIENTE 	= B.ID_CLIENTE
 								   	   WHERE A.ID_ORDEN_SERVICIO  like '$id_orden'
 								   	   	AND  A.ID_ESTADO_SERVICIO like '$id_estado'
@@ -28,7 +28,7 @@
 					   or die("Error en la consulta.." . mysql_error($con));
 	$countOrden = mysql_num_rows($lis_not_clientes);
 
-	$date = date_create($reg['FECHA_REGISTRO']);      
+	 
         
 				 	
  ?>
@@ -58,6 +58,8 @@
 	
 		<?php  while ($arrServi=mysql_fetch_array($lis_not_clientes)) {
 		
+				 	$date = date_create($arrServi['FECHA_REGISTRO_ORDEN']);   
+				 	  
 		 			if($arrServi['ID_ESTADO_SERVICIO'] == '1')
 			 			{
 			 				$resEstado = 'INTERNADO';
@@ -134,27 +136,7 @@
 	<!-- NUEVA SERVICIO -->
 	
 
-	<div id="dNewOrdenService" class="cajaDialogo">
-		<div class="nuevaOrdenServicio formulario">
-			<div class="encabezado">
-				NUEVA ORDEN DE SERVICIO
-				<div class="cerrar"></div>
-			</div>
-			<div class="detalles">
-				<form  id="formNotaCliente" method="post">
-					<label>Cliente</label>
-					<input id="id_cliente" class="vaciar" name="id_cliente" type="hidden" >
-					<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
-					<div class="btn_cliente" onclick="mostraCajaDialogo('#dListaCliente')"></div>		   
-					<label>Observaciones</label>
-					<textarea name="detalle"></textarea>
-					<label>A cuenta</label>
-					<input name="a_cuenta" type="number" value="0.00">
-					<input class="botonFormulario" id="btnNotaCliente" type="submit" value="Crear Orden">
-				</form>
-			</div>
-		</div>
-	</div>
+	<?php require 'src/form/frm_nuevo_servicio.php' ?>
 
 
 	<!-- ESCOGER CLIENTE -->

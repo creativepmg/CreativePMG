@@ -1,7 +1,6 @@
 $(document).on('ready', inicio);
 function inicio()
 {	
-	$('#btnBuscarDominio').on('click', consultaDominio);
 	$('#LogIn').on('click', logIn);
 	$('#btnContacto').on('click', insContacto);
 	$('#botonNuevoMenu').on('click', nuevoMenu);
@@ -14,9 +13,8 @@ function inicio()
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
-	$('.btn_menu').on('click', ioMenu);
 	$('#btnInsProducto').on('click', insProducto);
-	$('.usuario').on('click', mostrarOpcionesUsuario);
+	$('.usuario').on('click', ioMenu);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
 	$('.cerrarPopups').on('click', cerrarPopups);
