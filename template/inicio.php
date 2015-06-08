@@ -74,8 +74,8 @@
             <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
         </li>
     <?php } ?>
-        <li style="display: none;">
-            <a href="settings">CONFIGURACION</a>
+        <li>
+            <a href="configuracion">CONFIGURACION</a>
         </li>
         <li>
             <a href="querys/salir.php">CERRAR SESIÓN</a>
