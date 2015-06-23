@@ -281,7 +281,7 @@ function insOrdenServicio()
 
 function updUsuario()
 {
-	var url = "/querys/updUsuario.php";
+	var url = "querys/updUsuario.php";
 
 	$.ajax({
 		type: "POST",

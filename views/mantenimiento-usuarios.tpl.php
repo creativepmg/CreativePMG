@@ -6,7 +6,7 @@
             <div id="idUsuario" style="display: none;"><?= $arrUsuarios['ID_USUARIO']; ?></div>
             <div class="titulo"><?= $arrUsuarios['USER']; ?></div>
             <div class="imagen">
-              <img src="/img/avatares/<?= $arrUsuarios['AVATAR_USUARIO']; ?>">
+              <img src="img/avatares/<?= $arrUsuarios['AVATAR_USUARIO']; ?>">
             </div>
             <div class="detalles">
               <p class="email"><?= $arrUsuarios['EMAIL']; ?></p>
@@ -29,12 +29,12 @@
           <form id="formMenuUsuarios" class="formulario" class="formularioPopup" method="post">
             <input id="inputIdUsuario" class="vaciar" name="id_usuario" type="hidden" value="">
             <div class="listaMenus">
-              <?php while ($arrMenus=mysql_fetch_array($menu)) {?>
+              <?php while ($arrMenus=mysql_fetch_array($lis_menus)) {?>
                 <div class="opcionMenu">
                   <input type="checkbox" id="Menu<?= $arrMenus['ID_MENU']; ?>" name="id_menu[]" value="<?= $arrMenus['ID_MENU']; ?>" />
                   <label for="Menu<?= $arrMenus['ID_MENU']; ?>"><?= $arrMenus['DESCRIPCION']; ?></label>
                 </div>
-              <?php } mysql_data_seek($menu, 0);?>      
+              <?php } mysql_data_seek($lis_menus, 0);?>      
             </div>
             <input id="actualizarMenusUsuarios" class="botonFormulario" type="submit" value="Actualizar" >
           </form>

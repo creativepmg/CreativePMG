@@ -59,7 +59,7 @@
 		<?php  while ($arrServi=mysql_fetch_array($lis_not_clientes)) {
 		
 				 	$date = date_create($arrServi['FECHA_REGISTRO_ORDEN']);   
-				 	  
+				 	$resEstado = 'NULL';
 		 			if($arrServi['ID_ESTADO_SERVICIO'] == '1')
 			 			{
 			 				$resEstado = 'INTERNADO';
