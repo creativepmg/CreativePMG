@@ -9,7 +9,7 @@
 								INNER JOIN proveedores AS B
 									ON B.ID_PROVEEDOR = A.ID_PROVEEDOR
 								ORDER BY A.FECHA_COMPRA")
-						or die("Error en la consulta compras.." . mysql_error($con));
+						or die("Error en la consulta lis_compras.." . mysql_error($con));
 	//MENUS
 	$lis_menus		= mysql_query("SELECT * FROM menu ORDER BY ID_MENU DESC")
 					  or die("problemas en consulta:".mysql_error());
@@ -29,7 +29,7 @@
 											ON C.ID_PROVEEDOR = A.ID_PROVEEDOR
 										WHERE A.STOCK >= 0
 									 ORDER BY B.DESCRIPCION")
-					   	or die("Error en la consulta lis_productos" . mysqli_error($con));
+					   	or die("Error en la consulta lis_productos:  " . mysql_error($con));
 	//PROVEEDORES
 	$lis_proveedores = mysql_query("SELECT * FROM proveedores 
 									ORDER BY DESCRIPCION_PROVEEDOR")

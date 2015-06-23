@@ -13,8 +13,8 @@
 	<meta name="HandheldFriendly" content="true">
 	 <!-- Hojas de estilo -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
-	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">
 	    body
 	    {

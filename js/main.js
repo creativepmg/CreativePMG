@@ -400,11 +400,11 @@ function confirmarCuenta()
 }
 function admin()
 {
-	window.location = '../'
+	window.location = ''
 }
 function redireccionar()
 {
-	window.location = '../panel'
+	window.location = 'panel'
 }
 function ocultar()
 {
@@ -437,7 +437,7 @@ function mostarMenu()
 function logIn()
 {
 	console.log('deberias loguearte');
-	var url = "../querys/login.php";
+	var url = "querys/login.php";
 
 	$.ajax({
 		type: "POST",
