@@ -235,9 +235,10 @@ h1
   		height: 61px;
   		padding: 7px;
   		left: 13px;
-  		margin: 0 auto;
+  		margin: 10px auto;
   		border: 1px dotted;
   		text-align: left;
+  		display: inline-block;
 	
 			.iconoClientes
 			{
@@ -249,6 +250,15 @@ h1
 				height: 50px;
 			
 			}
+			.iconoOrdenesP 
+			{
+				background-image: url(../img/iconos/ordenes-pendientes.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+			}
 
 
 		
@@ -257,10 +267,15 @@ h1
 		{
 			display: inline-block;
 
-			.numeroClientes
+			.numeroItem, .numeroOrden
 			{
 				color: #2ECCFA;
 				font-size: 27px;
+			}
+		
+			.numeroOrden 
+			{
+				color: #FF0000;
 			}
 			p 
 			{

@@ -13,8 +13,16 @@
 		
 		<div class="iconoClientes"></div>
 		<div class="inf">
-			<div class="numeroClientes"> 100 </div>
+			<div class="numeroItem"> 100 </div>
 			<p>Clientes</p>
+		</div>
+	</div>
+	<div class="contenedorIcono">
+		
+		<div class="iconoOrdenesP"></div>
+		<div class="inf">
+			<div class="numeroOrden"> 100 </div>
+			<p>pendientes</p>
 		</div>
 	</div>
 	
