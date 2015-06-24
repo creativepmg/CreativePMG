@@ -38,7 +38,7 @@
 </head>
 <body>
 	<header>
-    <a href="/panel" class="logo"></a>
+    <a href="panel" class="logo"></a>
     <div class="menuUsuario">
         <div class="notificaciones">
             <div id="btn_notificaciones" class="icono">
