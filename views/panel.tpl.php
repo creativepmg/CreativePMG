@@ -11,11 +11,7 @@
 	<div class="contenedorIcono">		
 		<div class="iconoClientes"></div>
 		<div class="inf">
-<<<<<<< HEAD
-			<div class="numeroItem"> 100 </div>
-=======
 			<div class="numeroClientes"> <?= $countClientes ?> </div>
->>>>>>> origin/master
 			<p>Clientes</p>
 		</div>
 	</div>
@@ -23,8 +19,8 @@
 		
 		<div class="iconoOrdenesP"></div>
 		<div class="inf">
-			<div class="numeroOrden"> 100 </div>
-			<p>pendientes</p>
+			<div class="numeroOrden"> <?= $countServPendientes ?> </div>
+			<p>Ordenes Pendientes</p>
 		</div>
 	</div>
 	

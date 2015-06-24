@@ -34,5 +34,9 @@
 	$lis_proveedores = mysql_query("SELECT * FROM proveedores 
 									ORDER BY DESCRIPCION_PROVEEDOR")
 						or die("Error en la consulta proveedores.." . mysql_error($con));
-
+	//SERVICIOS PENDIENTES
+	$lis_serv_pendientes = mysql_query("SELECT * FROM orden_servicio
+										WHERE ID_ESTADO_SERVICIO")
+						or die("Error en la consulta proveedores.." . mysql_error($con));
+	$countServPendientes = mysql_num_rows($lis_serv_pendientes);
 ?>
