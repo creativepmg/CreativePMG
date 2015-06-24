@@ -15,8 +15,7 @@
 			<p>Clientes</p>
 		</div>
 	</div>
-	<div class="contenedorIcono">
-		
+	<div class="contenedorIcono">		
 		<div class="iconoOrdenesP"></div>
 		<div class="inf">
 			<div class="numeroOrden"> <?= $countServPendientes ?> </div>
