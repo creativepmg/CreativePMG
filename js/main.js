@@ -333,7 +333,7 @@ function nuevoMenu()
 {
 	console.log('Insertado nuevo cliente');
 	$('.popMenus').slideToggle();
-	var url = "/querys/insNuevoMenu.php";
+	var url = "querys/insNuevoMenu.php";
 	$.ajax({
 		type: "POST",
 		url: url,
