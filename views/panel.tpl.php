@@ -8,6 +8,16 @@
 			<div class="cantidad"></div>
 		</a>
 	</div>
+	
+	<div class="contenedorIcono">
+		
+		<div class="iconoClientes"></div>
+		<div class="inf">
+			<div class="numeroClientes"> 100 </div>
+			<p>Clientes</p>
+		</div>
+	</div>
+	
 
 	<!-- Footer -->
 	<script type="text/javascript">
