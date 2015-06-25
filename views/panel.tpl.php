@@ -22,6 +22,14 @@
 			<p>Ordenes Pendientes</p>
 		</div>
 	</div>
+	<div class="contenedorIcono">		
+		<div class="iconoProductos"></div>
+		<div class="inf">
+			<div class="numeroProductos"> <?= $countServPendientes ?> </div>
+			<p>Total de productos</p>
+		</div>
+	</div>
+	
 	
 
 	<!-- Footer -->
