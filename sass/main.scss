@@ -11,6 +11,7 @@ $primaryTextColor:   #212121;
 $secondaryTextColor: #727272;
 $dividerColor:       #B6B6B6;
 
+
 *{margin: 0;}
 a
 {
@@ -228,6 +229,108 @@ h1
 .contenido
 {
 	margin: 150px 0;
+	.contenedorProductos
+	{
+		.contenedorProducto
+		{
+			border-top: 1px solid #ccc;
+			width: 100%;
+			margin: auto;
+			padding: 10px;
+			.row2
+			{
+				font-size: 13px;
+				display: inline-block;
+				.ContImgProducto
+				{
+					margin: 10px;
+					img 
+					{
+					
+						max-width: 100%;
+						height: 100px;
+						display: inline-block;
+						vertical-align: bottom;
+					}
+					.datosImg
+					{
+						display: inline-block;
+						color: $darkPrimaryColor;
+
+						.decripcion
+						{
+							font-weight: bold;
+							margin: 5px;
+							padding: 5px;
+
+						}
+						.editar
+						{
+							background-image: url(../img/iconos/editar.png);
+							background-repeat: no-repeat;
+							background-position: center;
+							width: 50px;
+							height: 50px;
+							cursor: pointer;
+						}
+						.eliminar
+						{
+							background-image: url(../img/iconos/ic_delete_black_24dp_1x.png);
+							background-repeat: no-repeat;
+							background-position: center;
+							width: 50px;
+							height: 50px;
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
+			.row1
+			{
+				display: inline-block;
+
+				.cabecera
+				{
+					font-weight: bold;
+					padding: 5px;
+					.idCabecera
+					{
+						width:20px;
+					}
+					.cantidadcabecera
+					{
+						width: 110px;
+					}
+					.precioCabecera
+					{
+						width: 150px;
+					}
+
+				}
+				.cuerpo
+				{
+					.id
+					{
+						display: inline-block;
+						width:20px;
+					}
+					.cantidad
+					{
+						display: inline-block;
+						width: 110px;
+					}
+					.precio
+					{
+						display: inline-block;
+						width: 150px;
+					}
+				}
+			}
+
+		}
+	}
+
 	.contenedorIcono
 	{
 		background-color: #fff;
@@ -386,78 +489,7 @@ h1
 		width: 95%;
 	}
 }
-.tabla
-{
-	text-align: left;
-	max-width: 90%;
-	margin: 0 auto;
-	
-	div
-	{
 
-		div
-		{
-			display: inline-block;	
-			padding: 10px;
-			text-align: left;
-			border-right: 1px $accentColor solid;
-			font-size: 14px;
-			vertical-align: middle;
-		}
-		.id
-		{
-			width: 40px;
-			text-align: center;
-		}
-		.descripcion
-		{
-			width: 300px;
-		}
-		.monto
-		{
-			width: 70px;
-		}
-		.enlace
-		{
-			width: 200px;
-		}
-		.opciones
-		{
-			width: 70px;
-			float: right;
-			padding: 0;
-			.mas
-			{
-				background-color: $primaryColor;
-				background-image: url('../img/iconos/plus.png');
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: 50%;
-				border: 0;
-				height: 25px;
-				margin: 7px;
-				width: 25px;
-				&:hover{
-					background-color: $accentColor;
-					cursor: pointer;
-				}
-			}
-		}
-	}
-	.titulos
-	{
-		background-color: $secondaryTextColor;
-		color: $primaryTextColor;
-		.opciones
-		{
-			padding: 10px;
-		}
-	}
-	.item
-	{
-		border-bottom: 1px $accentColor solid;
-	}
-}
 .tarjeton
 {
 	background-color: $primaryTextColor;
@@ -1366,9 +1398,40 @@ h1
 	width: 100%;
 	height: 100%;
 }
-@media screen and (min-width: 400px){
-	.menuUsuario .usuario .username
+@media screen and (min-width: 400px)
+{
+	 .menuUsuario .usuario .username
 	{
 		display: inline-block;
 	}
+	
 }
+@media screen and (min-width: 600px)
+{
+	 
+	.contenido
+	{
+		.contenedorProductos
+		{
+			.contenedorProducto
+			{
+				width: 80%;
+				padding: 20px;
+				
+				.row1
+				{
+					vertical-align: top;
+					margin: 16px;
+					
+				}
+				.row2
+				{
+					font-size: 16px;
+				}
+			}	
+		}	
+	}  
+	
+			
+}
+

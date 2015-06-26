@@ -1,18 +1,249 @@
 <?php require 'template/inicio.php'; ?>
 	<!-- Contenido mostrado -->
-	<div class="tabla">
-		<div class="titulos">
-			<div class="id">ID</div>
-			<div class="descripcion">DESCRIPCION</div>
-		</div>
-	<?php while ($arrProductos=mysql_fetch_array($lis_tipo_productos)) {?>
-		<div class="item">
-			<div class="id"><?= $arrProductos['ID_TIPO_PRODUCTO'] ?></div>
-			<div class="descripcion"><?= $arrProductos['DESCRIPCION'] ?></div>
-		</div>
-	<?php } ?>
-	</div>
-	<?php include 'forms/producto.form.php' ?>
+   
+   <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!--productos-->
+
+ <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="contenedorProductos">
+      <div class="contenedorProducto">
+        <div class="row2">
+          <div class="ContImgProducto">
+            <img src="img/celular.jpg">
+              <div class="datosImg">
+                  <div class="decripcion">
+                      DRONE SYMA X5C-1 EXPLORERS
+                  </div>
+                  <div class="editar">
+                      
+                  </div>
+                  <div class="eliminar">
+                      
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row1">
+      <div class="cabecera">
+        <div class="idCabecera">id</div>
+        <div class="cantidadcabecera" >Cantidad</div>
+        <div class="precioCabecera">precio</div>
+      </div>
+      
+      <div class="cuerpo">
+          <div class="id">1</div>
+          <div class="cantidad">5</div>
+          <div class="precio">20.000</div>
+      </div>
+    </div>
+  </div>
+</div>    
 
 	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewProducto')"></div>
 <?php require 'template/fin.php'; ?>
