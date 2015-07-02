@@ -36,7 +36,7 @@
 						or die("Error en la consulta proveedores.." . mysql_error($con));
 	//SERVICIOS PENDIENTES
 	$lis_serv_pendientes = mysql_query("SELECT * FROM orden_servicio
-										WHERE ID_ESTADO_SERVICIO")
+										WHERE ID_ESTADO_SERVICIO = '1'")
 						or die("Error en la consulta proveedores.." . mysql_error($con));
 	$countServPendientes = mysql_num_rows($lis_serv_pendientes);
 ?>
