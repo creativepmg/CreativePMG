@@ -25,7 +25,7 @@
 	<div class="contenedorIcono">		
 		<div class="iconoProductos"></div>
 		<div class="inf">
-			<div class="numeroProductos"> <?= $countServPendientes ?> </div>
+			<div class="numeroProductos"> <?= '0' ?> </div>
 			<p>Total de productos</p>
 		</div>
 	</div>

@@ -1,20 +1,28 @@
 /*
 ** Paleta de SASS
 */
-/* line 14, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-* {
-  margin: 0; }
+/*fuentes*/
+@font-face {
+  font-family: 'serviciolatinopmg';
+  src: url("../fonts/icomoon.eot?-pztjif");
+  src: url("../fonts/icomoon.eot?#iefix-pztjif") format("embedded-opentype"), url("../fonts/icomoon.ttf?-pztjif") format("truetype"), url("../fonts/icomoon.woff?-pztjif") format("woff"), url("../fonts/icomoon.svg?-pztjif#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* line 15, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+* {
+  margin: 0;
+}
+
 a {
   color: #FFFFFF;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-/* line 20, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
-/* line 24, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -23,9 +31,9 @@ body {
   color: #323232;
   height: 100%;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 35, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 footer {
   background-color: #1976D2;
   color: #e9e9e9;
@@ -33,14 +41,14 @@ footer {
   border-top: 1px inset #ededed;
   position: fixed;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+}
 
-/* line 45, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 footer p {
   line-height: 50px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
-/* line 51, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header {
   background-color: #1976D2;
   height: 50px;
@@ -49,26 +57,26 @@ header {
   left: 0;
   width: 100%;
   text-align: left;
-  z-index: 2; }
+  z-index: 2;
+}
 
-/* line 62, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header nav {
   position: absolute;
   height: 50px;
   right: 0;
-  top: 0; }
+  top: 0;
+}
 
-/* line 69, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header nav ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 74, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header nav ul li {
   display: inline-block;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
-/* line 79, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header nav ul li a {
   height: 50px;
   line-height: 50px;
@@ -78,24 +86,24 @@ header nav ul li a {
   text-transform: uppercase;
   display: block;
   text-align: center;
-  border-left: 1px outset #e9e9e9; }
+  border-left: 1px outset #e9e9e9;
+}
 
-/* line 91, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header nav ul li a:hover {
   background-color: #3498db;
-  color: rgba(85, 85, 85, 0.7); }
+  color: rgba(85, 85, 85, 0.7);
+}
 
-/* line 97, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 header .logo {
   height: 50px;
   display: inline-block;
-  background-image: url('../img/logo.png');
+  background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-position: 0px center;
   background-size: 135px;
-  width: 150px; }
+  width: 150px;
+}
 
-/* line 107, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 h1 {
   background-color: #727272;
   color: #FFFFFF;
@@ -109,32 +117,44 @@ h1 {
   text-align: left;
   top: 50px;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+}
 
-/* line 125, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.buscador .bloque {
+.buscador
+.bloque {
   display: inline-block;
   width: 320px;
   max-width: 90%;
-  margin: 0 auto; }
-  /* line 131, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .buscador .bloque label {
-    display: inline-block;
-    margin: 5px;
-    text-align: left; }
-  /* line 139, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .buscador .bloque input[type="text"], .buscador .bloque input[type="number"], .buscador .bloque select {
-    border-radius: 5px;
-    border: 2px solid #2980b9;
-    height: 45px;
-    padding-left: 10px;
-    width: 180px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    vertical-align: middle; }
+  margin: 0 auto;
+}
 
-/* line 154, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.btnEditarOrden, .buscador .boton {
+.buscador
+.bloque
+label {
+  display: inline-block;
+  margin: 5px;
+  text-align: left;
+}
+
+.buscador
+.bloque input[type="text"],
+.buscador
+.bloque input[type="number"],
+.buscador
+.bloque
+select {
+  border-radius: 5px;
+  border: 2px solid #2980b9;
+  height: 45px;
+  padding-left: 10px;
+  width: 180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.btnEditarOrden,
+.buscador .boton {
   background-color: #2980b9;
   border-radius: 5px;
   border: 0;
@@ -146,38 +166,38 @@ h1 {
   font-weight: bolder;
   line-height: 46px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 169, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .buscador .boton:hover {
-  background-color: #3498db; }
+  background-color: #3498db;
+}
 
-/* line 174, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .btn_cliente {
   width: 45px;
   height: 45px;
   border-radius: 5px;
-  background-image: url('../img/iconos/keyboard-control.png');
+  background-image: url("../img/iconos/keyboard-control.png");
   background-position: center;
   background-repeat: no-repeat;
   background-color: #2980b9;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 186, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .btn_menu {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  background-image: url('../img/iconos/menu.png');
+  background-image: url("../img/iconos/menu.png");
   background-position: center;
   background-repeat: no-repeat;
-  display: inline-block; }
+  display: inline-block;
+}
 
-/* line 196, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .botonNuevo {
   background-color: #1976D2;
-  background-image: url('../img/iconos/plus.png');
+  background-image: url("../img/iconos/plus.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35%;
@@ -187,12 +207,13 @@ h1 {
   height: 70px;
   position: fixed;
   right: 10px;
-  width: 70px; }
-  /* line 210, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .botonNuevo:hover {
-    box-shadow: 0 0 1em black; }
+  width: 70px;
+}
 
-/* line 215, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.botonNuevo:hover {
+  box-shadow: 0 0 1em black;
+}
+
 .notificacion-emergente {
   width: 320px;
   display: none;
@@ -203,61 +224,269 @@ h1 {
   border-radius: 5px;
   color: #FFFFFF;
   line-height: 50px;
-  bottom: 60px; }
+  bottom: 60px;
+}
 
-/* line 228, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .contenido {
-  margin: 150px 0; }
-  /* line 231, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .contenido .contenedorIcono {
-    background-color: #fff;
-    width: 150px;
-    height: 61px;
-    padding: 7px;
-    left: 13px;
-    margin: 10px auto;
-    border: 1px dotted;
-    text-align: left;
-    display: inline-block; }
-    /* line 243, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenido .contenedorIcono .iconoClientes {
-      background-image: url(../img/iconos/clientes.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      display: inline-block;
-      width: 50px;
-      height: 50px; }
-    /* line 253, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenido .contenedorIcono .iconoOrdenesP {
-      background-image: url(../img/iconos/ordenes-pendientes.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      display: inline-block;
-      width: 50px;
-      height: 50px; }
-    /* line 266, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenido .contenedorIcono .inf {
-      display: inline-block; }
-      /* line 270, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .contenido .contenedorIcono .inf .numeroItem, .contenido .contenedorIcono .inf .numeroOrden {
-        color: #2ECCFA;
-        font-size: 27px; }
-      /* line 276, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .contenido .contenedorIcono .inf .numeroOrden {
-        color: #FF0000; }
-      /* line 280, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .contenido .contenedorIcono .inf p {
-        font-size: 13px; }
+  margin: 150px 0;
+}
 
-/* line 288, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.contenido
+.contenedorProductos
+.contenedorProducto {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2 {
+  font-size: 13px;
+  display: inline-block;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2
+.ContImgProducto {
+  margin: 10px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2
+.ContImgProducto
+img {
+  max-width: 100%;
+  height: 100px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2
+.ContImgProducto
+.datosImg {
+  display: inline-block;
+  color: #1976D2;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2
+.ContImgProducto
+.datosImg
+.decripcion {
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2
+.ContImgProducto
+.datosImg
+.editar {
+  background-image: url(../img/iconos/editar.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row2
+.ContImgProducto
+.datosImg
+.eliminar {
+  background-image: url(../img/iconos/ic_delete_black_24dp_1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1 {
+  display: inline-block;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cabecera {
+  font-weight: bold;
+  padding: 5px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cabecera
+.idCabecera {
+  width: 20px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cabecera
+.cantidadcabecera {
+  width: 110px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cabecera
+.precioCabecera {
+  width: 150px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cuerpo
+.id {
+  display: inline-block;
+  width: 20px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cuerpo
+.cantidad {
+  display: inline-block;
+  width: 110px;
+}
+
+.contenido
+.contenedorProductos
+.contenedorProducto
+.row1
+.cuerpo
+.precio {
+  display: inline-block;
+  width: 150px;
+}
+
+.contenido
+.contenedorIcono {
+  background-color: #fff;
+  width: 190px;
+  height: 61px;
+  padding: 7px;
+  left: 13px;
+  margin: 10px auto;
+  border: 1px dotted;
+  text-align: left;
+  display: inline-block;
+}
+
+.contenido
+.contenedorIcono
+.iconoClientes {
+  background-image: url(../img/iconos/clientes.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.contenido
+.contenedorIcono
+.iconoOrdenesP {
+  background-image: url(../img/iconos/ordenes-pendientes.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.contenido
+.contenedorIcono
+.iconoProductos {
+  background-image: url(../img/iconos/productos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.contenido
+.contenedorIcono
+.inf {
+  display: inline-block;
+}
+
+.contenido
+.contenedorIcono
+.inf .numeroClientes, .contenido
+.contenedorIcono
+.inf .numeroOrden, .contenido
+.contenedorIcono
+.inf
+.numeroProductos {
+  color: #2ECCFA;
+  font-size: 27px;
+}
+
+.contenido
+.contenedorIcono
+.inf
+.numeroOrden {
+  color: #FF0000;
+}
+
+.contenido
+.contenedorIcono
+.inf
+.numeroProductos {
+  color: #A901DB;
+}
+
+.contenido
+.contenedorIcono
+.inf
+p {
+  font-size: 13px;
+}
+
 .contenido .cabecera div {
-  display: inline-block; }
+  display: inline-block;
+}
 
-/* line 293, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.contenido .detalle .titulos div, .contenido .detalle .item div {
-  display: inline-block; }
+.contenido .detalle .titulos div,
+.contenido .detalle .item div {
+  display: inline-block;
+}
 
-/* line 297, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .contResult {
   position: fixed;
   right: 10px;
@@ -268,9 +497,9 @@ h1 {
   padding: 10px;
   border-radius: 50%;
   height: 20px;
-  width: 20px; }
+  width: 20px;
+}
 
-/* line 310, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .loading {
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -284,111 +513,64 @@ h1 {
   text-align: center;
   top: 50%;
   width: 280px;
-  z-index: 3; }
+  z-index: 3;
+}
 
-/* line 326, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .formularioExterno {
   width: 300px;
   margin: 0 auto;
-  text-align: center; }
-  /* line 331, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .formularioExterno .logo {
-    background-image: url('../img/logoCreativePMG.png');
-    background-size: 125px;
-    background-position: center 20px;
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 135px; }
-  /* line 340, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .formularioExterno .titulo {
-    font-size: 40px;
-    margin: 10px;
-    color: #1976D2; }
-  /* line 346, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .formularioExterno label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px 15px; }
-  /* line 353, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .formularioExterno input[type="text"], .formularioExterno input[type="password"] {
-    width: 90%;
-    height: 42px;
-    border-radius: 5px;
-    border: 2px #1976D2 solid;
-    padding-left: 10px; }
-  /* line 361, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .formularioExterno input[type="submit"] {
-    background-color: #1976D2;
-    border-radius: 5px;
-    border: 0;
-    color: #e9e9e9;
-    cursor: pointer;
-    display: block;
-    font-weight: bolder;
-    height: 46px;
-    line-height: 46px;
-    margin: 5px auto;
-    text-align: center;
-    width: 95%; }
+  text-align: center;
+}
 
-/* line 377, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.tabla {
+.formularioExterno
+.logo {
+  background-image: url("../img/logoCreativePMG.png");
+  background-size: 125px;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 135px;
+}
+
+.formularioExterno
+.titulo {
+  font-size: 40px;
+  margin: 10px;
+  color: #1976D2;
+}
+
+.formularioExterno
+label {
+  display: block;
   text-align: left;
-  max-width: 90%;
-  margin: 0 auto; }
-  /* line 386, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla div div {
-    display: inline-block;
-    padding: 10px;
-    text-align: left;
-    border-right: 1px #607D8B solid;
-    font-size: 14px;
-    vertical-align: middle; }
-  /* line 395, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla div .id {
-    width: 40px;
-    text-align: center; }
-  /* line 400, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla div .descripcion {
-    width: 300px; }
-  /* line 404, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla div .monto {
-    width: 70px; }
-  /* line 408, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla div .enlace {
-    width: 200px; }
-  /* line 412, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla div .opciones {
-    width: 70px;
-    float: right;
-    padding: 0; }
-    /* line 417, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .tabla div .opciones .mas {
-      background-color: #2196F3;
-      background-image: url('../img/iconos/plus.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 50%;
-      border: 0;
-      height: 25px;
-      margin: 7px;
-      width: 25px; }
-      /* line 428, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .tabla div .opciones .mas:hover {
-        background-color: #607D8B;
-        cursor: pointer; }
-  /* line 435, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla .titulos {
-    background-color: #727272;
-    color: #212121; }
-    /* line 439, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .tabla .titulos .opciones {
-      padding: 10px; }
-  /* line 444, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tabla .item {
-    border-bottom: 1px #607D8B solid; }
+  margin: 10px 0 5px 15px;
+}
 
-/* line 449, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.formularioExterno input[type="text"],
+.formularioExterno input[type="password"] {
+  width: 90%;
+  height: 42px;
+  border-radius: 5px;
+  border: 2px #1976D2 solid;
+  padding-left: 10px;
+}
+
+.formularioExterno
+input[type="submit"] {
+  background-color: #1976D2;
+  border-radius: 5px;
+  border: 0;
+  color: #e9e9e9;
+  cursor: pointer;
+  display: block;
+  font-weight: bolder;
+  height: 46px;
+  line-height: 46px;
+  margin: 5px auto;
+  text-align: center;
+  width: 95%;
+}
+
 .tarjeton {
   background-color: #212121;
   border-radius: 3px;
@@ -396,20 +578,29 @@ h1 {
   margin: 10px auto;
   max-width: 90%;
   padding: 10px;
-  text-align: left; }
-  /* line 459, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tarjeton .titulo {
-    font-size: 20px;
-    border-bottom: 1px #727272 solid;
-    padding: 5px; }
-  /* line 466, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .tarjeton .item {
-    padding: 10px; }
-    /* line 470, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .tarjeton .item div, .tarjeton .item p {
-      display: inline-block; }
+  text-align: left;
+}
 
-/* line 477, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.tarjeton
+.titulo {
+  font-size: 20px;
+  border-bottom: 1px #727272 solid;
+  padding: 5px;
+}
+
+.tarjeton
+.item {
+  padding: 10px;
+}
+
+.tarjeton
+.item div,
+.tarjeton
+.item
+p {
+  display: inline-block;
+}
+
 .cajaDialogo {
   background-color: rgba(114, 114, 114, 0.5);
   bottom: 0;
@@ -418,203 +609,313 @@ h1 {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 3; }
-  /* line 488, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .formulario {
-    background-color: #fff;
-    bottom: 0;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    height: 247px;
-    left: 0;
-    margin: auto;
-    padding: 5px;
-    position: fixed;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 280px;
-    z-index: 3; }
-    /* line 511, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario input[type="text"], .cajaDialogo .formulario input[type="password"], .cajaDialogo .formulario input[type="email"], .cajaDialogo .formulario input[type="number"], .cajaDialogo .formulario input[type="date"], .cajaDialogo .formulario select, .cajaDialogo .formulario textarea {
-      border-radius: 5px;
-      border: 2px solid #2980b9;
-      display: block;
-      height: 45px;
-      padding-left: 10px;
-      width: 100%;
-      margin: 0 auto;
-      box-sizing: border-box;
-      vertical-align: middle; }
-    /* line 523, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario input[type="date"] {
-      text-align: center;
-      padding-right: 10px; }
-    /* line 528, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario textarea {
-      height: 5em !important; }
-    /* line 534, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario .encabezado {
-      background-color: #2980b9;
-      padding: 10px;
-      color: #e9e9e9;
-      position: relative;
-      text-align: left; }
-      /* line 541, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .cajaDialogo .formulario .encabezado .cerrar {
-        background-image: url('../img/iconos/close.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        cursor: pointer;
-        height: 42px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 42px; }
-    /* line 555, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario .btn_nuevo {
-      background-color: #333;
-      color: #e9e9e9;
-      line-height: 50px;
-      height: 50px;
-      cursor: pointer; }
-    /* line 565, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario .detalles label {
-      display: block; }
-    /* line 570, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario .detalles input[type="submit"], .cajaDialogo .formulario .detalles .boton {
-      background-color: #2980b9;
-      border-radius: 5px;
-      border: 0;
-      display: block;
-      height: 46px;
-      margin: 5px 0;
-      width: 100%;
-      color: #e9e9e9;
-      font-weight: bolder;
-      line-height: 46px;
-      text-align: center;
-      cursor: pointer; }
-    /* line 587, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .cajaDialogo .formulario .lista {
-      height: 208px;
-      overflow-x: hidden;
-      overflow-y: scroll; }
-      /* line 592, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .cajaDialogo .formulario .lista .item {
-        border-bottom: 1px solid #333;
-        padding: 10px 0 10px 25px;
-        text-transform: uppercase;
-        text-align: left;
-        font-size: 15px; }
-        /* line 599, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-        .cajaDialogo .formulario .lista .item:hover {
-          background-color: rgba(33, 33, 33, 0.5);
-          color: #212121;
-          cursor: pointer; }
-        /* line 605, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-        .cajaDialogo .formulario .lista .item .descripcion .id_cliente {
-          display: none; }
-        /* line 609, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-        .cajaDialogo .formulario .lista .item .proveedor {
-          font-weight: bolder;
-          font-size: 0.8em; }
-  /* line 619, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .nuevaOrdenServicio {
-    height: 330px; }
-  /* line 623, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .lisProducto {
-    height: 250px; }
-  /* line 627, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .lisClientes {
-    height: 300px; }
-  /* line 632, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .newItemCompra, .cajaDialogo .newCliente {
-    height: 295px;
-    /*Tres inputs y sus labels*/ }
-  /* line 636, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .newCompra {
-    height: 227px; }
-  /* line 641, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .cajaDialogo .nuevo_usuario, .cajaDialogo .newProveedor {
-    height: 160px;
-    /*Un solo input*/ }
+  z-index: 3;
+}
 
-/* line 651, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.cajaDialogo
+.formulario {
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 247px;
+  left: 0;
+  margin: auto;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 280px;
+  z-index: 3;
+}
+
+.cajaDialogo
+.formulario input[type="text"],
+.cajaDialogo
+.formulario input[type="password"],
+.cajaDialogo
+.formulario input[type="email"],
+.cajaDialogo
+.formulario input[type="number"],
+.cajaDialogo
+.formulario input[type="date"],
+.cajaDialogo
+.formulario select,
+.cajaDialogo
+.formulario
+textarea {
+  border-radius: 5px;
+  border: 2px solid #2980b9;
+  display: block;
+  height: 45px;
+  padding-left: 10px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.cajaDialogo
+.formulario
+input[type="date"] {
+  text-align: center;
+  padding-right: 10px;
+}
+
+.cajaDialogo
+.formulario
+textarea {
+  height: 5em !important;
+}
+
+.cajaDialogo
+.formulario
+.encabezado {
+  background-color: #2980b9;
+  padding: 10px;
+  color: #e9e9e9;
+  position: relative;
+  text-align: left;
+}
+
+.cajaDialogo
+.formulario
+.encabezado
+.cerrar {
+  background-image: url("../img/iconos/close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  cursor: pointer;
+  height: 42px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
+}
+
+.cajaDialogo
+.formulario
+.btn_nuevo {
+  background-color: #333;
+  color: #e9e9e9;
+  line-height: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.cajaDialogo
+.formulario
+.detalles
+label {
+  display: block;
+}
+
+.cajaDialogo
+.formulario
+.detalles input[type="submit"],
+.cajaDialogo
+.formulario
+.detalles
+.boton {
+  background-color: #2980b9;
+  border-radius: 5px;
+  border: 0;
+  display: block;
+  height: 46px;
+  margin: 5px 0;
+  width: 100%;
+  color: #e9e9e9;
+  font-weight: bolder;
+  line-height: 46px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cajaDialogo
+.formulario
+.lista {
+  height: 208px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.cajaDialogo
+.formulario
+.lista
+.item {
+  border-bottom: 1px solid #333;
+  padding: 10px 0 10px 25px;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 15px;
+}
+
+.cajaDialogo
+.formulario
+.lista
+.item:hover {
+  background-color: rgba(33, 33, 33, 0.5);
+  color: #212121;
+  cursor: pointer;
+}
+
+.cajaDialogo
+.formulario
+.lista
+.item
+.descripcion .id_cliente {
+  display: none;
+}
+
+.cajaDialogo
+.formulario
+.lista
+.item
+.proveedor {
+  font-weight: bolder;
+  font-size: 0.8em;
+}
+
+.cajaDialogo
+.nuevaOrdenServicio {
+  height: 330px;
+}
+
+.cajaDialogo
+.lisProducto {
+  height: 250px;
+}
+
+.cajaDialogo
+.lisClientes {
+  height: 300px;
+}
+
+.cajaDialogo .newItemCompra,
+.cajaDialogo
+.newCliente {
+  height: 295px;
+  /*Tres inputs y sus labels*/
+}
+
+.cajaDialogo
+.newCompra {
+  height: 227px;
+}
+
+.cajaDialogo .nuevo_usuario,
+.cajaDialogo
+.newProveedor {
+  height: 160px;
+  /*Un solo input*/
+}
+
 .contenedor {
   margin-top: 50px;
   margin: 0 auto;
   max-width: 100%;
-  width: 1000px; }
-  /* line 658, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .contenedor .avatar {
-    background-color: #fff;
-    display: block;
-    height: 200px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    width: 200px; }
-    /* line 669, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenedor .avatar img {
-      width: 100%;
-      height: 100%; }
-    /* line 675, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenedor .avatar label {
-      color: transparent;
-      background-image: url('../img/iconos/camera.png');
-      background-repeat: no-repeat;
-      background-size: 25px;
-      background-position: 10px center;
-      bottom: 0;
-      padding: 10px 0 10px 40px;
-      position: absolute;
-      width: 100%;
-      box-sizing: border-box; }
-    /* line 688, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenedor .avatar label:hover {
-      background-size: 20px;
-      background-color: #333;
-      color: #e9e9e9;
-      cursor: pointer; }
-    /* line 695, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenedor .avatar input[type="file"] {
-      height: 0px;
-      width: 0px;
-      visibility: hidden; }
-  /* line 702, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .contenedor .detalles {
-    width: 500px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: left; }
-    /* line 709, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .contenedor .detalles .seccion {
-      border-bottom: 1px #BDBDBD solid; }
-      /* line 713, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .contenedor .detalles .seccion div {
-        font-weight: bolder;
-        width: 100px; }
-      /* line 718, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-      .contenedor .detalles .seccion div, .contenedor .detalles .seccion p {
-        margin: 10px;
-        display: inline-block; }
+  width: 1000px;
+}
 
-/* line 728, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.contenedor
+.avatar {
+  background-color: #fff;
+  display: block;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 200px;
+  border: 2px rgba(114, 114, 114, 0.5) solid;
+  border-radius: 5px;
+}
+
+.contenedor
+.avatar
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor
+.avatar
+label {
+  color: transparent;
+  background-image: url("../img/iconos/camera.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 10px center;
+  bottom: 0;
+  padding: 10px 0 10px 40px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contenedor
+.avatar
+label:hover {
+  background-size: 20px;
+  background-color: #333;
+  color: #e9e9e9;
+  cursor: pointer;
+}
+
+.contenedor
+.avatar
+input[type="file"] {
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
+}
+
+.contenedor
+.detalles {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contenedor
+.detalles
+.seccion {
+  border-bottom: 1px #BDBDBD solid;
+}
+
+.contenedor
+.detalles
+.seccion
+div {
+  font-weight: bolder;
+  width: 100px;
+}
+
+.contenedor
+.detalles
+.seccion div, .contenedor
+.detalles
+.seccion
+p {
+  margin: 10px;
+  display: inline-block;
+}
+
 .contentPanel {
-  position: relative; }
+  position: relative;
+}
 
-/* line 732, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .deuda {
-  padding: 45px; }
+  padding: 45px;
+}
 
-/* line 736, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .deuda p {
-  padding: 5px; }
+  padding: 5px;
+}
 
-/* line 740, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .deuda .montoDeuda {
   background-color: #2980b9;
   width: 120px;
@@ -624,9 +925,9 @@ h1 {
   height: 120px;
   margin: 0 auto;
   border-radius: 50%;
-  line-height: 120px; }
+  line-height: 120px;
+}
 
-/* line 753, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .descripciones {
   margin: 10px auto;
   display: inline-block;
@@ -636,46 +937,57 @@ h1 {
   border-radius: 5px 5px 0 0;
   padding: 25px;
   width: 90%;
-  text-align: left; }
-  /* line 764, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .descripciones div {
-    display: inline-block;
-    margin-left: 10px; }
-    /* line 768, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .descripciones div div {
-      font-weight: bolder;
-      width: 85px;
-      display: inline-block;
-      font-size: 16px; }
-    /* line 775, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-    .descripciones div p {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 14px; }
+  text-align: left;
+}
 
-/* line 784, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.descripciones
+div {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.descripciones
+div
+div {
+  font-weight: bolder;
+  width: 85px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.descripciones
+div
+p {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 .optDetalle {
   text-align: right;
   max-width: 90%;
-  margin: 0 auto; }
-  /* line 789, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .optDetalle .agregarDetalle {
-    background-color: #2980b9;
-    border-radius: 5px;
-    border: 0;
-    color: #e9e9e9;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: bolder;
-    height: 46px;
-    line-height: 46px;
-    padding: 0 10px;
-    margin: 5px 10px;
-    text-align: center;
-    width: 150px; }
+  margin: 0 auto;
+}
 
-/* line 812, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.listaNotas .item {
+.optDetalle
+.agregarDetalle {
+  background-color: #2980b9;
+  border-radius: 5px;
+  border: 0;
+  color: #e9e9e9;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bolder;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 10px;
+  margin: 5px 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.listaNotas
+.item {
   max-width: 700px;
   border-left: 5px solid #2980b9;
   background: #fff;
@@ -683,114 +995,115 @@ h1 {
   border-bottom: 2px solid #2980b9;
   text-align: left;
   position: relative;
-  padding: 10px 70px 45px 10px; }
+  padding: 10px 70px 45px 10px;
+}
 
-/* line 824, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .estado {
   background-color: #1976D2;
   color: #FFFFFF;
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 5px; }
+  padding: 5px;
+}
 
-/* line 833, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .editarOrden {
-  display: none; }
+  display: none;
+}
 
-/* line 837, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .cliente {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
-/* line 841, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .detalle {
-  padding-left: 25px; }
+  padding-left: 25px;
+}
 
-/* line 845, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .montos {
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
-/* line 849, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .montos div {
   display: inline-block;
   width: 100px;
   padding: 5px;
   text-align: center;
-  background-color: #efefef; }
+  background-color: #efefef;
+}
 
-/* line 857, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .montos div p:first-child {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
-/* line 861, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .montos div input[type="number"] {
   width: 100px;
   border: 1px solid #ccc;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 867, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .opcionesItem {
   position: absolute;
   right: 5px;
-  top: 3px; }
+  top: 3px;
+}
 
-/* line 874, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .areaEditable {
   border-radius: 5px;
   display: block;
-  border: 1px solid #2980b9;
+  border: 1px  solid #2980b9;
   width: 100%;
-  height: 5em; }
+  height: 5em;
+}
 
-/* line 882, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .opcionesItem .agregar {
   background-color: transparent;
-  background-image: url('../img/iconos/plus-opciones.png');
+  background-image: url("../img/iconos/plus-opciones.png");
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
   border: 0;
   height: 50px;
-  width: 50px; }
-  /* line 892, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-  .listaNotas .item .opcionesItem .agregar:hover {
-    background-image: url('../img/iconos/plus-hover.png');
-    cursor: pointer; }
+  width: 50px;
+}
 
-/* line 898, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
+.listaNotas .item .opcionesItem .agregar:hover {
+  background-image: url("../img/iconos/plus-hover.png");
+  cursor: pointer;
+}
+
 .listaNotas .item .opcionesItem .listo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-image: url('../img/iconos/done.png');
+  background-image: url("../img/iconos/done.png");
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
-/* line 907, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .opcionesItem .listo:hover {
-  background-image: url('../img/iconos/done-hover.png');
-  cursor: pointer; }
+  background-image: url("../img/iconos/done-hover.png");
+  cursor: pointer;
+}
 
-/* line 912, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .opcionesItem .editar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-image: url('../img/iconos/edit.png');
+  background-image: url("../img/iconos/edit.png");
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
-/* line 921, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaNotas .item .opcionesItem .editar:hover {
-  background-image: url('../img/iconos/edit-hover.png');
-  cursor: pointer; }
+  background-image: url("../img/iconos/edit-hover.png");
+  cursor: pointer;
+}
 
-/* line 926, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaDeudas {
   margin: 10px;
-  padding: 0 10px; }
+  padding: 0 10px;
+}
 
-/* line 931, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaDeudas .item {
   max-width: 500px;
   border-left: 5px solid #2980b9;
@@ -798,70 +1111,102 @@ h1 {
   margin: 0 auto;
   border-bottom: 2px solid #2980b9;
   text-align: left;
-  position: relative; }
+  position: relative;
+}
 
-/* line 941, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaDeudas .item div {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 946, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaDeudas .item .fecha {
   width: 35px;
   padding: 0 10px;
   font-size: 13px;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 953, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .listaDeudas .item .monto {
   height: 45px;
   line-height: 45px;
   position: absolute;
   right: 0;
   top: 0;
-  padding-right: 10px; }
+  padding-right: 10px;
+}
 
-/* line 962, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .mensajeParaElUsuario {
-  padding: 10px; }
+  padding: 10px;
+}
 
-/* line 966, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menu {
-  background-color: #727272;
-  bottom: 0px;
+  background-color: #FFFFFF;
+  bottom: 5px;
+  box-shadow: 5px 5px 10px #212121;
+  color: #212121;
   display: none;
   font-size: 14px;
   overflow-x: hidden;
   overflow-y: scroll;
   position: fixed;
-  right: 0px;
-  text-align: right;
-  top: 50px;
+  right: 5px;
+  text-align: left;
+  top: 55px;
   width: 250px;
-  z-index: 3; }
+  z-index: 3;
+}
 
-/* line 981, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.menu ul {
+.menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background-color: #1976D2;
+  border-radius: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+  background-color: #1976D2;
+  border: 1px solid #333;
+}
+
+.menu::-webkit-scrollbar-thumb:active {
+  background-color: #1976D2;
+  border: 1px solid #333;
+}
+
+.menu
+ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 986, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.menu ul li {
-  border-bottom: 1px #FFFFFF solid; }
+.menu
+ul
+li {
+  border-bottom: 1px #B6B6B6 solid;
+}
 
-/* line 990, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.menu ul li a {
+.menu
+ul
+li
+a {
   display: block;
   padding: 20px;
-  color: #e9e9e9;
-  text-decoration: none; }
+  color: #212121;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-/* line 997, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
-.menu ul li a:hover {
+.menu
+ul
+li
+a:hover {
   background-color: #2196F3;
-  font-weight: bolder; }
+  font-weight: bolder;
+  color: #FFFFFF;
+}
 
-/* line 1002, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .nuevoUsuario {
   bottom: 0;
   height: 380px;
@@ -871,9 +1216,9 @@ h1 {
   right: 0;
   top: 0;
   width: 250px;
-  position: absolute; }
+  position: absolute;
+}
 
-/* line 1014, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .nuevoServicio {
   bottom: 0;
   height: 370px;
@@ -883,9 +1228,9 @@ h1 {
   right: 0;
   top: 0;
   width: 250px;
-  position: absolute; }
+  position: absolute;
+}
 
-/* line 1026, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .newPreOrder {
   bottom: 0;
   height: 380px;
@@ -895,9 +1240,9 @@ h1 {
   right: 0;
   top: 0;
   width: 250px;
-  position: absolute; }
+  position: absolute;
+}
 
-/* line 1038, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .nuevoCliente {
   position: absolute;
   left: 0;
@@ -907,54 +1252,54 @@ h1 {
   bottom: 0;
   width: 250px;
   margin: auto !important;
-  min-height: 180px; }
+  min-height: 180px;
+}
 
-/* line 1050, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionCuenta {
   background: #dedede;
   padding: 20px;
   color: #333;
   font-size: 14px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+}
 
-/* line 1058, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionCuenta a {
   color: #2980b9;
   font-size: 20px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-/* line 1064, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionCuenta p {
-  margin: 5px; }
+  margin: 5px;
+}
 
-/* line 1068, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionesUsuario {
   display: none;
   position: absolute;
   width: 150px;
   right: 0;
   top: 50px;
-  z-index: 3; }
+  z-index: 3;
+}
 
-/* line 1077, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionesUsuario ul {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 1083, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionesUsuario ul li a {
   background-color: #333;
   color: #e9e9e9;
   display: block;
   padding: 15px 0;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-/* line 1091, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .opcionesUsuario ul li a:hover {
-  background-color: #444; }
+  background-color: #444;
+}
 
-/* line 1095, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .popup {
   display: none;
   background-color: rgba(0, 0, 0, 0.3);
@@ -963,9 +1308,9 @@ h1 {
   left: 0;
   right: 0;
   z-index: 99;
-  bottom: 0; }
+  bottom: 0;
+}
 
-/* line 1106, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta {
   margin: 10px auto;
   display: inline-block;
@@ -974,25 +1319,25 @@ h1 {
   background-color: #fff;
   border-radius: 5px 5px 0 0;
   padding-bottom: 5px;
-  width: 275px; }
+  width: 275px;
+}
 
-/* line 1117, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .opciones .agregarMenus {
   background-color: #2980b9;
-  background-image: url('../img/iconos/plus.png');
+  background-image: url("../img/iconos/plus.png");
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px; }
+  height: 50px;
+}
 
-/* line 1125, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .opciones .agregarMenus:hover {
   background-color: #3498db;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 1130, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .listaMenus label {
   background-color: #efefef;
-  background-image: url('../img/iconos/checkbox-unchecked.png');
+  background-image: url("../img/iconos/checkbox-unchecked.png");
   background-position: 1px;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -1001,19 +1346,19 @@ h1 {
   font-size: 14px;
   padding: 10px 0 10px 35px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 1144, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .listaMenus input[type="checkbox"] {
   visibility: hidden;
-  position: fixed; }
+  position: fixed;
+}
 
-/* line 1149, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .listaMenus input[type="checkbox"]:checked + label {
-  background-image: url('../img/iconos/checkbox-checked.png');
-  font-weight: bold; }
+  background-image: url("../img/iconos/checkbox-checked.png");
+  font-weight: bold;
+}
 
-/* line 1154, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .titulo {
   background-color: #2980b9;
   border-radius: 5px 5px 0 0;
@@ -1022,71 +1367,71 @@ h1 {
   min-height: 20px;
   padding: 10px 15px 10px 10px;
   position: relative;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
-/* line 1166, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .imagen {
   width: 100px;
-  margin: 5px auto; }
+  margin: 5px auto;
+}
 
-/* line 1171, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .imagen img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
-/* line 1176, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .detalles {
   padding: 5px;
-  text-align: left; }
+  text-align: left;
+}
 
-/* line 1181, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .detalles p {
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: 5px center;
-  padding: 0 0 0 25px; }
+  padding: 0 0 0 25px;
+}
 
-/* line 1188, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .detalles .nombre {
-  background-image: url('../img/iconos/user.png'); }
+  background-image: url("../img/iconos/user.png");
+}
 
-/* line 1192, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .detalles .email {
-  background-image: url('../img/iconos/email.png'); }
+  background-image: url("../img/iconos/email.png");
+}
 
-/* line 1196, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .tarjeta .detalles .mobile {
-  background-image: url('../img/iconos/mobile.png'); }
+  background-image: url("../img/iconos/mobile.png");
+}
 
-/* line 1201, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario {
   height: 50px;
   right: 0;
   text-align: right;
   position: absolute;
-  top: 0; }
+  top: 0;
+}
 
-/* line 1209, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones {
   display: inline-block;
   position: relative;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 1215, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .icono {
   width: 50px;
   height: 50px;
-  background-image: url('../img/iconos/notifications.png');
+  background-image: url("../img/iconos/notifications.png");
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+}
 
-/* line 1224, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .icono:hover {
-  background-image: url('../img/iconos/on_notifications.png');
-  cursor: pointer; }
+  background-image: url("../img/iconos/on_notifications.png");
+  cursor: pointer;
+}
 
-/* line 1229, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .icono .contador {
   background-color: #333;
   border-radius: 50%;
@@ -1099,9 +1444,9 @@ h1 {
   padding: 5px;
   position: absolute;
   right: 0;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 1244, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones {
   -webkit-animation: gb__a 0.2s;
   -webkit-border-radius: 2px;
@@ -1120,24 +1465,24 @@ h1 {
   right: 0;
   top: 50px;
   width: 240px;
-  z-index: 99; }
+  z-index: 99;
+}
 
-/* line 1265, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .item {
   color: #333;
   font-size: 11px;
   padding: 5px 30px 5px 20px;
   position: relative;
   text-align: left;
-  border: 1px solid #fff; }
+  border: 1px solid #fff;
+}
 
-/* line 1274, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .item:hover {
   border: 1px solid #e5e5e5;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.03); }
+  background-color: rgba(0, 0, 0, 0.03);
+}
 
-/* line 1280, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .verTodos {
   color: #333;
   list-style: none;
@@ -1145,15 +1490,15 @@ h1 {
   padding: 1em;
   text-align: center;
   position: relative;
-  padding-right: 40px; }
+  padding-right: 40px;
+}
 
-/* line 1290, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .verTodos:hover {
   cursor: pointer;
   color: #e9e9e9;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.5);
+}
 
-/* line 1296, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .flechita:after {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -1161,9 +1506,9 @@ h1 {
   content: "";
   left: 110px;
   position: absolute;
-  top: 0; }
+  top: 0;
+}
 
-/* line 1306, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones {
   border: 1px solid #fff;
   color: #333;
@@ -1172,53 +1517,101 @@ h1 {
   padding: 0;
   max-height: 250px;
   overflow-y: scroll;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 1317, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar {
-  width: 8px; }
+  width: 8px;
+}
 
-/* line 1321, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb {
   background-color: #2980b9;
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
-/* line 1325, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:hover {
   background-color: #2980b9;
-  border: 1px solid #333; }
+  border: 1px solid #333;
+}
 
-/* line 1329, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:active {
   background-color: #2980b9;
-  border: 1px solid #333; }
+  border: 1px solid #333;
+}
 
-/* line 1333, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .usuario {
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 1338, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .usuario .username {
   display: none;
   font-weight: bolder;
   color: #e9e9e9;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 1345, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .usuario .avatar {
   width: 50px;
   height: 50px;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 1352, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
 .menuUsuario .usuario .avatar img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-radius: 50%;
+}
+
+.menuUsuario
+.usuario {
+  position: relative;
+  margin-right: 33px;
+}
+
+.menuUsuario
+.usuario
+.icon-keyboard_arrow_down {
+  color: #efefef;
+  text-align: center;
+  font-size: 29px;
+  font-family: 'serviciolatinopmg';
+  position: absolute;
+  right: -27px;
+  top: 10px;
+}
+
+.menuUsuario
+.usuario
+.icon-keyboard_arrow_down:before {
+  content: "\e10f";
+}
 
 @media screen and (min-width: 400px) {
-  /* line 1358, C:/Users/tfbm89/Documents/GitHub/CreativePMG/sass/main.scss */
   .menuUsuario .usuario .username {
-    display: inline-block; }
- }
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contenido
+.contenedorProductos
+.contenedorProducto {
+    width: 80%;
+    padding: 20px;
+  }
+  .contenido
+.contenedorProductos
+.contenedorProducto
+.row1 {
+    vertical-align: top;
+    margin: 16px;
+  }
+  .contenido
+.contenedorProductos
+.contenedorProducto
+.row2 {
+    font-size: 16px;
+  }
+}

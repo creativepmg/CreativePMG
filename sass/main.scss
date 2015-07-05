@@ -722,6 +722,8 @@ h1
   		position: relative;
   		text-align: left;
   		width: 200px;
+  		border: 2px rgba($secondaryTextColor,0.5) solid;
+  		border-radius: 5px;
 
   		img 
   		{
@@ -1022,39 +1024,66 @@ h1
 }
 .menu
 {
-	background-color: $secondaryTextColor;
-	bottom: 0px;
+	background-color: $textPrimaryColor;
+	bottom: 5px;
+	box-shadow: 5px 5px 10px $primaryTextColor;
+	color: $primaryTextColor;
 	display: none;
 	font-size: 14px;
-	overflow-x: hidden; 
+	overflow-x: hidden;
 	overflow-y: scroll;
 	position: fixed;
-	right: 0px;
-	text-align: right;
-	top: 50px;
+	right: 5px;
+	text-align: left;
+	top: 55px;
 	width: 250px;
 	z-index: 3;
-}
-.menu ul
-{
-	list-style: none;
-	padding: 0;
-}
-.menu ul li
-{	
-	border-bottom: 1px $textPrimaryColor solid;
-}
-.menu ul li a
-{
-	display: block;
-	padding: 20px;
-	color: #e9e9e9;
-	text-decoration: none;
-}
-.menu ul li a:hover
-{
-	background-color: $primaryColor;
-	font-weight: bolder;
+
+	&::-webkit-scrollbar
+	{
+		width: 8px;
+	}
+	&::-webkit-scrollbar-thumb
+	{
+		background-color: $darkPrimaryColor;
+		border-radius:10px;
+	}
+	&::-webkit-scrollbar-thumb:hover
+	{
+		background-color: $darkPrimaryColor;
+		border:1px solid #333;
+	}
+	&::-webkit-scrollbar-thumb:active
+	{
+		background-color:$darkPrimaryColor;
+		border:1px solid #333;
+	}
+	ul
+	{
+		list-style: none;
+		padding: 0;
+
+		li
+		{	
+			border-bottom: 1px $dividerColor solid;
+			
+			a
+			{
+				display: block;
+				padding: 20px;
+				color: $primaryTextColor;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				
+				&:hover
+				{
+					background-color: $primaryColor;
+					font-weight: bolder;
+					color: $textPrimaryColor;
+				}
+			}
+		}
+	}
 }
 .nuevoUsuario 
 {

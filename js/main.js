@@ -22,6 +22,11 @@ function inicio()
 	$('#btnInsProveedor').on('click', insProveedor);
 	$('#btnInsCompra').on('click', insCompra);
 	$('#btnInsItemCompra').on('click', insItemCompra);
+	$('#avatar').on('change', cambiar_avatar);
+}
+function cambiar_avatar()
+{
+	$('#btn_subir_avatar').click();
 }
 function insItemCompra()
 {
