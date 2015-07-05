@@ -56,10 +56,11 @@
             </div>
         </div>
         <div class="usuario">
-        	<p class="username"><?= $user_user ?></p>
-        	<div class="avatar">
-            	<img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
+            <div class="avatar">
+                <img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
             </div>
+        	<p class="username"><?= $user_user ?></p>
+            <span class="icon-keyboard_arrow_down"></span>
         </div>        
     </div>
     
