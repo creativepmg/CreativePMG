@@ -358,7 +358,7 @@ function asignarMenu(obj)
 	var disparador = obj;
 	var idUsuario = $(disparador).parents('.tarjeta').children('#idUsuario').html();
 	$('#inputIdUsuario').val(idUsuario);
-	$('.popMenus').slideToggle();
+	$('#acceso_menus').slideToggle();
 }
 function cerrarPopups()
 {

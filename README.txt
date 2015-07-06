@@ -1,3 +1,15 @@
+Precios fijos  cambio pantalla
+iphone 4 /4s 70$
+
+iphone 5
+
+100
+
+iphone 5c 110
+
+y iphone 5s 120
+
+
 
 -comando para subir tus commits a github
 	git push origin master  
