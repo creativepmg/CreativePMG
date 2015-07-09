@@ -1,6 +1,7 @@
 $(document).on('ready', inicio);
 function inicio()
 {	
+	$('.popup .cajaDialogo .titulo .cerrar').on('click', cerrarCajaDialogo);
 	$('#LogIn').on('click', logIn);
 	$('#btnContacto').on('click', insContacto);
 	$('#botonNuevoMenu').on('click', nuevoMenu);
@@ -88,7 +89,7 @@ function mostraCajaDialogo(parametro)
 }
 function cerrarCajaDialogo()
 {
-	$('.cajaDialogo').css('display', 'none');
+	$('.popup').css('display', 'none');
 }
 function guardadoLocal(obj)
 {	
