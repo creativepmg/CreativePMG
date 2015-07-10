@@ -579,13 +579,16 @@ h1
 
 			.cerrar 
 			{
-				font-family: 'esandex';
 				color: #fff;
+				font-family: 'esandex';
 				font-size: 20px;
-				position: absolute;
-				top: 0;
-				right: 0;
 				padding: 10px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-radius: 0 5px 0 0; 
+
 				&:hover
 				{
 				  background-color: $accentColor;
@@ -736,7 +739,7 @@ h1
 	*/
 	.acceso_menus
 	{
-		height: 268px;
+		height: 311px;
 	}
 	.nuevaOrdenServicio
 	{
@@ -768,30 +771,7 @@ h1
 	{
 	}
 }
-.tarjeta .listaMenus label
-{
-	background-color: #efefef;
-	background-image: url('../img/iconos/checkbox-unchecked.png');	
-	background-position: 1px;
-	background-repeat: no-repeat;
-	background-size: 30px;
-	border-bottom: 1px solid #333;
-	display: block;
-	font-size: 14px;
-	padding: 10px 0 10px 35px;
-	text-align: center;
-	cursor: pointer;
-}
-.tarjeta .listaMenus input[type="checkbox"]
-{
-	visibility: hidden;
-	position: fixed;
-}
-.tarjeta .listaMenus input[type="checkbox"]:checked+label
-{ 
-	background-image: url('../img/iconos/checkbox-checked.png');	
-	font-weight: bold; 
-} 
+
 .contenedor
 {
 	  margin-top: 50px;
@@ -1273,81 +1253,31 @@ h1
 		}
 	}
 }
-
-.opcionesUsuario ul
-{
-	list-style: none; 
-	margin: 0;
-	padding: 0;
-}
-.opcionesUsuario ul li a
-{
-	background-color: #333;
-	color: #e9e9e9;
-	display: block;
-	padding: 15px 0;
-	text-decoration: none;
-}
-.opcionesUsuario ul li a:hover
-{
-	background-color: #444;
-}
-
  
-.popup
+.tarjeta
 {
-	display: none;
-	background-color: rgba(0,0,0,0.3);
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-	bottom: 0;
-}
-
- 
- 
-.tarjeta 
-
-{
-	margin: 10px auto;
-	display: inline-block;
-	vertical-align: top;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 	border-radius: 5px 5px 0 0;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	display: inline-block;
+	margin: 10px auto;
 	padding-bottom: 5px;
+	vertical-align: top;
 	width: 275px;
 
-}
-.tarjeta .opciones .agregarMenus
-{
-	background-color: #2980b9;
-	background-image: url('../img/iconos/plus.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 50px;
-}
-.tarjeta .opciones .agregarMenus:hover
-{
-	background-color: #3498db;
-	cursor: pointer;
-}
+	.imagen
+	{
+		height: 100px;
+		margin: 5px auto;
+		width: 100px;
 
-.tarjeta .titulo
-{
-	background-color: #2980b9;
-	border-radius: 5px 5px 0 0;
-	color: #e9e9e9;
-	font-weight: bolder;
-	min-height: 20px;
-	padding: 10px 15px 10px 10px;
-	position: relative;
-	text-transform: uppercase;
-}
-
-	.opciones
+		img
+		{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.opciones 
 	{
 		.agregarMenus
 		{
@@ -1363,45 +1293,16 @@ h1
 			}
 		}
 	}
-	.listaMenus 
+	.titulo
 	{
-		label
-		{
-			background-color: #efefef;
-			background-image: url('../img/iconos/checkbox-unchecked.png');	
-			background-position: 1px;
-			background-repeat: no-repeat;
-			background-size: 30px;
-			border-bottom: 1px solid #333;
-			display: block;
-			font-size: 14px;
-			padding: 10px 0 10px 35px;
-			text-align: center;
-			cursor: pointer;
-		}
-		input[type="checkbox"]
-		{
-			visibility: hidden;
-			position: fixed;
-
-			&:checked+label
-			{ 
-				background-image: url('../img/iconos/checkbox-checked.png');	
-				font-weight: bold; 
-			} 
-		}
-	}
-	
-
-	.imagen
-	{
-		width: 100px;
-		margin: 5px auto;
-		img
-		{
-			width: 100%;
-			height: 100%;
-		}
+		background-color: #2980b9;
+		border-radius: 5px 5px 0 0;
+		color: #e9e9e9;
+		font-weight: bolder;
+		min-height: 20px;
+		padding: 10px 15px 10px 10px;
+		position: relative;
+		text-transform: uppercase;
 	}
 	.detalles 
 	{
@@ -1422,7 +1323,16 @@ h1
 		{
 			background-image: url('../img/iconos/email.png'); 		
 		}
+		.mobile
+		{
+			background-image: url('../img/iconos/mobile.png'); 		
+		}
 	}
+}
+
+
+	
+	
 
 .menuUsuario 
 {
