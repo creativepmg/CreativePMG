@@ -1,5 +1,4 @@
-<?php require 'template/inicio.php'; ?>
-<?php
+<?php require 'template/inicio.php'; 
 			
 			if(empty($_POST['nroOrden']))
 			{
@@ -140,9 +139,9 @@
 
 
 	<!-- ESCOGER CLIENTE -->
-	<div id="dListaCliente" class="cajaDialogo">
-		<div class="lisClientes formulario">
-			<div class="encabezado">
+	<div id="dListaCliente" class="popup">
+		<div class="cajaDialogo lisClientes">
+			<div class="titulo">
 				CLIENTES
 				<div class="cerrar"></div>
 			</div>
@@ -165,9 +164,9 @@
 	<!--  -->
 
 	<!-- Nuevo Cliente  -->
-	<div id="dNewCliente" class="cajaDialogo">
-		<div class="newCliente formulario">
-			<div class="encabezado">
+	<div id="dNewCliente" class="popup">
+		<div class="cajaDialogo newCliente">
+			<div class="titulo">
 				NUEVO CLIENTE
 				<div class="cerrar"></div>
 			</div> 

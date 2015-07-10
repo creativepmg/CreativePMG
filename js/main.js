@@ -18,12 +18,15 @@ function inicio()
 	$('.usuario').on('click', ioMenu);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
-	$('.cerrarPopups').on('click', cerrarPopups);
-	$('.cajaDialogo .formulario .encabezado .cerrar').on('click', cerrarCajaDialogo);
 	$('#btnInsProveedor').on('click', insProveedor);
 	$('#btnInsCompra').on('click', insCompra);
 	$('#btnInsItemCompra').on('click', insItemCompra);
 	$('#avatar').on('change', cambiar_avatar);
+	$('#ver_pendientes').on('click', ver_pendientes);
+}
+function ver_pendientes()
+{
+	$('#btn_ver_pendientes').click();
 }
 function cambiar_avatar()
 {
@@ -85,6 +88,7 @@ function insProveedor()
 function mostraCajaDialogo(parametro)
 {
 	cerrarCajaDialogo();
+	console.log('ejecuto mostraCajaDialogo: ' + parametro);
 	$(parametro).slideToggle();
 }
 function cerrarCajaDialogo()
@@ -262,7 +266,6 @@ function updOrdenFinalizada(obj)
 			}
 	});
 	$('.vaciar').val('');
-	cerrarPopups();
 	setTimeout ("location.reload()", 3000);
 	return false;
 }
@@ -280,7 +283,6 @@ function insOrdenServicio()
 			}
 	});
 	$('.vaciar').val('');
-	cerrarPopups();
 	setTimeout ("location.reload()", 3000);
 	return false;
 }
@@ -299,7 +301,7 @@ function updUsuario()
 			}
 	});
 	$('.vaciar').val('');
-	cerrarPopups();
+	cerrarCajaDialogo();
 	return false;
 }
 function insContacto()
@@ -360,11 +362,6 @@ function asignarMenu(obj)
 	var idUsuario = $(disparador).parents('.tarjeta').children('#idUsuario').html();
 	$('#inputIdUsuario').val(idUsuario);
 	$('#acceso_menus').slideToggle();
-}
-function cerrarPopups()
-{
-	$('.popup,.cajaDialogo').css('display', 'none');
-	$('.vaciar').val('');
 }
 function nuevoUsuario()
 {

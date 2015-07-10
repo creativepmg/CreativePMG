@@ -15,14 +15,20 @@
 			<p>Clientes</p>
 		</div>
 	</div>
-	<div class="contenedorIcono">		
+
+	<div id="ver_pendientes" class="contenedorIcono">		
 		<div class="iconoOrdenesP"></div>
 		<div class="inf">
 			<div class="numeroOrden"> <?= $countServPendientes ?> </div>
 			<p>Ordenes Pendientes</p>
 		</div>
+		<form action="orden-servicio" style="display:none;">
+			<input type="hidden" name="nroOrden" value="">
+			<input type="hidden" name="estado" value="1">
+			<input id="btn_ver_pendientes" type="submit">
+		</form>
 	</div>
-	<div class="contenedorIcono">		
+	<div class="contenedorIcono" style="display: none">		
 		<div class="iconoProductos"></div>
 		<div class="inf">
 			<div class="numeroProductos"> <?= '0' ?> </div>
