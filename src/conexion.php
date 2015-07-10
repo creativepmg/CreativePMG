@@ -2,7 +2,7 @@
 	$host 			= "localhost";
 	$user 			= "latinopm_admin";
 	$pw 			= "phillip1707";
-	$db 			= "latinopm_desarrollo";
+	$db 			= "latinopm_main";
 	$con = mysql_connect($host,$user,$pw)
 	or die("problemas al conectar con el servidor");
 	mysql_select_db($db,$con)

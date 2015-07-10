@@ -9,7 +9,7 @@
 				<div class="cliente">
 					<label>Cliente</label>
 					<input id="id_cliente" class="vaciar" name="id_cliente" type="hidden" >
-					<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 80%; display: inline-block">
+					<input id="nombre_cliente" type="text" class="vaciar" disabled style="text-transform: uppercase; width: 78%; display: inline-block">
 					<div class="btn_cliente" onclick="mostraCajaDialogo('#dListaCliente')"></div>		   
 				</div>
 				
