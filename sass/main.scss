@@ -509,6 +509,92 @@ h1
 	}
 }
 
+.secciones
+{
+    
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  width: 80%;
+  z-index: 3;
+  .datos 
+  {
+    margin: 10px;
+    width: 78%;
+    float: left;
+    h3
+    {
+      text-align: center;
+    }
+
+    div
+    {
+
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      margin: 0px;
+      div 
+      {
+       width: 30%;
+       margin: 0px;
+       padding: 0px;
+       font-size: 13px;
+      }
+      p 
+      {
+        width: 67%;
+        height: 10px;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+
+  }
+
+  .opcion1, .opcion2
+  {
+    display: inline-block;
+    width: 100%;
+    width: 14%;
+    height: 50px;
+    vertical-align: top;
+    margin: 0px;
+  
+
+    .borrar, .agregar
+    {
+      font-family: 'esandex';
+      color: $primaryTextColor;
+      font-size: 30px;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      margin: 0px;
+      cursor: pointer;
+      &:hover
+      {
+          font-size: 25px;
+      }
+    }
+    .borrar:before
+     {
+       content: "\e9ac";
+     }
+    .agregar:before 
+    {
+      content: "\e905";
+    }
+
+
+  }
+}
+
 .tarjeton
 {
 	background-color: $primaryTextColor;
@@ -548,7 +634,10 @@ h1
 	bottom: 0;
 	
 	
-
+	.nuevo_menu
+	{
+		height: 250px  !important; 
+	}
 	.cajaDialogo
 	{
 		background-color: #fff;
@@ -1530,7 +1619,10 @@ h1
 }
 @media screen and (min-width: 600px)
 {
-	 
+	.secciones
+	{
+     width: 45%; 
+  	}
 	.contenido
 	{
 		.contenedorProductos
