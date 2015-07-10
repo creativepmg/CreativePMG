@@ -290,18 +290,19 @@ function insOrdenServicio()
 function updUsuario()
 {
 	var url = "querys/updUsuario.php";
-
+	console.log('permisos usuario');
 	$.ajax({
 		type: "POST",
 		url: url,
 		data: $("#formMenuUsuarios").serialize(),
 		success: function(data){
-			$(".notificacion-emergenteRegister").html(data);
+			$(".notificacion-emergente").html(data);
 			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
 	cerrarCajaDialogo();
+	setTimeout ("location.reload()", 3000);
 	return false;
 }
 function insContacto()
