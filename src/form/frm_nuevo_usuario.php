@@ -1,10 +1,10 @@
-<div id="dNewUsuario" class="cajaDialogo">
-    <div class="nuevo_usuario formulario">
-      <div class="encabezado">
+<div id="dNewUsuario" class="popup">
+    <div class="cajaDialogo nuevo_usuario">
+      <div class="titulo">
           NUEVO USUARIO
           <div class="cerrar"></div>
       </div>
-      <div class="detalles">
+      <div class="formulario">
         <form id="formRegister" method="post">
           <label>Email</label>
           <input type="text" name="email" class="vaciar">

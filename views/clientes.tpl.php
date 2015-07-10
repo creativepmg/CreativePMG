@@ -45,24 +45,10 @@
 
     <div id="respuesta"></div>
    
-    <!-- Nuevo cliente -->
     <div id="respuestaRegister"></div>
-    <div class="popup popNuevoUsuario">
-      <div class="tarjeta nuevoCliente">
-        <div class="titulo">NUEVO CLIENTE
-          <div class="cerrar cerrarPopups"></div>
-        </div> 
-        <form class="formulario" id="formInsCliente" method="post">
-          <label>Nombre</label>
-          <input type="text" name="nombre_cliente" class="vaciar">
-          <label>Numero Celular</label>
-          <input type="number" name="numero_celular" class="vaciar">
-          <label>Email</label>
-          <input type="text" name="email" class="vaciar">
-          <input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
-        </form>
-      </div>
-    </div>
-    <div id="nuevoCliente" class="botonNuevo"></div>
+    <!-- Nuevo cliente -->
+    <?php require 'src/form/frm_nuevo_cliente.php' ?>
+    <!-- Boton Nuevo cliente -->  
+    <div class="botonNuevo" onclick="mostraCajaDialogo('#dNewCliente')"></div>
 
  <?php require 'template/fin.php'; ?>

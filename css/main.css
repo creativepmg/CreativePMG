@@ -384,25 +384,10 @@ h1 {
   left: 0;
   right: 0;
   z-index: 99;
-  bottom: 0; }
-  .popup .acceso_menus {
-    height: 268px; }
-  .popup .nuevaOrdenServicio {
-    height: 330px; }
-  .popup .lisProducto {
-    height: 250px; }
-  .popup .lisClientes {
-    height: 300px; }
-  .popup .newItemCompra,
-  .popup .newCliente {
-    height: 295px;
-    /*Tres inputs y sus labels*/ }
-  .popup .newCompra {
-    height: 227px; }
-  .popup .nuevo_usuario,
-  .popup .newProveedor {
-    height: 160px;
-    /*Un solo input*/ }
+  bottom: 0;
+  /*
+  ** Clases para darle alto a diferentes popups
+  */ }
   .popup .cajaDialogo {
     background-color: #fff;
     border-radius: 5px;
@@ -446,47 +431,105 @@ h1 {
       .popup .cajaDialogo .formulario select {
         width: 100%;
         height: 49px; }
-      .popup .cajaDialogo .formulario input[type="text"] {
+      .popup .cajaDialogo .formulario input[type="text"],
+      .popup .cajaDialogo .formulario input[type="number"] {
         border-radius: 5px;
         width: 100%;
         border: 1px #1976D2 solid;
         vertical-align: middle;
         height: 40px; }
+      .popup .cajaDialogo .formulario input[type="number"] {
+        text-align: right;
+        padding-right: 5px;
+        box-sizing: border-box; }
       .popup .cajaDialogo .formulario input[type="submit"] {
         background-color: #1976D2;
-        border-radius: 5px;
+        border-radius: 0 0 5px 5px;
         border: 0;
-        bottom: 5px;
+        bottom: 0px;
+        box-sizing: border-box;
         color: #e9e9e9;
         display: block;
         font-weight: bolder;
         height: 46px;
-        right: 5px;
-        margin: 5px 0;
         left: 5px;
-        box-sizing: border-box;
+        margin: 5px 0;
         position: absolute;
-        width: 96%; }
+        right: 5px;
+        width: 280px; }
         .popup .cajaDialogo .formulario input[type="submit"]:hover {
           background-color: #2196F3; }
-    .popup .cajaDialogo .listaMenus label {
-      background-color: #efefef;
-      background-image: url("../img/iconos/checkbox-unchecked.png");
-      background-position: 1px;
-      background-repeat: no-repeat;
-      background-size: 30px;
-      border-bottom: 1px solid #333;
-      cursor: pointer;
-      display: block;
-      font-size: 14px;
-      padding: 10px 0 10px 35px;
-      text-align: center; }
-    .popup .cajaDialogo .listaMenus input[type="checkbox"] {
-      visibility: hidden;
-      position: fixed; }
-      .popup .cajaDialogo .listaMenus input[type="checkbox"]:checked + label {
-        background-image: url("../img/iconos/checkbox-checked.png");
-        font-weight: bold; }
+      .popup .cajaDialogo .formulario textarea {
+        border-radius: 5px;
+        border: 1px #1976D2 solid;
+        width: 100%;
+        box-sizing: border-box; }
+      .popup .cajaDialogo .formulario .btn_nuevo {
+        background-color: #333;
+        color: #e9e9e9;
+        line-height: 50px;
+        height: 50px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        border-radius: 0 0 5px 5px;
+        width: 280px; }
+      .popup .cajaDialogo .formulario .lista {
+        height: 208px;
+        overflow-x: hidden;
+        overflow-y: scroll; }
+        .popup .cajaDialogo .formulario .lista .item {
+          border-bottom: 1px solid #333;
+          padding: 10px 0 10px 25px;
+          text-transform: uppercase;
+          text-align: left;
+          font-size: 15px; }
+          .popup .cajaDialogo .formulario .lista .item:hover {
+            background-color: #607D8B;
+            color: #FFFFFF;
+            cursor: pointer; }
+          .popup .cajaDialogo .formulario .lista .item .descripcion .id_cliente {
+            display: none; }
+    .popup .cajaDialogo .listaMenus {
+      overflow-y: scroll;
+      height: 208px; }
+      .popup .cajaDialogo .listaMenus label {
+        background-color: #efefef;
+        background-image: url("../img/iconos/checkbox-unchecked.png");
+        background-position: 1px;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        border-bottom: 1px solid #333;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        padding: 10px 0 10px 35px;
+        text-align: center; }
+      .popup .cajaDialogo .listaMenus input[type="checkbox"] {
+        visibility: hidden;
+        position: fixed; }
+        .popup .cajaDialogo .listaMenus input[type="checkbox"]:checked + label {
+          background-image: url("../img/iconos/checkbox-checked.png");
+          font-weight: bold; }
+  .popup .acceso_menus {
+    height: 268px; }
+  .popup .nuevaOrdenServicio {
+    height: 315px; }
+  .popup .lisProducto {
+    height: 250px; }
+  .popup .lisClientes {
+    height: 315px; }
+  .popup .newItemCompra,
+  .popup .newCliente {
+    height: 295px;
+    /*Tres inputs y sus labels*/ }
+  .popup .newCompra {
+    height: 227px; }
+  .popup .nuevo_usuario,
+  .popup .newProveedor {
+    height: 170px;
+    /*Un solo input*/ }
 
 .tarjeta .listaMenus label {
   background-color: #efefef;

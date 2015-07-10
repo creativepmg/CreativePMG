@@ -133,59 +133,12 @@
 	</div>
 	
 	<!-- NUEVA SERVICIO -->
-	
-
 	<?php require 'src/form/frm_nuevo_servicio.php' ?>
-
-
 	<!-- ESCOGER CLIENTE -->
-	<div id="dListaCliente" class="popup">
-		<div class="cajaDialogo lisClientes">
-			<div class="titulo">
-				CLIENTES
-				<div class="cerrar"></div>
-			</div>
-			<div class="lista">			 
-			    	<?php while ($arrClientes=mysql_fetch_array($lis_clients)) {?>
-			    		<div class="item" onclick="guardadoLocal(this);">
-							<div class="avatar">
-								<img src="">
-							</div>
-							<div class="descripcion">
-								<p id="id_cliente" class="id_cliente"><?= $arrClientes['ID_CLIENTE'] ?></p>
-								<p id="nombre_cliente"><?= $arrClientes['NOMBRE_CLIENTE'] ?></p>
-							</div>
-						</div>		    
-			    	<?php } ?>
-			</div>
-			<div class="btn_nuevo" onclick="mostraCajaDialogo('#dNewCliente')">NUEVO CLIENTE</div>
-		</div>
-	</div>
-	<!--  -->
-
+	<?php require 'src/form/frm_escoger_cliente.php' ?>
 	<!-- Nuevo Cliente  -->
-	<div id="dNewCliente" class="popup">
-		<div class="cajaDialogo newCliente">
-			<div class="titulo">
-				NUEVO CLIENTE
-				<div class="cerrar"></div>
-			</div> 
-			<div class="detalles">
-				<form id="formInsCliente" method="post">
-					<label>Nombre</label>
-					<input id="nombre_cliente" type="text" name="nombre_cliente" class="vaciar">
-					<label>Numero Celular</label>
-					<input id="numero_cliente" type="number" name="numero_celular" class="vaciar">
-					<label>Email</label>
-					<input id="email_cliente" type="text" name="email" class="vaciar">
-					<input class="botonFormulario" id="btnInsCliente" type="submit" value="Guardar">
-				</form>
-			</div>
-		</div>
-	</div>
-	<!--  -->
-
-
+	<?php require 'src/form/frm_nuevo_cliente.php' ?>
+	<!-- Boton para agregar nueva orden -->
 	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewOrdenService')"></div>  
 	
 <?php require 'template/fin.php'; ?>
