@@ -24,7 +24,23 @@ function inicio()
 	$('#ver_pendientes').on('click', ver_pendientes);
 	//inserts
 	$('#btnNotaCliente').on('click', insOrdenServicio);
-
+	//eventos random
+	$("#programacion").on('click', verificarCheck);
+}
+function verificarCheck()
+{
+	var estado = $("#programacion").is(":checked");
+	console.log('El estado es: ' + estado);
+	if(estado == true)
+	{
+		$('.fecha_programada').css('display','block');
+		console.log('entro en el if');
+	}
+	else
+	{
+		console.log('entro en el else');
+		$('.fecha_programada').css('display','none');	
+	}
 }
 function ver_pendientes()
 {

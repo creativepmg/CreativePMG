@@ -28,7 +28,7 @@
 			<input id="btn_ver_pendientes" type="submit">
 		</form>
 	</div>
-	<div class="contenedorIcono" style="display: none">		
+	<div class="contenedorIcono">		
 		<div class="iconoProductos"></div>
 		<div class="inf">
 			<div class="numeroProductos"> <?= '0' ?> </div>
@@ -36,6 +36,14 @@
 		</div>
 	</div>
 	
+	<div class="agenda">
+		<div class="titulo">AGENDA</div>
+		<div class="lista">
+			<div class="item">
+				<p></p>
+			</div>
+		</div>
+	</div>
 	
 
 	<!-- Footer -->
