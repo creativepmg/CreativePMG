@@ -672,6 +672,7 @@ h1
 	    top: 0;
 	    width: 280px;
 	    z-index: 3; 
+	    transition: all 0.3s ease;
 
 		.titulo 
 	    {
@@ -899,7 +900,7 @@ h1
 	}
 	.nuevaOrdenServicio
 	{
-		height: 400px;
+		height: 355px;
 	}
 	.lisProducto
 	{
