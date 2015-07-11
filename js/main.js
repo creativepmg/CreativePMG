@@ -10,7 +10,6 @@ function inicio()
 	$('#actualizarMenusUsuarios').on('click', updUsuario);
 	$('#btnInsCliente').on('click', insCliente);
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
-	$('#btnNotaCliente').on('click', insOrdenServicio);
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
@@ -23,6 +22,9 @@ function inicio()
 	$('#btnInsItemCompra').on('click', insItemCompra);
 	$('#avatar').on('change', cambiar_avatar);
 	$('#ver_pendientes').on('click', ver_pendientes);
+	//inserts
+	$('#btnNotaCliente').on('click', insOrdenServicio);
+
 }
 function ver_pendientes()
 {
@@ -271,7 +273,7 @@ function updOrdenFinalizada(obj)
 }
 function insOrdenServicio()
 {
-	var url = "/querys/insOrdenServicio.php";
+	var url = "../src/inserts/ins_orden_servicio.php";
 
 	$.ajax({
 		type: "POST",
@@ -279,11 +281,12 @@ function insOrdenServicio()
 		data: $("#formNotaCliente").serialize(),
 		success: function(data){
 			$(".notificacion-emergente").html(data);
-			notificacionEmergente();
+				notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
-	setTimeout ("location.reload()", 3000);
+	cerrarCajaDialogo();
+	//setTimeout ("location.reload()", 3000);
 	return false;
 }
 

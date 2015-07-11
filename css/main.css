@@ -12,7 +12,7 @@
   margin: 0; }
 
 a {
-  color: #FFFFFF;
+  color: #212121;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -358,6 +358,64 @@ h1 {
     text-align: center;
     width: 95%; }
 
+.secciones {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 1em;
+  padding: 5px;
+  text-align: center;
+  width: 80%;
+  font-size: 14px;
+  z-index: 3; }
+  .secciones a {
+    font-size: 11px; }
+  .secciones .datos {
+    margin: 10px;
+    width: 78%;
+    float: left; }
+    .secciones .datos h3 {
+      text-align: center; }
+    .secciones .datos div {
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      margin: 0px; }
+      .secciones .datos div .titulo {
+        width: 85px;
+        margin: 0px;
+        padding: 0px;
+        font-size: 13px; }
+      .secciones .datos div p {
+        width: 67%;
+        height: 10px;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px; }
+  .secciones .opcion1, .secciones .opcion2 {
+    display: inline-block;
+    width: 100%;
+    width: 14%;
+    height: 50px;
+    vertical-align: top;
+    margin: 0px; }
+    .secciones .opcion1 .borrar, .secciones .opcion1 .agregar, .secciones .opcion2 .borrar, .secciones .opcion2 .agregar {
+      font-family: 'esandex';
+      color: #212121;
+      font-size: 30px;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      margin: 0px;
+      cursor: pointer; }
+      .secciones .opcion1 .borrar:hover, .secciones .opcion1 .agregar:hover, .secciones .opcion2 .borrar:hover, .secciones .opcion2 .agregar:hover {
+        font-size: 25px; }
+    .secciones .opcion1 .borrar:before, .secciones .opcion2 .borrar:before {
+      content: "\e9ac"; }
+    .secciones .opcion1 .agregar:before, .secciones .opcion2 .agregar:before {
+      content: "\e905"; }
+
 .tarjeton {
   background-color: #212121;
   border-radius: 3px;
@@ -388,6 +446,8 @@ h1 {
   /*
   ** Clases para darle alto a diferentes popups
   */ }
+  .popup .nuevo_menu {
+    height: 250px  !important; }
   .popup .cajaDialogo {
     background-color: #fff;
     border-radius: 5px;
@@ -1060,6 +1120,9 @@ h1 {
   .menuUsuario .usuario .username {
     display: inline-block; } }
 @media screen and (min-width: 600px) {
+  .secciones {
+    width: 45%; }
+
   .contenido .contenedorProductos .contenedorProducto {
     width: 80%;
     padding: 20px; }
