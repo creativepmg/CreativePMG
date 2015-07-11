@@ -286,7 +286,7 @@ function insOrdenServicio()
 	});
 	$('.vaciar').val('');
 	cerrarCajaDialogo();
-	//setTimeout ("location.reload()", 3000);
+	setTimeout ("location.reload()", 3000);
 	return false;
 }
 
