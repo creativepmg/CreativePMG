@@ -37,7 +37,7 @@
           <p class="mobile"><?= $arrClientes['NUMERO_CELULAR']; ?></p>
         </div>
         <div class="social"></div>
-        <div class="opciones">
+        <div class="opciones" style="display: none;">
           <div class="agregarMenus" onclick="asignarMenu(this);"></div>
         </div>   
       </div>

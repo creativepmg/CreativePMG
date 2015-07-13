@@ -10,7 +10,6 @@ function inicio()
 	$('#actualizarMenusUsuarios').on('click', updUsuario);
 	$('#btnInsCliente').on('click', insCliente);
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
-	$('#btnNotaCliente').on('click', insOrdenServicio);
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
@@ -23,6 +22,27 @@ function inicio()
 	$('#btnInsItemCompra').on('click', insItemCompra);
 	$('#avatar').on('change', cambiar_avatar);
 	$('#ver_pendientes').on('click', ver_pendientes);
+	//inserts
+	$('#btnNotaCliente').on('click', insOrdenServicio);
+	//eventos random
+	$("#programacion").on('click', verificarCheck);
+}
+function verificarCheck()
+{
+	var estado = $("#programacion").is(":checked");
+	console.log('El estado es: ' + estado);
+	if(estado == true)
+	{
+		$('.fecha_programada').css('display','block');
+		$('.popup .nuevaOrdenServicio').css('height','400px');
+		console.log('entro en el if');
+	}
+	else
+	{
+		console.log('entro en el else');
+		$('.fecha_programada').css('display','none');
+		$('.popup .nuevaOrdenServicio').css('height','355px');	
+	}
 }
 function ver_pendientes()
 {
@@ -271,7 +291,7 @@ function updOrdenFinalizada(obj)
 }
 function insOrdenServicio()
 {
-	var url = "/querys/insOrdenServicio.php";
+	var url = "../src/inserts/ins_orden_servicio.php";
 
 	$.ajax({
 		type: "POST",
@@ -279,10 +299,11 @@ function insOrdenServicio()
 		data: $("#formNotaCliente").serialize(),
 		success: function(data){
 			$(".notificacion-emergente").html(data);
-			notificacionEmergente();
+				notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
+	cerrarCajaDialogo();
 	setTimeout ("location.reload()", 3000);
 	return false;
 }
@@ -290,18 +311,19 @@ function insOrdenServicio()
 function updUsuario()
 {
 	var url = "querys/updUsuario.php";
-
+	console.log('permisos usuario');
 	$.ajax({
 		type: "POST",
 		url: url,
 		data: $("#formMenuUsuarios").serialize(),
 		success: function(data){
-			$(".notificacion-emergenteRegister").html(data);
+			$(".notificacion-emergente").html(data);
 			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
 	cerrarCajaDialogo();
+	setTimeout ("location.reload()", 3000);
 	return false;
 }
 function insContacto()
