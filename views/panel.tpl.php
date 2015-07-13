@@ -39,9 +39,11 @@
 	<div class="agenda">
 		<div class="titulo">AGENDA</div>
 		<div class="lista">
+			<?php while ($arrAgenda=mysql_fetch_array($lis_agenda)) {?>
 			<div class="item">
-				<p></p>
+				<p><?= $arrAgenda['DESCRIPCION'] ?></p>
 			</div>
+			<?php } ?>
 		</div>
 	</div>
 	

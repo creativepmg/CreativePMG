@@ -1,4 +1,7 @@
 <?php 
+	//AGENDA
+	$lis_agenda		= mysql_query("SELECT * FROM agenda ORDER BY FECHA_PROGRAMACION DESC")
+					  or die("problemas en consulta:".mysql_error());
 	//COMPRAS
 	$lis_compras = mysql_query("SELECT 	A.ID_COMPRA,
 										A.ID_PROVEEDOR,

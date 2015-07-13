@@ -232,10 +232,11 @@ h1 {
         width: 150px; }
   .contenido .contenedorIcono {
     background-color: #fff;
-    border: 1px dotted;
+    box-shadow: 0px 0px 5px #B6B6B6;
     display: inline-block;
     height: 61px;
     left: 13px;
+    margin: 10px;
     padding: 7px;
     text-align: left;
     vertical-align: top;
@@ -312,11 +313,19 @@ h1 {
   width: 300px;
   margin: 0 auto;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  box-shadow: 0px 0px 5px #B6B6B6;
+  margin: 10px; }
   .agenda .titulo {
     padding: 0.5em;
     text-align: left;
     font-weight: bolder; }
+  .agenda .item {
+    background-color: #BBDEFB;
+    border-bottom: 1px #B6B6B6 solid;
+    text-align: left;
+    font-size: 14px;
+    padding: 5px; }
 
 .formularioExterno {
   width: 300px;
@@ -462,7 +471,8 @@ h1 {
     text-align: center;
     top: 0;
     width: 280px;
-    z-index: 3; }
+    z-index: 3;
+    transition: all 0.3s ease; }
     .popup .cajaDialogo .titulo {
       background-color: #2980b9;
       border-radius: 5px 5px 0 0;
@@ -604,7 +614,8 @@ h1 {
       display: block;
       font-size: 14px;
       padding: 10px 0 10px 35px;
-      text-align: center; }
+      text-align: center;
+      -webkit-user-select: none; }
     .popup .cajaDialogo .opcion_check input[type="checkbox"] {
       visibility: hidden;
       position: fixed; }
@@ -614,7 +625,7 @@ h1 {
   .popup .acceso_menus {
     height: 311px; }
   .popup .nuevaOrdenServicio {
-    height: 400px; }
+    height: 355px; }
   .popup .lisProducto {
     height: 250px; }
   .popup .lisClientes {
