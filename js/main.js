@@ -34,14 +34,14 @@ function verificarCheck()
 	if(estado == true)
 	{
 		$('.fecha_programada').css('display','block');
-		$('.popup .nuevaOrdenServicio').css('height','400px');
+		$('.popup .nuevaOrdenServicio').css('height','470px');
 		console.log('entro en el if');
 	}
 	else
 	{
 		console.log('entro en el else');
 		$('.fecha_programada').css('display','none');
-		$('.popup .nuevaOrdenServicio').css('height','355px');	
+		$('.popup .nuevaOrdenServicio').css('height','430px');	
 	}
 }
 function ver_pendientes()

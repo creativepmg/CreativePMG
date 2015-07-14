@@ -17,6 +17,8 @@
 				<textarea name="detalle"></textarea>
 				<label>A cuenta</label>
 				<input name="a_cuenta" type="number" value="0.00">
+				<label>Total</label>
+				<input name="a_cuenta" type="number" value="0.00">
 
 				<div class="opcion_check">
 					<input type="checkbox" id="programacion" name="con_fecha_programada" value="1">
