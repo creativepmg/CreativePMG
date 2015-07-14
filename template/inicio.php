@@ -78,6 +78,9 @@
             <a href="configuracion">CONFIGURACION</a>
         </li>
         <li>
+            <a href="informacion">INFORMACION</a>
+        </li>
+        <li>
             <a href="querys/salir.php">CERRAR SESIÓN</a>
         </li>
     </ul>
