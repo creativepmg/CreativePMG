@@ -1,4 +1,5 @@
 <?php require 'template/inicio.php'; ?>
+  <div class="contResult"><?= $countClientes ?></div>
   <div class="buscador">
     <form method="get">
       <div class="bloque">

@@ -7,8 +7,7 @@ function inicio()
 	$('#botonNuevoMenu').on('click', nuevoMenu);
 	$('#Register').on('click', PreRegister);	
 	$('#confirmarCuenta').on('click', confirmarCuenta);
-	$('#actualizarMenusUsuarios').on('click', updUsuario);
-	$('#btnInsCliente').on('click', insCliente);
+	$('#actualizarMenusUsuarios').on('click', updUsuario);	
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
@@ -24,6 +23,7 @@ function inicio()
 	$('#ver_pendientes').on('click', ver_pendientes);
 	//inserts
 	$('#btnNotaCliente').on('click', insOrdenServicio);
+	$('#btnInsCliente').on('click', insCliente);
 	//eventos random
 	$("#programacion").on('click', verificarCheck);
 }
@@ -152,8 +152,6 @@ function insCliente()
 	var cliente_email = $('#formInsCliente').children('#email_cliente').val();
 	//SETIADO DE VARIABLES EN SESSION STORAGE
 	sessionStorage.setItem("cliente_nombre", cliente_nombre);
-	
-	
 
 	$.ajax({
 		type: "POST",
@@ -169,6 +167,10 @@ function insCliente()
 	});
 	$('.vaciar').val('');
 	mostraCajaDialogo('#dNewOrdenService');
+	$(".notificacion-emergente").html('Redirigiendo...');
+	var redireccion = window.location.href = "?name=" + cliente_nombre;
+	var urlActual = window.location.href;
+	console.log(urlActual);
 	//setTimeout ("location.reload()", 3000);
 	return false;
 }
@@ -462,7 +464,7 @@ function mostarMenu()
 function logIn()
 {
 	console.log('deberias loguearte');
-	var url = "querys/login.php";
+	var url = "src/validacion/login.php";
 
 	$.ajax({
 		type: "POST",

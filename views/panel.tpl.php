@@ -1,9 +1,4 @@
-<?php 
-	require 'template/inicio.php'; 
-	 $lis_clientes = mysql_query("SELECT * FROM clientes ") 
-             or die("Error en la consulta.." . mysqli_error($con));
-	$countClientes = mysql_num_rows($lis_clientes);
-?>
+<?php require 'template/inicio.php'; ?>
 	
 	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
 
