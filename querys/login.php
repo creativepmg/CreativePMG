@@ -1,6 +1,6 @@
  <?php
  	@session_start();
- 	require '../src/conexion.php';
+ 	require '../conexion.php';
 
  	if 	(
 	 		isset($_POST['user']) 		&& !empty($_POST['user']) 		&& 

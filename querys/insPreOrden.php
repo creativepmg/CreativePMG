@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	require 'conexion.php';
+	require '../conexion.php';
 	require 'session.php';
 	mysql_set_charset('utf8');	
 	echo "todo esta funcionando correctamente <br/>"; 

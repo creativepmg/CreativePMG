@@ -1,5 +1,5 @@
 <?php 
-	require 'conexion.php';
+	require '../conexion.php';
 	mysql_set_charset('utf8');					
 	//$result_ins_cliente = $link->query($ins_cliente); 
 	$user 	=mysql_query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);

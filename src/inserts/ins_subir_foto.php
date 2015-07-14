@@ -1,5 +1,5 @@
 <?php
-		require '../conexion.php';
+		require '../../conexion.php';
 		$carpeta = "../../img/avatares/";
 		opendir($carpeta);
 		$destino = $carpeta.$_FILES['avatar']['name'];

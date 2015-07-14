@@ -1,5 +1,5 @@
 <?php 
-	require 'conexion.php';
+	require '../conexion.php';
 	mysql_set_charset('utf8');					
 	//$result_ins_cliente = $link->query($ins_cliente); 
 	$ins_menu		= "INSERT INTO orden_servicio (ID_CLIENTE,NOTA)

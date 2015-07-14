@@ -1,6 +1,6 @@
 
 <?php
-	include 'conexion.php';
+	include '../conexion.php';
 
 	if(
 		isset($_POST['email']) 	&& !empty($_POST['email']) 	&&
