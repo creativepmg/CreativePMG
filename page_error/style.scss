@@ -4,30 +4,24 @@ body
 	margin: auto;
 
 	.contenedor
-	{
-
-		
+	{		
 		header
 		{	
-			
 			background-color: #1976D2;
 			height: 50px;
 			width: 100%;
 			text-align: left;
-		
-					
-				.logo
-				{
-					height: 50px;
-					display: inline-block;
-					background-image: url("../img/logo.png");
-					background-repeat: no-repeat;
-					background-position: 0px center;
-					background-size: 135px;
-					width: 150px;
-
-				}
-		
+				
+			.logo
+			{
+				height: 50px;
+				display: inline-block;
+				background-image: url("logo.png");
+				background-repeat: no-repeat;
+				background-position: 0px center;
+				background-size: 135px;
+				width: 150px;
+			}
 		}
 
 		.error404

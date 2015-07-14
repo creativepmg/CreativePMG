@@ -19,8 +19,9 @@
 		}
 		else
 		{
-			header("HTTP/1.0 404 Not Found");
-			exit('Pagina no encontrada');
+			//header("HTTP/1.0 404 Not Found");
+			//exit('Pagina no encontrada');
+			require 'page_error/error.html';
 		}
 
 	}
