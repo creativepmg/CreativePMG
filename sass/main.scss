@@ -236,9 +236,38 @@ h1
 	line-height: 50px;
 	bottom: 10px;
 }
+
 .contenido
 {
 	margin: 150px 0;
+	.contenedor_informacion
+	{
+		margin: 10px;
+		width: 90%;
+		margin: auto;
+
+		.bloques
+		{
+			background-color: #fff;
+			margin: 30px;
+			box-shadow: 0px 0px 5px $dividerColor;
+
+			h3
+			{
+				background-color: $darkPrimaryColor;
+				color: #fff;
+				font-weight: bold;
+				padding: 10px;
+				text-align: left;
+		
+			}
+			p 
+			{
+				padding: 10px;
+			}
+
+		}
+	}
 	.contenedorProductos
 	{
 		.contenedorProducto
