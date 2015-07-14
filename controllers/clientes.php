@@ -3,3 +3,5 @@
 	$titulo = 'Clientes';
 
 	view('clientes', compact('titulo'));
+
+	

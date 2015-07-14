@@ -33,6 +33,7 @@
  ?>
 
  <div class="contResult"><?= $countOrden ?></div>
+ 
 
 
 	<div class="buscador">

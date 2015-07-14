@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
 	 <!-- Hojas de estilo -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="img/iconos/ico.png" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">

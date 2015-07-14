@@ -1,7 +1,10 @@
-<?php require 'template/inicio.php'; ?>
+<?php 
+	require 'template/inicio.php'; 
+	require 'src/selects/lis_clientes.php';
+?>
 	
 	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
-
+	
 	
 	<div class="contenedorIcono">		
 		<div class="iconoClientes"></div>
