@@ -1,11 +1,20 @@
 <?php 
+	require 'config/conexion.php';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	if ($mysqli->connect_errno) {
+    	echo "Falló la conexión a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+	}
+	else
+	{
+		echo "Conexion exitosa";
+	}
 	//AGENDA
-	$lis_agenda		= mysql_query("SELECT * FROM agenda ORDER BY FECHA_PROGRAMACION DESC")
-					  or die("problemas en consulta:".mysql_error());
+	$lis_agenda		= $mysqli->query("SELECT * FROM agenda ORDER BY FECHA_PROGRAMACION DESC")
+					  or die("problemas en consulta:".mysqli_error());
 	
     
 	//COMPRAS
-	$lis_compras = mysql_query("SELECT 	A.ID_COMPRA,
+	$lis_compras = $mysqli->query("SELECT 	A.ID_COMPRA,
 										A.ID_PROVEEDOR,
 										B.ID_PROVEEDOR,
 										B.DESCRIPCION_PROVEEDOR,
@@ -14,12 +23,12 @@
 								INNER JOIN proveedores AS B
 									ON B.ID_PROVEEDOR = A.ID_PROVEEDOR
 								ORDER BY A.FECHA_COMPRA")
-						or die("Error en la consulta lis_compras.." . mysql_error($con));
+						or die("Error en la consulta lis_compras.." . mysqli_error($con));
 	//MENUS
-	$lis_menus		= mysql_query("SELECT * FROM menu ORDER BY ID_MENU DESC")
-					  or die("problemas en consulta:".mysql_error());
+	$lis_menus		= $mysqli->query("SELECT * FROM menu ORDER BY ID_MENU DESC")
+					  or die("problemas en consulta:".mysqli_error());
 	//PRODUCTOS
-	$lis_productos 		= mysql_query("SELECT 	A.ID_PRODUCTO,
+	$lis_productos 		= $mysqli->query("SELECT 	A.ID_PRODUCTO,
 												A.STOCK,
 												A.ID_TIPO_PRODUCTO,
 												B.ID_TIPO_PRODUCTO,
@@ -34,14 +43,14 @@
 											ON C.ID_PROVEEDOR = A.ID_PROVEEDOR
 										WHERE A.STOCK >= 0
 									 ORDER BY B.DESCRIPCION")
-					   	or die("Error en la consulta lis_productos:  " . mysql_error($con));
+					   	or die("Error en la consulta lis_productos:  " . mysqli_error($con));
 	//PROVEEDORES
-	$lis_proveedores = mysql_query("SELECT * FROM proveedores 
+	$lis_proveedores = $mysqli->query("SELECT * FROM proveedores 
 									ORDER BY DESCRIPCION_PROVEEDOR")
-						or die("Error en la consulta proveedores.." . mysql_error($con));
+						or die("Error en la consulta proveedores.." . mysqli_error($con));
 	//SERVICIOS PENDIENTES
-	$lis_serv_pendientes = mysql_query("SELECT * FROM orden_servicio
+	$lis_serv_pendientes = $mysqli->query("SELECT * FROM orden_servicio
 										WHERE ID_ESTADO_SERVICIO = '1'")
-						or die("Error en la consulta proveedores.." . mysql_error($con));
-	$countServPendientes = mysql_num_rows($lis_serv_pendientes);
+						or die("Error en la consulta proveedores.." . mysqli_error($con));
+	$countServPendientes = mysqli_num_rows($lis_serv_pendientes);
 ?>

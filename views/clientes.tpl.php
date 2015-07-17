@@ -16,7 +16,7 @@
   </div>
 
     <!-- Lista de Clientes -->
-    <?php while ($arrClientes=mysql_fetch_array($lis_clientes)) {?>
+    <?php while ($arrClientes=mysqli_fetch_array($lis_clientes)) {?>
       <div class="tarjeta">
         <div id="idUsuario" style="display: none;"><?= $arrClientes['ID_CLIENTE']; ?></div>
         <div class="titulo"><?= $arrClientes['USER']; ?></div>

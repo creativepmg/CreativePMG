@@ -1,5 +1,6 @@
 <?php 
 	require 'querys/control.php';
+    require 'config/conexion.php';
 	require 'querys/querys.php';
     require 'src/selects/selects.php';
 ?>
@@ -69,7 +70,7 @@
 
 <div class="menu">
     <ul>
-    <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+    <?php while ($reg=mysqli_fetch_array($usuario_menu)) {?>
         <li>
             <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
         </li>

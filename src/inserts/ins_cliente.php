@@ -1,5 +1,5 @@
 <?php 
-	require '../conexion.php';
+	require '../../config/conexion.php';
 	mysql_set_charset('utf8');					
 	//$result_ins_cliente = $link->query($ins_cliente); 
 	$user 	=mysql_query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);
@@ -14,13 +14,6 @@
 	$nombreCliente = $dataCliente['NOMBRE_CLIENTE']; 
 	$numeroCel = $dataCliente['NUMERO_CELULAR'];
 	$emailCliente = $dataCliente['EMAIL_CLIENTE'];
-
-	//echo 'seleccionado '.$numeroCel;
-	//echo 'enviado por post '.$_POST['numero_celular'];
-	/* echo 	"Email: ".$emailCliente."<br/>
-	 *		Celular: ".$numeroCel."<br/>";
-	 */
-
 	$postCliente = $_POST['nombre_cliente'];
 	$postCelular = $_POST['numero_celular'];
 	$postEmail	 = $_POST['email'];
@@ -54,11 +47,11 @@
 	else
 	{
 		if ($emailCliente == '') 
-		{
-			
+		{			
 			if ($numeroCel == '') 
 			{
 	  			$result_ins_menu = mysql_query($ins_cliente,$con);
+	  			echo "Cliente registrado correctamente";
 			}
 			else
 			{

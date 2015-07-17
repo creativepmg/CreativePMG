@@ -147,13 +147,55 @@ function insCliente()
 {
 	var pathname = $(location).attr('pathname');
 	console.log(pathname);
+	
+	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
+
 	if (pathname == '/clientes') {
 		console.log(' entré a clientes');
+		var url = "../src/inserts/ins_cliente.php";
+		if (cliente_nombre == '') {
+			$(".notificacion-emergente").html('No puede registrar cliente sin nombre');
+			notificacionEmergente();
+		}
+		else
+		{
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: $("#formInsCliente").serialize(),
+				success: function(data){
+						$(".notificacion-emergente").html(data);
+						notificacionEmergente();
+					}
+			});
+			//setTimeout ( window.location.href = "?name=" + cliente_nombre, 5000);
+		}
+		
 	};
 	if (pathname == '/orden-servicio') {
 		console.log(' entré a oden de servicio');
+		var url = "../querys/insCliente.php";
+		//VARIABLES A RECOGER
+		var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
+		var cliente_email = $('#formInsCliente').children('#email_cliente').val();
+		//SETIADO DE VARIABLES EN SESSION STORAGE
+		sessionStorage.setItem("cliente_nombre", cliente_nombre);
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: $("#formInsCliente").serialize(),
+			success: function(data){
+				var id_utl_client = data;
+				console.log(id_utl_client);	
+				sessionStorage.setItem("id_cliente", id_utl_client);
+				$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+				$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));	
+				}
+		});
+		$('.vaciar').val('');
+		mostraCajaDialogo('#dNewOrdenService');
 	};
-	
+	cerrarCajaDialogo();
 	return false;
 }
 function insProducto()

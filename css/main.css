@@ -173,6 +173,22 @@ h1 {
 
 .contenido {
   margin: 150px 0; }
+  .contenido .contenedor_informacion {
+    margin: 10px;
+    width: 90%;
+    margin: auto; }
+    .contenido .contenedor_informacion .bloques {
+      background-color: #fff;
+      margin: 30px;
+      box-shadow: 0px 0px 5px #B6B6B6; }
+      .contenido .contenedor_informacion .bloques h3 {
+        background-color: #1976D2;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left; }
+      .contenido .contenedor_informacion .bloques p {
+        padding: 10px; }
   .contenido .contenedorProductos .contenedorProducto {
     border-top: 1px solid #ccc;
     width: 100%;
