@@ -76,7 +76,7 @@
         </li>
     <?php } ?>
         <li>
-            <a href="configuracion"><span class="icon-configuracion"></span>CONFIGURACION</a>
+            <a href="configuracion" class="icon-configuracion">CONFIGURACION</a>
         </li>
         <li>
             <a href="informacion"><span class="icon-informacion"></span>INFORMACION</a>

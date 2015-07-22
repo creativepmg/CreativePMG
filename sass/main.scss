@@ -1359,8 +1359,10 @@ h1
 			a
 			{
 				display: block;
-				padding: 20px;
+				padding: 10px;
 				color: $primaryTextColor;
+				height: 40px;
+				line-height: 40px;
 				text-decoration: none;
 				transition: all 0.3s ease;
 				
@@ -1370,17 +1372,20 @@ h1
 					font-weight: bolder;
 					color: $textPrimaryColor;
 				}
+				&:before
+				{
+					vertical-align: middle;
+					margin-right: 10px;
+					font-family: 'esandex';
+					font-size: 25px;
+				}
 			}
 
 			
 			.icon-configuracion
 			{
-				  font-family: 'esandex';
-				  color: #000;
-				  font-size: 30px;
-				  padding: 10px;
 				&:before
-				{
+				{				
 					content: "\e006";
 				}
 			}

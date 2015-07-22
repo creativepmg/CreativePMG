@@ -4,8 +4,8 @@
 /*fuentes*/
 @font-face {
   font-family: 'esandex';
-  src: url("../fonts/icomoon.eot?p6yepu");
-  src: url("../fonts/icomoon.eot?#iefixp6yepu") format("embedded-opentype"), url("../fonts/icomoon.ttf?p6yepu") format("truetype"), url("../fonts/icomoon.woff?p6yepu") format("woff"), url("../fonts/icomoon.svg?p6yepu#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?-qxz6z2");
+  src: url("../fonts/icomoon.eot?#iefix-qxz6z2") format("embedded-opentype"), url("../fonts/icomoon.ttf?-qxz6z2") format("truetype"), url("../fonts/icomoon.woff?-qxz6z2") format("woff"), url("../fonts/icomoon.svg?-qxz6z2#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 * {
@@ -143,21 +143,24 @@ h1 {
   background-repeat: no-repeat;
   display: inline-block; }
 
-.botonNuevo {
+.icon-add2 {
   background-color: #1976D2;
-  background-image: url("../img/iconos/plus.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 35%;
   border-radius: 50%;
   bottom: 10px;
-  cursor: pointer;
+  color: #E6E6E6;
+  font-family: 'esandex';
+  font-size: 65px;
+  font-weight: bolder;
   height: 70px;
   position: fixed;
   right: 10px;
+  text-align: center;
+  text-decoration: none;
   width: 70px; }
-  .botonNuevo:hover {
+  .icon-add2:hover {
     box-shadow: 0 0 1em black; }
+  .icon-add2:before {
+    content: "\e069"; }
 
 .notificacion-emergente {
   width: 320px;
@@ -926,14 +929,30 @@ h1 {
       border-bottom: 1px #B6B6B6 solid; }
       .menu ul li a {
         display: block;
-        padding: 20px;
+        padding: 10px;
         color: #212121;
+        height: 40px;
+        line-height: 40px;
         text-decoration: none;
         transition: all 0.3s ease; }
         .menu ul li a:hover {
           background-color: #2196F3;
           font-weight: bolder;
           color: #FFFFFF; }
+        .menu ul li a:before {
+          vertical-align: middle;
+          margin-right: 10px;
+          font-family: 'esandex';
+          font-size: 25px; }
+      .menu ul li .icon-configuracion:before {
+        content: "\e006"; }
+      .menu ul li .icon-informacion {
+        font-family: 'esandex';
+        color: #000;
+        font-size: 30px;
+        padding: 10px; }
+        .menu ul li .icon-informacion:before {
+          content: "\e02b"; }
 
 .nuevoUsuario {
   bottom: 0;
@@ -1209,5 +1228,3 @@ h1 {
       margin: 16px; }
     .contenido .contenedorProductos .contenedorProducto .row2 {
       font-size: 16px; } }
-
-/*# sourceMappingURL=main.css.map */
