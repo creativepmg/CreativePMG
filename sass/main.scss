@@ -13,14 +13,14 @@ $dividerColor:       #B6B6B6;
 
 /*fuentes*/
 @font-face {
-  font-family: 'esandex';
-  src:url('../fonts/icomoon.eot?p6yepu');
-  src:url('../fonts/icomoon.eot?#iefixp6yepu') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?p6yepu') format('truetype'),
-    url('../fonts/icomoon.woff?p6yepu') format('woff'),
-    url('../fonts/icomoon.svg?p6yepu#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'esandex';
+	src:url('../fonts/icomoon.eot?-qxz6z2');
+	src:url('../fonts/icomoon.eot?#iefix-qxz6z2') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?-qxz6z2') format('truetype'),
+		url('../fonts/icomoon.woff?-qxz6z2') format('woff'),
+		url('../fonts/icomoon.svg?-qxz6z2#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -204,23 +204,28 @@ h1
 	background-repeat: no-repeat;
 	display: inline-block;
 }
-.botonNuevo
+.icon-add2
 {
 	background-color: $darkPrimaryColor;
-	background-image: url('../img/iconos/plus.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 35%;
 	border-radius: 50%;
 	bottom: 10px;
-	cursor: pointer;
+	color: #E6E6E6;
+	font-family: 'esandex';
+	font-size: 65px;
+	font-weight: bolder;
 	height: 70px;
 	position: fixed;
 	right: 10px;
+	text-align: center;
+	text-decoration: none;
 	width: 70px;
 	&:hover
 	{
 		box-shadow: 0 0 1em rgba(0,0,0,1);
+	}
+	&:before
+	{
+		content: "\e069";
 	}
 }
 .notificacion-emergente
@@ -1348,9 +1353,9 @@ h1
 		padding: 0;
 
 		li
-		{	
-			border-bottom: 1px $dividerColor solid;
+		{   
 			
+			border-bottom: 1px $dividerColor solid;
 			a
 			{
 				display: block;
@@ -1364,6 +1369,30 @@ h1
 					background-color: $primaryColor;
 					font-weight: bolder;
 					color: $textPrimaryColor;
+				}
+			}
+
+			
+			.icon-configuracion
+			{
+				  font-family: 'esandex';
+				  color: #000;
+				  font-size: 30px;
+				  padding: 10px;
+				&:before
+				{
+					content: "\e006";
+				}
+			}
+			.icon-informacion
+			{
+				  font-family: 'esandex';
+				  color: #000;
+				  font-size: 30px;
+				  padding: 10px;
+				&:before
+				{
+					content: "\e02b";
 				}
 			}
 		}

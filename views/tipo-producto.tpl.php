@@ -245,5 +245,5 @@
   </div>
 </div>    
 
-	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewProducto')"></div>
+	<div class="icon-add2" onclick="mostraCajaDialogo('#dNewProducto')"></div>
 <?php require 'template/fin.php'; ?>
