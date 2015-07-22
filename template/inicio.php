@@ -72,7 +72,7 @@
     <ul>
     <?php while ($reg=mysqli_fetch_array($usuario_menu)) {?>
         <li>
-            <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+            <a href="<?= $reg['URL'] ?>" class="<?= $reg['CLASS_ICON'] ?>"><?= $reg['DESCRIPCION']  ?></a>
         </li>
     <?php } ?>
         <li>
