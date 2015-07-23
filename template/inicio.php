@@ -46,7 +46,7 @@
             </div>
             <div class="listaNotificaciones">
                 <div class="misNotificaciones">
-                    <?php while ($reg=mysql_fetch_array($lis_notificaciones)) {?>
+                    <?php while ($reg=mysqli_fetch_array($lis_notificaciones)) {?>
                         <div class="item">
                             <div class="descripcion"><?= $reg['DESCRIPCION'] ?></div>
                         </div>
