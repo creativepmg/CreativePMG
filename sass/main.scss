@@ -14,16 +14,14 @@ $dividerColor:       #B6B6B6;
 /*fuentes*/
 @font-face {
 	font-family: 'esandex';
-	src:url('../fonts/icomoon.eot?-qxz6z2');
-	src:url('../fonts/icomoon.eot?#iefix-qxz6z2') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?-qxz6z2') format('truetype'),
-		url('../fonts/icomoon.woff?-qxz6z2') format('woff'),
-		url('../fonts/icomoon.svg?-qxz6z2#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?-e19lwl');
+	src:url('../fonts/icomoon.eot?#iefix-e19lwl') format('embedded-opentype'),
+		url('..7fonts/icomoon.ttf?-e19lwl') format('truetype'),
+		url('../fonts/icomoon.woff?-e19lwl') format('woff'),
+		url('../fonts/icomoon.svg?-e19lwl#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
-
-
 
 *{margin: 0;}
 a
@@ -1318,7 +1316,7 @@ h1
 	box-shadow: 0px 0px 10px $primaryTextColor;
 	color: $primaryTextColor;
 	display: none;
-	font-size: 14px;
+	font-size: 13px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	position: fixed;
@@ -1380,25 +1378,73 @@ h1
 					font-size: 25px;
 				}
 			}
-
-			
-			.icon-configuracion
+			.icon-tipo-servicios
+			{
+				&:before
+				{		
+					content: "\e60c";	
+				}
+			}
+			.icon-producto
+			{
+				&:before
+				{
+					content: "\e60e";
+				}
+				
+			}
+			.icon-orden-servicio
+			{
+				&:before
+				{
+					content: "\e014";	
+				}
+			}
+			.icon-usuarios 
+			{
+				&:before
+				{
+					content: "\e60a";	
+				}
+			}
+			.icon-menus
+			{
+				&:before
+				{
+					content: "\e00c";	
+				}
+			}
+	
+			.icon-clientes
 			{
 				&:before
 				{				
-					content: "\e006";
+					content: "\e609";
+				}
+			}
+			.icon-mi-perfil
+			{
+	
+				&:before
+				{		
+					content: "\e268";
 				}
 			}
 			.icon-informacion
 			{
-				  font-family: 'esandex';
-				  color: #000;
-				  font-size: 30px;
-				  padding: 10px;
+	
 				&:before
 				{
-					content: "\e02b";
+					content: "\e2a2";
 				}
+			}
+			.icon-cerrar-sesion
+			{
+		
+				&:before
+				{
+					content: "\e608";
+				}	
 			}
 		}
 	}

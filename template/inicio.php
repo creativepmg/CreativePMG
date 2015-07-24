@@ -76,13 +76,13 @@
         </li>
     <?php } ?>
         <li>
-            <a href="configuracion" class="icon-configuracion">CONFIGURACION</a>
+            <a href="configuracion" class="icon-mi-perfil">MI PERFIL</a>
         </li>
         <li>
-            <a href="informacion"><span class="icon-informacion"></span>INFORMACION</a>
+            <a href="informacion" class="icon-informacion">INFORMACION</a>
         </li>
         <li>
-            <a href="querys/salir.php">CERRAR SESIÓN</a>
+            <a href="querys/salir.php" class="icon-cerrar-sesion">CERRAR SESIÓN</a>
         </li>
     </ul>
 </div>
