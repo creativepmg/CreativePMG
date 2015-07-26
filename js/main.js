@@ -152,14 +152,17 @@ function insCliente()
 
 	if (pathname == '/clientes') {
 		console.log(' entré a clientes');
+
 		var url = "../src/inserts/ins_cliente.php";
+
 		if (cliente_nombre == '') {
 			$(".notificacion-emergente").html('No puede registrar cliente sin nombre');
 			notificacionEmergente();
 		}
 		else
 		{
-			$.ajax({
+			console.log('deberia estar insertando en: ' + url);
+			$.ajax({ 
 				type: "POST",
 				url: url,
 				data: $("#formInsCliente").serialize(),
@@ -168,7 +171,8 @@ function insCliente()
 						notificacionEmergente();
 					}
 			});
-			//setTimeout ( window.location.href = "?name=" + cliente_nombre, 5000);
+			$('.vaciar').val('');
+			setTimeout ( window.location.href = "?name=" + cliente_nombre, 5000);
 		}
 		
 	};

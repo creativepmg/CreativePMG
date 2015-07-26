@@ -214,7 +214,7 @@ h1
 	background-repeat: no-repeat;
 	display: inline-block;
 }
-.icon-add2
+.botonNuevo
 {
 	background-color: $darkPrimaryColor;
 	border-radius: 50%;
@@ -705,10 +705,8 @@ h1
 	bottom: 0;
 	
 	
-	.nuevo_menu
-	{
-		height: 250px  !important; 
-	}
+	
+
 	.cajaDialogo
 	{
 		background-color: #fff;
@@ -948,6 +946,14 @@ h1
 	/*
 	** Clases para darle alto a diferentes popups
 	*/
+	.nuevo_producto
+	{
+		height: 240px; /* Dos inputs */
+	}
+	.nuevo_menu
+	{
+		height: 250px; 
+	}
 	.acceso_menus
 	{
 		height: 311px;
@@ -978,9 +984,7 @@ h1
 	{
 		height: 170px; /*Un solo input*/
 	}
-	.newCompra
-	{
-	}
+
 }
 
 .contenedor

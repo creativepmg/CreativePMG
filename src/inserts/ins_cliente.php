@@ -1,19 +1,20 @@
 <?php 
 	require '../../config/conexion.php';
-	mysql_set_charset('utf8');					
-	//$result_ins_cliente = $link->query($ins_cliente); 
-	$user 	=mysql_query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);
-	$cliente=mysql_query("SELECT * FROM clientes 
+	$mysqli = new mysqli($host, $user, $pw, $db);
+
+	$user 	=$mysqli->query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);
+	$cliente=$mysqli->query("SELECT * FROM clientes 
 						  WHERE EMAIL_CLIENTE 	= '$_POST[email]'
 						   	OR 	NUMERO_CELULAR 	= '$_POST[numero_celular]'",$con);
-	$dataUser=mysql_fetch_array($user);
-	$dataCliente = mysql_fetch_array($cliente);
+	$dataUser=mysqli_fetch_array($user);
+	$dataCliente = mysqli_fetch_array($cliente);
 	//Datos Usuario
 	$idUsuario = $dataUser['ID_USUARIO'];
 	//Datos Cliente
 	$nombreCliente = $dataCliente['NOMBRE_CLIENTE']; 
 	$numeroCel = $dataCliente['NUMERO_CELULAR'];
 	$emailCliente = $dataCliente['EMAIL_CLIENTE'];
+
 	$postCliente = $_POST['nombre_cliente'];
 	$postCelular = $_POST['numero_celular'];
 	$postEmail	 = $_POST['email'];
@@ -50,8 +51,8 @@
 		{			
 			if ($numeroCel == '') 
 			{
-	  			$result_ins_menu = mysql_query($ins_cliente,$con);
-	  			echo "Cliente registrado correctamente";
+	  			$result_ins_menu = $mysqli->query($ins_cliente,$con);
+	  			echo 'Cliente registrado correctamente';
 			}
 			else
 			{
@@ -60,10 +61,7 @@
 		}
 		else
 		{
-			echo "	Ya existe un cliente registrado con esos Datos<br />
-					Nombre:  ".$nombreCliente."<br />
-					Numero Celular:  ".$numeroCel." <br />
-				  	El email: ".$emailCliente."<br />";
+			echo "Ya existe un cliente con esos datos";
 		}
 	}
 ?>

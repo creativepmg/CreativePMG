@@ -6,7 +6,7 @@
 			</div>
 			<div class="formulario">
 				<div class="lista">			 
-				    	<?php while ($arrClientes=mysql_fetch_array($lis_clients)) {?>
+				    	<?php while ($arrClientes=mysqli_fetch_array($lis_clients)) {?>
 				    		<div class="item" onclick="guardadoLocal(this);">
 								<div class="avatar">
 									<img src="">
