@@ -1,11 +1,10 @@
-<!-- Cajas de dialogo -->
-<div id="dNewProducto" class="cajaDialogo">
-	<div class="formulario">
-		<div class="encabezado">
+<div id="dNewProducto" class="popup">
+	<div class="cajaDialogo nuevo_producto">
+		<div class="titulo">
 			NUEVO PRODUCTO	
 			<div class="cerrar"></div>
 		</div>
-		<div class="detalles">
+		<div class="formulario">
 			<form id="nuevoProducto" method="post">
 				<label>Descripcion</label>
 				<input name="descripcion" type="text" class="vaciar">

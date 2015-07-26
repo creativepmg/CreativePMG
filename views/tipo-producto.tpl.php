@@ -244,6 +244,9 @@
     </div>
   </div>
 </div>    
-
+  
+  <!-- Nuevo Cliente  -->
+  <?php require 'src/form/frm_nuevo_producto.php' ?>
+  <!-- Boton nuevo -->
 	<div class="icon-add2" onclick="mostraCajaDialogo('#dNewProducto')"></div>
 <?php require 'template/fin.php'; ?>
