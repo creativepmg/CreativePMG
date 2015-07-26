@@ -59,7 +59,20 @@ footer
 		font-weight: bold;
 	}
 }
- 
+.botonNuevo {
+    background-color: #1976D2;
+    background-image: url("../img/iconos/plus.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35%;
+    border-radius: 50%;
+    bottom: 10px;
+    cursor: pointer;
+    height: 70px;
+    position: fixed;
+    right: 10px;
+    width: 70px;
+} 
 
 header
 {
