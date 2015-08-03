@@ -388,7 +388,7 @@ h1
 	.contenedorIcono
 	{
 		background-color: #fff;
-  		box-shadow: 0px 0px 5px $dividerColor;
+  		box-shadow: 0px 0px 5px #333;
   		display: inline-block;
   		height: 61px;
   		left: 13px;
@@ -500,7 +500,7 @@ h1
 	margin: 0 auto;
 	display: inline-block;
 	vertical-align: top;
-	box-shadow: 0px 0px 5px $dividerColor;
+	box-shadow: 0px 0px 5px #333;
 	margin: 10px;
 
 	.titulo
@@ -509,14 +509,39 @@ h1
 		text-align: left;
 		font-weight: bolder;
 	}
-	
-	.item
+	.lista
 	{
-		background-color: $lightPrimaryColor;
-		border-bottom: 1px $dividerColor solid;
-		text-align: left;
-		font-size: 14px;
-		padding: 5px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		height: 250px; 
+		&::-webkit-scrollbar
+		{
+			width: 8px;
+		}
+		&::-webkit-scrollbar-thumb
+		{
+			background-color: $darkPrimaryColor;
+			border-radius:10px;
+		}
+		&::-webkit-scrollbar-thumb:hover
+		{
+			background-color: $darkPrimaryColor;
+			border:1px solid #333;
+		}
+		&::-webkit-scrollbar-thumb:active
+		{
+			background-color:$darkPrimaryColor;
+			border:1px solid #333;
+		}
+
+		.item
+		{
+			background-color: $lightPrimaryColor;
+			border-bottom: 1px $dividerColor solid;
+			text-align: left;
+			font-size: 14px;
+			padding: 5px;
+		}
 	}
 }
 .formularioExterno

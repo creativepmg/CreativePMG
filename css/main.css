@@ -264,7 +264,7 @@ h1 {
         width: 150px; }
   .contenido .contenedorIcono {
     background-color: #fff;
-    box-shadow: 0px 0px 5px #B6B6B6;
+    box-shadow: 0px 0px 5px #333;
     display: inline-block;
     height: 61px;
     left: 13px;
@@ -346,18 +346,33 @@ h1 {
   margin: 0 auto;
   display: inline-block;
   vertical-align: top;
-  box-shadow: 0px 0px 5px #B6B6B6;
+  box-shadow: 0px 0px 5px #333;
   margin: 10px; }
   .agenda .titulo {
     padding: 0.5em;
     text-align: left;
     font-weight: bolder; }
-  .agenda .item {
-    background-color: #BBDEFB;
-    border-bottom: 1px #B6B6B6 solid;
-    text-align: left;
-    font-size: 14px;
-    padding: 5px; }
+  .agenda .lista {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 250px; }
+    .agenda .lista::-webkit-scrollbar {
+      width: 8px; }
+    .agenda .lista::-webkit-scrollbar-thumb {
+      background-color: #1976D2;
+      border-radius: 10px; }
+    .agenda .lista::-webkit-scrollbar-thumb:hover {
+      background-color: #1976D2;
+      border: 1px solid #333; }
+    .agenda .lista::-webkit-scrollbar-thumb:active {
+      background-color: #1976D2;
+      border: 1px solid #333; }
+    .agenda .lista .item {
+      background-color: #BBDEFB;
+      border-bottom: 1px #B6B6B6 solid;
+      text-align: left;
+      font-size: 14px;
+      padding: 5px; }
 
 .formularioExterno {
   width: 300px;
