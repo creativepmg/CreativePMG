@@ -34,7 +34,7 @@ function verificarCheck()
 	if(estado == true)
 	{
 		$('.fecha_programada').css('display','block');
-		$('.popup .nuevaOrdenServicio').css('height','470px');
+		$('.popup .nuevaOrdenServicio').css('height','480px');
 		console.log('entro en el if');
 	}
 	else
@@ -145,15 +145,15 @@ function insItemServicio()
 }
 function insCliente()
 {
-	var pathname = $(location).attr('pathname');
-	console.log(pathname);
+	var pagename = $('#pagina').val();
+	console.log(pagename);
 	
 	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
 
-	if (pathname == '/clientes') {
+	if (pagename == 'clientes') {
 		console.log(' entré a clientes');
 
-		var url = "../src/inserts/ins_cliente.php";
+		var url = "src/inserts/ins_cliente.php";
 
 		if (cliente_nombre == '') {
 			$(".notificacion-emergente").html('No puede registrar cliente sin nombre');
@@ -172,13 +172,15 @@ function insCliente()
 					}
 			});
 			$('.vaciar').val('');
-			setTimeout ( window.location.href = "?name=" + cliente_nombre, 5000);
+			setTimeout ( function(){window.location.href = "?name=" + cliente_nombre}, 5000);
 		}
 		
 	};
-	if (pathname == '/orden-servicio') {
+
+	if (pagename == 'orden_servicio') {
 		console.log(' entré a oden de servicio');
-		var url = "../querys/insCliente.php";
+		
+		var url = "querys/insCliente.php";
 		//VARIABLES A RECOGER
 		var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
 		var cliente_email = $('#formInsCliente').children('#email_cliente').val();
@@ -197,7 +199,7 @@ function insCliente()
 				}
 		});
 		$('.vaciar').val('');
-		mostraCajaDialogo('#dNewOrdenService');
+		$('#dNewOrdenService').css('display','block');
 	};
 	cerrarCajaDialogo();
 	return false;
@@ -321,8 +323,8 @@ function updOrdenFinalizada(obj)
 }
 function insOrdenServicio()
 {
-	var url = "../src/inserts/ins_orden_servicio.php";
-
+	var url = "src/inserts/ins_orden_servicio.php";
+	console.log('Deberia estar insertando')
 	$.ajax({
 		type: "POST",
 		url: url,

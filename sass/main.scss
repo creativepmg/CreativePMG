@@ -781,11 +781,13 @@ h1
 			input[type="date"]
 			{
 				border-radius: 5px;
-				width: 100%;
 				border: 1px $darkPrimaryColor solid;
-				vertical-align: middle;
-				height: 40px;
+				height: 45px;
 				margin-top: 5px;
+				padding-left: 5px;
+				vertical-align: middle;
+				width: 100%;
+				font-size: 14px;
 			}
 			input[type="number"],
 			input[type="date"]
@@ -973,7 +975,7 @@ h1
 	.newItemCompra,
 	.newCliente
 	{
-		height: 315px; /*Tres inputs y sus labels*/
+		height: 320px; /*Tres inputs y sus labels*/
 	}
 	.newCompra
 	{

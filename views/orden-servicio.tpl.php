@@ -142,4 +142,12 @@
 	<!-- Boton para agregar nueva orden -->
 	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewOrdenService')"></div>  
 	
+    <script>
+      $(document).on('ready', inicio);
+      function inicio()
+      {
+        $('#pagina').val('orden_servicio');
+      }
+    </script>
+
 <?php require 'template/fin.php'; ?>

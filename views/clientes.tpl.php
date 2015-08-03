@@ -41,4 +41,12 @@
     <!-- Boton Nuevo cliente -->  
     <div class="botonNuevo" onclick="mostraCajaDialogo('#dNewCliente')"></div>
 
+    <script>
+      $(document).on('ready', inicio);
+      function inicio()
+      {
+        $('#pagina').val('clientes');
+      }
+    </script>
+
  <?php require 'template/fin.php'; ?>

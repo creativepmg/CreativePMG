@@ -541,11 +541,13 @@ h1 {
       .popup .cajaDialogo .formulario input[type="number"],
       .popup .cajaDialogo .formulario input[type="date"] {
         border-radius: 5px;
-        width: 100%;
         border: 1px #1976D2 solid;
+        height: 45px;
+        margin-top: 5px;
+        padding-left: 5px;
         vertical-align: middle;
-        height: 40px;
-        margin-top: 5px; }
+        width: 100%;
+        font-size: 14px; }
       .popup .cajaDialogo .formulario input[type="number"],
       .popup .cajaDialogo .formulario input[type="date"] {
         text-align: right;
@@ -667,7 +669,7 @@ h1 {
     height: 315px; }
   .popup .newItemCompra,
   .popup .newCliente {
-    height: 315px;
+    height: 320px;
     /*Tres inputs y sus labels*/ }
   .popup .newCompra {
     height: 227px; }

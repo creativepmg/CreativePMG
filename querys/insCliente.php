@@ -1,13 +1,14 @@
 <?php 
-	require '../conexion.php';
+	require '../config/conexion.php';
+	$mysqli = new mysqli($host, $user, $pw, $db);
 	mysql_set_charset('utf8');					
 	//$result_ins_cliente = $link->query($ins_cliente); 
-	$user 	=mysql_query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);
-	$cliente=mysql_query("SELECT * FROM clientes 
+	$user 	=$mysqli->query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);
+	$cliente=$mysqli->query("SELECT * FROM clientes 
 						  WHERE EMAIL_CLIENTE 	= '$_POST[email]'
 						   	OR 	NUMERO_CELULAR 	= '$_POST[numero_celular]'",$con);
-	$dataUser=mysql_fetch_array($user);
-	$dataCliente = mysql_fetch_array($cliente);
+	$dataUser=mysqli_fetch_array($user);
+	$dataCliente = mysqli_fetch_array($cliente);
 	//Datos Usuario
 	$idUsuario = $dataUser['ID_USUARIO'];
 	//Datos Cliente
@@ -58,13 +59,13 @@
 			
 			if ($numeroCel == '') 
 			{
-	  			$result_ins_menu = mysql_query($ins_cliente,$con);
+	  			$result_ins_menu = $mysqli->query($ins_cliente,$con);
 				
-				$ultimoCliente = mysql_query("SELECT ID_CLIENTE FROM clientes 
+				$ultimoCliente = $mysqli->query("SELECT ID_CLIENTE FROM clientes 
 							  	ORDER BY ID_CLIENTE DESC 
 							  	LIMIT 1 
 							  	",$con);	
-				$arryCliente=mysql_fetch_array($ultimoCliente);
+				$arryCliente=mysqli_fetch_array($ultimoCliente);
 				echo $arryCliente['ID_CLIENTE'];
 				
 			}
