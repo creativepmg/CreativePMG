@@ -1,6 +1,7 @@
 <?php 
 	session_start();
-	require '../conexion.php';
+	require '../../config/conexion.php';
+	$mysqli = new mysqli($host, $user, $pw, $db);
 	require '../session.php';
 	//mysql_set_charset('utf8');					
 	//$result_ins_cliente = $link->query($ins_cliente); 
@@ -12,11 +13,13 @@
 	$ins_orden_servicio		=  "INSERT INTO orden_servicio (ID_CLIENTE,
 												   		   DETALLE,
 												   		   A_CUENTA,
+												   		   TOTAL,
 												   		   ID_ESTADO_SERVICIO,
 												   	 	   ID_USUARIO)
 					   	   		VALUES ('$_POST[id_cliente]',
 							   	   		'$_POST[detalle]',
 							   	   		'$_POST[a_cuenta]',
+							   	   		'$_POST[total]',
 							   	   		'1',
 							   	   		'$userId')"
 				       			or die("Error en la consulta.." . mysqli_error($con));
@@ -32,13 +35,13 @@
 	 	isset($_POST['a_cuenta'])	&& !empty($_POST['a_cuenta'])	
 	  )
 	{
-		$result_ins_orden_servicio = mysql_query($ins_orden_servicio,$con);
+		$result_ins_orden_servicio = $mysqli->query($ins_orden_servicio,$con);
 		echo "Nuevo servicio agregado ";
 
 		if ($_POST['con_fecha_programada'] == '1')
 		{
-			$id = mysql_query($ultima_orden,$con);
-			$array_orden = mysql_fetch_array($id);
+			$id = $mysqli->query($ultima_orden,$con);
+			$array_orden = mysqli_fetch_array($id);
 			$id_orden_de_servicio = $array_orden['ID_ORDEN_SERVICIO'];
 			$fecha_programacion = $_POST['fecha_programada'];
 			$mensaje = 'La orden de Servicio Nro: '.$id_orden_de_servicio.' está programada para '.$fecha_programacion;
@@ -51,7 +54,7 @@
 							'$fecha_programacion'
 					       )" or die("Error en la consulta.." . mysqli_error($con));
 
-			mysql_query($ins_agenda,$con);
+			$mysqli->query($ins_agenda,$con);
 			echo $id_orden_de_servicio;
 			echo " ";
 			echo $fecha_programacion;

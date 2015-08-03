@@ -7,8 +7,7 @@ function inicio()
 	$('#botonNuevoMenu').on('click', nuevoMenu);
 	$('#Register').on('click', PreRegister);	
 	$('#confirmarCuenta').on('click', confirmarCuenta);
-	$('#actualizarMenusUsuarios').on('click', updUsuario);
-	$('#btnInsCliente').on('click', insCliente);
+	$('#actualizarMenusUsuarios').on('click', updUsuario);	
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
@@ -24,6 +23,7 @@ function inicio()
 	$('#ver_pendientes').on('click', ver_pendientes);
 	//inserts
 	$('#btnNotaCliente').on('click', insOrdenServicio);
+	$('#btnInsCliente').on('click', insCliente);
 	//eventos random
 	$("#programacion").on('click', verificarCheck);
 }
@@ -34,14 +34,14 @@ function verificarCheck()
 	if(estado == true)
 	{
 		$('.fecha_programada').css('display','block');
-		$('.popup .nuevaOrdenServicio').css('height','400px');
+		$('.popup .nuevaOrdenServicio').css('height','480px');
 		console.log('entro en el if');
 	}
 	else
 	{
 		console.log('entro en el else');
 		$('.fecha_programada').css('display','none');
-		$('.popup .nuevaOrdenServicio').css('height','355px');	
+		$('.popup .nuevaOrdenServicio').css('height','430px');	
 	}
 }
 function ver_pendientes()
@@ -145,31 +145,93 @@ function insItemServicio()
 }
 function insCliente()
 {
-	var url = "../querys/insCliente.php";
+	var pagename = $('#pagina').val();
+	console.log(pagename);
+	var url = '';
 	//VARIABLES A RECOGER
 	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
 	var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
-	var cliente_email = $('#formInsCliente').children('#email_cliente').val();
-	//SETIADO DE VARIABLES EN SESSION STORAGE
-	sessionStorage.setItem("cliente_nombre", cliente_nombre);
-	
-	
+	var cliente_email  = $('#formInsCliente').children('#email_cliente').val();
+	var respuesta = '';
+	if (cliente_nombre == '' && cliente_numero == '' && cliente_email == '') {
+		cerrarCajaDialogo();
+		console.log('Deberia llenar todos los campos');
+		$(".notificacion-emergente").html('Deberia llenar todos los campos');
+		notificacionEmergente();
+	}else{
+		url = 'src/validacion/validar_cliente.php';
 
-	$.ajax({
-		type: "POST",
-		url: url,
-		data: $("#formInsCliente").serialize(),
-		success: function(data){
-			var id_utl_client = data;
-			console.log(id_utl_client);	
-			sessionStorage.setItem("id_cliente", id_utl_client);
-			$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
-			$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));	
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: $("#formInsCliente").serialize(),
+			success: function(data){
+				respuesta = data;
+				sessionStorage.setItem("respuesta", respuesta);				
 			}
-	});
-	$('.vaciar').val('');
-	mostraCajaDialogo('#dNewOrdenService');
-	//setTimeout ("location.reload()", 3000);
+		});
+		rep = sessionStorage.getItem("respuesta");
+		console.log(rep);	
+		if (rep == 'continuar') {
+			console.log('Se procede a continuar');			
+			if (pagename == 'clientes') {
+				console.log(' entré a clientes');
+
+				url = "src/inserts/ins_cliente.php";
+
+				if (cliente_nombre == '') {
+					$(".notificacion-emergente").html('No puede registrar cliente sin nombre');
+					notificacionEmergente();
+				}
+				else
+				{
+					console.log('deberia estar insertando en: ' + url);
+					$.ajax({ 
+						type: "POST",
+						url: url,
+						data: $("#formInsCliente").serialize(),
+						success: function(data){
+								$(".notificacion-emergente").html(data);
+								notificacionEmergente();
+							}
+					});
+					$('.vaciar').val('');
+					cerrarCajaDialogo();
+					setTimeout ( function(){window.location.href = "?name=" + cliente_nombre}, 5000);
+				}
+
+				};
+
+				if (pagename == 'orden_servicio') {
+					console.log(' entré a oden de servicio');
+
+					url = "querys/insCliente.php";	
+
+					//SETIADO DE VARIABLES EN SESSION STORAGE
+					sessionStorage.setItem("cliente_nombre", cliente_nombre);
+					$.ajax({
+						type: "POST",
+						url: url,
+						data: $("#formInsCliente").serialize(),
+						success: function(data){
+							var id_utl_client = data;
+							console.log(id_utl_client);	
+							sessionStorage.setItem("id_cliente", id_utl_client);
+							$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+							$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));	
+							}
+					});
+					$('.vaciar').val('');
+					cerrarCajaDialogo();		
+					$('#dNewOrdenService').slideToggle();
+				};	
+		}else{
+			$(".notificacion-emergente").html(rep);
+			notificacionEmergente();
+		}
+	}//fin del else
+
+	
 	return false;
 }
 function insProducto()
@@ -291,8 +353,8 @@ function updOrdenFinalizada(obj)
 }
 function insOrdenServicio()
 {
-	var url = "../src/inserts/ins_orden_servicio.php";
-
+	var url = "src/inserts/ins_orden_servicio.php";
+	console.log('Deberia estar insertando')
 	$.ajax({
 		type: "POST",
 		url: url,
@@ -462,7 +524,7 @@ function mostarMenu()
 function logIn()
 {
 	console.log('deberias loguearte');
-	var url = "querys/login.php";
+	var url = "src/validacion/login.php";
 
 	$.ajax({
 		type: "POST",

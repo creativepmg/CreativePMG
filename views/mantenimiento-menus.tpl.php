@@ -1,6 +1,6 @@
 <?php require 'template/inicio.php'; ?>
 
-  <?php while ($arrMenus=mysql_fetch_array($lis_menus)) {?>
+  <?php while ($arrMenus=mysqli_fetch_array($lis_menus)) {?>
     <div class="secciones">
         <div class="datos">
           <div>

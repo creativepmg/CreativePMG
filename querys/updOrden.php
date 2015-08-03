@@ -1,5 +1,5 @@
 <?php 
-	require 'conexion.php';
+	require '../conexion.php';
 	mysql_set_charset('utf8');					
 	mysql_query("UPDATE orden_servicio 
 	          	 SET 	DETALLE 			= '$_POST[detalle]',

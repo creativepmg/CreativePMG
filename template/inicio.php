@@ -1,6 +1,6 @@
 <?php 
 	require 'querys/control.php';
-	require 'src/conexion.php';
+    require 'config/conexion.php';
 	require 'querys/querys.php';
     require 'src/selects/selects.php';
 ?>
@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
 	 <!-- Hojas de estilo -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="img/iconos/ico.png" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">
@@ -46,7 +46,7 @@
             </div>
             <div class="listaNotificaciones">
                 <div class="misNotificaciones">
-                    <?php while ($reg=mysql_fetch_array($lis_notificaciones)) {?>
+                    <?php while ($reg=mysqli_fetch_array($lis_notificaciones)) {?>
                         <div class="item">
                             <div class="descripcion"><?= $reg['DESCRIPCION'] ?></div>
                         </div>
@@ -70,16 +70,19 @@
 
 <div class="menu">
     <ul>
-    <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+    <?php while ($reg=mysqli_fetch_array($usuario_menu)) {?>
         <li>
-            <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+            <a href="<?= $reg['URL'] ?>" class="<?= $reg['CLASS_ICON'] ?>"><?= $reg['DESCRIPCION']  ?></a>
         </li>
     <?php } ?>
         <li>
-            <a href="configuracion">CONFIGURACION</a>
+            <a href="configuracion" class="icon-mi-perfil">MI PERFIL</a>
         </li>
         <li>
-            <a href="querys/salir.php">CERRAR SESIÓN</a>
+            <a href="informacion" class="icon-informacion">INFORMACION</a>
+        </li>
+        <li>
+            <a href="querys/salir.php" class="icon-cerrar-sesion">CERRAR SESIÓN</a>
         </li>
     </ul>
 </div>

@@ -1,6 +1,6 @@
 
 <?php
-	require 'conexion.php';
+	require '../conexion.php';
 
 	if(isset($_POST['email']) && !empty($_POST['email']))
 	{

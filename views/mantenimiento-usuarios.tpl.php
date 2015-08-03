@@ -1,7 +1,7 @@
 <?php require 'template/inicio.php'; ?>
 
       <div class="listaUsuarios">
-        <?php while ($arrUsuarios=mysql_fetch_array($usuarios)) {?>
+        <?php while ($arrUsuarios=mysqli_fetch_array($usuarios)) {?>
           <div class="tarjeta">
             <div id="idUsuario" style="display: none;"><?= $arrUsuarios['ID_USUARIO']; ?></div>
             <div class="titulo"><?= $arrUsuarios['USER']; ?></div>

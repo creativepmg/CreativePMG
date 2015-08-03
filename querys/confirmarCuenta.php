@@ -1,6 +1,6 @@
  <?php
  	@session_start();
- 	require 'conexion.php';
+ 	require '../conexion.php';
 	$con=mysql_connect($host,$user,$pw) or die("problemas con server");
 	mysql_select_db($db,$con)or die("problemas con BD");
  	if 	(

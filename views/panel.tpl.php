@@ -1,12 +1,10 @@
 <?php 
 	require 'template/inicio.php'; 
-	 $lis_clientes = mysql_query("SELECT * FROM clientes ") 
-             or die("Error en la consulta.." . mysqli_error($con));
-	$countClientes = mysql_num_rows($lis_clientes);
+	require 'src/selects/lis_clientes.php';
 ?>
 	
 	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
-
+	
 	
 	<div class="contenedorIcono">		
 		<div class="iconoClientes"></div>
@@ -39,7 +37,7 @@
 	<div class="agenda">
 		<div class="titulo">AGENDA</div>
 		<div class="lista">
-			<?php while ($arrAgenda=mysql_fetch_array($lis_agenda)) {?>
+			<?php while ($arrAgenda=mysqli_fetch_array($lis_agenda)) {?>
 			<div class="item">
 				<p><?= $arrAgenda['DESCRIPCION'] ?></p>
 			</div>

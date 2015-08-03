@@ -18,14 +18,14 @@
 			}
 
 				
-	$lis_not_clientes	= mysql_query("SELECT * FROM orden_servicio AS A
+	$lis_not_clientes	= $mysqli->query("SELECT * FROM orden_servicio AS A
 								   	   	LEFT JOIN clientes 			AS B
 								   		ON A.ID_CLIENTE 	= B.ID_CLIENTE
 								   	   WHERE A.ID_ORDEN_SERVICIO  like '$id_orden'
 								   	   	AND  A.ID_ESTADO_SERVICIO like '$id_estado'
 								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta.." . mysql_error($con));
-	$countOrden = mysql_num_rows($lis_not_clientes);
+					   or die("Error en la consulta.." . mysqli_error($con));
+	$countOrden = mysqli_num_rows($lis_not_clientes);
 
 	 
         
@@ -33,6 +33,7 @@
  ?>
 
  <div class="contResult"><?= $countOrden ?></div>
+ 
 
 
 	<div class="buscador">
@@ -55,7 +56,7 @@
 	</div>
 	<div class="listaNotas">
 	
-		<?php  while ($arrServi=mysql_fetch_array($lis_not_clientes)) {
+		<?php  while ($arrServi=mysqli_fetch_array($lis_not_clientes)) {
 		
 				 	$date = date_create($arrServi['FECHA_REGISTRO_ORDEN']);   
 				 	$resEstado = 'NULL';
@@ -141,4 +142,12 @@
 	<!-- Boton para agregar nueva orden -->
 	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewOrdenService')"></div>  
 	
+    <script>
+      $(document).on('ready', inicio);
+      function inicio()
+      {
+        $('#pagina').val('orden_servicio');
+      }
+    </script>
+
 <?php require 'template/fin.php'; ?>

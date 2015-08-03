@@ -1,6 +1,6 @@
 <?php 
 	
-	require 'conexion.php';
+	require '../conexion.php';
 	mysql_query("DELETE FROM usuario_menu
 				 WHERE ID_USUARIO = '$_POST[id_usuario]'",$con);	
 	$checked_count = count($_POST['id_menu']);
