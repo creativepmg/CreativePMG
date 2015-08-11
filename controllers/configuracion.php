@@ -1,3 +1,5 @@
 <?php
 	$titulo = 'Configuracion';
-	view('configuracion', compact('titulo'));
+	$pagina = 'configuracion';
+
+	view('configuracion', compact('titulo','pagina'));

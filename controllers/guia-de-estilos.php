@@ -1,4 +1,6 @@
 <?php 
 	//Llamando una funcion
-	$titulo = 'Guia de estilos'
-	view('guia-de-estilos', compact('titulo'));
+	$titulo = 'Guia de estilos';
+	$pagina = 'guia-de-estilos';
+
+	view('guia-de-estilos', compact('titulo','pagina'));

@@ -1,5 +1,6 @@
 <?php
 
 	$titulo = 'Informacion';
+	$pagina = 'informacion';
 
-	view('informacion', compact('titulo'));
+	view('informacion', compact('titulo','pagina'));

@@ -109,6 +109,9 @@ h1 {
   top: 50px;
   width: 100%;
   z-index: 1; }
+  h1 a {
+    color: #FFFFFF;
+    transition: all 0.3s ease; }
 
 .buscador .bloque {
   display: inline-block;

@@ -145,6 +145,12 @@ h1
 	top: 50px;
 	width: 100%;
 	z-index: 1;
+	
+	a
+	{
+		color: $textPrimaryColor;
+		transition: all 0.3s ease;
+	}
 }
 .buscador
 {

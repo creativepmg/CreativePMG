@@ -66,7 +66,7 @@
     
 </header>
 
-<h1><?= $titulo ?></h1>
+<h1><a href="<?= $pagina ?>"> <?= $titulo ?></a></h1>
 
 <div class="menu">
     <ul>

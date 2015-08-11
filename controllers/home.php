@@ -1,8 +1,6 @@
 <?php 
 
-	$confidencial = "esto no deberia verse por q es privado";
-	$lenguage = "PHP"; 
 	$titulo = 'Esandex';
-
+	$pagina = 'home';
 	//Llamando una funcion
-	view('home', compact('titulo'));
+	view('home', compact('titulo','pagina'));
