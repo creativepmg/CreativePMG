@@ -1,4 +1,6 @@
 <?php
 	
 	$titulo = 'Mantenimiento Usuarios';
-	view('mantenimiento-usuarios', compact('titulo'));
+	$pagina = 'mantenimiento-usuarios';
+
+	view('mantenimiento-usuarios', compact('titulo','pagina'));
