@@ -985,7 +985,7 @@ h1
 	}
 	.nuevo_menu
 	{
-		height: 250px; 
+		height: 310px; 
 	}
 	.acceso_menus
 	{
@@ -1491,6 +1491,13 @@ h1
 				{
 					content: "\e608";
 				}	
+			}
+			.people
+			{
+				&:before
+				{
+					content: "\e251";	 
+				}
 			}
 		}
 	}

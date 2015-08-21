@@ -76,6 +76,9 @@
         </li>
     <?php } ?>
         <li>
+            <a href="proveedores" class="people">PROVEEDORES</a>
+        </li>
+        <li>
             <a href="configuracion" class="icon-mi-perfil">MI PERFIL</a>
         </li>
         <li>
