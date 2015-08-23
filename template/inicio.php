@@ -70,14 +70,11 @@
 
 <div class="menu">
     <ul>
-    <?php while ($reg=mysqli_fetch_array($usuario_menu)) {?>
-        <li>
-            <a href="<?= $reg['URL'] ?>" class="<?= $reg['CLASS_ICON'] ?>"><?= $reg['DESCRIPCION']  ?></a>
-        </li>
-    <?php } ?>
-        <li>
-            <a href="proveedores" class="people">PROVEEDORES</a>
-        </li>
+        <?php while ($reg=mysqli_fetch_array($usuario_menu)) {?>
+            <li>
+                <a href="<?= $reg['URL'] ?>" class="<?= $reg['CLASS_ICON'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+            </li>
+        <?php } ?>
         <li>
             <a href="configuracion" class="icon-mi-perfil">MI PERFIL</a>
         </li>

@@ -4,10 +4,8 @@ function inicio()
 	$('.popup .cajaDialogo .titulo .cerrar').on('click', cerrarCajaDialogo);
 	$('#LogIn').on('click', logIn);
 	$('#btnContacto').on('click', insContacto);
-	$('#botonNuevoMenu').on('click', nuevoMenu);
 	$('#Register').on('click', PreRegister);	
 	$('#confirmarCuenta').on('click', confirmarCuenta);
-	$('#actualizarMenusUsuarios').on('click', updUsuario);	
 	$('#btn_notificaciones').on('click', mostrarNotificaciones);
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
@@ -16,7 +14,6 @@ function inicio()
 	$('.usuario').on('click', ioMenu);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
-	$('#btnInsProveedor').on('click', insProveedor);
 	$('#btnInsCompra').on('click', insCompra);
 	$('#btnInsItemCompra').on('click', insItemCompra);
 	$('#avatar').on('change', cambiar_avatar);
@@ -24,6 +21,12 @@ function inicio()
 	//inserts
 	$('#btnNotaCliente').on('click', insOrdenServicio);
 	$('#btnInsCliente').on('click', insCliente);
+	$('#btn_ins_menu').on('click', insNuevoMenu);
+
+	$('#btnInsProveedor').on('click', insProveedor);
+	//update
+	$('#actualizarMenusUsuarios').on('click', upd_acceso_menus_usuario);	
+	
 	//eventos random
 	$("#programacion").on('click', verificarCheck);
 }
@@ -89,8 +92,8 @@ function insCompra()
 function insProveedor()
 {
 	console.log('MFNuevoProveedor');
-	var url = "../querys/insProveedor.php";
-	var formulario = $('#nuevoProveedor');
+	var url = "src/inserts/ins_nuevo_proveedor.php";
+	var formulario = $('#frm_nuevo_proveedor');
 	$.ajax({
 		type: "POST",
 		url: url,
@@ -98,9 +101,9 @@ function insProveedor()
 		success: function(data){
 			$(".notificacion-emergente").html(data);
 			notificacionEmergente();
-			setTimeout ("location.reload()", 5000);
 			}
 	});
+	setTimeout ("location.reload()", 5000);
 	$('.vaciar').val('');
 	cerrarCajaDialogo();
 	return false;
@@ -370,9 +373,9 @@ function insOrdenServicio()
 	return false;
 }
 
-function updUsuario()
+function upd_acceso_menus_usuario()
 {
-	var url = "querys/updUsuario.php";
+	var url = "src/update/upd_acceso_menus_usuario.php";
 	console.log('permisos usuario');
 	$.ajax({
 		type: "POST",
@@ -421,15 +424,15 @@ function consultaDominio()
 	$('.vaciar').val('');
 	return false;
 }
-function nuevoMenu()
+function insNuevoMenu()
 {
 	console.log('Insertado nuevo cliente');
 	$('.popMenus').slideToggle();
-	var url = "querys/insNuevoMenu.php";
+	var url = "src/inserts/ins_nuevo_menu.php";
 	$.ajax({
 		type: "POST",
 		url: url,
-		data: $("#nuevoMenu").serialize(),
+		data: $("#form_ins_menu").serialize(),
 		success: function(data){
 			$(".notificacion-emergente").html(data);
 			notificacionEmergente();

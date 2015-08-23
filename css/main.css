@@ -420,7 +420,7 @@ h1 {
 .secciones {
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   display: inline-block;
   margin: 1em;
   padding: 5px;
@@ -672,11 +672,17 @@ h1 {
       .popup .cajaDialogo .opcion_check input[type="checkbox"]:checked + label {
         background-image: url("../img/iconos/checkbox-checked.png");
         font-weight: bold; }
+  .popup .nuevo_proveedor,
+  .popup .nuevo_usuario,
+  .popup .newProveedor {
+    height: 175px;
+    /*Un solo input*/ }
   .popup .nuevo_producto {
     height: 240px;
     /* Dos inputs */ }
   .popup .nuevo_menu {
-    height: 250px; }
+    height: 320px;
+    /* Tres opciones */ }
   .popup .acceso_menus {
     height: 311px; }
   .popup .nuevaOrdenServicio {
@@ -691,10 +697,6 @@ h1 {
     /*Tres inputs y sus labels*/ }
   .popup .newCompra {
     height: 227px; }
-  .popup .nuevo_usuario,
-  .popup .newProveedor {
-    height: 170px;
-    /*Un solo input*/ }
 
 .contenedor {
   margin-top: 50px;
@@ -999,6 +1001,8 @@ h1 {
         content: "\e2a2"; }
       .menu ul li .icon-cerrar-sesion:before {
         content: "\e608"; }
+      .menu ul li .people:before {
+        content: "\e251"; }
 
 .nuevoUsuario {
   bottom: 0;
@@ -1263,9 +1267,6 @@ h1 {
   .menuUsuario .usuario .username {
     display: inline-block; } }
 @media screen and (min-width: 600px) {
-  .secciones {
-    width: 45%; }
-
   .contenido .contenedorProductos .contenedorProducto {
     width: 80%;
     padding: 20px; }

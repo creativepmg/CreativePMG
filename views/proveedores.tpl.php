@@ -1,17 +1,21 @@
 <?php require 'template/inicio.php' ?>
 	<!-- Contenido mostrado -->
-	<div class="tabla">
-		<div class="titulos">
-			<div class="id">ID</div>
-			<div class="descripcion">DESCRIPCION</div>
-		</div>
-	<?php while ($arrProveedores=mysql_fetch_array($lis_proveedores)) {?>
-		<div class="item">
-			<div class="id"><?= $arrProveedores['ID_PROVEEDOR'] ?></div>
-			<div class="descripcion"><?= $arrProveedores['DESCRIPCION'] ?></div>
-		</div>
+	
+	<?php while ($arrProveedores=mysqli_fetch_array($lis_proveedores)) {?>
+		<div class="tarjeta">
+	        <div id="idUsuario" style="display: none;"><?= $arrProveedores['ID_PROVEEDOR'] ?></div>
+	        <div class="titulo">ID: <?= $arrProveedores['ID_PROVEEDOR'] ?></div>
+	        
+	        <div class="detalles">
+	          <p class="nombre"><?= $arrProveedores['DESCRIPCION_PROVEEDOR'] ?></p>
+	        </div>
+	        <div class="social"></div>
+	        <div class="opciones" style="display: none;">
+	          <div class="agregarMenus" onclick="asignarMenu(this);"></div>
+	        </div>   
+      	</div>
 	<?php } ?>
-	</div>
-	<?php include 'forms/proveedor.form.php' ?>
+	
+	<?php include 'src/form/frm_nuevo_proveedor.php' ?>
 	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewProveedor')"></div>
 <?php require 'template/fin.php' ?>

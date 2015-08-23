@@ -1,7 +1,9 @@
 <?php 
 	
-	require '../conexion.php';
-	mysql_query("DELETE FROM usuario_menu
+	require '../../config/conexion.php';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+
+	$mysqli->query("DELETE FROM usuario_menu
 				 WHERE ID_USUARIO = '$_POST[id_usuario]'",$con);	
 	$checked_count = count($_POST['id_menu']);
 	
@@ -13,7 +15,7 @@
 			$ins_menu = "INSERT INTO usuario_menu(ID_USUARIO,ID_MENU)
 						VALUES ('$_POST[id_usuario]','$selected')"
 						or die("Error en la consulta.." . mysqli_error($con));
-			mysql_query($ins_menu,$con);		
+			$mysqli->query($ins_menu,$con);		
 			
 		}
 		echo "Menus de usuario actualizados correctamente";
