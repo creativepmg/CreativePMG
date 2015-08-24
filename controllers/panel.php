@@ -1,6 +1,6 @@
 <?php
 	$titulo = 'Home';
-	$pagina = 'panel'
+	$pagina = 'panel';
 
 	//Llamando una funcion
 	view('panel', compact('titulo','pagina'));
