@@ -1,7 +1,9 @@
 <?php 
-	require '../conexion.php';
+	require '../config/conexion.php';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+
 	mysql_set_charset('utf8');					
-	mysql_query("UPDATE orden_servicio 
+	$mysqli->query("UPDATE orden_servicio 
 	          	 SET 	DETALLE 			= '$_POST[detalle]',
 	          	 		A_CUENTA			= '$_POST[a_cuenta]',
 	          	 		TOTAL				= '$_POST[monto_total]',

@@ -2,7 +2,7 @@
 
 <div class="contenedor">
 	<div class="avatar">
-		<img  src="img/avatares/<?= $user_avatar ?>">		
+		<img  src="data:image/png;base64,<?= $user_avatar ?>">		
 		<form action="src/inserts/ins_subir_foto.php" method="post" enctype="multipart/form-data">
 			<label for="avatar">Cambia tu foto de perfil</label>
 			<input type="hidden" name="id_usuario" value="<?= $userId ?>">

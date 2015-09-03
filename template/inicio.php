@@ -57,7 +57,7 @@
         </div>
         <div class="usuario">
             <div class="avatar">
-                <img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
+                <img src="data:image/png;base64,<?= $user_avatar ?>">
             </div>
         	<p class="username"><?= $user_user ?></p>
             <span class="icon-keyboard_arrow_down"></span>
