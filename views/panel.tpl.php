@@ -3,7 +3,7 @@
 	require 'src/selects/lis_clientes.php';
 ?>
 	
-	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
+	<p class="mensajeParaElUsuario">Bienvenido <strong></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
 	
 	
 	<div class="contenedorIcono">		
