@@ -2,8 +2,8 @@
 	//local
 	$host 			= "127.0.0.1";
 	$user 			= "root";
-	$pw 			= "w8uiq9da";
-	$db 			= "serviciolatino_desarrollo";
+	$pw 			= "";
+	$db 			= "serviciolatino";
 	$servidor 		= "dev.serviciolatinopmg.com/";
 	//produccion
 	/*$host 			= "localhost";
