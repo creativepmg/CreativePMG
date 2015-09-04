@@ -14,11 +14,11 @@ $dividerColor:       #B6B6B6;
 /*fuentes*/
 @font-face {
   font-family: 'esandex';
-  src:url('../fonts/icomoon.eot?q5an4m');
-  src:url('../fonts/icomoon.eot?#iefixq5an4m') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?q5an4m') format('truetype'),
-    url('../fonts/icomoon.woff?q5an4m') format('woff'),
-    url('../fonts/icomoon.svg?q5an4m#icomoon') format('svg');
+  src:url('../fonts/icomoon.eot?1y8f5i');
+  src:url('../fonts/icomoon.eot?#iefix1y8f5i') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1y8f5i') format('truetype'),
+    url('../fonts/icomoon.woff?1y8f5i') format('woff'),
+    url('../fonts/icomoon.svg?1y8f5i#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -73,7 +73,60 @@ footer
     right: 10px;
     width: 70px;
 } 
+.bloque-notificaciones
+{	
+	position: relative;
+	overflow: hidden;
+	background-color: #fff;
+    box-shadow: 0px 0px 5px #333;
+    padding: 7px;
+	margin: 15 auto;
+	width: 90%;
+	text-align: left;
 
+	.img
+	{
+		display: inline-block;
+		
+		img
+		{
+			width: 50px;
+			height: 50px;	
+		}
+	}
+	.informacion
+	{
+		vertical-align: top;
+		display: inline-block;
+		width: 80%;
+		.nombre
+		{
+			font-weight: bold;
+		}
+		p
+		{
+		
+		}
+	}
+	.cerrar
+	{
+		position: absolute;
+		top: 0;
+		right:  0;
+		font-family: 'esandex';
+		font-size: 20px;
+		padding: 10px;
+		&:before
+		{
+			content: "\e600";
+		}
+		&:hover
+		{
+			color:$darkPrimaryColor; 
+			cursor: pointer;
+		}
+	}
+}
 header
 {
 	background-color: $darkPrimaryColor;
