@@ -1,7 +1,7 @@
 <!-- Nuevo menu -->
 <div id="dNewMenu" class="popup ">
     <div class="cajaDialogo nuevo_menu">
-        <div class="encabezado">
+        <div class="titulo">
             NUEVO MENU
             <div class="cerrar "></div>
         </div>
