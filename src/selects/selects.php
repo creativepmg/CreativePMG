@@ -32,7 +32,7 @@
 	$lis_menus		= $mysqli->query("SELECT * FROM menu ORDER BY ID_MENU DESC")
 					  or die("problemas en consulta:".mysqli_error());
 	//PRODUCTOS
-	$lis_productos 		= $mysqli->query("SELECT 	A.ID_PRODUCTO,
+	/*$lis_productos 		= $mysqli->query("SELECT 	A.ID_PRODUCTO,
 												A.STOCK,
 												A.ID_TIPO_PRODUCTO,
 												B.ID_TIPO_PRODUCTO,
@@ -47,7 +47,7 @@
 											ON C.ID_PROVEEDOR = A.ID_PROVEEDOR
 										WHERE A.STOCK >= 0
 									 ORDER BY B.DESCRIPCION")
-					   	or die("Error en la consulta lis_productos:  " . mysqli_error($con));
+					   	or die("Error en la consulta lis_productos:  " . mysqli_error($con));*/
 	//PROVEEDORES
 	$lis_proveedores = $mysqli->query("SELECT * FROM proveedores 
 									ORDER BY DESCRIPCION_PROVEEDOR")

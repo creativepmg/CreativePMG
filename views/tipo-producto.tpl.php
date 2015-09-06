@@ -191,8 +191,8 @@
     </div>
   </div>
 </div>
-  <!-- Nuevo Cliente  -->
-  <?php require 'src/form/frm_nuevo_producto.php' ?>  
+    <!-- Nuevo Producto  -->
+    <?php require 'src/form/frm_nuevo_producto.php' ?>  
 
 	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewProducto')"></div>
 <?php require 'template/fin.php'; ?>
