@@ -8,8 +8,12 @@
 	{
 		echo "Conexion exitosa";
 	}
+	$hoy = getdate();
 	//AGENDA
-	$lis_agenda		= $mysqli->query("SELECT * FROM agenda ORDER BY FECHA_PROGRAMACION DESC")
+	$lis_agenda		= $mysqli->query("SELECT * 
+									  FROM agenda 
+									  WHERE FECHA_PROGRAMACION >= '$hoy'
+									  ORDER BY FECHA_PROGRAMACION DESC")
 					  or die("problemas en consulta:".mysqli_error());
 	
     
