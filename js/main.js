@@ -10,7 +10,6 @@ function inicio()
 	$('#nuevoServicio, #nuevoCliente, #nuevoServicio, #nuevoUsuario').on('click', nuevoUsuario);
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
-	$('#btnInsProducto').on('click', insProducto);
 	$('.usuario').on('click', ioMenu);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
@@ -22,8 +21,9 @@ function inicio()
 	$('#btnNotaCliente').on('click', insOrdenServicio);
 	$('#btnInsCliente').on('click', insCliente);
 	$('#btn_ins_menu').on('click', insNuevoMenu);
-
 	$('#btnInsProveedor').on('click', insProveedor);
+	
+	$('#btnInsProducto').on('click', insProducto);
 	//update
 	$('#actualizarMenusUsuarios').on('click', upd_acceso_menus_usuario);	
 	
@@ -240,7 +240,7 @@ function insCliente()
 function insProducto()
 {
 	console.log('MFNuevoProducto');
-	var url = "src/inserts/insProducto.php";
+	var url = "src/inserts/ins_nuevo_producto.php";
 	var formulario = $('#nuevoProducto');
 	$.ajax({
 		type: "POST",

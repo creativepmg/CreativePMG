@@ -2,7 +2,7 @@
 	require '../../config/conexion.php';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	mysql_set_charset('utf8');					
-	//$result_ins_cliente = $link->query($ins_cliente); 
+	
 	$ins_menu		= "INSERT INTO menu (DESCRIPCION,
 										 URL,
 										 CLASS_ICON)
