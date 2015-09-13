@@ -356,6 +356,52 @@ h1
 				display: inline-block;
 				.ContImgProducto
 				{
+					  .imgProducto 
+				  	  {
+				  		background-color: #fff;
+				  		display: block;
+				  		height: 200px;
+				  		margin: 0 auto;
+				  		overflow: hidden;
+				  		position: relative;
+				  		text-align: left;
+				  		width: 200px;
+				  		border: 2px rgba($secondaryTextColor,0.5) solid;
+				  		border-radius: 5px;
+
+				  		img 
+				  		{
+				  			width: 100%;
+				  			height: 100%;
+						}
+
+						label 
+						{
+				  			color: transparent;
+				  			background-image: url('../img/iconos/camera.png');
+				  			background-repeat: no-repeat;
+				  			background-size: 25px;
+				  			background-position: 10px center;
+				  			bottom: 0;
+				  			padding: 10px 0 10px 40px;
+				  			position: absolute;
+				  			width: 100%;
+				  			box-sizing: border-box;
+				  			&:hover 
+							{
+					  			background-size: 20px;
+					  			background-color: #333;
+					  			color: #e9e9e9;
+					  			cursor: pointer;
+							}
+						}
+						input[type="file"] 
+						{
+				  			height: 0px;
+				  			width: 0px;
+				  			visibility: hidden;
+						}	
+					}
 					margin: 10px;
 					img 
 					{
