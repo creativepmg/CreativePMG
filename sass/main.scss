@@ -359,7 +359,7 @@ h1
 					  .imgProducto 
 				  	  {
 				  		background-color: #fff;
-				  		display: block;
+				  		display: inline-block;
 				  		height: 200px;
 				  		margin: 0 auto;
 				  		overflow: hidden;
@@ -415,6 +415,7 @@ h1
 					{
 						display: inline-block;
 						color: $darkPrimaryColor;
+						vertical-align: top;
 
 						.decripcion
 						{

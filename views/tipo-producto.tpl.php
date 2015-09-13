@@ -5,7 +5,16 @@
             <div class="contenedorProducto">
                 <div class="row2">
                     <div class="ContImgProducto">
-                        <img src="data:image/png;base64,<?= $arrProductos['IMAGEN'] ?>">
+                        <div class="imgProducto">
+                            <img src="data:image/png;base64,<?= $arrProductos['IMAGEN'] ?>">
+                            <form action="src/inserts/ins_subir_foto.php" method="post" enctype="multipart/form-data">
+                                <label for="avatar">Subir imagen</label>
+                                <input type="hidden" name="id_usuario" value="<?= $userId ?>">
+                                <input type="file" id="avatar" name="avatar"> 
+                                <input id="btn_subir_avatar" type="submit" value="" style="display: none;">
+                            </form>
+                        </div>
+                       
                         <div class="datosImg">
                             <div class="decripcion"><?= $arrProductos['DESCRIPCION'] ?></div>
                             <div class="editar"></div>
