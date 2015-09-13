@@ -7,10 +7,10 @@
                     <div class="ContImgProducto">
                         <div class="imgProducto">
                             <img src="data:image/png;base64,<?= $arrProductos['IMAGEN'] ?>">
-                            <form action="src/inserts/ins_subir_foto.php" method="post" enctype="multipart/form-data">
+                            <form action="src/inserts/ins_subir_imgProducto.php" method="post" enctype="multipart/form-data">
                                 <label for="avatar">Subir imagen</label>
-                                <input type="hidden" name="id_usuario" value="<?= $userId ?>">
-                                <input type="file" id="avatar" name="avatar"> 
+                                <input type="hidden" name="id_producto" value="<?= $arrProductos['ID_PRODUCTO'] ?>">
+                                <input type="file" id="avatar" name="producto"> 
                                 <input id="btn_subir_avatar" type="submit" value="" style="display: none;">
                             </form>
                         </div>
