@@ -1,0 +1,32 @@
+[04-Sep-2015 20:20:41 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_menu.php on line 4
+[04-Sep-2015 20:20:41 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_menu.php on line 4
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_query(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_query(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_query(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_query(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 03:00:05 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:00:05 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:14:43 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:14:43 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:15:06 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:15:06 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:18:34 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:18:34 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:04:28 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:04:28 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:38:42 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:38:42 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:49:05 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:49:05 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:50:02 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:50:02 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:02:54 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:02:54 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:09:25 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:09:25 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:27:08 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:27:08 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4

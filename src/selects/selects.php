@@ -12,7 +12,6 @@
 	//AGENDA
 	$lis_agenda		= $mysqli->query("SELECT * 
 									  FROM agenda 
-									  WHERE FECHA_PROGRAMACION >= '$hoy'
 									  ORDER BY FECHA_PROGRAMACION DESC")
 					  or die("problemas en consulta:".mysqli_error());
 	
@@ -32,22 +31,9 @@
 	$lis_menus		= $mysqli->query("SELECT * FROM menu ORDER BY ID_MENU DESC")
 					  or die("problemas en consulta:".mysqli_error());
 	//PRODUCTOS
-	$lis_productos 		= $mysqli->query("SELECT 	A.ID_PRODUCTO,
-												A.STOCK,
-												A.ID_TIPO_PRODUCTO,
-												B.ID_TIPO_PRODUCTO,
-												A.ID_PROVEEDOR,
-												C.ID_PROVEEDOR,
-												C.DESCRIPCION_PROVEEDOR,
-												B.DESCRIPCION
-										FROM producto_stock 		AS A
-										INNER JOIN producto_tipo    AS B
-											ON B.ID_TIPO_PRODUCTO = A.ID_TIPO_PRODUCTO
-										INNER JOIN proveedores		AS C
-											ON C.ID_PROVEEDOR = A.ID_PROVEEDOR
-										WHERE A.STOCK >= 0
-									 ORDER BY B.DESCRIPCION")
-					   	or die("Error en la consulta lis_productos:  " . mysqli_error($con));
+	$lis_productos 		= $mysqli->query("SELECT * 
+										  FROM producto_tipo")
+					   	or die("Error en la consulta lis_productos:  " . mysqli_error($mysqli));
 	//PROVEEDORES
 	$lis_proveedores = $mysqli->query("SELECT * FROM proveedores 
 									ORDER BY DESCRIPCION_PROVEEDOR")
