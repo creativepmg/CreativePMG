@@ -11,9 +11,9 @@
 		
 		$id_producto = $_POST['id_producto']; 
 
-		$mysqli->query("UPDATE usuarios 
-						SET AVATAR_USUARIO = '$imdata'
-						WHERE ID_USUARIO = '$id_producto'",$con);
+		$mysqli->query("UPDATE producto_tipo 
+						SET IMAGEN = '$imdata'
+						WHERE ID_PRODUCTO = '$id_producto'",$con);
 		unlink($destino);
-		header("Location: ../../configuracion");
+		header("Location: ../../tipo-producto");
 ?>
