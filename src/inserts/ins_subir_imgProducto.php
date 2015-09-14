@@ -11,9 +11,12 @@
 		
 		$id_producto = $_POST['id_producto']; 
 
-		$mysqli->query("UPDATE producto_tipo 
-						SET IMAGEN = '$imdata'
-						WHERE ID_PRODUCTO = '$id_producto'",$con);
+		$sql = "UPDATE producto_tipo 
+				SET IMAGEN = '$imdata'
+				WHERE ID_PRODUCTO = '$id_producto'";
+		$mysqli->query($sql);
+	
+
 		unlink($destino);
 		header("Location: ../../tipo-producto");
 ?>

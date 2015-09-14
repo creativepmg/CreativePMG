@@ -1,6 +1,10 @@
 <?php require 'template/inicio.php'; ?>
 	<!-- Contenido mostrado -->
-    <?php while ($arrProductos=mysqli_fetch_array($lis_productos)) {?>
+    <?php 
+        $contador = 0;
+        while ($arrProductos=mysqli_fetch_array($lis_productos)) {
+        $contador = $contador + 1;
+    ?>
         <div class="contenedorProductos">
             <div class="contenedorProducto">
                 <div class="row2">
@@ -8,10 +12,10 @@
                         <div class="imgProducto">
                             <img src="data:image/png;base64,<?= $arrProductos['IMAGEN'] ?>">
                             <form action="src/inserts/ins_subir_imgProducto.php" method="post" enctype="multipart/form-data">
-                                <label for="avatar">Subir imagen</label>
+                                <label for="avatar<?= $contador ?>">Subir imagen</label>
                                 <input type="hidden" name="id_producto" value="<?= $arrProductos['ID_PRODUCTO'] ?>">
-                                <input type="file" id="avatar" name="producto"> 
-                                <input id="btn_subir_avatar" type="submit" value="" style="display: none;">
+                                <input type="file" id="avatar<?= $contador ?>" name="producto" onchange="cambiar_imagen_producto(this)"> 
+                                <input id="btn_change_img_product" type="submit" value="" style="display: none;">
                             </form>
                         </div>
                        

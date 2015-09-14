@@ -4,10 +4,7 @@
 	if ($mysqli->connect_errno) {
     	echo "Falló la conexión a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 	}
-	else
-	{
-		echo "Conexion exitosa";
-	}
+	
 	$hoy = getdate();
 	//AGENDA
 	$lis_agenda		= $mysqli->query("SELECT * 

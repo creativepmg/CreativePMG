@@ -30,3 +30,36 @@
 [12-Sep-2015 17:09:25 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
 [12-Sep-2015 17:27:08 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
 [12-Sep-2015 17:27:08 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[13-Sep-2015 19:28:40 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:29:05 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:30:35 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:33:29 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:35:46 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:37:52 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:01:12 Etc/GMT] PHP Notice:  Undefined variable: id_usuario in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:01:12 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:24:14 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:24:33 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:25:03 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  opendir(../../img/avatares/): failed to open dir: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 5
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  copy(../../img/avatares/joseluis.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 7
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  file_get_contents(../../img/avatares/joseluis.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 9
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  unlink(../../img/avatares/joseluis.jpg): No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 17
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  opendir(../../img/avatares/): failed to open dir: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 5
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  copy(../../img/avatares/Screenshot_132.png): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 7
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  file_get_contents(../../img/avatares/Screenshot_132.png): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 9
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  unlink(../../img/avatares/Screenshot_132.png): No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 17
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Warning:  opendir(../../img/avatares/): failed to open dir: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 5
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Warning:  copy(../../img/avatares/CMibHjnWwAEpWbo.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 7
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Warning:  file_get_contents(../../img/avatares/CMibHjnWwAEpWbo.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 9
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:37:11 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:39:33 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 17:41:04 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 17:57:58 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 18:08:35 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 19:06:16 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 19:06:36 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 19:18:29 Etc/GMT] PHP Parse error:  syntax error, unexpected '$id_producto' (T_VARIABLE), expecting ',' or ';' in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 18

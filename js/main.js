@@ -53,7 +53,13 @@ function ver_pendientes()
 }
 function cambiar_avatar()
 {
-	$('#btn_subir_avatar').click();
+	$('#btn_subir_avatar').click(); 
+}
+function cambiar_imagen_producto(obj)
+{
+	var boton = $(obj).parent('form').children('#btn_change_img_product');
+	console.log('se ejecuto funcion cambir imagen producto con el boton: ' + boton);
+	boton.click();
 }
 function insItemCompra()
 {
