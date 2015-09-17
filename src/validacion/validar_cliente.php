@@ -13,20 +13,18 @@
 	$postCelular = $_POST['numero_celular'];
 	$postEmail	 = $_POST['email'];
 
-	if ($numeroCel == "") 
+	if ($postCelular == "") 
 	{
 		echo "deberias llenar el campo celular";
 	}
-	else if($emailCliente == "")
-	{
-		echo "Deberias llenar el campo Email";
-	}
-	else if($numeroCel == $postCelular)
-	{
-		echo "El numero ya existe";
-	}else
-	{
-		echo "continuar";
-	}
+	else 
+		if($numeroCel == $postCelular)
+		{
+			echo "El numero ya existe";
+		}
+		else
+		{
+			echo "continuar";
+		}
 
 ?>

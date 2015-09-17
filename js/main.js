@@ -162,11 +162,17 @@ function insCliente()
 	var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
 	var cliente_email  = $('#formInsCliente').children('#email_cliente').val();
 	var respuesta = '';
-	if (cliente_nombre == '' && cliente_numero == '' && cliente_email == '') {
+
+	if(cliente_nombre == '')
+	{
 		cerrarCajaDialogo();
-		console.log('Deberia llenar todos los campos');
-		$(".notificacion-emergente").html('Deberia llenar todos los campos');
+		$(".notificacion-emergente").html('El campo de nombre es obligatorio');
 		notificacionEmergente();
+	}
+	else if (cliente_numero == '') {
+		cerrarCajaDialogo();
+		$(".notificacion-emergente").html('El campo de numero es obligatorio');
+		notificacionEmergente();	
 	}else{
 		url = 'src/validacion/validar_cliente.php';
 
@@ -179,8 +185,9 @@ function insCliente()
 				sessionStorage.setItem("respuesta", respuesta);				
 			}
 		});
+
 		rep = sessionStorage.getItem("respuesta");
-		console.log(rep);	
+		console.log('respuesta del validador: ' + rep);	
 		if (rep == 'continuar') {
 			console.log('Se procede a continuar');			
 			if (pagename == 'clientes') {
