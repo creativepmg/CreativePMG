@@ -2,66 +2,57 @@
 	require '../../config/conexion.php';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 
-	$user 	=$mysqli->query("SELECT * FROM usuarios WHERE EMAIL='$_POST[email]'",$con);
-	$cliente=$mysqli->query("SELECT * FROM clientes 
-						  WHERE EMAIL_CLIENTE 	= '$_POST[email]'
-						   	OR 	NUMERO_CELULAR 	= '$_POST[numero_celular]'",$con);
-	$dataUser=mysqli_fetch_array($user);
+	$sql = "SELECT * 
+            FROM clientes 
+            WHERE NUMERO_CELULAR 	= '$_POST[numero_celular]'";
+
+	$cliente=$mysqli->query($sql);
+	
 	$dataCliente = mysqli_fetch_array($cliente);
-	//Datos Usuario
-	$idUsuario = $dataUser['ID_USUARIO'];
+	
 	//Datos Cliente
 	$nombreCliente = $dataCliente['NOMBRE_CLIENTE']; 
 	$numeroCel = $dataCliente['NUMERO_CELULAR'];
-	$emailCliente = $dataCliente['EMAIL_CLIENTE'];
 
-	$postCliente = $_POST['nombre_cliente'];
-	$postCelular = $_POST['numero_celular'];
-	$postEmail	 = $_POST['email'];
+	$postCliente   = $_POST['nombre_cliente'];
+	$postCelular   = $_POST['numero_celular'];
+	$postEmail	   = $_POST['email'];
+    $postPagina    = $_POST['pagina'];
+        
 
+	if(isset($postCliente) && !empty($postCliente)){
+        if(isset($postCelular) && !empty($postCelular)){
+            //echo "Bien, ";
+            if($postCelular == $numeroCel){
+                echo "El numero de cel ya existe con el usuario: " . $nombreCliente;   
+            }else{
+                $sqlCliente	= "INSERT INTO clientes (NOMBRE_CLIENTE,
+                                                     NUMERO_CELULAR,
+                                                     EMAIL_CLIENTE,
+                                                     FOTO_CLIENTE,
+                                                     ID_USUARIO)
+                               VALUES ('$postCliente',
+                                       '$postCelular',
+                                       '$postEmail',
+                                       'user.png',
+                                       '$idUsuario')"
+                                or die("Error en la consulta.." . mysqli_error($mysqli));
 
-	if ($postCelular == '') {
-		$postCelular = 'NULL';
-	}
-	if ($postEmail == '') {
-		$postEmail = 'NULL';
-	}
-	if ($postCliente == '') {
-		$postCliente = 'NULL';
-	}
-	$ins_cliente	= "INSERT INTO clientes (NOMBRE_CLIENTE,
-											 NUMERO_CELULAR,
-											 EMAIL_CLIENTE,
-											 FOTO_CLIENTE,
-											 ID_USUARIO)
-				   	   VALUES ('$postCliente',
-				   	   		   '$postCelular',
-				   	   		   '$postEmail',
-				   	   		   'user.png',
-				   	   		   '$idUsuario')"
-				       or die("Error en la consulta.." . mysqli_error($con));
-	//Validacion de insercion 
-	if ($postCliente == 'NULL') 
-	{
-		echo "No puede registrar cliente sin nombre";	
-	}
-	else
-	{
-		if ($emailCliente == '') 
-		{			
-			if ($numeroCel == '') 
-			{
-	  			$result_ins_menu = $mysqli->query($ins_cliente,$con);
-	  			echo 'Cliente registrado correctamente';
-			}
-			else
-			{
-				echo "El numero de cel ya existe";
-			}
-		}
-		else
-		{
-			echo "Ya existe un cliente con esos datos";
-		}
-	}
+                $resul_ins_cliente = $mysqli->query($sqlCliente);
+
+                if($resul_ins_cliente)
+                {
+                    echo 'exito';
+                }else{
+                    echo 'Error en: ' . $resul_ins_cliente;
+                }
+            }
+        }else{
+            echo "El campo celular es obligatorio";
+        }
+    }else{
+        echo "El campo cliente es obligatorio";
+    }
+           
+	
 ?>

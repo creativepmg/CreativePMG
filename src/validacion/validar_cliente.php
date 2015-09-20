@@ -1,17 +1,17 @@
 <?php 
 	require '../../config/conexion.php';
 	$mysqli = new mysqli($host, $user, $pw, $db);	
-	$cliente=$mysqli->query("SELECT * 
+	//datos enviados por post
+	$postCelular = $_POST['numero_celular'];
+	$postEmail	 = $_POST['email'];
+	
+    $cliente=$mysqli->query("SELECT * 
 							 FROM clientes 
-						     WHERE EMAIL_CLIENTE 	= '$_POST[email]'
-						   	    OR NUMERO_CELULAR 	= '$_POST[numero_celular]'");
+						     WHERE NUMERO_CELULAR 	= '$postCelular'");
 	$dataCliente = mysqli_fetch_array($cliente);
 	//Datos Cliente	
 	$numeroCel = $dataCliente['NUMERO_CELULAR'];
 	$emailCliente = $dataCliente['EMAIL_CLIENTE'];
-	//datos enviados por post
-	$postCelular = $_POST['numero_celular'];
-	$postEmail	 = $_POST['email'];
 
 	if ($postCelular == "") 
 	{

@@ -154,15 +154,12 @@ function insItemServicio()
 }
 function insCliente()
 {
-	var pagename = $('#pagina').val();
-	console.log(pagename);
-	var url = '';
+    
 	//VARIABLES A RECOGER
-	var cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
-	var cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
-	var cliente_email  = $('#formInsCliente').children('#email_cliente').val();
-	var respuesta = '';
-
+    cliente_nombre = $('#formInsCliente').children('#nombre_cliente').val();
+	cliente_numero = $('#formInsCliente').children('#numero_cliente').val();
+	cliente_email  = $('#formInsCliente').children('#email_cliente').val();
+	    
 	if(cliente_nombre == '')
 	{
 		cerrarCajaDialogo();
@@ -173,82 +170,65 @@ function insCliente()
 		cerrarCajaDialogo();
 		$(".notificacion-emergente").html('El campo de numero es obligatorio');
 		notificacionEmergente();	
-	}else{
-		url = 'src/validacion/validar_cliente.php';
-
-		$.ajax({
-			type: "POST",
-			url: url,
-			data: $("#formInsCliente").serialize(),
-			success: function(data){
-				respuesta = data;
-				sessionStorage.setItem("respuesta", respuesta);				
-			}
-		});
-
-		rep = sessionStorage.getItem("respuesta");
-		console.log('respuesta del validador: ' + rep);	
-		if (rep == 'continuar') {
-			console.log('Se procede a continuar');			
-			if (pagename == 'clientes') {
-				console.log(' entré a clientes');
-
-				url = "src/inserts/ins_cliente.php";
-
-				if (cliente_nombre == '') {
-					$(".notificacion-emergente").html('No puede registrar cliente sin nombre');
-					notificacionEmergente();
-				}
-				else
-				{
-					console.log('deberia estar insertando en: ' + url);
-					$.ajax({ 
-						type: "POST",
-						url: url,
-						data: $("#formInsCliente").serialize(),
-						success: function(data){
-								$(".notificacion-emergente").html(data);
-								notificacionEmergente();
-							}
-					});
-					$('.vaciar').val('');
-					cerrarCajaDialogo();
-					setTimeout ( function(){window.location.href = "?name=" + cliente_nombre}, 5000);
-				}
-
-				};
-
-				if (pagename == 'orden_servicio') {
-					console.log(' entré a oden de servicio');
-
-					url = "querys/insCliente.php";	
-
-					//SETIADO DE VARIABLES EN SESSION STORAGE
-					sessionStorage.setItem("cliente_nombre", cliente_nombre);
-					$.ajax({
-						type: "POST",
-						url: url,
-						data: $("#formInsCliente").serialize(),
-						success: function(data){
-							var id_utl_client = data;
-							console.log(id_utl_client);	
-							sessionStorage.setItem("id_cliente", id_utl_client);
-							$('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
-							$('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));	
-							}
-					});
-					$('.vaciar').val('');
-					cerrarCajaDialogo();		
-					$('#dNewOrdenService').slideToggle();
-				};	
-		}else{
-			$(".notificacion-emergente").html(rep);
-			notificacionEmergente();
-		}
+	}else{ 
+        $(".notificacion-emergente").html('Procesando...');
+		notificacionEmergente();	
+        url = "src/inserts/ins_cliente.php";
+        console.log('deberia estar insertando en: ' + url);
+        
+        $.ajax({ 
+            type: "POST",
+            url: url,
+            data: $("#formInsCliente").serialize(),
+            success: function(data){
+                var dExito = data;
+                sessionStorage.setItem("exito", dExito);
+                console.log(dExito);
+            }
+        });		
+        setTimeout(insercionClienteExito, 2000);
+        setTimeout(comportamientoClientePagina, 5000);
 	}//fin del else
-
-	
+    
+    setTimeout(function(){$('#dNewCliente .vaciar').val('')}, 10000);    
 	return false;
+}
+function insercionClienteExito(){
+    var exito = sessionStorage.getItem("exito");
+    if(exito == "exito"){
+        console.log('entró con exito');
+        $(".notificacion-emergente").html('Cliente registrado correctamente');
+        sessionStorage.setItem("cliente_nombre", cliente_nombre);
+        cerrarCajaDialogo();
+        notificacionEmergente();
+    }else{
+        console.log('no pasó con exito');
+        $(".notificacion-emergente").html(exito);
+        notificacionEmergente();
+    }
+}
+function comportamientoClientePagina(){
+    var pagina = $('#pagina').val();
+    if(pagina == 'clientes'){
+        console.log('pagina: ' + pagina);
+    }else
+        if(pagina == 'orden_servicio'){
+        console.log('pagina: ' + pagina);
+        mostraCajaDialogo('#dNewOrdenService');
+        var sCliente = 'src/selects/lis_ultimo_cliente.php'; 
+        $.ajax({
+            type: "POST",
+            url: sCliente,
+            data: $("#formInsCliente").serialize(),
+            success: function(data){
+                var id_utl_client = data;
+                console.log('El id del cliente insertado es: ' + id_utl_client);	
+                sessionStorage.setItem("id_cliente", id_utl_client);
+                $('#formNotaCliente #id_cliente').val(sessionStorage.getItem("id_cliente"));
+                $('#formNotaCliente #nombre_cliente').val(sessionStorage.getItem("cliente_nombre"));	
+                }
+        });	
+    }
 }
 function insProducto()
 {
@@ -271,15 +251,13 @@ function insProducto()
 }
 function notificacionEmergente()
 {
-	$('.notificacion-emergente').slideToggle();
-	setTimeout ('ocultarEmergente()', 5000);
+	$('.notificacion-emergente').css('display','block');
+	setTimeout ('ocultarEmergente()', 8000);
 }
 function ocultarEmergente()
-{
-	$('.notificacion-emergente').animate({
-        height: "toggle",
-        opacity: "toggle"
-    });  
+{ 
+    $('.notificacion-emergente').css('display','none');
+    $('.notificacion-emergente').html('');
 }
 function funcando()
 {

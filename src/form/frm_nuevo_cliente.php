@@ -6,7 +6,8 @@
 			</div> 
 			<div class="formulario">
 				<form id="formInsCliente" method="post">
-					<input type="hidden" id="pagina">
+					<input type="hidden" id="pagina" name="pagina" >
+					<input type="hidden" name="registrante" value="<?= $user_user ?>">
 					<label>Nombre</label>
 					<input id="nombre_cliente" type="text" name="nombre_cliente" class="vaciar">
 					<label>Numero Celular</label>

@@ -6,7 +6,7 @@
             <div id="idUsuario" style="display: none;"><?= $arrUsuarios['ID_USUARIO']; ?></div>
             <div class="titulo"><?= $arrUsuarios['USER']; ?></div>
             <div class="imagen">
-              <img src="img/avatares/<?= $arrUsuarios['AVATAR_USUARIO']; ?>">
+              <img src="data:image/png;base64,<?= $arrUsuarios['AVATAR_USUARIO']; ?>">
             </div>
             <div class="detalles">
               <p class="email"><?= $arrUsuarios['EMAIL']; ?></p>
