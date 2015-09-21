@@ -12,8 +12,8 @@
             LEFT JOIN usuarios AS B
               ON A.ID_USUARIO = B.ID_USUARIO
             WHERE A.NOMBRE_CLIENTE LIKE '$nombre'
-            ORDER BY A.NOMBRE_CLIENTE";
+            ORDER BY A.NOMBRE_CLIENTE"
+            or die("Error en la consulta.." . mysqli_error($mysqli));
     $lis_clientes = $mysqli->query($sql); 
-         or die("Error en la consulta.." . mysqli_error($mysqli));
     $countClientes = mysqli_num_rows($lis_clientes);
 ?>
