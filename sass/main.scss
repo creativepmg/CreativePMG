@@ -471,20 +471,54 @@ h1
 				}
 				.cuerpo
 				{
+					
 					.id
 					{
 						display: inline-block;
 						width:20px;
+						
 					}
 					.cantidad
 					{
 						display: inline-block;
 						width: 110px;
+						
 					}
 					.precio
 					{
 						display: inline-block;
 						width: 150px;
+						
+					}
+					
+				}
+				.ContblqCuerpo
+				{
+					border:1px solid #369;
+					width: 242px;
+					.blqCuerpo
+					{
+						display: inline-block;
+						padding: 10px;
+						.tittle
+						{ 
+							color: $darkPrimaryColor;
+							font-weight: bold;
+							&:hover
+							{
+								cursor: pointer;
+								color: $primaryColor;
+							}
+						}
+						.proveedores
+						{	
+							display: none;
+							text-align: left;
+							div
+							{
+								margin:5px;
+							}
+						}
 					}
 				}
 			}
