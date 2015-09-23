@@ -1,0 +1,134 @@
+[04-Sep-2015 20:20:41 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_menu.php on line 4
+[04-Sep-2015 20:20:41 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_menu.php on line 4
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_query(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 02:54:58 Etc/GMT] PHP Warning:  mysql_query(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_query(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 02:58:10 Etc/GMT] PHP Warning:  mysql_query(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 11
+[06-Sep-2015 03:00:05 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:00:05 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:14:43 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:14:43 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:15:06 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:15:06 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:18:34 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[06-Sep-2015 03:18:34 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:04:28 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:04:28 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:38:42 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:38:42 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:49:05 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:49:05 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:50:02 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 16:50:02 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:02:54 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:02:54 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:09:25 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:09:25 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:27:08 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[12-Sep-2015 17:27:08 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_producto.php on line 4
+[13-Sep-2015 19:28:40 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:29:05 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:30:35 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:33:29 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:35:46 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 19:37:52 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:01:12 Etc/GMT] PHP Notice:  Undefined variable: id_usuario in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:01:12 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:24:14 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:24:33 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[13-Sep-2015 20:25:03 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  opendir(../../img/avatares/): failed to open dir: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 5
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  copy(../../img/avatares/joseluis.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 7
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  file_get_contents(../../img/avatares/joseluis.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 9
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:21:57 Etc/GMT] PHP Warning:  unlink(../../img/avatares/joseluis.jpg): No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 17
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  opendir(../../img/avatares/): failed to open dir: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 5
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  copy(../../img/avatares/Screenshot_132.png): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 7
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  file_get_contents(../../img/avatares/Screenshot_132.png): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 9
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:22:27 Etc/GMT] PHP Warning:  unlink(../../img/avatares/Screenshot_132.png): No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 17
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Warning:  opendir(../../img/avatares/): failed to open dir: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 5
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Warning:  copy(../../img/avatares/CMibHjnWwAEpWbo.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 7
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Warning:  file_get_contents(../../img/avatares/CMibHjnWwAEpWbo.jpg): failed to open stream: No such file or directory in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 9
+[14-Sep-2015 17:35:46 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:37:11 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_foto.php on line 16
+[14-Sep-2015 17:39:33 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 17:41:04 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 17:57:58 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 18:08:35 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 19:06:16 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 19:06:36 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 16
+[14-Sep-2015 19:18:29 Etc/GMT] PHP Parse error:  syntax error, unexpected '$id_producto' (T_VARIABLE), expecting ',' or ';' in /home/latinopmg/public_html/dev/src/inserts/ins_subir_imgProducto.php on line 18
+[14-Sep-2015 22:50:49 Etc/GMT] PHP Warning:  mysql_set_charset(): Access denied for user 'latinopmg'@'localhost' (using password: NO) in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_proveedor.php on line 5
+[14-Sep-2015 22:50:49 Etc/GMT] PHP Warning:  mysql_set_charset(): A link to the server could not be established in /home/latinopmg/public_html/dev/src/inserts/ins_nuevo_proveedor.php on line 5
+[16-Sep-2015 19:58:55 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[16-Sep-2015 19:58:55 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[16-Sep-2015 19:58:55 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[16-Sep-2015 20:00:11 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[16-Sep-2015 20:00:11 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[16-Sep-2015 20:00:11 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[16-Sep-2015 20:02:38 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[16-Sep-2015 20:02:38 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[16-Sep-2015 20:02:38 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[16-Sep-2015 20:05:10 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[16-Sep-2015 20:05:10 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[16-Sep-2015 20:05:10 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[16-Sep-2015 23:56:26 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[16-Sep-2015 23:56:26 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[16-Sep-2015 23:56:26 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 00:03:54 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 00:03:54 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 00:03:54 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 00:04:54 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 00:04:54 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 00:04:54 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 00:05:13 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 00:05:13 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 00:05:13 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 00:14:44 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 00:14:44 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 00:14:44 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 00:15:03 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 00:15:03 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 00:15:03 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 03:21:12 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 03:21:12 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 03:21:12 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 03:48:24 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 03:48:24 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 03:48:24 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[17-Sep-2015 17:53:21 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 5
+[17-Sep-2015 17:53:21 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 8
+[17-Sep-2015 17:53:21 Etc/GMT] PHP Notice:  Undefined variable: con in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 54
+[19-Sep-2015 22:04:44 Etc/GMT] PHP Parse error:  syntax error, unexpected '&&' (T_BOOLEAN_AND), expecting ',' or ')' in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 23
+[19-Sep-2015 22:06:54 Etc/GMT] PHP Parse error:  syntax error, unexpected '=' in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 24
+[19-Sep-2015 22:06:59 Etc/GMT] PHP Parse error:  syntax error, unexpected '=' in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 24
+[19-Sep-2015 22:07:42 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[19-Sep-2015 22:07:49 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[19-Sep-2015 22:09:27 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[19-Sep-2015 22:11:01 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[19-Sep-2015 22:12:24 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[19-Sep-2015 22:13:08 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[19-Sep-2015 22:14:04 Etc/GMT] PHP Notice:  Undefined index: pagina in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 20
+[20-Sep-2015 02:51:31 Etc/GMT] PHP Notice:  Undefined variable: idUsuario in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 39
+[20-Sep-2015 02:51:31 Etc/GMT] PHP Notice:  Undefined variable: ins_cliente in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:51:31 Etc/GMT] PHP Warning:  mysqli::query(): Empty query in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:54:44 Etc/GMT] PHP Notice:  Undefined variable: idUsuario in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 39
+[20-Sep-2015 02:54:44 Etc/GMT] PHP Notice:  Undefined variable: ins_cliente in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:54:44 Etc/GMT] PHP Warning:  mysqli::query(): Empty query in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:56:09 Etc/GMT] PHP Notice:  Undefined variable: idUsuario in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 39
+[20-Sep-2015 02:56:09 Etc/GMT] PHP Notice:  Undefined variable: ins_cliente in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:56:09 Etc/GMT] PHP Warning:  mysqli::query(): Empty query in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:56:10 Etc/GMT] PHP Notice:  Undefined variable: idUsuario in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 39
+[20-Sep-2015 02:56:10 Etc/GMT] PHP Notice:  Undefined variable: ins_cliente in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:56:10 Etc/GMT] PHP Warning:  mysqli::query(): Empty query in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:56:12 Etc/GMT] PHP Notice:  Undefined variable: idUsuario in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 39
+[20-Sep-2015 02:56:12 Etc/GMT] PHP Notice:  Undefined variable: ins_cliente in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 02:56:12 Etc/GMT] PHP Warning:  mysqli::query(): Empty query in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 03:12:45 Etc/GMT] PHP Notice:  Undefined variable: idUsuario in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 39
+[20-Sep-2015 03:12:45 Etc/GMT] PHP Notice:  Undefined variable: ins_cliente in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
+[20-Sep-2015 03:12:45 Etc/GMT] PHP Warning:  mysqli::query(): Empty query in /home/latinopmg/public_html/dev/src/inserts/ins_cliente.php on line 42
