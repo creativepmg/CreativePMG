@@ -334,6 +334,30 @@ h1 {
       .contenido .contenedorProductos .contenedorProducto .row1 .cuerpo .precio {
         display: inline-block;
         width: 150px; }
+      .contenido .contenedorProductos .contenedorProducto .row1 .contenedorCrp {
+        border: 1px solid #369;
+        width: 241px; }
+        .contenido .contenedorProductos .contenedorProducto .row1 .contenedorCrp .tittle {
+          display: inline-block;
+          padding: 14px;
+          color: #1976D2;
+          font-weight: bold; }
+        .contenido .contenedorProductos .contenedorProducto .row1 .contenedorCrp:hover {
+          cursor: pointer;
+          color: #2196F3; }
+      .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo {
+        display: none;
+        border: 1px solid #369;
+        width: 241px; }
+        .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo {
+          text-align: left;
+          display: inline-block; }
+          .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo .comun {
+            text-align: left; }
+            .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo .comun div {
+              margin: 5px; }
+          .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo .proveedores {
+            width: 150px; }
   .contenido .contenedorIcono {
     background-color: #fff;
     box-shadow: 0px 0px 5px #333;

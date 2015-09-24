@@ -492,35 +492,47 @@ h1
 					}
 					
 				}
-				.ContblqCuerpo
+				.contenedorCrp
 				{
 					border:1px solid #369;
-					width: 242px;
+					width: 241px;
+					.tittle
+					{ 
+						display: inline-block;
+						padding: 14px;
+						color: $darkPrimaryColor;
+						font-weight: bold;
+					}
+					&:hover
+					{
+						cursor: pointer;
+						color: $primaryColor;
+					}	
+				}
+				.contCuerpo
+				{
+					display: none;
+					border:1px solid #369;
+					width: 241px;
 					.blqCuerpo
 					{
+						text-align: left;
 						display: inline-block;
-						padding: 10px;
-						.tittle
-						{ 
-							color: $darkPrimaryColor;
-							font-weight: bold;
-							&:hover
-							{
-								cursor: pointer;
-								color: $primaryColor;
-							}
-						}
-						.proveedores
-						{	
-							display: none;
-							text-align: left;
+						.comun 
+						{
+					 		text-align: left;
 							div
 							{
 								margin:5px;
 							}
 						}
+						.proveedores
+						{	
+						    width: 150px;									
+						}
 					}
-				}
+			    }
+				
 			}
 
 		}

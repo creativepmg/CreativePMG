@@ -33,28 +33,32 @@
           <div class="cantidad">5</div>
           <div class="precio">20.000</div>
       </div>
-      <div class="ContblqCuerpo">
-             <div class="blqCuerpo">
+            <div>
+                <div class="contenedorCrp">
                     <div class="tittle">PROVEEDORES</div>
-                    <div class="proveedores">
-                      <div >esandex</div>
-                      <div >El trebol</div>
-                      <div>Exito</div>
-                      <div>microsoft</div>
-                      <div>apple</div>
-                    </div>
-                </div>
-                <div class="blqCuerpo">
                     <div  class="tittle">STOCK</div>
-                    <div class="proveedores">
-                      <div>50</div>
-                      <div>100</div>
-                      <div>200</div>
-                      <div>300</div>
-                      <div>900</div>
-                    </div>
                 </div>
-        </div>
+                <div class="contCuerpo">
+                   <div class="blqCuerpo">
+                        <div class="proveedores comun">
+                          <div >esandex</div>
+                          <div >El trebol</div>
+                          <div >Exito</div>
+                          <div >microsoft</div>
+                          <div >apple</div>
+                        </div>
+                    </div>
+                    <div class="blqCuerpo">
+                        <div class="comun">
+                          <div>50</div>
+                          <div>100</div>
+                          <div>200</div>
+                          <div>300</div>
+                          <div>900</div>
+                        </div>
+                    </div>
+              </div>
+          </div>
     </div>
   </div>
 </div>

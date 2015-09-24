@@ -11,7 +11,7 @@ function inicio()
 	$('#nuevoPreServicio').on('click', nuevoPreServicio);
 	$('#btnPreOrden').on('click', insPreOrden);
 	$('.usuario').on('click', ioMenu);
-	$('.tittle').on('click', proveedores);
+	$('.contenedorCrp').on('click', proveedores);
 	
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
@@ -274,7 +274,8 @@ function ioMenu()
 }
 function proveedores()
 {
-	$('.blqCuerpo .proveedores').slideToggle();
+	$('.contCuerpo').slideToggle();
+	$('.contCuerpo').css("border-top","none");
 }
 
 
