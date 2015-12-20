@@ -6,11 +6,13 @@
 	}
 	
 	$hoy = getdate();
+	echo $hoy;
 	//AGENDA
 	$lis_agenda		= $mysqli->query("SELECT * 
 									  FROM agenda 
+									  WHERE FECHA_PROGRAMACION >= NOW()
 									  ORDER BY FECHA_PROGRAMACION DESC")
-					  or die("problemas en consulta:".mysqli_error());
+					  or die("problemas en consulta:".$mysqli->error);
 	
     
 	//COMPRAS

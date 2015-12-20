@@ -478,11 +478,10 @@ function confirmarCuenta()
 		url: url,
 		data: $("#formConfirmarCuenta").serialize(),
 		success: function(data){
-			$(".notificacion-emergenteConfirmacionCuenta").html(data);
-			notificacionEmergente();
-			}
+			$(".notificacion-emergente").html(data);
+		}
 	});
-	$('.notificacion-emergenteConfirmacionCuenta').slideToggle();
+	notificacionEmergente();
 	$('.vaciar').val('');
 	return false;
 }
@@ -540,8 +539,7 @@ function logIn()
 }
 function PreRegister()
 {
-	console.log('usuario pre registrado');
-	$('.popNuevoUsuario').slideToggle();
+	console.log('usuario pre registrado');	
 	var url = "../querys/insPreRegistro.php";
 
 	$.ajax({
@@ -549,11 +547,12 @@ function PreRegister()
 		url: url,
 		data: $("#formRegister").serialize(),
 		success: function(data){
-			$("#RespuestaRegister").html(data);
+			$(".notificacion-emergente").html(data);
 			notificacionEmergente();
 			}
 	});
 	$('.vaciar').val('');
+	cerrarCajaDialogo();
 	return false;
 }
 //NOTIFICACIONES DE ESCRITORIO

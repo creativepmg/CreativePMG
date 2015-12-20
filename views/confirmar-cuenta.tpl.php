@@ -21,11 +21,9 @@
 	<script type="text/javascript" src="js/analytics.js"></script>
 </head>
 <body>
-	<div class="formulario">
+	<div class="formularioExterno">
+		<div class="logo"></div>
 		<h1>Confirmar Cuenta</h1>
-		<div id="respuestaConfirmacionCuenta" class="cajaDialogo">
-			<img src="../img/loader.gif">
-		</div>
 		<form id="formConfirmarCuenta" method="post">
 			<label>Email</label>
 			<input type="email" name="email" value="<?= $_GET['email']?>" readonly>
@@ -40,5 +38,6 @@
 		<p>¿No tienes una cuenta?</p>
 		<a href="../login">Iniciar Sesión</a>
 	</div>
+	<div class="notificacion-emergente"></div>
 </body>
 </html>
