@@ -19,16 +19,16 @@
 	 			$_SESSION['username'] = $_POST['user'];
 	 			
 	 		
-	 			echo "Bienvenido ".$_SESSION['username']."<img src='img/loader.gif'><script type='text/javascript'>logueado();</script>";
+	 			echo "Bienvenido ".$_SESSION['username']."<script type='text/javascript'>logueado();</script>";
 	 					
 	 		}
 	 		else
 	 		{
-	 			echo "<script type='text/javascript'>timeOcultar();</script>Combinacion erronea ".$_POST['user']."<img src='img/loader.gif'>";
+	 			echo "Combinacion erronea";
 	 		}
  	}
  	else
 	 	{
-	 		echo '<script type="text/javascript">timeOcultar();</script>Oye tu <strong>"'.$_POST['user']. '"</strong> Deberias llenar ambos campos';
+	 		echo 'Oye tu <strong>"'.$_POST['user']. '"</strong> Deberias llenar ambos campos';
 	 	}
  ?>

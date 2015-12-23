@@ -1,11 +1,14 @@
+/* line 1, style.scss */
 body {
   background-color: #efefef;
   margin: auto; }
+  /* line 8, style.scss */
   body .contenedor header {
     background-color: #1976D2;
     height: 50px;
     width: 100%;
     text-align: left; }
+    /* line 15, style.scss */
     body .contenedor header .logo {
       height: 50px;
       display: inline-block;
@@ -14,6 +17,7 @@ body {
       background-position: 0px center;
       background-size: 135px;
       width: 150px; }
+  /* line 27, style.scss */
   body .contenedor .error404 {
     background-image: url("img.png");
     background-size: 235px;
@@ -21,6 +25,7 @@ body {
     width: 282px;
     background-repeat: no-repeat;
     margin: 80px auto; }
+  /* line 37, style.scss */
   body .contenedor h3 {
     color: #2980b9;
     margin: 0 auto;

@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
 	 <!-- Hojas de estilo -->
-	<link rel="shortcut icon" type="image/x-icon" href="http://static.serviciolatinopmg.com/image/logos/logo.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="http://static.serviciolatinopmg.com/images/logos/logo.png" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">

@@ -27,9 +27,6 @@
 			<div class="logo"></div>			
 		</a>
 		<div class="titulo">Iniciar Sesión</div>
-		<div id="respuestaLogin" class="loading">
-			<img src="img/loader.gif">
-		</div>
 		<form id="formLogIn" method="post">
 			<label>Usuario</label>
 			<input type="text" name="user" placeholder="Nombre de usuario">
@@ -42,6 +39,6 @@
 		<p>¿No tienes una cuenta?</p>
 		<a href="../register">Crear una cuenta</a>
 	</div>
-	
+	<div class="notificacion-emergente">Porcesando...</div>
 </body>
 </html>

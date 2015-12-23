@@ -523,7 +523,6 @@ function mostarMenu()
 }
 function logIn()
 {
-	console.log('deberias loguearte');
 	var url = "src/validacion/login.php";
 
 	$.ajax({
@@ -531,10 +530,10 @@ function logIn()
 		url: url,
 		data: $("#formLogIn").serialize(),
 		success: function(data){
-			$("#respuestaLogin").html(data);
+			$(".notificacion-emergente").html(data);
 			}
 	});
-	$('#respuestaLogin').slideToggle();
+	notificacionEmergente();
 	return false;
 }
 function PreRegister()

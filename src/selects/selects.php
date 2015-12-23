@@ -6,7 +6,6 @@
 	}
 	
 	$hoy = getdate();
-	echo $hoy;
 	//AGENDA
 	$lis_agenda		= $mysqli->query("SELECT * 
 									  FROM agenda 

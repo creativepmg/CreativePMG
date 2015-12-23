@@ -22,8 +22,8 @@
 </head>
 <body>
 	<div class="formularioExterno">
-		<div class="logo"></div>
-		<h1>Confirmar Cuenta</h1>
+		<a href="/"><div class="logo"></div></a>
+		<div class="titulo">Confirmar Cuenta</div>
 		<form id="formConfirmarCuenta" method="post">
 			<label>Email</label>
 			<input type="email" name="email" value="<?= $_GET['email']?>" readonly>

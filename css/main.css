@@ -8,15 +8,19 @@
   src: url("../fonts/icomoon.eot?#iefix1y8f5i") format("embedded-opentype"), url("../fonts/icomoon.ttf?1y8f5i") format("truetype"), url("../fonts/icomoon.woff?1y8f5i") format("woff"), url("../fonts/icomoon.svg?1y8f5i#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+/* line 25, ../sass/main.scss */
 * {
   margin: 0; }
 
+/* line 26, ../sass/main.scss */
 a {
   color: #212121;
   text-decoration: none; }
+  /* line 30, ../sass/main.scss */
   a:hover {
     text-decoration: underline; }
 
+/* line 36, ../sass/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -27,6 +31,7 @@ body {
   margin: 0 auto;
   padding: 0; }
 
+/* line 47, ../sass/main.scss */
 footer {
   background-color: #1976D2;
   color: #e9e9e9;
@@ -35,10 +40,12 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%; }
+  /* line 56, ../sass/main.scss */
   footer p {
     line-height: 50px;
     font-weight: bold; }
 
+/* line 63, ../sass/main.scss */
 .bloque-notificaciones {
   position: relative;
   overflow: hidden;
@@ -48,17 +55,22 @@ footer {
   margin: 15 auto;
   width: 90%;
   text-align: left; }
+  /* line 74, ../sass/main.scss */
   .bloque-notificaciones .img {
     display: inline-block; }
+    /* line 78, ../sass/main.scss */
     .bloque-notificaciones .img img {
       width: 50px;
       height: 50px; }
+  /* line 84, ../sass/main.scss */
   .bloque-notificaciones .informacion {
     vertical-align: top;
     display: inline-block;
     width: 80%; }
+    /* line 89, ../sass/main.scss */
     .bloque-notificaciones .informacion .nombre {
       font-weight: bold; }
+  /* line 98, ../sass/main.scss */
   .bloque-notificaciones .cerrar {
     position: absolute;
     top: 0;
@@ -66,12 +78,15 @@ footer {
     font-family: 'esandex';
     font-size: 20px;
     padding: 10px; }
+    /* line 106, ../sass/main.scss */
     .bloque-notificaciones .cerrar:before {
       content: "\e600"; }
+    /* line 110, ../sass/main.scss */
     .bloque-notificaciones .cerrar:hover {
       color: #1976D2;
       cursor: pointer; }
 
+/* line 117, ../sass/main.scss */
 header {
   background-color: #1976D2;
   height: 50px;
@@ -81,25 +96,30 @@ header {
   width: 100%;
   text-align: left;
   z-index: 2; }
+  /* line 127, ../sass/main.scss */
   header .logo {
     height: 50px;
     display: inline-block;
-    background-image: url("../img/logo.png");
+    background-image: url(http://static.serviciolatinopmg.com/images/logos/logo.png);
     background-repeat: no-repeat;
-    background-position: 0px center;
-    background-size: 135px;
-    width: 150px; }
+    background-position: 5px center;
+    background-size: 70px;
+    width: 100px; }
+  /* line 137, ../sass/main.scss */
   header nav {
     position: absolute;
     height: 50px;
     right: 0;
     top: 0; }
+    /* line 143, ../sass/main.scss */
     header nav ul {
       list-style: none;
       padding: 0; }
+      /* line 147, ../sass/main.scss */
       header nav ul li {
         display: inline-block;
         font-weight: bold; }
+        /* line 151, ../sass/main.scss */
         header nav ul li a {
           height: 50px;
           line-height: 50px;
@@ -110,20 +130,24 @@ header {
           display: block;
           text-align: center;
           border-left: 1px outset #e9e9e9; }
+          /* line 162, ../sass/main.scss */
           header nav ul li a:hover {
             background-color: #3498db;
             color: rgba(85, 85, 85, 0.7); }
 
+/* line 176, ../sass/main.scss */
 .buscador .bloque {
   display: inline-block;
   width: 320px;
   max-width: 90%;
   margin: 5px auto;
   text-align: right; }
+  /* line 185, ../sass/main.scss */
   .buscador .bloque label {
     display: inline-block;
     margin: 5px;
     text-align: left; }
+  /* line 191, ../sass/main.scss */
   .buscador .bloque input[type="text"],
   .buscador .bloque input[type="number"],
   .buscador .bloque select {
@@ -136,6 +160,7 @@ header {
     box-sizing: border-box;
     vertical-align: middle; }
 
+/* line 209, ../sass/main.scss */
 .buscador .boton {
   background-color: #2980b9;
   border-radius: 5px;
@@ -149,9 +174,11 @@ header {
   line-height: 46px;
   text-align: center;
   cursor: pointer; }
+  /* line 223, ../sass/main.scss */
   .buscador .boton:hover {
     background-color: #3498db; }
 
+/* line 232, ../sass/main.scss */
 .btn_menu {
   cursor: pointer;
   width: 50px;
@@ -161,6 +188,7 @@ header {
   background-repeat: no-repeat;
   display: inline-block; }
 
+/* line 242, ../sass/main.scss */
 .botonNuevo {
   background-color: #1976D2;
   border-radius: 50%;
@@ -182,11 +210,14 @@ header {
   position: fixed;
   right: 10px;
   width: 70px; }
+  /* line 266, ../sass/main.scss */
   .botonNuevo:hover {
     box-shadow: 0 0 12px black; }
+  /* line 270, ../sass/main.scss */
   .botonNuevo:before {
     content: "\e069"; }
 
+/* line 275, ../sass/main.scss */
 .notificacion-emergente {
   background-color: #333;
   border-radius: 5px;
@@ -200,8 +231,10 @@ header {
   line-height: 60px;
   bottom: 10px; }
 
+/* line 290, ../sass/main.scss */
 .contenido {
   margin: 90px 0; }
+  /* line 293, ../sass/main.scss */
   .contenido h1 {
     background-color: #727272;
     color: #FFFFFF;
@@ -216,35 +249,44 @@ header {
     top: 50px;
     width: 100%;
     z-index: 1; }
+    /* line 309, ../sass/main.scss */
     .contenido h1 a {
       color: #FFFFFF;
       transition: all 0.3s ease; }
+  /* line 316, ../sass/main.scss */
   .contenido .contenedor_informacion {
     margin: 10px;
     width: 90%;
     margin: auto; }
+    /* line 322, ../sass/main.scss */
     .contenido .contenedor_informacion .bloques {
       background-color: #fff;
       margin: 30px;
       box-shadow: 0px 0px 5px #B6B6B6; }
+      /* line 328, ../sass/main.scss */
       .contenido .contenedor_informacion .bloques h3 {
         background-color: #1976D2;
         color: #fff;
         font-weight: bold;
         padding: 10px;
         text-align: left; }
+      /* line 337, ../sass/main.scss */
       .contenido .contenedor_informacion .bloques p {
         padding: 10px; }
+  /* line 346, ../sass/main.scss */
   .contenido .contenedorProductos .contenedorProducto {
     border-top: 1px solid #ccc;
     width: 100%;
     margin: auto;
     padding: 10px; }
+    /* line 352, ../sass/main.scss */
     .contenido .contenedorProductos .contenedorProducto .row2 {
       font-size: 13px;
       display: inline-block; }
+      /* line 356, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto {
         margin: 10px; }
+        /* line 358, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .imgProducto {
           background-color: #fff;
           display: inline-block;
@@ -256,9 +298,11 @@ header {
           width: 200px;
           border: 2px rgba(114, 114, 114, 0.5) solid;
           border-radius: 5px; }
+          /* line 371, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .imgProducto img {
             width: 100%;
             height: 100%; }
+          /* line 377, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .imgProducto label {
             color: transparent;
             background-image: url("../img/iconos/camera.png");
@@ -270,28 +314,34 @@ header {
             position: absolute;
             width: 100%;
             box-sizing: border-box; }
+            /* line 389, ../sass/main.scss */
             .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .imgProducto label:hover {
               background-size: 20px;
               background-color: #333;
               color: #e9e9e9;
               cursor: pointer; }
+          /* line 397, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .imgProducto input[type="file"] {
             height: 0px;
             width: 0px;
             visibility: hidden; }
+        /* line 405, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto img {
           max-width: 100%;
           height: 100px;
           display: inline-block;
           vertical-align: bottom; }
+        /* line 413, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .datosImg {
           display: inline-block;
           color: #1976D2;
           vertical-align: top; }
+          /* line 419, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .datosImg .decripcion {
             font-weight: bold;
             margin: 5px;
             padding: 5px; }
+          /* line 426, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .datosImg .editar {
             background-image: url(../img/iconos/editar.png);
             background-repeat: no-repeat;
@@ -299,6 +349,7 @@ header {
             width: 50px;
             height: 50px;
             cursor: pointer; }
+          /* line 435, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row2 .ContImgProducto .datosImg .eliminar {
             background-image: url(../img/iconos/ic_delete_black_24dp_1x.png);
             background-repeat: no-repeat;
@@ -306,50 +357,67 @@ header {
             width: 50px;
             height: 50px;
             cursor: pointer; }
+    /* line 448, ../sass/main.scss */
     .contenido .contenedorProductos .contenedorProducto .row1 {
       display: inline-block; }
+      /* line 452, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row1 .cabecera {
         font-weight: bold;
         padding: 5px; }
+        /* line 456, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row1 .cabecera .idCabecera {
           width: 20px; }
+        /* line 460, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row1 .cabecera .cantidadcabecera {
           width: 110px; }
+        /* line 464, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row1 .cabecera .precioCabecera {
           width: 150px; }
+      /* line 473, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row1 .cuerpo .id {
         display: inline-block;
         width: 20px; }
+      /* line 479, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row1 .cuerpo .cantidad {
         display: inline-block;
         width: 110px; }
+      /* line 485, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row1 .cuerpo .precio {
         display: inline-block;
         width: 150px; }
+      /* line 493, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row1 .contenedorCrp {
         border: 1px solid #369;
         width: 241px; }
+        /* line 497, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row1 .contenedorCrp .tittle {
           display: inline-block;
           padding: 14px;
           color: #1976D2;
           font-weight: bold; }
+        /* line 504, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row1 .contenedorCrp:hover {
           cursor: pointer;
           color: #2196F3; }
+      /* line 510, ../sass/main.scss */
       .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo {
         display: none;
         border: 1px solid #369;
         width: 241px; }
+        /* line 515, ../sass/main.scss */
         .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo {
           text-align: left;
           display: inline-block; }
+          /* line 519, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo .comun {
             text-align: left; }
+            /* line 522, ../sass/main.scss */
             .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo .comun div {
               margin: 5px; }
+          /* line 527, ../sass/main.scss */
           .contenido .contenedorProductos .contenedorProducto .row1 .contCuerpo .blqCuerpo .proveedores {
             width: 150px; }
+  /* line 539, ../sass/main.scss */
   .contenido .contenedorIcono {
     background-color: #fff;
     box-shadow: 0px 0px 5px #333;
@@ -361,6 +429,7 @@ header {
     text-align: left;
     vertical-align: top;
     width: 190px; }
+    /* line 552, ../sass/main.scss */
     .contenido .contenedorIcono .iconoClientes {
       background-image: url(../img/iconos/clientes.png);
       background-repeat: no-repeat;
@@ -368,6 +437,7 @@ header {
       display: inline-block;
       width: 50px;
       height: 50px; }
+    /* line 562, ../sass/main.scss */
     .contenido .contenedorIcono .iconoOrdenesP {
       background-image: url(../img/iconos/ordenes-pendientes.png);
       background-repeat: no-repeat;
@@ -375,6 +445,7 @@ header {
       display: inline-block;
       width: 50px;
       height: 50px; }
+    /* line 571, ../sass/main.scss */
     .contenido .contenedorIcono .iconoProductos {
       background-image: url(../img/iconos/productos.png);
       background-repeat: no-repeat;
@@ -382,25 +453,33 @@ header {
       display: inline-block;
       width: 50px;
       height: 50px; }
+    /* line 582, ../sass/main.scss */
     .contenido .contenedorIcono .inf {
       display: inline-block; }
+      /* line 586, ../sass/main.scss */
       .contenido .contenedorIcono .inf .numeroClientes, .contenido .contenedorIcono .inf .numeroOrden, .contenido .contenedorIcono .inf .numeroProductos {
         color: #2ECCFA;
         font-size: 27px; }
+      /* line 592, ../sass/main.scss */
       .contenido .contenedorIcono .inf .numeroOrden {
         color: #FF0000; }
+      /* line 597, ../sass/main.scss */
       .contenido .contenedorIcono .inf .numeroProductos {
         color: #A901DB; }
+      /* line 601, ../sass/main.scss */
       .contenido .contenedorIcono .inf p {
         font-size: 13px; }
 
+/* line 609, ../sass/main.scss */
 .contenido .cabecera div {
   display: inline-block; }
 
+/* line 613, ../sass/main.scss */
 .contenido .detalle .titulos div,
 .contenido .detalle .item div {
   display: inline-block; }
 
+/* line 618, ../sass/main.scss */
 .contResult {
   position: fixed;
   right: 10px;
@@ -413,6 +492,7 @@ header {
   height: 20px;
   width: 20px; }
 
+/* line 631, ../sass/main.scss */
 .loading {
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -428,6 +508,7 @@ header {
   width: 280px;
   z-index: 3; }
 
+/* line 647, ../sass/main.scss */
 .agenda {
   background-color: #FFFFFF;
   width: 300px;
@@ -436,25 +517,32 @@ header {
   vertical-align: top;
   box-shadow: 0px 0px 5px #333;
   margin: 10px; }
+  /* line 657, ../sass/main.scss */
   .agenda .titulo {
     padding: 0.5em;
     text-align: left;
     font-weight: bolder; }
+  /* line 663, ../sass/main.scss */
   .agenda .lista {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 250px; }
+    /* line 668, ../sass/main.scss */
     .agenda .lista::-webkit-scrollbar {
       width: 8px; }
+    /* line 672, ../sass/main.scss */
     .agenda .lista::-webkit-scrollbar-thumb {
       background-color: #1976D2;
       border-radius: 10px; }
+    /* line 677, ../sass/main.scss */
     .agenda .lista::-webkit-scrollbar-thumb:hover {
       background-color: #1976D2;
       border: 1px solid #333; }
+    /* line 682, ../sass/main.scss */
     .agenda .lista::-webkit-scrollbar-thumb:active {
       background-color: #1976D2;
       border: 1px solid #333; }
+    /* line 688, ../sass/main.scss */
     .agenda .lista .item {
       background-color: #BBDEFB;
       border-bottom: 1px #B6B6B6 solid;
@@ -462,12 +550,15 @@ header {
       font-size: 14px;
       padding: 5px; }
 
+/* line 698, ../sass/main.scss */
 .formularioExterno {
   width: 300px;
   margin: 0 auto;
   text-align: center; }
+  /* line 703, ../sass/main.scss */
   .formularioExterno h1 {
     background-color: inherit; }
+  /* line 707, ../sass/main.scss */
   .formularioExterno .logo {
     background-image: url("http://static.serviciolatinopmg.com/images/logos/logo.png");
     background-size: 60%;
@@ -475,14 +566,17 @@ header {
     background-repeat: no-repeat;
     width: 300px;
     height: 135px; }
+  /* line 716, ../sass/main.scss */
   .formularioExterno .titulo {
     font-size: 40px;
     margin: 10px;
     color: #1976D2; }
+  /* line 722, ../sass/main.scss */
   .formularioExterno label {
     display: block;
     text-align: left;
     margin: 10px 0 5px 15px; }
+  /* line 728, ../sass/main.scss */
   .formularioExterno input[type="text"],
   .formularioExterno input[type="password"],
   .formularioExterno input[type="email"] {
@@ -491,6 +585,7 @@ header {
     border-radius: 5px;
     border: 2px #1976D2 solid;
     padding-left: 10px; }
+  /* line 738, ../sass/main.scss */
   .formularioExterno input[type="submit"] {
     background-color: #1976D2;
     border-radius: 5px;
@@ -505,6 +600,7 @@ header {
     text-align: center;
     width: 95%; }
 
+/* line 755, ../sass/main.scss */
 .secciones {
   background-color: #fff;
   border-radius: 5px;
@@ -516,30 +612,37 @@ header {
   width: 80%;
   font-size: 14px;
   z-index: 3; }
+  /* line 769, ../sass/main.scss */
   .secciones a {
     font-size: 11px; }
+  /* line 774, ../sass/main.scss */
   .secciones .datos {
     margin: 10px;
     width: 78%;
     float: left; }
+    /* line 780, ../sass/main.scss */
     .secciones .datos h3 {
       text-align: center; }
+    /* line 785, ../sass/main.scss */
     .secciones .datos div {
       text-align: left;
       display: inline-block;
       width: 100%;
       margin: 0px; }
+      /* line 793, ../sass/main.scss */
       .secciones .datos div .titulo {
         width: 85px;
         margin: 0px;
         padding: 0px;
         font-size: 13px; }
+      /* line 800, ../sass/main.scss */
       .secciones .datos div p {
         width: 67%;
         height: 10px;
         display: inline-block;
         padding: 0px;
         margin: 0px; }
+  /* line 812, ../sass/main.scss */
   .secciones .opcion1, .secciones .opcion2 {
     display: inline-block;
     width: 100%;
@@ -547,6 +650,7 @@ header {
     height: 50px;
     vertical-align: top;
     margin: 0px; }
+    /* line 822, ../sass/main.scss */
     .secciones .opcion1 .borrar, .secciones .opcion1 .agregar, .secciones .opcion2 .borrar, .secciones .opcion2 .agregar {
       font-family: 'esandex';
       color: #212121;
@@ -556,13 +660,17 @@ header {
       display: inline-block;
       margin: 0px;
       cursor: pointer; }
+      /* line 832, ../sass/main.scss */
       .secciones .opcion1 .borrar:hover, .secciones .opcion1 .agregar:hover, .secciones .opcion2 .borrar:hover, .secciones .opcion2 .agregar:hover {
         font-size: 25px; }
+    /* line 837, ../sass/main.scss */
     .secciones .opcion1 .borrar:before, .secciones .opcion2 .borrar:before {
       content: "\e9ac"; }
+    /* line 841, ../sass/main.scss */
     .secciones .opcion1 .agregar:before, .secciones .opcion2 .agregar:before {
       content: "\e905"; }
 
+/* line 850, ../sass/main.scss */
 .tarjeton {
   background-color: #212121;
   border-radius: 3px;
@@ -571,16 +679,20 @@ header {
   max-width: 90%;
   padding: 10px;
   text-align: left; }
+  /* line 860, ../sass/main.scss */
   .tarjeton .titulo {
     font-size: 20px;
     border-bottom: 1px #727272 solid;
     padding: 5px; }
+  /* line 867, ../sass/main.scss */
   .tarjeton .item {
     padding: 10px; }
+    /* line 870, ../sass/main.scss */
     .tarjeton .item div,
     .tarjeton .item p {
       display: inline-block; }
 
+/* line 877, ../sass/main.scss */
 .popup {
   display: none;
   background-color: rgba(0, 0, 0, 0.3);
@@ -593,6 +705,7 @@ header {
   /*
   ** Clases para darle alto a diferentes popups
   */ }
+  /* line 891, ../sass/main.scss */
   .popup .cajaDialogo {
     background-color: #fff;
     border-radius: 5px;
@@ -609,6 +722,7 @@ header {
     width: 280px;
     z-index: 3;
     transition: all 0.3s ease; }
+    /* line 909, ../sass/main.scss */
     .popup .cajaDialogo .titulo {
       background-color: #2980b9;
       border-radius: 5px 5px 0 0;
@@ -618,6 +732,7 @@ header {
       padding: 10px 15px 10px 10px;
       position: relative;
       text-transform: uppercase; }
+      /* line 920, ../sass/main.scss */
       .popup .cajaDialogo .titulo .cerrar {
         color: #fff;
         font-family: 'esandex';
@@ -628,21 +743,27 @@ header {
         top: 0;
         bottom: 0;
         border-radius: 0 5px 0 0; }
+        /* line 932, ../sass/main.scss */
         .popup .cajaDialogo .titulo .cerrar:hover {
           background-color: #607D8B;
           cursor: pointer; }
+        /* line 937, ../sass/main.scss */
         .popup .cajaDialogo .titulo .cerrar:before {
           content: "\e600"; }
+    /* line 944, ../sass/main.scss */
     .popup .cajaDialogo .formulario {
       background-image: none;
       padding: 10px; }
+      /* line 949, ../sass/main.scss */
       .popup .cajaDialogo .formulario label {
         text-align: left;
         display: block;
         padding-left: 5px; }
+      /* line 955, ../sass/main.scss */
       .popup .cajaDialogo .formulario select {
         width: 100%;
         height: 49px; }
+      /* line 960, ../sass/main.scss */
       .popup .cajaDialogo .formulario input[type="text"],
       .popup .cajaDialogo .formulario input[type="number"],
       .popup .cajaDialogo .formulario input[type="date"] {
@@ -654,11 +775,13 @@ header {
         vertical-align: middle;
         width: 100%;
         font-size: 14px; }
+      /* line 973, ../sass/main.scss */
       .popup .cajaDialogo .formulario input[type="number"],
       .popup .cajaDialogo .formulario input[type="date"] {
         text-align: right;
         padding-right: 5px;
         box-sizing: border-box; }
+      /* line 980, ../sass/main.scss */
       .popup .cajaDialogo .formulario input[type="submit"] {
         background-color: #1976D2;
         border-radius: 0 0 5px 5px;
@@ -674,13 +797,16 @@ header {
         position: absolute;
         right: 5px;
         width: 280px; }
+        /* line 997, ../sass/main.scss */
         .popup .cajaDialogo .formulario input[type="submit"]:hover {
           background-color: #2196F3; }
+      /* line 1002, ../sass/main.scss */
       .popup .cajaDialogo .formulario textarea {
         border-radius: 5px;
         border: 1px #1976D2 solid;
         width: 100%;
         box-sizing: border-box; }
+      /* line 1009, ../sass/main.scss */
       .popup .cajaDialogo .formulario .btn_nuevo {
         background-color: #333;
         color: #e9e9e9;
@@ -692,6 +818,7 @@ header {
         left: 5px;
         border-radius: 0 0 5px 5px;
         width: 280px; }
+      /* line 1022, ../sass/main.scss */
       .popup .cajaDialogo .formulario .btn_cliente {
         background-color: #2980b9;
         background-image: url("../img/iconos/keyboard-control.png");
@@ -703,27 +830,34 @@ header {
         margin-top: 5px;
         vertical-align: middle;
         width: 45px; }
+      /* line 1035, ../sass/main.scss */
       .popup .cajaDialogo .formulario .fecha_programada {
         display: none; }
+      /* line 1039, ../sass/main.scss */
       .popup .cajaDialogo .formulario .lista {
         height: 208px;
         overflow-x: hidden;
         overflow-y: scroll; }
+        /* line 1045, ../sass/main.scss */
         .popup .cajaDialogo .formulario .lista .item {
           border-bottom: 1px solid #333;
           padding: 10px 0 10px 25px;
           text-transform: uppercase;
           text-align: left;
           font-size: 15px; }
+          /* line 1053, ../sass/main.scss */
           .popup .cajaDialogo .formulario .lista .item:hover {
             background-color: #607D8B;
             color: #FFFFFF;
             cursor: pointer; }
+          /* line 1061, ../sass/main.scss */
           .popup .cajaDialogo .formulario .lista .item .descripcion .id_cliente {
             display: none; }
+    /* line 1069, ../sass/main.scss */
     .popup .cajaDialogo .listaMenus {
       overflow-y: scroll;
       height: 208px; }
+      /* line 1074, ../sass/main.scss */
       .popup .cajaDialogo .listaMenus label {
         background-color: #efefef;
         background-image: url("../img/iconos/checkbox-unchecked.png");
@@ -736,12 +870,15 @@ header {
         font-size: 14px;
         padding: 10px 0 10px 35px;
         text-align: center; }
+      /* line 1088, ../sass/main.scss */
       .popup .cajaDialogo .listaMenus input[type="checkbox"] {
         visibility: hidden;
         position: fixed; }
+        /* line 1093, ../sass/main.scss */
         .popup .cajaDialogo .listaMenus input[type="checkbox"]:checked + label {
           background-image: url("../img/iconos/checkbox-checked.png");
           font-weight: bold; }
+    /* line 1102, ../sass/main.scss */
     .popup .cajaDialogo .opcion_check label {
       background-color: #efefef;
       background-image: url("../img/iconos/checkbox-unchecked.png");
@@ -754,43 +891,56 @@ header {
       padding: 10px 0 10px 35px;
       text-align: center;
       -webkit-user-select: none; }
+    /* line 1116, ../sass/main.scss */
     .popup .cajaDialogo .opcion_check input[type="checkbox"] {
       visibility: hidden;
       position: fixed; }
+      /* line 1121, ../sass/main.scss */
       .popup .cajaDialogo .opcion_check input[type="checkbox"]:checked + label {
         background-image: url("../img/iconos/checkbox-checked.png");
         font-weight: bold; }
+  /* line 1132, ../sass/main.scss */
   .popup .nuevo_proveedor,
   .popup .nuevo_usuario,
   .popup .newProveedor {
     height: 175px;
     /*Un solo input*/ }
+  /* line 1138, ../sass/main.scss */
   .popup .nuevo_producto {
     height: 250px;
     /* Dos inputs */ }
+  /* line 1142, ../sass/main.scss */
   .popup .nuevo_menu {
     height: 320px;
     /* Tres opciones */ }
+  /* line 1146, ../sass/main.scss */
   .popup .acceso_menus {
     height: 311px; }
+  /* line 1150, ../sass/main.scss */
   .popup .nuevaOrdenServicio {
     height: 430px; }
+  /* line 1154, ../sass/main.scss */
   .popup .lisProducto {
     height: 250px; }
+  /* line 1158, ../sass/main.scss */
   .popup .lisClientes {
     height: 315px; }
+  /* line 1162, ../sass/main.scss */
   .popup .newItemCompra,
   .popup .newCliente {
     height: 320px;
     /*Tres inputs y sus labels*/ }
+  /* line 1167, ../sass/main.scss */
   .popup .newCompra {
     height: 227px; }
 
+/* line 1175, ../sass/main.scss */
 .contenedor {
   margin-top: 50px;
   margin: 0 auto;
   max-width: 100%;
   width: 1000px; }
+  /* line 1182, ../sass/main.scss */
   .contenedor .avatar {
     background-color: #fff;
     display: block;
@@ -802,9 +952,11 @@ header {
     width: 200px;
     border: 2px rgba(114, 114, 114, 0.5) solid;
     border-radius: 5px; }
+    /* line 1195, ../sass/main.scss */
     .contenedor .avatar img {
       width: 100%;
       height: 100%; }
+    /* line 1201, ../sass/main.scss */
     .contenedor .avatar label {
       color: transparent;
       background-image: url("../img/iconos/camera.png");
@@ -816,36 +968,46 @@ header {
       position: absolute;
       width: 100%;
       box-sizing: border-box; }
+      /* line 1213, ../sass/main.scss */
       .contenedor .avatar label:hover {
         background-size: 20px;
         background-color: #333;
         color: #e9e9e9;
         cursor: pointer; }
+    /* line 1221, ../sass/main.scss */
     .contenedor .avatar input[type="file"] {
       height: 0px;
       width: 0px;
       visibility: hidden; }
+  /* line 1228, ../sass/main.scss */
   .contenedor .detalles {
     width: 500px;
     max-width: 100%;
     margin: 0 auto;
     text-align: left; }
+    /* line 1235, ../sass/main.scss */
     .contenedor .detalles .seccion {
       border-bottom: 1px #BDBDBD solid; }
+      /* line 1239, ../sass/main.scss */
       .contenedor .detalles .seccion div {
         font-weight: bolder;
         width: 100px; }
+      /* line 1244, ../sass/main.scss */
       .contenedor .detalles .seccion div, .contenedor .detalles .seccion p {
         margin: 10px;
         display: inline-block; }
 
+/* line 1254, ../sass/main.scss */
 .contentPanel {
   position: relative; }
 
+/* line 1258, ../sass/main.scss */
 .deuda {
   padding: 45px; }
+  /* line 1261, ../sass/main.scss */
   .deuda p {
     padding: 5px; }
+  /* line 1265, ../sass/main.scss */
   .deuda .montoDeuda {
     background-color: #2980b9;
     width: 120px;
@@ -857,6 +1019,7 @@ header {
     border-radius: 50%;
     line-height: 120px; }
 
+/* line 1279, ../sass/main.scss */
 .descripciones {
   margin: 10px auto;
   display: inline-block;
@@ -867,23 +1030,28 @@ header {
   padding: 25px;
   width: 90%;
   text-align: left; }
+  /* line 1290, ../sass/main.scss */
   .descripciones div {
     display: inline-block;
     margin-left: 10px; }
+    /* line 1294, ../sass/main.scss */
     .descripciones div div {
       font-weight: bolder;
       width: 85px;
       display: inline-block;
       font-size: 16px; }
+    /* line 1301, ../sass/main.scss */
     .descripciones div p {
       display: inline-block;
       text-transform: uppercase;
       font-size: 14px; }
 
+/* line 1310, ../sass/main.scss */
 .optDetalle {
   text-align: right;
   max-width: 90%;
   margin: 0 auto; }
+  /* line 1315, ../sass/main.scss */
   .optDetalle .agregarDetalle {
     background-color: #2980b9;
     border-radius: 5px;
@@ -899,6 +1067,7 @@ header {
     text-align: center;
     width: 150px; }
 
+/* line 1338, ../sass/main.scss */
 .listaNotas .item {
   background: #fff;
   border-bottom: 2px solid #2980b9;
@@ -908,6 +1077,7 @@ header {
   padding: 10px 70px 45px 10px;
   position: relative;
   text-align: left; }
+  /* line 1349, ../sass/main.scss */
   .listaNotas .item .estado {
     background-color: #1976D2;
     color: #FFFFFF;
@@ -915,30 +1085,39 @@ header {
     right: 0;
     bottom: 0;
     padding: 5px; }
+  /* line 1358, ../sass/main.scss */
   .listaNotas .item .editarOrden {
     display: none; }
+  /* line 1362, ../sass/main.scss */
   .listaNotas .item .cliente {
     font-weight: bolder; }
+  /* line 1366, ../sass/main.scss */
   .listaNotas .item .detalle {
     padding-left: 25px; }
+  /* line 1370, ../sass/main.scss */
   .listaNotas .item .montos {
     margin-top: 10px; }
+    /* line 1373, ../sass/main.scss */
     .listaNotas .item .montos div {
       display: inline-block;
       width: 100px;
       padding: 5px;
       text-align: center;
       background-color: #efefef; }
+      /* line 1380, ../sass/main.scss */
       .listaNotas .item .montos div:first-child {
         font-weight: bolder; }
+      /* line 1384, ../sass/main.scss */
       .listaNotas .item .montos div input[type="number"] {
         width: 100px;
         border: 1px solid #ccc;
         text-align: center; }
+  /* line 1392, ../sass/main.scss */
   .listaNotas .item .opcionesItem {
     position: absolute;
     right: 5px;
     top: 3px; }
+    /* line 1397, ../sass/main.scss */
     .listaNotas .item .opcionesItem .editar {
       width: 50px;
       height: 50px;
@@ -946,9 +1125,11 @@ header {
       background-image: url("../img/iconos/edit.png");
       background-position: center;
       background-repeat: no-repeat; }
+      /* line 1405, ../sass/main.scss */
       .listaNotas .item .opcionesItem .editar:hover {
         background-image: url("../img/iconos/edit-hover.png");
         cursor: pointer; }
+    /* line 1411, ../sass/main.scss */
     .listaNotas .item .opcionesItem .listo {
       width: 50px;
       height: 50px;
@@ -956,9 +1137,11 @@ header {
       background-image: url("../img/iconos/done.png");
       background-position: center;
       background-repeat: no-repeat; }
+      /* line 1419, ../sass/main.scss */
       .listaNotas .item .opcionesItem .listo:hover {
         background-image: url("../img/iconos/done-hover.png");
         cursor: pointer; }
+    /* line 1425, ../sass/main.scss */
     .listaNotas .item .opcionesItem .agregar {
       background-color: transparent;
       background-image: url("../img/iconos/plus-opciones.png");
@@ -968,15 +1151,18 @@ header {
       border: 0;
       height: 50px;
       width: 50px; }
+      /* line 1435, ../sass/main.scss */
       .listaNotas .item .opcionesItem .agregar:hover {
         background-image: url("../img/iconos/plus-hover.png");
         cursor: pointer; }
+  /* line 1442, ../sass/main.scss */
   .listaNotas .item .areaEditable {
     border-radius: 5px;
     display: block;
     border: 1px  solid #2980b9;
     width: 100%;
     height: 5em; }
+  /* line 1450, ../sass/main.scss */
   .listaNotas .item .btnEditarOrden {
     background-color: #2980b9;
     border-radius: 5px;
@@ -990,12 +1176,15 @@ header {
     line-height: 46px;
     text-align: center;
     cursor: pointer; }
+    /* line 1464, ../sass/main.scss */
     .listaNotas .item .btnEditarOrden:hover {
       background-color: #3498db; }
 
+/* line 1472, ../sass/main.scss */
 .listaDeudas {
   margin: 10px;
   padding: 0 10px; }
+  /* line 1476, ../sass/main.scss */
   .listaDeudas .item {
     max-width: 500px;
     border-left: 5px solid #2980b9;
@@ -1004,14 +1193,17 @@ header {
     border-bottom: 2px solid #2980b9;
     text-align: left;
     position: relative; }
+    /* line 1485, ../sass/main.scss */
     .listaDeudas .item div {
       display: inline-block;
       vertical-align: middle; }
+    /* line 1490, ../sass/main.scss */
     .listaDeudas .item .fecha {
       width: 35px;
       padding: 0 10px;
       font-size: 13px;
       text-align: center; }
+    /* line 1497, ../sass/main.scss */
     .listaDeudas .item .monto {
       height: 45px;
       line-height: 45px;
@@ -1020,9 +1212,11 @@ header {
       top: 0;
       padding-right: 10px; }
 
+/* line 1509, ../sass/main.scss */
 .mensajeParaElUsuario {
   padding: 10px; }
 
+/* line 1513, ../sass/main.scss */
 .menu {
   background-color: #FFFFFF;
   bottom: 5px;
@@ -1038,22 +1232,29 @@ header {
   top: 55px;
   width: 250px;
   z-index: 3; }
+  /* line 1530, ../sass/main.scss */
   .menu::-webkit-scrollbar {
     width: 8px; }
+  /* line 1534, ../sass/main.scss */
   .menu::-webkit-scrollbar-thumb {
     background-color: #1976D2;
     border-radius: 10px; }
+  /* line 1539, ../sass/main.scss */
   .menu::-webkit-scrollbar-thumb:hover {
     background-color: #1976D2;
     border: 1px solid #333; }
+  /* line 1544, ../sass/main.scss */
   .menu::-webkit-scrollbar-thumb:active {
     background-color: #1976D2;
     border: 1px solid #333; }
+  /* line 1549, ../sass/main.scss */
   .menu ul {
     list-style: none;
     padding: 0; }
+    /* line 1554, ../sass/main.scss */
     .menu ul li {
       border-bottom: 1px #B6B6B6 solid; }
+      /* line 1558, ../sass/main.scss */
       .menu ul li a {
         display: block;
         padding: 10px;
@@ -1062,36 +1263,49 @@ header {
         line-height: 40px;
         text-decoration: none;
         transition: all 0.3s ease; }
+        /* line 1568, ../sass/main.scss */
         .menu ul li a:hover {
           background-color: #2196F3;
           font-weight: bolder;
           color: #FFFFFF; }
+        /* line 1574, ../sass/main.scss */
         .menu ul li a:before {
           vertical-align: middle;
           margin-right: 10px;
           font-family: 'esandex';
           font-size: 25px; }
+      /* line 1584, ../sass/main.scss */
       .menu ul li .icon-tipo-servicios:before {
         content: "\e60c"; }
+      /* line 1591, ../sass/main.scss */
       .menu ul li .icon-producto:before {
         content: "\e60e"; }
+      /* line 1599, ../sass/main.scss */
       .menu ul li .icon-orden-servicio:before {
         content: "\e014"; }
+      /* line 1606, ../sass/main.scss */
       .menu ul li .icon-usuarios:before {
         content: "\e60a"; }
+      /* line 1613, ../sass/main.scss */
       .menu ul li .icon-menus:before {
         content: "\e00c"; }
+      /* line 1621, ../sass/main.scss */
       .menu ul li .icon-clientes:before {
         content: "\e609"; }
+      /* line 1628, ../sass/main.scss */
       .menu ul li .icon-mi-perfil:before {
         content: "\e268"; }
+      /* line 1635, ../sass/main.scss */
       .menu ul li .icon-informacion:before {
         content: "\e2a2"; }
+      /* line 1642, ../sass/main.scss */
       .menu ul li .icon-cerrar-sesion:before {
         content: "\e608"; }
+      /* line 1649, ../sass/main.scss */
       .menu ul li .people:before {
         content: "\e251"; }
 
+/* line 1657, ../sass/main.scss */
 .nuevoUsuario {
   bottom: 0;
   height: 380px;
@@ -1103,6 +1317,7 @@ header {
   width: 250px;
   position: absolute; }
 
+/* line 1669, ../sass/main.scss */
 .nuevoServicio {
   bottom: 0;
   height: 370px;
@@ -1114,6 +1329,7 @@ header {
   width: 250px;
   position: absolute; }
 
+/* line 1681, ../sass/main.scss */
 .newPreOrder {
   bottom: 0;
   height: 380px;
@@ -1125,6 +1341,7 @@ header {
   width: 250px;
   position: absolute; }
 
+/* line 1693, ../sass/main.scss */
 .nuevoCliente {
   position: absolute;
   left: 0;
@@ -1136,19 +1353,23 @@ header {
   margin: auto !important;
   min-height: 180px; }
 
+/* line 1705, ../sass/main.scss */
 .opcionCuenta {
   background: #dedede;
   padding: 20px;
   color: #333;
   font-size: 14px;
   margin-bottom: 50px; }
+  /* line 1712, ../sass/main.scss */
   .opcionCuenta a {
     color: #2980b9;
     font-size: 20px;
     text-decoration: none; }
+  /* line 1718, ../sass/main.scss */
   .opcionCuenta p {
     margin: 5px; }
 
+/* line 1725, ../sass/main.scss */
 .opcionesUsuario {
   display: none;
   position: absolute;
@@ -1156,19 +1377,23 @@ header {
   right: 0;
   top: 50px;
   z-index: 3; }
+  /* line 1733, ../sass/main.scss */
   .opcionesUsuario ul {
     list-style: none;
     margin: 0;
     padding: 0; }
+    /* line 1740, ../sass/main.scss */
     .opcionesUsuario ul li a {
       background-color: #333;
       color: #e9e9e9;
       display: block;
       padding: 15px 0;
       text-decoration: none; }
+      /* line 1747, ../sass/main.scss */
       .opcionesUsuario ul li a:hover {
         background-color: #444; }
 
+/* line 1756, ../sass/main.scss */
 .tarjeta {
   background-color: #fff;
   border-radius: 5px 5px 0 0;
@@ -1178,22 +1403,27 @@ header {
   padding-bottom: 5px;
   vertical-align: top;
   width: 275px; }
+  /* line 1767, ../sass/main.scss */
   .tarjeta .imagen {
     height: 100px;
     margin: 5px auto;
     width: 100px; }
+    /* line 1773, ../sass/main.scss */
     .tarjeta .imagen img {
       width: 100%;
       height: 100%; }
+  /* line 1781, ../sass/main.scss */
   .tarjeta .opciones .agregarMenus {
     background-color: #2980b9;
     background-image: url("../img/iconos/plus.png");
     background-position: center;
     background-repeat: no-repeat;
     height: 50px; }
+    /* line 1788, ../sass/main.scss */
     .tarjeta .opciones .agregarMenus:hover {
       background-color: #3498db;
       cursor: pointer; }
+  /* line 1795, ../sass/main.scss */
   .tarjeta .titulo {
     background-color: #2980b9;
     border-radius: 5px 5px 0 0;
@@ -1203,46 +1433,57 @@ header {
     padding: 10px 15px 10px 10px;
     position: relative;
     text-transform: uppercase; }
+  /* line 1806, ../sass/main.scss */
   .tarjeta .detalles {
     padding: 5px;
     text-align: left; }
+    /* line 1810, ../sass/main.scss */
     .tarjeta .detalles p {
       background-size: 15px;
       background-repeat: no-repeat;
       background-position: 5px center;
       padding: 0 0 0 25px; }
+    /* line 1817, ../sass/main.scss */
     .tarjeta .detalles .nombre {
       background-image: url("../img/iconos/user.png"); }
+    /* line 1821, ../sass/main.scss */
     .tarjeta .detalles .email {
       background-image: url("../img/iconos/email.png"); }
+    /* line 1825, ../sass/main.scss */
     .tarjeta .detalles .mobile {
       background-image: url("../img/iconos/mobile.png"); }
 
+/* line 1836, ../sass/main.scss */
 .menuUsuario {
   height: 50px;
   right: 0;
   text-align: right;
   position: absolute;
   top: 0; }
+  /* line 1843, ../sass/main.scss */
   .menuUsuario .usuario {
     position: relative;
     margin-right: 33px;
     display: inline-block;
     cursor: pointer; }
+    /* line 1849, ../sass/main.scss */
     .menuUsuario .usuario .username {
       display: none;
       font-weight: bolder;
       color: #e9e9e9;
       vertical-align: middle; }
+    /* line 1856, ../sass/main.scss */
     .menuUsuario .usuario .avatar {
       width: 50px;
       height: 50px;
       display: inline-block;
       vertical-align: middle; }
+      /* line 1862, ../sass/main.scss */
       .menuUsuario .usuario .avatar img {
         width: 100%;
         height: 100%;
         border-radius: 50%; }
+    /* line 1870, ../sass/main.scss */
     .menuUsuario .usuario .icon-keyboard_arrow_down {
       color: #efefef;
       text-align: center;
@@ -1251,12 +1492,15 @@ header {
       position: absolute;
       right: -27px;
       top: 10px; }
+      /* line 1879, ../sass/main.scss */
       .menuUsuario .usuario .icon-keyboard_arrow_down:before {
         content: "\e10f"; }
+  /* line 1885, ../sass/main.scss */
   .menuUsuario .notificaciones {
     display: inline-block;
     position: relative;
     vertical-align: middle; }
+    /* line 1891, ../sass/main.scss */
     .menuUsuario .notificaciones .icono {
       width: 50px;
       height: 50px;
@@ -1264,6 +1508,7 @@ header {
       background-position: center;
       background-repeat: no-repeat;
       position: relative; }
+      /* line 1900, ../sass/main.scss */
       .menuUsuario .notificaciones .icono .contador {
         background-color: #333;
         border-radius: 50%;
@@ -1277,9 +1522,11 @@ header {
         position: absolute;
         right: 0;
         text-align: center; }
+      /* line 1915, ../sass/main.scss */
       .menuUsuario .notificaciones .icono:hover {
         background-image: url("../img/iconos/on_notifications.png");
         cursor: pointer; }
+    /* line 1921, ../sass/main.scss */
     .menuUsuario .notificaciones .listaNotificaciones {
       -webkit-animation: gb__a .2s;
       -webkit-border-radius: 2px;
@@ -1299,6 +1546,7 @@ header {
       top: 50px;
       width: 240px;
       z-index: 99; }
+      /* line 1942, ../sass/main.scss */
       .menuUsuario .notificaciones .listaNotificaciones .item {
         border: 1px solid #fff;
         color: #333;
@@ -1306,10 +1554,12 @@ header {
         padding: 5px 30px 5px 20px;
         position: relative;
         text-align: left; }
+        /* line 1951, ../sass/main.scss */
         .menuUsuario .notificaciones .listaNotificaciones .item:hover {
           background-color: rgba(0, 0, 0, 0.03);
           border: 1px solid #e5e5e5;
           cursor: pointer; }
+      /* line 1961, ../sass/main.scss */
       .menuUsuario .notificaciones .listaNotificaciones .flechita:after {
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
@@ -1318,6 +1568,7 @@ header {
         left: 110px;
         position: absolute;
         top: 0; }
+      /* line 1973, ../sass/main.scss */
       .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones {
         border: 1px solid #fff;
         color: #333;
@@ -1327,17 +1578,22 @@ header {
         max-height: 250px;
         overflow-y: scroll;
         text-align: center; }
+        /* line 1983, ../sass/main.scss */
         .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar {
           width: 8px; }
+        /* line 1987, ../sass/main.scss */
         .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb {
           background-color: #2980b9;
           border-radius: 10px; }
+        /* line 1991, ../sass/main.scss */
         .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:hover {
           background-color: #2980b9;
           border: 1px solid #333; }
+        /* line 1995, ../sass/main.scss */
         .menuUsuario .notificaciones .listaNotificaciones .misNotificaciones::-webkit-scrollbar-thumb:active {
           background-color: #2980b9;
           border: 1px solid #333; }
+      /* line 2001, ../sass/main.scss */
       .menuUsuario .notificaciones .listaNotificaciones .verTodos {
         color: #333;
         list-style: none;
@@ -1346,20 +1602,25 @@ header {
         text-align: center;
         position: relative;
         padding-right: 40px; }
+        /* line 2010, ../sass/main.scss */
         .menuUsuario .notificaciones .listaNotificaciones .verTodos:hover {
           cursor: pointer;
           color: #e9e9e9;
           background: rgba(0, 0, 0, 0.5); }
 
 @media screen and (min-width: 400px) {
+  /* line 2024, ../sass/main.scss */
   .menuUsuario .usuario .username {
     display: inline-block; } }
 @media screen and (min-width: 600px) {
+  /* line 2037, ../sass/main.scss */
   .contenido .contenedorProductos .contenedorProducto {
     width: 80%;
     padding: 20px; }
+    /* line 2042, ../sass/main.scss */
     .contenido .contenedorProductos .contenedorProducto .row1 {
       vertical-align: top;
       margin: 16px; }
+    /* line 2048, ../sass/main.scss */
     .contenido .contenedorProductos .contenedorProducto .row2 {
       font-size: 16px; } }
