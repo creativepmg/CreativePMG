@@ -39,6 +39,6 @@
 		<p>¿No tienes una cuenta?</p>
 		<a href="../register">Crear una cuenta</a>
 	</div>
-	<div class="notificacion-emergente">Porcesando...</div>
+	<div class="notificacion-emergente">Procesando...</div>
 </body>
 </html>
