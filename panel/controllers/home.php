@@ -3,4 +3,4 @@
 	$pagina = 'inicio';
 
 	//Llamando una funcion
-	view('inicio', compact('titulo','pagina'));
+	view('home', compact('titulo','pagina'));

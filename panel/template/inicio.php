@@ -1,6 +1,6 @@
 <?php 
 	require 'querys/control.php';
-    require 'config/conexion.php';
+    require '../config/conexion.php';
 	require 'querys/querys.php';
     require 'src/selects/selects.php';
 ?>

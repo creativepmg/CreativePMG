@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title>Login - CreativePMG</title>
 	<meta charset="UTF-8" />

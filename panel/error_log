@@ -1,0 +1,1 @@
+[27-Dec-2015 22:59:35 America/Lima] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/latinopmg/public_html/panel/src/selects/selects.php on line 2

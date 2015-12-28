@@ -491,7 +491,7 @@ function admin()
 }
 function redireccionar()
 {
-	window.location = 'panel'
+	window.location = '/'
 }
 function ocultar()
 {

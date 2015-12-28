@@ -56,8 +56,7 @@
 				<input class="button-search" type="submit" value="">
 			</form>
 		</section>
-		<section class="results">
-			
+		<section class="results">			
 			<?php 
 				if(!empty($getNumero))
 				{
@@ -118,6 +117,7 @@
 				}
 			?>
 		</section>
+		
 	</section>
 	<footer>
 		<?php  
@@ -128,6 +128,9 @@
 		<?php 
 			}
 		?>
+		<section class="contact">
+			<p>LatinoPMG Contáctacnos a teléfono: 3023390742</p>
+		</section>
 	</footer>
 </body>
 </html>
