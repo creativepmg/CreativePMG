@@ -19,7 +19,7 @@
 										  WHERE A.NUMERO_CELULAR  = '{$getNumero}'
 										   	AND  B.ID_ESTADO_SERVICIO <  6
 										  ORDER BY B.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta.." . mysqli_error($con));
+					   or die("Error en la consulta: " . $mysqli->error);
 	$countOrder = mysqli_num_rows($resultSetServices);
 ?>
 <!DOCTYPE html>
