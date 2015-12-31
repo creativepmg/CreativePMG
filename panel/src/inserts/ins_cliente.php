@@ -1,5 +1,5 @@
 <?php 
-	require '../../config/conexion.php';
+	require '../../../config/conexion.php';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 
 	$sql = "SELECT * 

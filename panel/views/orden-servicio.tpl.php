@@ -18,14 +18,16 @@
 			}
 
 				
-	$lis_not_clientes	= $mysqli->query("SELECT * FROM orden_servicio AS A
-								   	   	LEFT JOIN clientes 			AS B
-								   		ON A.ID_CLIENTE 	= B.ID_CLIENTE
+	$ResultSetServices	= $mysqli->query("SELECT * FROM orden_servicio AS A
+								   	   	  LEFT JOIN clientes 			AS B
+								   			ON A.ID_CLIENTE 	= B.ID_CLIENTE
+								   		  LEFT JOIN orden_servicio_estado AS C
+										  	ON C.STATUS_ID = A.ID_ESTADO_SERVICIO
 								   	   WHERE A.ID_ORDEN_SERVICIO  like '$id_orden'
 								   	   	AND  A.ID_ESTADO_SERVICIO like '$id_estado'
 								   ORDER BY A.FECHA_REGISTRO_ORDEN DESC") 
-					   or die("Error en la consulta.." . mysqli_error($con));
-	$countOrden = mysqli_num_rows($lis_not_clientes);
+					   or die("Error en la consulta.." . $mysqli->error);
+	$countOrden = mysqli_num_rows($ResultSetServices);
 
 	 
         
@@ -46,8 +48,12 @@
 				<label>Estado</label>
 				<select name="estado">
 					<option value="%">TODOS</option>
-					<option value="1">INTERNADO</option>
-					<option value="2">ENTREGADO</option>
+					<option value="1">RECEPCIONADO</option>
+					<option value="2">DIAGNOSTICO</option>
+					<option value="3">PEDIDO DE PARTE</option>
+					<option value="4">TRABAJANDO</option>
+					<option value="5">LISTO PARA ENTREGA</option>
+					<option value="6">ENTREGADO</option>
 				</select>
 			</div>
 			
@@ -56,38 +62,31 @@
 	</div>
 	<div class="listaNotas">
 	
-		<?php  while ($arrServi=mysqli_fetch_array($lis_not_clientes)) {
+		<?php  while ($arrayServices=mysqli_fetch_array($ResultSetServices)) {
 		
-				 	$date = date_create($arrServi['FECHA_REGISTRO_ORDEN']);   
+				 	$date = date_create($arrayServices['FECHA_REGISTRO_ORDEN']);   
 				 	$resEstado = 'NULL';
-		 			if($arrServi['ID_ESTADO_SERVICIO'] == '1')
-			 			{
-			 				$resEstado = 'INTERNADO';
-			 			}
-			 		elseif ($arrServi['ID_ESTADO_SERVICIO'] == '2') 
-				 		{
-				 			$resEstado = 'ENTREGADO';
-				 		}
+		 			$status = $arrayServices['DESCRIPTION'];
 		?>
 		<div class="item">
-			<div class="id_orden_servicio">Numero de Orden: <?= $arrServi['ID_ORDEN_SERVICIO'] ?></div>
+			<div class="id_orden_servicio">Numero de Orden: <?= $arrayServices['ID_ORDEN_SERVICIO'] ?></div>
 			<div class="fechaRegistro">Fecha Ingreso: <?= date_format($date, 'd M Y') ?></div>
-			<div class="cliente"><?= $arrServi['NOMBRE_CLIENTE'] ?></div>
-			<div class="detalle"><?= $arrServi['DETALLE'] ?></div>
+			<div class="cliente"><?= $arrayServices['NOMBRE_CLIENTE'] ?></div>
+			<div class="detalle"><?= $arrayServices['DETALLE'] ?></div>
 			<div class="opcionesItem">
 				<div class="editar" title="Marcar como terminado" onclick="verEditar(this);"></div>
 				<form action="detalle-orden-servicio" method="GET" style="display:  none;">
-					<input name="nroOrden" type="hidden" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
+					<input name="nroOrden" type="hidden" value="<?= $arrayServices['ID_ORDEN_SERVICIO'] ?>">
 					<input type="submit" class="agregar" title="Agregar detalles" value="" />
 				</form>
 			</div>
 			<form id="frmEditarOrden" class="editarOrden" method="post">
-				<input type="hidden" name="id_orden_servicio" value="<?= $arrServi['ID_ORDEN_SERVICIO'] ?>">
-				<textarea class="areaEditable" name="detalle"> <?= $arrServi['DETALLE'] ?></textarea>
+				<input type="hidden" name="id_orden_servicio" value="<?= $arrayServices['ID_ORDEN_SERVICIO'] ?>">
+				<textarea class="areaEditable" name="detalle"> <?= $arrayServices['DETALLE'] ?></textarea>
 				<div class="montos">
 				<?php  
-					$acuenta = $arrServi['A_CUENTA'];
-					$total = $arrServi['TOTAL'];
+					$acuenta = $arrayServices['A_CUENTA'];
+					$total = $arrayServices['TOTAL'];
 					$deuda = $total - $acuenta;
 				?>
 				<div class="a_cuenta">
@@ -101,8 +100,12 @@
 				<div>
 					<p>Estado</p>
 					<select name="id_estado_servicio">
-						<option value="1">Internado</option>
-						<option value="2">Entregado</option>
+						<option value="1">RECEPCIONADO</option>
+						<option value="2">DIAGNOSTICO</option>
+						<option value="3">PEDIDO DE PARTE</option>
+						<option value="4">TRABAJANDO</option>
+						<option value="5">LISTO PARA ENTREGA</option>
+						<option value="6">ENTREGADO</option>
 					</select>
 				</div>	
 			</div>
@@ -110,8 +113,8 @@
 			</form>
 			<div class="montos">
 				<?php  
-					$acuenta = $arrServi['A_CUENTA'];
-					$total = $arrServi['TOTAL'];
+					$acuenta = $arrayServices['A_CUENTA'];
+					$total = $arrayServices['TOTAL'];
 					$deuda = $total - $acuenta;
 				?>
 				<div class="a_cuenta">
@@ -128,7 +131,7 @@
 					<p><?= $total." USD" ?></p>
 				</div>
 			</div>
-			<div class="estado"><?= 'ESTADO: '.$resEstado ?></div>
+			<div class="estado"><?= 'ESTADO: '.$status ?></div>
 		</div>
 		<?php } ?>
 	</div>

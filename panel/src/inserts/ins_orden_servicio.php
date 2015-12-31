@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	require '../../config/conexion.php';
+	require '../../../config/conexion.php';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	require '../session.php';
 	//mysql_set_charset('utf8');					
@@ -40,7 +40,7 @@
 
 		if ($_POST['con_fecha_programada'] == '1')
 		{
-			$id = $mysqli->query($ultima_orden,$con);
+			$id = $mysqli->query($ultima_orden);
 			$array_orden = mysqli_fetch_array($id);
 			$id_orden_de_servicio = $array_orden['ID_ORDEN_SERVICIO'];
 			$fecha_programacion = $_POST['fecha_programada'];
@@ -52,9 +52,9 @@
 					VALUES ('$id_orden_de_servicio',
 							'$mensaje',
 							'$fecha_programacion'
-					       )" or die("Error en la consulta.." . mysqli_error($con));
+					       )" or die("Error en la consulta.." . $mysqli->error);
 
-			$mysqli->query($ins_agenda,$con);
+			$mysqli->query($ins_agenda);
 			echo $id_orden_de_servicio;
 			echo " ";
 			echo $fecha_programacion;

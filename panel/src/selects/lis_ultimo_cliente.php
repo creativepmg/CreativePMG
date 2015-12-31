@@ -1,6 +1,5 @@
 <?php 
-    require '../../config/conexion.php';
-	$mysqli = new mysqli($host, $user, $pw, $db);
+	require '../../../config/conexion.php';
     $sql = "SELECT ID_CLIENTE 
             FROM clientes 
             WHERE NUMERO_CELULAR = '$_POST[numero_celular]'

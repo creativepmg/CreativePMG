@@ -246,9 +246,10 @@ header
 	border-radius: 50%;
 	color: #E6E6E6;
 	font-family: 'esandex';
-	font-size: 65px;
+	font-size: 32px;
 	font-weight: bolder;
-	height: 50px;
+	line-height: 60px;
+	height: 60px;
 	position: fixed;
 	text-align: center;
 	text-decoration: none;
@@ -258,7 +259,7 @@ header
     cursor: pointer;
     position: fixed;
     right: 10px;
-    width: 50px;
+    width: 60px;
 
 	&:hover
 	{
