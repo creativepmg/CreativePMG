@@ -1,6 +1,6 @@
 <?php 
 	
-	require '../../config/conexion.php';
+	require '../../../config/conexion.php';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 
 	$mysqli->query("DELETE FROM usuario_menu

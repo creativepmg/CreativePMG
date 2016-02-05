@@ -13,6 +13,7 @@
       
       <input class="boton" type="submit" value="BUSCAR">
     </form>
+    <a href="reporte-clientes" class="boton">Descargar</a>
   </div>
 
     <!-- Lista de Clientes -->

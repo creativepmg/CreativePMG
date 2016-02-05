@@ -35,9 +35,6 @@
  ?>
 
  <div class="contResult"><?= $countOrden ?></div>
- 
-
-
 	<div class="buscador">
 		<form method="post">
 			<div class="bloque">

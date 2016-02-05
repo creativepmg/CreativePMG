@@ -11,10 +11,10 @@
    		echo "Falló la conexión a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 	}
 	$resultSetServices	= $mysqli->query("SELECT * 
-										  FROM clientes 	AS A
-										  LEFT JOIN orden_servicio 	AS B
+										  FROM clientes 						AS A
+										  LEFT JOIN orden_servicio 				AS B
 										  	ON B.ID_CLIENTE 	= A.ID_CLIENTE
-										  LEFT JOIN orden_servicio_estado AS C
+										  LEFT JOIN orden_servicio_estado 		AS C
 										  	ON C.STATUS_ID = B.ID_ESTADO_SERVICIO
 										  WHERE A.NUMERO_CELULAR  = '{$getNumero}'
 										   	AND  B.ID_ESTADO_SERVICIO <  6
