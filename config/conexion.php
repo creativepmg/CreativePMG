@@ -18,19 +18,19 @@
 
 	/*
 	** Produccion
-	$host 			= "localhost";
-	$user 			= "latinopm_admin";
-	$pw 			= "phillip1707";
-	$db 			= "latinopm_main";
-	$servidor 		= "serviciolatinopmg.com/";
 	*/
+	$host 			= "localhost";
+	$user 			= "phillipm_latino";
+	$pw 			= "T3mporal";
+	$db 			= "phillipm_main";
+	$servidor 		= "latino.phillipmg.com/";
 	
 	/*
 	**desarrollo
-	*/
 	$host 			= "seviciolatinopmg.com";
 	$user 			= "latinopm_admin";
 	$pw 			= "phillip1707";
 	$db 			= "latinopm_desarrollo";
 	$servidor 		= "dev.serviciolatinopmg.com/";
+	*/
 ?>

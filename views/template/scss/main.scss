@@ -8,6 +8,7 @@ $accentColor:        #607D8B;
 $primaryTextColor:   #212121;
 $secondaryTextColor: #727272;
 $dividerColor:       #B6B6B6;
+$servidor: 'http://static.latino.phillipmg.com/';
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900,300);
 
@@ -58,7 +59,7 @@ body
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: 90%;
-			background-image: url(http://static.serviciolatinopmg.com/images/logos/logo.png);
+			background-image: url($servidor + 'images/logos/logo.png');
 		}
 	}
 	footer
@@ -112,7 +113,7 @@ body
 			{
 				vertical-align: bottom;
 				background-color: $darkPrimaryColor;
-				background-image: url(http://static.serviciolatinopmg.com/images/icons/search.png);
+				background-image: url($servidor + 'images/icons/search.png');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: 32px;
