@@ -10,6 +10,7 @@ $accentColor:        #607D8B;
 $primaryTextColor:   #212121;
 $secondaryTextColor: #727272;
 $dividerColor:       #B6B6B6;
+$servidor: 'http://static.latino.phillipmg.com/';
 
 /*fuentes*/
 @font-face {
@@ -128,7 +129,7 @@ header
 	{
 		height: 50px;
 		display: inline-block;
-		background-image: url(http://static.serviciolatinopmg.com/images/logos/logo.png);
+		background-image: url($servidor + 'images/logos/logo.png');
 		background-repeat: no-repeat;
 		background-position: 5px center;
 		background-size: 70px;
@@ -704,7 +705,7 @@ header
 	}
 	.logo
 	{
-		background-image: url('http://static.serviciolatinopmg.com/images/logos/logo.png');
+		background-image: url($servidor + 'images/logos/logo.png');
 		background-size: 60%;
 		background-position: center 20px;
 		background-repeat: no-repeat;
