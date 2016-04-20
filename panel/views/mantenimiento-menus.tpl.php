@@ -13,7 +13,7 @@
           </div>
           <div>
             <div class="titulo">ENLACE:</div>
-            <a href="http://<?= $servidor.$arrMenus['URL'] ?>">http://<?= $servidor.$arrMenus['URL'] ?></a>
+            <a href="http://panel.<?= $servidor.$arrMenus['URL'] ?>">http://panel.<?= $servidor.$arrMenus['URL'] ?></a>
           </div>
         </div>
 

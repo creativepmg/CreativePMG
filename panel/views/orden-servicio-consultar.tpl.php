@@ -140,7 +140,7 @@
 	<!-- Nuevo Cliente  -->
 	<?php require 'src/form/frm_nuevo_cliente.php' ?>
 	<!-- Boton para agregar nueva orden -->
-	<div class="botonNuevo" onclick="mostraCajaDialogo('#dNewOrdenService')"></div>  
+	<a href="orden-de-servicio/generar" class="botonNuevo" ></a>  
 	
     <script>
       $(document).on('ready', inicio);

@@ -32,5 +32,5 @@
 	$user 			= "phillipm_latino";
 	$pw 			= "T3mporal";
 	$db 			= "phillipm_desarrollo";
-	$servidor 		= "dev.serviciolatinopmg.com/";
+	$servidor 		= "dev.phillipmg.com/";
 ?>
