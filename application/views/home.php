@@ -17,10 +17,10 @@
 			      <a href="#!" class="brand-logo">LatinoPMG</a>
 			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 			      <ul class="right hide-on-med-and-down">
-			        <li><a href="sass.html" class="btn">Iniciar Sesión</a></li>
+			        <li><a href="login" class="btn">Iniciar Sesión</a></li>
 			      </ul>
 			      <ul class="side-nav" id="mobile-demo">
-			        <li><a href="sass.html" class="btn">Iniciar Sesión</a></li>
+			        <li><a href="login" class="btn">Iniciar Sesión</a></li>
 			      </ul>
 			    </div>
 			</nav>
