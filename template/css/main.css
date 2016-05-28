@@ -1,0 +1,15 @@
+/* line 1, ../scss/main.scss */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+/* line 6, ../scss/main.scss */
+body nav {
+  padding: 0 1em;
+}
+
+/* line 13, ../scss/main.scss */
+main {
+  flex: 1 0 auto;
+}
