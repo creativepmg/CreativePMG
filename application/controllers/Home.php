@@ -8,7 +8,9 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
+		$this->load->view('template/inicio');
 		$this->load->view('home');
+		$this->load->view('template/fin');
 	}
 	public function cerrar_sesion()
 	{
