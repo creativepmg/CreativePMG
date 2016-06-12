@@ -22,4 +22,22 @@ class Clientes extends CI_Controller {
 		$this->load->view('clientes/listar');
 		$this->load->view('template/fin_panel');
 	}
+	public function nuevo(){
+		$data = array();
+		$data['username'] = $this->session->userdata('username');
+		$data['menus_permitidos'] = $this->Usuarios_model->listar_menu_permitidos($this->session->userdata('id'));
+		$this->load->view('template/inicio_panel', $data);
+		$this->load->view('clientes/nuevo');
+		$this->load->view('template/fin_panel');
+	}
+	public function insertar(){
+		$data = array(	
+						'name' 		=> $this->input->post('name'), 
+						'phone' 	=> $this->input->post('phone'), 
+						'email' 	=> $this->input->post('email'), 
+						'username' 	=> $this->session->userdata('username')
+					 );
+		$this->Clientes_model->create($data);
+		redirect('clientes');
+	}
 }

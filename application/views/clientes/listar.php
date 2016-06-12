@@ -21,6 +21,10 @@
 	              	<i class="material-icons valign">phone</i>
 	              	<span class="valign"><?= $cliente->NUMERO_CELULAR ?></span>
 	              </p>
+	              <p class="valign-wrapper">
+	              	<i class="material-icons valign">event</i>
+	              	<span class="valign"><?= $cliente->FECHA_REGISTRO ?></span>
+	              </p>
 	            </div>
 	            <div class="card-action">
 	              <a href="#!" onclick="alert('Opción en desarrollo')">editar</a>              
@@ -33,3 +37,8 @@
 		<h4>No hemos encontrado ningun cliente, empieza agregando el primero.</h4>
 	<?php } ?>
 </section>
+<div class="fixed-action-btn">
+	<a class="btn-floating btn-large waves-effect waves-light blue lighten-1" href="clientes/nuevo">
+		<i class="material-icons">add</i>
+	</a>
+</div>
