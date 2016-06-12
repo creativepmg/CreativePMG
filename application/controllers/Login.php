@@ -20,7 +20,7 @@ class Login extends CI_Controller {
 		$ResultSet = $this->Usuarios_model->obtenerUsuario($data);
 		if($ResultSet){
 			$usuario_data = array(
-               'id' => $ResultSet->id_user,
+               'id' => $ResultSet->user_id,
                'username' => $ResultSet->username,
                'logueado' => TRUE
             );
@@ -28,6 +28,7 @@ class Login extends CI_Controller {
             echo "Bienvenido " . $ResultSet->username;
             redirect(base_url()."panel");
 		}else{
+			$this->session->set_flashdata('error', 'Combinacion errónea');
 			redirect(base_url()."login");	
 		}
 	}

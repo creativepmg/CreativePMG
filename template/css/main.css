@@ -8,8 +8,16 @@ body {
 body nav {
   padding: 0 1em;
 }
+/* line 10, ../scss/main.scss */
+body .progress {
+  display: none;
+}
+/* line 14, ../scss/main.scss */
+body .message {
+  padding: 5px;
+}
 
-/* line 13, ../scss/main.scss */
+/* line 21, ../scss/main.scss */
 main {
   flex: 1 0 auto;
 }

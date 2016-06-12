@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Clientes extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -9,6 +9,7 @@ class Welcome extends CI_Controller {
 			redirect('login');
 		}else{
 			$this->load->model('Usuarios_model');		
+			$this->load->model('Clientes_model');
 		}
 	}
 	public function index()
@@ -16,7 +17,9 @@ class Welcome extends CI_Controller {
 		$data = array();
 		$data['username'] = $this->session->userdata('username');
 		$data['menus_permitidos'] = $this->Usuarios_model->listar_menu_permitidos($this->session->userdata('id'));
+		$data['clientes'] = $this->Clientes_model->read_all();
 		$this->load->view('template/inicio_panel', $data);
+		$this->load->view('clientes/listar');
 		$this->load->view('template/fin_panel');
 	}
 }
