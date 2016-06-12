@@ -31,6 +31,6 @@
 	$host 			= "localhost";
 	$user 			= "phillipm_latino";
 	$pw 			= "T3mporal";
-	$db 			= "phillipm_desarrollo";
-	$servidor 		= "dev.phillipmg.com/";
+	$db 			= "phillipm_main";
+	$servidor 		= "latino.phillipmg.com/";
 ?>
