@@ -12,17 +12,28 @@ class Servicios_model extends CI_Model
 		if($tipo == 'number')
 		{			
 			$query = $this->db->query("SELECT * 
-										  FROM clientes 						AS A
+										  FROM clients 						AS A
 										  LEFT JOIN orden_servicio 				AS B
 										  	ON B.ID_CLIENTE 	= A.ID_CLIENTE
 										  LEFT JOIN orden_servicio_estado 		AS C
 										  	ON C.STATUS_ID = B.ID_ESTADO_SERVICIO
 										  WHERE A.NUMERO_CELULAR  = $parametro
 										   	AND  B.ID_ESTADO_SERVICIO <  6
-										  ORDER BY B.FECHA_REGISTRO_ORDEN DESC");
+										  ORDER BY B.date_register DESC");
 			$result = $query->row();
 			if($query -> num_rows() > 0) return $result;
 			else return false;
 		}
+	}
+	function read_all(){
+		$query = $this->db->query("SELECT * 
+								  FROM orden_servicio 						AS A
+								  LEFT JOIN clients 				AS B
+								  	ON B.ID_CLIENTE 	= A.ID_CLIENTE
+								  LEFT JOIN orden_servicio_estado 		AS C
+								  	ON C.STATUS_ID = A.ID_ESTADO_SERVICIO
+								  ORDER BY A.date_register DESC");									  
+		if($query -> num_rows() > 0) return $query;
+		else return false;
 	}
 }
